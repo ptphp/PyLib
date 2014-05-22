@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div id="page">
+		{% include "common/header.html" %}
+		
+		{% include "common/navbar.html" %}
+		<div class="wrapper">
+			<div id="waterfall">
+				
+				<div id="user_info" class="pin wfc isotope-item" style="margin-bottom: 15px; position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(0px, 0px, 0px); ">
+				    <div id="Profile">
+				        <div class="profile-basic">
+				            <a href="/user/{{user['user_key']}}/" title="runlau" class="img x">		            	
+				         
+				            	{% if userInfo['avatar']%}
+								<img style="width:64px;height:64px" src="{{userInfo['avatar']}}">
+								{% else %}
+								<img style="width:64px;height:64px" src="{{static_url('media/img/iconor-25x25.png')}}">
+								{% end %}
+				            	
+				            </a>
+				            <a href="/user/{{user['user_key']}}/" class="userlink">{{user['user_nickname']}}</a>
+				            <a href="/settings/" class="settings">帐号设置</a>
+				        </div>
+				        <div class="profile-stats">
+				            <a href="/user/{{user['user_key']}}/pins/"><strong>{{counts['pins']}}</strong>采集</a>
+				            <a href="/user/{{user['user_key']}}/"><strong>{{counts['boards']}}</strong>画板</a>
+				            <a href="#"><strong>{{counts['fans']}}</strong>粉丝</a>
+				        </div>
+				    </div>
+				</div>
+				
+				
+				{{boards}}
+			</div>
+		    <div class="clear"></div>
+		    {% include "sl/loadingbar.html" %}		
+		</div>
+
+		<div class="clear"></div>
+		<div id="page_overlay" style="display: none;" class="overlay"></div>
+		{% include "common/elevator.html" %}
+	</div>
+{% end %}

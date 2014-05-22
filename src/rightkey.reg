@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+;-------------------------
+[HKEY_CLASSES_ROOT\*\shell]
+
+[HKEY_CLASSES_ROOT\*\shell\open with VI]
+@="open with VI"
+
+[HKEY_CLASSES_ROOT\*\shell\open with VI\Command]
+@="d:\\PtProject\\bin\\vi.exe %1"
+
+[HKEY_CLASSES_ROOT\*\shell]
+
+[HKEY_CLASSES_ROOT\*\shell\open with SublimeText2]
+@="open with SublimeText2"
+
+[HKEY_CLASSES_ROOT\*\shell\open with SublimeText2\Command]
+@="d:\\PtProject\\Local\\SublimeText2\\sublime.exe %1"
+

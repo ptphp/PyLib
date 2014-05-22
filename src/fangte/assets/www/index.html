@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>房特易</title>
+	<link rel="stylesheet"  href="jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet" href="css/jqm-docs.css" />
+	<link rel="stylesheet" href="css/m_style.css" />
+	<script src="jquery-1.7.1.js"></script>
+	<script src="jquery.mobile.themeswitcher.js"></script>
+	<script src="js/jqm-docs.js"></script>
+	<script src="jquery.mobile-1.0.min.js"></script>
+	<script src="js/jquery.mobile.simpledialog.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/spider.js"></script>
+	<script type="text/javascript">
+	<!--
+	var clientApi;
+	var dd;
+	try
+	{
+	   clientApi = callApi;
+	}
+	catch(err)
+	{
+	  
+	}
+	
+	var key = "111111";
+	$(function(){		
+		getMobileKey();
+	})
+	
+	function getMobileKey(){
+		$("body").hide();
+		url = "http://mobile.fangtee.com/auth/login?key="+key+"&callback=?";		
+		$.ajax({
+			url:url,
+			dataType:"json",
+			type:"Get",
+			success:function(data){
+				if(data.code!=1){
+					$("body").show().html("没有权限");
+				}else{			
+					$("body").show();
+					location.href="#spider"
+				}
+			}			
+		});
+	}
+	//-->
+	</script>
+</head> 
+<body> 
+<div data-role="page" class="type-home" id="page_home">
+	<div data-role="content">
+		<p id="jqm-version">Beta Release</p>
+		
+		<div class="content-secondary">
+	
+			<div id="jqm-homeheader">
+				<h1 id="jqm-logo"><img src="images/jquery-logo.png" alt="jQuery Mobile Framework" /></h1>
+				<p>专业的房产服务平台</p>
+			</div>
+	
+	
+			<p class="intro"><strong id="t_username"></strong> 欢迎您的到来!  </p>
+			
+			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="f">
+				<li data-role="list-divider">个人房源</li>
+				<li><a href="#house_list?flag=1">二手房出售</a></li>
+				<li><a href="#house_list?flag=2">出租</a></li>
+				<li><a href="#house_list?flag=3">求购</a></li>
+				<li><a href="#house_list?flag=4">求租</a></li>
+				<li><a href="#spider">采集设置</a></li>
+			</ul>
+			
+		</div><!--/content-primary-->	
+		
+		<div class="content-primary">
+			<nav>
+				
+				<ul data-role="listview" data-inset="true">
+					<li data-role="list-divider">我的帐户</li>
+					<li>个人资料</li>
+					<li>认证</li>
+					<li data-role="list-divider">我的房源</li>
+					<li>出售</li>
+					<li>出售</li>
+					<li>求租</li>
+					<li>求购</li>
+					<li>发布房源</li>
+					<li data-role="list-divider">全网操作</li>
+					<li>我的端口</li>
+					<li>任务队列</li>
+					<li data-role="list-divider">工具箱</li>
+					<li>房货计算</li>
+					<li>经济人电话判断</li>
+					<li>地图</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	
+	<div data-role="footer" class="footer-docs" data-theme="c">
+			<p>&copy; 2011 The FangTee Project</p>
+	</div>	
+	
+</div>
+
+<div data-role="page" class="type-interior" id="house_list">
+		<div data-role="header" data-theme="f">
+			<h1>二手房</h1>
+			<a href="#page_home" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
+		</div><!-- /header -->
+
+		<div data-role="content">			
+			<div class="content-primary">	
+				
+			</div><!--/content-primary -->		
+	
+			<div class="content-secondary">
+	
+				<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="d">	
+						<h3>More in this section</h3>	
+						<ul data-role="listview" data-theme="c" data-dividertheme="d">
+	
+							<li data-role="list-divider">查询条件</li>
+							<div style=" margin-left:20px">
+								<div data-role="fieldcontain">
+						        	<input type="search" name="password" id="search" value=""  />
+								</div>
+								<div data-role="fieldcontain">
+									<select name="select-choice-3" id="select-choice-3">
+										<option value="0-0">价格范围</option>
+										<option value="5-10">5-10万</option>
+										<option value="10-30">10-30万</option>
+										<option value="10-30">30-60万</option>
+									</select>
+								</div>
+								
+								<div data-role="fieldcontain">
+									<select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+										<option>选 择房屋类型</option>
+										<option value="1">普通住宅</option>
+										<option value="2">公寓</option>
+										<option value="3">别墅</option>
+										<option value="4">公房</option>
+									</select>
+								</div>
+							</div>
+							
+							<div class="ui-grid-b" style="width:290px; margin:10px auto">
+								<a href="#house_list?flag=2" data-role="button" data-inline="true" data-transition="flip" style="margin-left:30px;width:100px">查询</a>
+							</div>
+						</ul>
+				</div>
+			</div>		
+	
+		</div><!-- /content -->
+	
+		<div data-role="footer" class="footer-docs" data-theme="c">
+				<p>&copy; 2011 The FangTee Project</p>
+		</div>
+	
+		</div><!-- /page -->
+		
+	<!-- Start of second page: #house_detail -->
+	<div data-role="page" id="house_detail">
+	
+		<div data-role="header">
+			<h1>房源详情</h1>
+			<a href="#house_list" id="house_detail_to_list" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
+		</div><!-- /header -->
+	
+		<div data-role="content">	
+		
+			<center><h1 id="detail_title"></h1></center>
+			<div class="ui-grid-b" style="width:290px">
+				<div class="ui-block-a"><a href="#house_pic" data-role="button" data-theme="a" >图片</a></div>
+				<div class="ui-block-b"><a href="#house_map" data-role="button" data-theme="a" >地图</a></div>
+			</div>
+			
+			
+			<div class="ui-body ui-body-d">
+				<div class="ui-grid-b">
+					<div class="ui-block-a"><strong>售价：</strong><span id="detail_price"></span>万</div>
+					<div class="ui-block-b"><strong>单价：</strong><span id="detail_area"></span>元/平米</div>
+					<div class="ui-block-c"><strong>楼层：</strong>第<span id="detail_floor"></span>层/共<span id="detail_topfloor"></span>层</div>
+				</div>
+			</div>
+			<div class="ui-body ui-body-c">
+				<div class="ui-grid-b">
+					<div class="ui-block-a"><strong>房型：</strong><span id="detail_room"></span>室<span id="detail_hall"></span>厅<span id="detail_toilet"></span>卫</div>
+					<div class="ui-block-b"><strong>面积：</strong><span id="detail_area"></span>平米</div>
+					<div class="ui-block-c"><strong>装修：</strong><span id="detail_fitment"></span></div>
+				</div>
+			</div>
+			<div class="ui-body ui-body-d">
+				<div class="ui-grid-b">
+					<div class="ui-block-a"><strong>小点区：</strong><span id="detail_borough_name"></span></div>
+					<div class="ui-block-b"><strong>朝向：</strong><span id="detail_toward"></span></div>
+				</div>
+			</div>
+			
+			<div class="ui-body ui-body-d">
+				<h3>简介</h3>
+						<p><span id="detail_house_desc"></span></p>				
+			</div>
+			<div class="ui-body ui-body-d">
+				<h3>图片</h3>
+				<div id="house_detail_piclists">
+						
+				</div>			
+			</div>
+			
+		</div><!-- /content -->
+		
+	</div><!-- /page house_detail -->
+	
+	
+	<!-- Start of second page: #house_detail -->
+	<div data-role="page" id="house_pic" >
+	
+		<div data-role="header">
+			<h1>房源图片</h1>
+			<a href="#house_detail" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
+		</div><!-- /header -->
+	
+		<div data-role="content">
+			<h2></h2>
+			<p></p>
+			
+		</div><!-- /content -->
+		
+	</div><!-- /page house_detail -->
+	
+	
+	<!-- Start of second page: #house_map -->
+	<div data-role="page" id="house_map" >
+		<div data-role="header">
+			<h1>房源地图</h1>
+			<a href="#house_detail" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
+		</div><!-- /header -->
+	
+		<div data-role="content">
+				<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">		
+					<div id="map_canvas_1" style="height:300px;"></div>
+					<p>
+						<label for="from">出发地</label>
+						<input id="from" class="ui-bar-c" value="上海" />
+					</p>
+					<p>
+						<label for="to">日的地</label>
+						<input id="to" class="ui-bar-c" value="北京" />
+					</p>				
+					<a id="submit" href="#" data-role="button" data-icon="search">查找路线</a>
+				</div>
+				<div id="results" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" style="display:none;">
+					<div class="ui-li ui-li-divider ui-btn ui-bar-b ui-corner-top ui-btn-up-undefined">路线</div>
+					<div id="directions"></div>
+					<div class="ui-li ui-li-divider ui-btn ui-bar-b ui-corner-bottom ui-btn-up-undefined"></div>
+				</div>
+		</div>
+		
+	</div><!-- /page house_map -->
+
+<div data-role="page" class="type-home" id="spider_detail">
+<form method="POST" action="http://client.fangtee.com/houseapi/python" name="ff" >
+	<div data-role="content">
+		<p id="jqm-version">Beta Release</p>		
+		<div class="content-secondary">	
+			<div id="jqm-homeheader">
+				<h1 id="jqm-logo"><img src="images/jquery-logo.png" alt="jQuery Mobile Framework" /></h1>
+				<p>专业的房产服务平台</p>
+			</div>	
+			<p class="intro"><strong id="t_username"></strong> 欢迎您的到来!  </p>			
+			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="f">
+				<li data-role="list-divider">采集设置</li>
+				<li><a href="#spider">采集管理</a></li>
+				<li><a href="#spider_list">获取列表</a></li>
+				<li><a href="#spider">获取内容</a></li>				
+				<li><a href="#page_home">返回</a></li>
+			</ul>
+			
+			<ul data-role="listview" data-inset="true" >
+				<li data-role="fieldcontain"  data-theme="e">
+		        	<label for="name">网址：</label>
+		        	<input type="text" name="url" id="url" value="http://sh.ganji.com/fang5/11120722_1324358.htm"/>
+		        	<button type="button" data-theme="b" name="submit" onclick="fetchContent()" value="submit-value">提交</button>
+				</li>
+			</ul>
+			<ul data-role="listview" data-inset="true">
+				<li data-role="fieldcontain">
+		        	<label for="d_web_flag" class="select">网站</label>
+					<select name="d_web_flag" id="d_web_flag" data-native-menu="false" style="width:80px">
+						<option>选择网站</option>
+						<option value="1">58</option>
+						<option value="2" selected="selected">赶集</option>
+						<option value="3">百姓</option>
+						<option value="4">搜房</option>
+					</select>
+				</li>
+				<li data-role="fieldcontain">
+		        	<label for="d_house_flag" class="select">分类</label>
+					<select name="d_house_flag" id="d_house_flag" data-native-menu="false" style="width:80px">
+						<option>选择房源类型</option>
+						<option value="1" selected="selected">出售</option>
+						<option value="2">出租</option>
+						<option value="3">求购</option>
+						<option value="4">求租</option>
+					</select>
+				</li>
+				<li data-role="fieldcontain">	        	
+					<label for="d_city" class="select">城市</label>
+					<select name="d_city" id="d_city" data-native-menu="false" style="width:80px">
+						<option>选择城市</option>
+						<option value="1" selected="selected">上海</option>
+						<option value="2">北京</option>
+						<option value="3">杭州</option>
+						<option value="4">南京</option>
+					</select>
+				</li>
+			</ul>
+			
+		</div><!--/content-primary-->			
+		<div class="content-primary">
+		<ul data-role="listview" data-inset="true">
+			
+			<li data-role="fieldcontain">
+	        	<label for="d_title">标题</label>
+	        	<input type="text" name="d_title" id="d_title" value=""  />
+			</li>
+			<li data-role="fieldcontain">
+	        	<label for="d_uptime">发布时间</label>
+	        	<input type="text" name="d_uptime" id="d_uptime" value="" style="width:120px" />
+			</li>
+			<li data-role="fieldcontain">
+	        	<label for="d_price">价格</label>
+	        	<input type="text" name="d_price" id="d_price" value="" style="width:60px"/>
+	        	<label for="d_area">面积</label>
+	        	<input type="text" name="d_area" id="d_area" value="" style="width:60px"/>
+			</li>
+			<li data-role="fieldcontain">
+				
+	        	<label for="d_borough_name">小区</label>
+	        	<input type="text" name="d_borough_name" id="d_borough_name" value="" style="width:80px"/>
+	        	
+	        	<label for="d_region">区</label>
+	        	<input type="text" name="d_region" id="d_region" value="" style="width:50px"/>
+	        	
+	        	<label for="d_section">版块</label>
+	        	<input type="text" name="d_section" id="d_section" value="" style="width:50px"/>
+			</li>
+			<li data-role="fieldcontain">
+	        	<label for="d_address">地址</label>
+	        	<input type="text" name="d_address" id="d_address" value=""  />
+			</li>
+			
+			<li data-role="fieldcontain">
+	        	<label for="d_room">室</label>
+	        	<input type="text" name="d_room" id="d_room" value="" style="width:30px"/>
+	        	<label for="d_hall">厅</label>
+	        	<input type="text" name="d_hall" id="d_hall" value="" style="width:30px"/>
+	        	<label for="d_toilet">卫</label>
+	        	<input type="text" name="d_toilet" id="d_toilet" value="" style="width:30px"/>
+			</li>
+			<li data-role="fieldcontain">
+	        	<label for="d_floor">楼层</label>
+	        	<input type="text" name="d_floor" id="d_floor" value="" style="width:30px"/>
+	        	<label for="d_topfloor">总层</label>
+	        	<input type="text" name="d_topfloor" id="d_topfloor" value="" style="width:30px"/>
+	        	<label for="d_age">房龄</label>
+	        	<input type="text" name="d_age" id="d_age" value="" style="width:30px"/>
+			</li>
+			<li data-role="fieldcontain">
+	        	<label for="d_fitment">装修</label>
+	        	<input type="text" name="d_fitment" id="d_fitment" value="" style="width:50px"/>
+	        	<label for="d_belong">产权</label>
+	        	<input type="text" name="d_belong" id="d_belong" value="" style="width:50px"/>
+	        	<label for="d_house_type">类型</label>
+	        	<input type="text" name="d_house_type" id="d_house_type" value="" style="width:50px"/>
+			</li>
+			<li data-role="fieldcontain">
+	        	<label for="d_owner_name">联系人</label>
+	        	<input type="text" name="d_owner_name" id="d_owner_name" value="" style="width:100px"/>
+	        	<label for="d_owner_phone">电话</label>
+	        	<input type="text" name="d_owner_phone" id="d_owner_phone" value="" style="width:140px"/>
+			</li>
+			<li data-role="fieldcontain">
+	        	<label for="d_owner_phone_pic">电话图片</label>
+	        	<input type="text" name="d_owner_phone_pic" id="d_owner_phone_pic" value=""  />
+			</li>
+			<li data-role="fieldcontain">
+	        	<label for="d_thumb">图片</label>
+	        	<input type="text" name="d_thumb" id="d_thumb" value=""  />
+			</li>
+			<li data-role="fieldcontain">
+	        	<label for="d_pic_num">图片数量</label>
+	        	<input type="text" name="d_pic_num" id="d_pic_num" value=""  />
+			</li>
+			<li data-role="fieldcontain">
+	        	<label for="d_pics">图片列表:</label>
+				<textarea cols="40" rows="16" name="d_pics" id="d_pics"></textarea>
+			</li>		
+			
+			<li data-role="fieldcontain">
+	        	<label for="d_house_desc">详细:</label>
+				<textarea cols="40" rows="18" name="d_house_desc" id="d_house_desc"></textarea>
+			</li>
+			<li data-role="fieldcontain">
+	        	<label for="d_info">info:</label>
+				<textarea cols="40" rows="18" name="d_info" id="d_info"></textarea>
+			</li>
+			<li data-role="fieldcontain">
+	        	<label for=“d_search”>search:</label>
+				<textarea cols="40" rows="18" name="d_search" id=“d_search”></textarea>
+			</li>
+			<li class="ui-body ui-body-b">
+				<fieldset class="ui-grid-a">
+					<div class="ui-block-b"><button type="button" onclick="clientApi.saveContent();" data-theme="a">提交  </button></div>
+			    </fieldset>
+			</li>
+			
+		</ul>
+		</div>
+	</div>
+	</form>
+	<div data-role="footer" class="footer-docs" data-theme="c">
+			<p>&copy; 2011 The FangTee Project</p>
+	</div>	
+</div>
+
+<div data-role="page" class="type-home" id="spider_list">
+	<div data-role="content">
+		<p id="jqm-version">Beta Release</p>		
+		<div class="content-secondary">	
+			<div id="jqm-homeheader">
+				<h1 id="jqm-logo"><img src="images/jquery-logo.png" alt="jQuery Mobile Framework" /></h1>
+				<p>专业的房产服务平台</p>
+			</div>	
+			<p class="intro"><strong id="t_username"></strong> 欢迎您的到来!  </p>			
+			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="f">
+				<li data-role="list-divider">采集设置</li>
+				<li><a href="#spider">采集管理</a></li>
+				<li><a href="#spider_list">获取列表</a></li>
+				<li><a href="#spider_detail">获取内容</a></li>				
+				<li><a href="#page_home">返回</a></li>
+			</ul>
+			<ul data-role="listview" data-inset="true" >
+				<li data-role="fieldcontain"  data-theme="e">
+		        	<label for="l_url">网址：</label>
+		        	<input type="text" name="l_url" id="l_url" value="http://sh.ganji.com/fang5/a1/"/>
+		        	<button type="button" data-theme="b" name="submit" onclick="getSpiderList()" value="submit-value">提交</button>
+				</li>
+			</ul>
+			<ul data-role="listview" data-inset="true">
+				<li data-role="fieldcontain">
+		        	<label for="l_web_flag" class="select">网站</label>
+					<select name="l_web_flag" id="l_web_flag" data-native-menu="false" style="width:80px">
+						<option>选择网站</option>
+						<option value="1">58</option>
+						<option value="2" selected="selected">赶集</option>
+						<option value="3">百姓</option>
+						<option value="4">搜房</option>
+					</select>
+				</li>
+				<li data-role="fieldcontain">
+		        	<label for="l_house_flag" class="select">分类</label>
+					<select name="l_house_flag" id="l_house_flag" data-native-menu="false" style="width:80px">
+						<option>选择房源类型</option>
+						<option value="1" selected="selected">出售</option>
+						<option value="2">出租</option>
+						<option value="3">求购</option>
+						<option value="4">求租</option>
+					</select>
+				</li>
+				<li data-role="fieldcontain">	        	
+					<label for="l_city" class="select">城市</label>
+					<select name="l_city" id="l_city" data-native-menu="false" style="width:80px">
+						<option>选择城市</option>
+						<option value="1" selected="selected">上海</option>
+						<option value="2">北京</option>
+						<option value="3">杭州</option>
+						<option value="4">南京</option>
+					</select>
+				</li>
+			</ul>
+		</div><!--/content-primary-->	
+		
+		<div class="content-primary">
+			
+		</div>
+	</div>
+	
+	<div data-role="footer" class="footer-docs" data-theme="c">
+			<p>&copy; 2011 The FangTee Project</p>
+	</div>	
+</div>
+
+<div data-role="page" class="type-home" id="spider">
+	<div data-role="content">
+		<p id="jqm-version">Beta Release</p>		
+		<div class="content-secondary">	
+			<div id="jqm-homeheader">
+				<h1 id="jqm-logo"><img src="images/jquery-logo.png" alt="jQuery Mobile Framework" /></h1>
+				<p>专业的房产服务平台</p>
+			</div>	
+			<p class="intro"><strong id="t_username"></strong> 欢迎您的到来!  </p>			
+			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="f">
+				<li data-role="list-divider">采集设置</li>
+				<li><a href="#spider">采集管理</a></li>
+				<li><a href="#spider_list">获取列表</a></li>
+				<li><a href="#spider_detail">获取内容</a></li>				
+				<li><a href="#page_home">返回</a></li>
+			</ul>
+				
+		</div><!--/content-primary-->	
+		
+		<div class="content-primary">
+			<nav>
+				
+				<ul data-role="listview" data-inset="true">
+					<li data-role="list-divider">赶集</li>
+					<li><p><span style="float:left;padding-top:10px;padding-right:20px">出售</span>
+						<a href="javascript:startSpider();" data-role="button" data-theme="a" style="float:left;width:110px;font-size:12px;height:29px;margin-top:1px">开始采集</a>
+						<span style="float:left;padding-top:10px;padding-right:20px" id="SpiderState"></span>
+						<span style="float:left;padding-top:10px;padding-right:20px" id="SpiderResult"></span>
+						</p></li>
+					<li>出租</li>
+					<li>求购</li>
+					<li>求租</li>
+					<li data-role="list-divider">58</li>
+					<li>出售</li>
+					<li>出租</li>
+					<li>求购</li>
+					<li>求租</li>
+					<li data-role="list-divider">百姓</li>
+					<li>出售</li>
+					<li>出租</li>
+					<li>求购</li>
+					<li>求租</li>
+					<li data-role="list-divider">搜房</li>
+					<li>出售</li>
+					<li>出租</li>
+					<li>求购</li>
+					<li>求租</li>
+				</ul>
+			</nav>
+		</div>
+	</div>	
+	<div data-role="footer" class="footer-docs" data-theme="c">
+			<p>&copy; 2011 The FangTee Project</p>
+	</div>	
+</div>
+
+</body>
+</html>

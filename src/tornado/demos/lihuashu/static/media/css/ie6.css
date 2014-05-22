@@ -1,0 +1,1374 @@
+#search {
+	float:right;
+	padding-right:20px
+}
+#search a {
+	background-image:url("../img/sprite_nav_ie6.png")
+}
+#huaban {
+	float:left;
+	display:block;
+	width:117px;
+	height:32px;
+	background:url("../img/logo_38_ie6.png") 0 0 no-repeat
+}
+#huaban img {
+	display:none
+}
+.wfx #header #logo {
+	background:url("../img/logo_ie6.jpg") center center no-repeat;
+	display:block;
+	width:117px;
+	height:52px
+}
+.wfx #header #logo img {
+	display:none
+}
+.rbtn {
+	background:#E04751;
+	border:1px solid #524D4D
+}
+.wbtn {
+	background:#FFF;
+	border:1px solid #524D4D
+}
+.rbtn span,.wbtn span {
+	display:none;
+	visibility:hidden
+}
+#BoardTitle {
+	z-index:3
+}
+#nav_bar ul#nav li {
+	float:left
+}
+#nav_bar ul#nav li.invite,#nav_bar ul#nav li.client {
+	float:right
+}
+#nav_bar ul#nav li.client {
+	height:42px
+}
+#nav_bar ul#nav li.client a {
+	background:url(../img/icon_app_ie6.png) left top;
+	height:40px;
+	bottom:0
+}
+#nav_bar ul#nav li.client a:hover {
+	background-position:left -45px
+}
+#menu a.nav {
+	text-decoration:none
+}
+#menu a.nav:active span {
+	background-position:top center
+}
+#nav_bar .nav em {
+	background-image:url("../img/sprite_nav_ie6.png")
+}
+#nav_bar a.popular em {
+	background-position:-30px -60px
+}
+#nav_bar a.popular:hover em {
+	background-position:-30px -90px
+}
+#nav_bar a.boards-popular em {
+	background-position:0 -60px
+}
+#nav_bar a.boards-popular:hover em {
+	background-position:0 -90px
+}
+#nav_bar a.following em {
+	background-position:-60px -60px
+}
+#nav_bar a.following:hover em {
+	background-position:-60px -90px
+}
+#nav_bar a.all em {
+	background-position:-90px -60px
+}
+#nav_bar a.all:hover em {
+	background-position:-90px -90px
+}
+#nav.menu {
+	padding-top:8px
+}
+#header {
+	height:32px;
+	z-index:99
+}
+#menu .nav {
+	background-image:url("../img/sprite_nav_ie6.png")
+}
+#menu .nav em {
+	background-image:url("../img/sprite_nav_ie6.png");
+	display:block;
+	line-height:0;
+	font-size:0
+}
+#menu li {
+	zoom:1;
+	display:inline
+}
+#menu li ul {
+	top:31px;
+	display:block;
+	visibility:hidden
+}
+#menu li ul li {
+	zoom:0
+}
+#menu li ul a {
+	zoom:1
+}
+#elevator {
+	bottom:0;
+	padding:20px 10px
+}
+.btn.Indicator {
+	position:absolute
+}
+.modal {
+	position:absolute;
+	border:2px solid #CCC
+}
+.modal .close {
+	height:56px;
+	background:url("../img/Close.gif") no-repeat scroll center top transparent;
+	filter:0
+}
+.modal .close:hover {
+	background-color:#EEE;
+	filter:0
+}
+.modal .close span {
+	display:none
+}
+.modal div.header {
+	zoom:1
+}
+.pin {
+	border:1px solid #DDD
+}
+.convo.attribution {
+	margin:0 -15px;
+	padding:10px 15px
+}
+.attribution p {
+	margin:0;
+	width:190px;
+	display:block;
+	height:auto
+}
+.comments .comment p {
+	margin:0;
+	float:left
+}
+.pin .actions {
+	width:210px
+}
+.actions .wbtn.btn11 em {
+	font-size:0
+}
+#PinActionButtons .like-button em,#PinActionButtons .unlike-button em {
+	font-size:0
+}
+a#huaban_logo {
+	display:block;
+	width:117px;
+	height:52px;
+	background:url("../img/logo_ie6.jpg") center center no-repeat
+}
+#huaban_logo img {
+	display:none
+}
+.board input#email_input,.board textarea#bio_input {
+	width:360px;
+	padding:6px 15px
+}
+.board span.fff {
+	width:360px
+}
+.board div.submit {
+	position:absolute;
+	left:0;
+	top:60px
+}
+
+.Board .link {
+	width:207px;
+	zoom:1
+}
+.PriorAndNext {
+	zoom:1
+}
+.PriorAndNext .btn {
+	z-index:1
+}
+.PriorAndNext .btn em {
+	font-size:0
+}
+.PriorAndNext .position {
+	margin:0;
+	left:50px
+}
+#PinActionButtons .repin-button em {
+	font-size:0
+}
+.view #huaban {
+	left:auto;
+	margin-left:0;
+	top:auto;
+	position:static;
+	float:left;
+	display:block;
+	width:117px;
+	height:32px
+}
+.wt {
+	border:1px solid #DDD
+}
+.pin-img {
+	width:553px
+}
+#intro {
+	border:1px solid #DDD
+}
+#PinActionButtons {
+	zoom:1
+}
+.PinActivity h4 {
+	display:inline
+}
+a.douban,a.weibo {
+	background-image:url("../img/login_btns.jpg")
+}
+.login-button span {
+	color:#FFF;
+	float:left;
+	font-size:15px;
+	font-weight:500;
+	margin-top:7px;
+	height:20px;
+	line-height:20px;
+	padding:8px 12px 8px 20px;
+	font-weight:700
+}
+#login input,.FancyForm textarea,.FancyForm #scrapePinInput {
+	background:none repeat scroll 0 0 transparent;
+	border:1px solid #A4A2A2;
+	display:block;
+	position:relative;
+	width:234px;
+	z-index:3;
+	padding:10px 15px
+}
+.FancyForm .fff {
+	width:234px;
+	padding:10px 15px;
+	font-size:0;
+	height:20px
+}
+.FancyForm textarea {
+	width:476px
+}
+#PinAddCommentControls .btn {
+	zoom:1;
+	display:block
+}
+h1#login_logo {
+	background-image:url("../img/login_logo.jpg")!important
+}
+div.login_bar {
+	background-image:url("../img/login_bar2.jpg")
+}
+.msgr span.arrow,.msgr span.arrow-mask {
+	display:none
+}
+#signup div.msgr,#login div.msgr {
+	background:url("../img/msg.jpg") no-repeat left center;
+	height:34px;
+	line-height:34px;
+	padding-left:20px;
+	width:222px;
+	top:-3px;
+	font-weight:700
+}
+.signup_form .fff {
+	display:none
+}
+#bio_input {
+	height:61px
+}
+.input.bio .fff {
+	width:475px;
+	height:61px
+}
+.FancyForm div.bio {
+	top:54px
+}
+#email_input {
+	width:496px;
+	z-index:999;
+	position:absolute;
+	background:transparent;
+	height:30px;
+	border:1px solid #A4A2A2
+}
+.input.email .fff {
+	width:475px
+}
+#apply_form .FancyForm div.submit {
+	top:150px;
+	left:600px
+}
+.wfx #nav li.selected {
+	background-image:url("../img/about/li.jpg")
+}
+.wfx div#main {
+	overflow:hidden
+}
+
+div#ProfileSidebar {
+	margin-top:20px;
+	border:1px solid #CCC
+}
+.sortable li {
+	display:inline;
+	border:1px solid #CCC;
+	margin-left:13px
+}
+.activity li {
+	clear:both;
+	zoom:1
+}
+.activity li .img {
+	float:left
+}
+.Board a.link {
+	background-image:url("../img/BoardBackground.gif")
+}
+.profile #waterfall {
+	margin-left:234px;
+	zoom:1
+}
+.pin a.img {
+	zoom:1
+}
+#OpenLinks .cell#OpenScrapePin {
+	border-left:0
+}
+#OpenLinks .cell {
+	cursor:pointer
+}
+#OpenLinks .cell .icon {
+	background-image:url("../img/AddIcons.gif")
+}
+.modal label {
+	display:block;
+	float:left;
+	height:30px;
+	line-height:30px
+}
+.modal #id_board_title {
+	background:none repeat scroll 0 0 #FFF;
+	border:1px solid #A4A2A2;
+	color:#221919;
+	display:block;
+	font-size:18px;
+	font-weight:300;
+	height:30px;
+	line-height:30px padding:6px 12px;
+	width:363px;
+	margin:0 1px 0 0;
+	float:right
+}
+.modal .nbt div.BoardSelector {
+	position:absolute;
+	right:-23px;
+	bottom:10px;
+	margin:0;
+	filter:0;
+	z-index:99999
+}
+span.DownArrow {
+	background-image:url("../img/downArrow.gif");
+	line-height:0;
+	font-size:0
+}
+.modal .StaticForm li {
+	position:relative;
+	zoom:1
+}
+.modal .StaticForm .Submit {
+	padding-left:0
+}
+div.BoardList {
+	height:100px;
+	overflow-y:auto
+}
+.btn {
+	display:inline;
+	zoom:1
+}
+.modal .FancyForm textarea {
+	z-index:999;
+	display:none
+}
+.PinTop.inputHolder.scrapePin ul li label {
+	top:0
+}
+#ScrapePin .scrapePin input#scrapePinInput {
+	margin-top:-17px;
+	width:380px;
+	padding:8px 15px
+}
+.modal .Form.FancyForm .fff {
+	padding:8px 1px
+}
+.modal .PinTop {
+	width:550px
+}
+#profile_edit.StaticForm h3 {
+	border-bottom:3px double #CCC
+}
+#profile_edit.StaticForm li {
+	border-width:0 0 1px;
+	border-style:solid;
+	border-color:#CCC
+}
+.BoardSelector {
+	filter:0
+}
+#pin_edit_form .Right .btn span {
+	display:none
+}
+#pin_edit_form .btn {
+	position:static;
+	width:110px
+}
+#pin_edit_form .Submit a.btn {
+	width:100px
+}
+#pin_edit_form .btn strong {
+	position:static
+}
+#BoardBoards a {
+	position:relative
+}
+#BoardBoards a .stats {
+	position:absolute;
+	margin:0;
+	right:25px;
+	top:0
+}
+#BoardTitle h1 {
+	padding-bottom:10px
+}
+#BoardTitle h1 em {
+	display:block;
+	background-image:url("../img/sprite_nav_ie6.png");
+	width:24px
+}
+#ctx_bar {
+	zoom:1
+}
+#BoardButton {
+	position:absolute;
+	right:15px;
+	top:7px
+}
+div#pin_tool_bar {
+	position:absolute
+}
+a#next_disabled.disabled {
+	background-position:left -175px
+}
+a#prev_disabled.disabled {
+	background-position:left -75px
+}
+div#browser_notice_callout {
+	margin-top:15px
+}
+.view div#browser_notice_callout .callout {
+	margin-left:2px
+}
+#page_invites div#browser_notice_callout .callout {
+	margin-left:200px
+}
+div#browser_notice_callout .callout h3 {
+	line-height:180%
+}
+div#browser_notice_callout a.browser {
+	padding:10px 0 10px 35px;
+	background-position:left center;
+	background-repeat:no-repeat
+}
+div#browser_notice_callout a.chrome {
+	background-image:url(../img/browser/chrome_yellow.png)
+}
+div#browser_notice_callout a.firefox {
+	background-image:url(../img/browser/firefox_yellow.png)
+}
+div#browser_notice_callout a.safari {
+	background-image:url(../img/browser/safari_yellow.png)
+}
+#dialog_form .FancyForm ul li.nbb .input {
+	margin:0;
+	background:#f2eded
+}
+#dialog_form .FancyForm ul li.nbb .email {
+	margin-right:5px
+}
+#dialog_form .FancyForm ul li.nbb a.btn {
+	padding:10px 5px;
+	line-height:36px;
+	width:50px
+}
+#dialog_form .FancyForm ul li .input input {
+	border:0;
+	height:26px;
+	line-height:26px;
+	width:168px;
+	padding-left:40px;
+	background:url(../img/login/login_bg.gif) left -5px no-repeat
+}
+#dialog_form .FancyForm ul li .input label {
+	filter:0
+}
+#dialog_form .FancyForm ul li .input span.fff {
+	height:17px;
+	width:180px;
+	background:#f2eded
+}
+#dialog_form .FancyForm ul li .password span.fff {
+	background-position:left -40px
+}
+#login_dialog .panel_intro {
+	background:#6f6a64
+}
+#login_dialog .panel_form {
+	background:#6f6a64
+}
+#login_dialog div.extra a.weibo,#login_dialog div.extra a.douban {
+	background:url(../img/login/login_bg.gif) -10px -181px no-repeat
+}
+#login_dialog div.extra a.douban {
+	background-position:-10px -201px
+}
+#login_dialog a#back_to_login,#login_dialog a#reset_password {
+	margin-left:160px
+}
+#login_dialog a#back_to_login {
+	margin-left:80px
+}
+#login_dialog a#back_to_login:hover,#login_dialog a#reset_password:hover {
+	float:left;
+	padding:0
+}
+#login_dialog div.panel_intro div {
+	background:url(../img/login/login_bg.gif) left -73px no-repeat
+}
+#login_dialog div.panel_intro div span {
+	background:url(../img/login/login_bg.gif) left -125px no-repeat
+}
+#login_dialog div.panel_form span.side {
+	background:url(../img/login/login_bg.gif) right -220px no-repeat
+}
+#login_dialog div.panel_form span.text {
+	margin-top:15px
+}
+#login_dialog div.panel_form a.btn {
+	margin-top:10px;
+	vertical-align:middle
+}
+#menu_bar {
+	width:600px;
+	position:relative
+}
+.pin .actions {
+	display:block;
+	visibility:hidden
+}
+#menu ul {
+	z-index:99999999
+}
+
+#ntf_tip {
+	height:30px
+}
+#ntf_tip .shadow {
+	background:0
+}
+.view #intro {
+	margin-left:2px
+}
+.PinRepinStory {
+	zoom:1
+}
+#login_btn strong em {
+	background-image:url("../img/login/openlogin_icons.jpg")
+}
+.unauth-btns .btn {
+	float:left
+}
+#bookmarklet textarea {
+	position:relative;
+	display:block;
+	width:300px;
+	height:80px;
+	background:#fff;
+	border:1px solid #A4A2A2
+}
+.pin-form .Buttons label {
+	border:0
+}
+#bookmarklet .BoardSelector {
+	z-index:1;
+	width:295px;
+	zoom:1
+}
+#bookmarklet .BoardList {
+	width:330px;
+	height:150px
+}
+#bookmarklet .BoardListBody {
+	width:330px;
+	height:150px
+}
+#bookmarklet .BoardListBody ul li {
+	position:static
+}
+#bookmarklet .BoardListBody ul li:hover {
+	background:#EBE8E8
+}
+#bookmarklet .BoardPicker .CreateBoard input {
+	width:220px
+}
+#board_share_unit strong {
+	background:url("../img/board_share_sprite_ie6.png") 10px 7px no-repeat;
+	padding-bottom:3px
+}
+#board_share_unit ul li {
+	background:url("../img/board_share_sprite_ie6.png") -58px -100px no-repeat
+}
+#category_callout .form {
+	float:none
+}
+#category_callout .wrapper {
+	z-index:8
+}
+.bl .Board h3 {
+	width:162px
+}
+#dialog_slide div#slide_holder a {
+	line-height:100%;
+	font-size:0
+}
+#dialog_login .FancyForm ul li .input {
+	margin:0;
+	background:#f2eded
+}
+#dialog_login .FancyForm ul li.nbb .password {
+	margin-top:5px
+}
+#dialog_login .FancyForm ul li.nbb a.btn {
+	padding:10px 5px;
+	line-height:36px;
+	width:50px
+}
+#dialog_login .FancyForm ul li .input input {
+	border:0;
+	height:26px;
+	line-height:26px;
+	width:185px;
+	padding-left:40px;
+	background:#fff url(../img/login/login_bg.gif) left -5px no-repeat
+}
+#dialog_login .FancyForm ul li .input label {
+	filter:0
+}
+#dialog_login .FancyForm ul li .input span.fff {
+	height:17px;
+	width:180px
+}
+#dialog_login .FancyForm ul li .password input {
+	background-position:left -40px
+}
+a#event_ads {
+	position:static;
+	float:left;
+	display:block;
+	width:122px;
+	height:44px;
+	margin-top:10px;
+	background:url("../img/event_ad.gif") center top no-repeat
+}
+.view a#event_ads {
+	margin-left:0
+}
+#event_ads img {
+	display:none
+}
+#MessageIndicator {
+	position:absolute!important;
+	padding-bottom:3px
+}
+#arrow-btn .arrow span {
+	top:11px
+}
+#Profile .profile-acts .btn {
+	padding:6px 13px
+}
+#Profile .profile-acts .links a em {
+	background-image:url("../img/sprite_nav_ie6.png");
+	top:0;
+	margin-right:10px
+}
+#MessageIndicator ul.nav {
+	background:#FAFAFA
+}
+#msgl_logo {
+	display:block;
+	width:98px;
+	height:37px;
+	background:url("../img/logo_grey_ie6.png") 0 0 no-repeat
+}
+#msgl_logo img {
+	display:none
+}
+#msgl_hide {
+	background-image:url("../img/msgl_back_ie6.png")
+}
+#msgl ol.activities li {
+	height:85px
+}
+#msgl ol li .content {
+	zoom:1
+}
+.write .grid_comment_button {
+	background-image:url("../img/comment_button_ie6.png");
+	background-position:right -26px
+}
+.write .grid_comment_button:hover {
+	background-position:right -56px
+}
+#header .overlay a.close {
+	background:#393939 url("../img/login/noti_close_button_ie6.png") center center no-repeat;
+	margin-top:4px
+}
+#weekly_page.view {
+	width:920px
+}
+.weekly-item-header {
+	zoom:1
+}
+#sheet {
+	position:absolute
+}
+#login_btn {
+	float:left
+}
+#auth_form li {
+	zoom:1;
+	margin:0
+}
+#auth_form li input {
+	width:150px;
+	padding:6px 12px 6px 38px;
+	background:#fff url(../img/login/login_bg.gif) left -10px no-repeat;
+	line-height:17px
+}
+#auth_form li input#login_password {
+	background-position:left -45px
+}
+
+
+.view #header .wrapper, .hwfx #header .wrapper {
+width: 852px;
+}
+.CloseupRight {
+float: right;
+width: 614px;
+margin-top: 15px;
+}
+
+.CloseupLeft div.Board {
+	width:222px;
+	padding:0;
+	border:1px solid #DDD
+}
+.CloseupLeft {
+	position:absolute;
+	top:15px;
+	left:50%;
+	width:222px;
+	margin-left:-425px
+}
+.CloseupLeft .Board {
+	margin:0 0 15px
+}
+.CloseupLeft .DomainPins {
+	position:static;
+	margin:0 0 15px;
+	float:left
+}
+.CloseupRight {
+	float:right;
+	width:614px;
+	margin-top:15px
+}
+.CloseupRight .wt {
+	margin-top:0;
+	padding:0
+}
+#PinPinner {
+	padding:20px 30px;
+	border-bottom:1px solid #d1cdcd;
+	overflow:hidden
+}
+#PinPinner #PinnerImage {
+	float:left;
+	margin-right:9px;
+	width:50px
+}
+#PinPinner #PinnerImage img {
+	display:block;
+	width:50px;
+	height:50px
+}
+#PinPinner #PinnerName {
+	font-size:23px;
+	line-height:1em;
+	margin-bottom:2px
+}
+#PinPinner #PinnerName a {
+	color:#211922;
+	text-decoration:none
+}
+#PinPinner #PinnerName a:hover {
+	color:#211922;
+	text-decoration:underline;
+	background-color:transparent
+}
+#PinnerStats {
+	display:block;
+	margin:5px 0 0;
+	padding-left:60px
+}
+#PinActionButtons {
+	padding:20px 30px 10px;
+	overflow:hidden
+}
+#PinActionButtons ul {
+	float:left;
+	margin-right:12px
+}
+#PinActionButtons li {
+	display:inline
+}
+#PinActionButtons li a {
+	float:left;
+	margin-right:6px
+}
+#PinActionButtons em {
+	position:relative;
+	top:1px;
+	display:inline-block;
+	width:12px;
+	height:13px;
+	margin-right:4px;
+	background:url(../img/ActionIcons.png) 0 0 no-repeat
+}
+#PinActionButtons .like-button em,#PinActionButtons .unlike-button em {
+	background-position:-24px 0;
+	height:11px
+}
+#PinActionButtons .like-button:hover em,#PinActionButtons .unlike-button:hover em {
+	background-position:-24px -13px
+}
+#PinActionButtons .like-button:active em,#PinActionButtons .unlike-button:active em {
+	background-position:-24px -26px
+}
+#PinActionButtons .repin-button em {
+	background-position:-12px 0;
+	height:11px
+}
+#PinActionButtons .repin-button:hover em {
+	background-position:-12px -13px
+}
+#PinActionButtons .repin-button:active em {
+	background-position:-12px -26px
+}
+#pin_source {
+	float:right;
+	margin:8px 0 0;
+	font-size:13px;
+	color:#8c7e7e
+}
+.pin-img {
+	position:relative;
+	margin:20px 30px 30px;
+	overflow:hidden;
+	text-align:center
+}
+.pin-img img {
+	display:block;
+	max-width:554px;
+	margin:0 auto
+}
+.pin-caption {
+	padding:0 30px 30px;
+	line-height:1.5em;
+	border-bottom-width:0
+}
+.pintag {
+	color:#524d4d
+}
+.pintag:after {
+	content:" "
+}
+.pin-caption .text {
+	font-size:14px;
+	word-wrap:break-word
+}
+.pin-caption .via {
+	display:block;
+	margin-top:8px;
+	margin-bottom:0;
+	line-height:16px
+}
+#pin_comments {
+	border-top:1px solid #d1cdcd
+}
+#pin_comments p {
+	line-height:1.33em
+}
+#pin_comments .comment {
+	clear:both;
+	padding:15px 30px;
+	border-bottom:1px solid #d1cdcd;
+	overflow:hidden
+}
+#pin_comments .comment p {
+	display:block;
+	margin:0 58px 4px 58px
+}
+#pin_comments .comment img {
+	display:block;
+	width:50px
+}
+#pin_comments .comment .meta {
+	color:#ad9c9c
+}
+#pin_comments .comment ul {
+	margin:0 0 4px 58px
+}
+#pin_comments .comment li {
+	display:inline;
+	margin-right:3px
+}
+#pin_comments .comment li img {
+	display:inline;
+	width:5px
+}
+#pin_comments .avatar {
+	float:left;
+	margin-right:8px
+}
+#pin_comments .avatar img {
+	width:50px;
+	height:50px
+}
+#pin_likes {
+	padding-bottom:7px
+}
+#pin_likes .avatar {
+	float:left;
+	margin:0 8px 8px 0
+}
+#pin_comments .author {
+	text-decoration:none
+}
+#pin_comments .DeleteComment {
+	float:right;
+	background:url("../img/comment_act_icon.png") -19px 0 no-repeat;
+	width:20px;
+	height:20px;
+	cursor:pointer
+}
+#pin_comments .DeleteComment:hover {
+	background-position:-19px -20px
+}
+#pin_comments .DeleteComment:active {
+	background-position:-19px -40px
+}
+#pin_comments .pinViewReplyButton {
+	float:right;
+	background:url("../img/comment_act_icon.png") 0 0 no-repeat;
+	width:20px;
+	height:20px;
+	cursor:pointer;
+	margin-left:7px
+}
+#pin_comments .pinViewReplyButton:hover {
+	background-position:0 -20px
+}
+#pin_comments .pinViewReplyButton:active {
+	background-position:0 -40px
+}
+#pin_comments .comment #comment_action_btns {
+	visibility:hidden;
+	width:50px;
+	height:30px
+}
+#pin_comments .comment:hover #comment_action_btns {
+	visibility:visible
+}
+#PinAddComment {
+	padding:15px 30px
+}
+#PinAddComment .avatar {
+	float:left;
+	width:50px
+}
+#PinAddComment .InputContainer {
+	margin-left:58px;
+	position:relative
+}
+#PinAddComment #CloseupComment {
+	height:32px;
+	padding:8px;
+	font-size:13px
+}
+#PinAddComment label.unauth {
+	z-index:9
+}
+#PinAddCommentControls {
+	overflow:hidden
+}
+#PinAddCommentControls .HelpText {
+	float:left;
+	width:320px;
+	margin:13px 0 0 58px;
+	font-size:13px
+}
+#PinAddCommentControls .btn {
+	float:right;
+	margin-top:8px
+}
+#loginToComment {
+	padding:12px;
+	text-align:center;
+	font-size:13px
+}
+.PinActivity {
+	clear:both;
+	padding:15px 30px 15px 30px;
+	font-size:13px;
+	border-top:1px solid #d1cdcd;
+	overflow:hidden
+}
+.PinActivity h4 {
+	display:block;
+	margin-bottom:10px;
+	font-weight:700
+}
+.PinActivity .avatar {
+	float:left;
+	margin-right:8px
+}
+.PinActivity .avatar img {
+	display:block;
+	width:50px;
+	height:50px
+}
+.PinActivity .repin {
+	float:left;
+	width:495px;
+	margin-bottom:8px;
+	line-height:14px;
+	color:#8c7e7e
+}
+.PinActivity .repin p {
+	float:left;
+	margin:0;
+	padding-top:14px
+}
+.PinActivity .repin_attr {
+	display:block;
+	padding:16px 0 25px
+}
+.PinRepinStory {
+	position:relative;
+	margin:0 0 8px;
+	overflow:hidden;
+	height:50px
+}
+.PinRepinStory .avatar {
+	position:absolute;
+	left:0;
+	top:0
+}
+.PinRepinStory .repin-post-attr {
+	position:absolute;
+	display:block;
+	top:0;
+	left:60px;
+	height:34px;
+	width:260px;
+	padding-top:16px;
+	overflow:hidden
+}
+.PinRepinStory .repin-board {
+	position:absolute;
+	width:230px;
+	top:0;
+	right:0
+}
+.PinRepinStory .repin-board img {
+	float:left;
+	margin-right:10px
+}
+.PinRepinStory a.stats {
+	padding:6px;
+	width:36px;
+	height:36px;
+	text-align:center
+}
+.PinRepinStory a.stats span {
+	border:0;
+	display:block;
+	margin-top:2px
+}
+.PinMoreActivity {
+	clear:both;
+	margin-top:16px;
+	font-weight:700
+}
+#zoomr {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	width:100%;
+	background:#333 url(../img/zoomr_bg.gif) repeat
+}
+#zoomr_toolbar {
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	width:110px;
+	padding:5px;
+	overflow:hidden;
+	border-right:1px solid #222
+}
+#zoomr_toolbar .bg {
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:100%;
+	background-color:#111;
+	z-index:1;
+	opacity:.25;
+	filter:alpha(opacity=25)
+}
+#zoomr_toolbar .fg {
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:100%;
+	z-index:2
+}
+#zoomr_logo {
+	position:absolute;
+	top:10px;
+	left:10px
+}
+#zoomr_hide {
+	display:block;
+	margin:70px auto 0 auto;
+	padding:0 5px 0 20px;
+	width:39px;
+	height:30px;
+	background:url(../img/zoomr_back.png) no-repeat left top;
+	color:#999;
+	font-size:1.2em;
+	font-weight:700;
+	line-height:30px;
+	text-shadow:0 1px 1px rgba(0,0,0,.7);
+	cursor:pointer
+}
+#zoomr_hide:hover {
+	background-position:left -30px;
+	text-decoration:none
+}
+#zoomr_hide:active {
+	background-position:left -60px
+}
+#zoomr_show {
+	position:absolute;
+	display:block;
+	top:-50px;
+	right:-50px;
+	width:32px;
+	height:32px;
+	background:url(../img/zoomr_in.png) no-repeat left top;
+	cursor:pointer;
+	-webkit-transition:right .15s ease-in-out,top .15s ease-in-out;
+	-moz-transition:right .15s ease-in-out,top .15s ease-in-out;
+	-ms-transition:right .15s ease-in-out,top .15s ease-in-out;
+	-o-transition:right .15s ease-in-out,top .15s ease-in-out;
+	transition:right .15s ease-in-out,top .15s ease-in-out
+}
+#zoomr_show:hover {
+	background-position:left -32px
+}
+#zoomr_show:active {
+	background-position:left -64px
+}
+.hover #zoomr_show,#pin_img:hover #zoomr_show {
+	top:0;
+	right:0
+}
+#zoomr_body {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:121px;
+	right:0;
+	padding:20px;
+	overflow:auto;
+	border-left:1px solid #454545
+}
+#zoomr_body img {
+	box-shadow:0 0 25px rgba(25,25,25,.9);
+	-moz-box-shadow:0 0 25px rgba(25,25,25,.9);
+	-webkit-box-shadow:0 0 25px rgba(25,25,25,.9)
+}
+* html,* html body{background-image:url(about:blank);background-attachment:fixed}
+*html #pin_toolbar{
+	font-size:12px;
+	color:#666;
+	width:80px;
+	position:absolute;
+	right:expression(eval(document.documentElement.scrollLeft-90));
+	top:expression(eval(document.documentElement.scrollTop+180))
+}
+/*
+#pin_toolbar {
+	position:absolute;
+	margin-left:320px;
+	
+}
+*/
+#pin_toolbar .share-text {
+	color:#8c7e7e
+}
+.share-btn {
+	border-color:#c3c3c3;
+	background-color:#f2f0f0;
+	margin-top:5px;
+	background:url("../img/toolbar.gif?0.gif") left 10px no-repeat;
+	height:22px;
+	cursor:pointer
+}
+.share-btn span {
+	display:block;
+	padding-left:25px;
+	line-height:22px
+}
+#share_to_weibo {
+	background-position:left -200px
+}
+#share_to_douban {
+	background-position:left -300px
+}
+#share_to_Qzone {
+	background-position:left -400px
+}
+#share_to_weibo:hover {
+	background-position:left -225px
+}
+#share_to_douban:hover {
+	background-position:left -325px
+}
+#share_to_Qzone:hover {
+	background-position:left -425px
+}
+#share_to_weibo:active {
+	background-position:left -250px
+}
+#share_to_douban:active {
+	background-position:left -350px
+}
+#share_to_Qzone:active {
+	background-position:left -450px
+}
+
+
+
+
+.category a {
+	font-size:14px;
+	display:inline-block;
+	margin:0 8px 8px 0;
+	padding:4px 10px;
+	border:1px solid #BFBFBF;
+	color:#999;
+	background-color:#F7F7F7;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	box-shadow:inset 0 1px #FFF,0 1px 1px rgba(0,0,0,.1);
+	-moz-box-shadow:inset 0 1px #FFF,0 1px 1px rgba(0,0,0,.1);
+	-webkit-box-shadow:inset 0 1px #FFF,0 1px 1px rgba(0,0,0,.1)
+}
+.category a:hover,.category a.selected {
+	color:#444;
+	background-color:#fff;
+	text-decoration:none
+}
+.category a.web_captures span {
+	padding-left:20px;
+	background:url(../img/channel_capture.png) no-repeat center left
+}
+.category a.videos span {
+	padding-left:20px;
+	background:url(../img/channel_video.png) no-repeat center left
+}
+.category a.taomm span {
+	padding-left:20px;
+	background:url(../img/channel_taomm.png) no-repeat center left
+}
+.category a.chrome_crx_ad {
+	display:block;
+	height:125px;
+	width:172px;
+	margin:0 15px 10px 15px;
+	text-indent:-9999px;
+	background:url(../img/chrome_crx_ad.jpg) no-repeat -202px;
+	0;border:0;
+	border-radius:0;
+	-webkit-border-radius:0;
+	-moz-border-radius:0
+}
+.category a.chrome_crx_ad:hover {
+	background-position:0 0
+}
+.category {
+	padding:0!important;
+	width:222px
+}
+.category .cats {
+	padding:10px 10px 5px 10px;
+	border-bottom:1px solid #f5f2f2;
+}
+.category .last.cats {
+	border-bottom:0!important
+}

@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block css %}
+    <link type="text/css" href="{{static_url('media/css/main.dev.css')}}" rel="stylesheet" media="screen" />
+    <link type="text/css" href="{{static_url('media/css/login.css')}}" rel="stylesheet" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" href="{{static_url('media/css/ie6.css')}}"><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="{{static_url('media/css/ie7.css')}}"><![endif]-->
+{% end %}
+
+{% block js %}
+    <script type="text/javascript" src="{{static_url('media/js/jquery-1.7.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('media/js/jquery.isotope.min.js')}}"></script>
+    <!--[if lt IE 7]><script src="{{static_url('media/js/ie6.js')}}"></script><![endif]-->
+{% end %}
+
+{% block content %}
+<div id="page" >
+        <a id="login_return" href="{{ escape(handler.settings["site_host"]) }}">返回</a>
+
+<div id="login">
+    <a href="{{ escape(handler.settings["site_host"]) }}"><h1 id="login_logo"></h1></a>
+<!--
+    <div class="social_buttons">
+        <div class="inset">
+            <a href="/lihuashu/oauth/weibo" class="weibo login_button">
+                <div class="logo_wrapper">
+                    <span class="logo"></span>
+                </div>
+                <span>用微博帐号登录</span>
+            </a>
+        </div>
+        <div style="margin-right:0" class="inset">
+            <a href="/lihuashu/oauth/douban" class="douban login_button">
+                <div class="logo_wrapper">
+                    <span class="logo"></span>
+                </div>
+                <span>用豆瓣帐号登录</span>
+            </a>
+        </div>
+        <div class="inset">
+            <a href="/lihuashu/oauth/renren" class="renren login_button">
+                <div class="logo_wrapper">
+                    <span class="logo"></span>
+                </div>
+                <span>用人人帐号登录</span>
+            </a>
+        </div>
+        <div style="margin-right:0" class="inset">
+            <a href="/lihuashu/oauth/qzone" class="qzone login_button">
+                <div class="logo_wrapper">
+                    <span class="logo"></span>
+                </div>
+                <span>用QQ帐号登录</span>
+            </a>
+        </div>
+    </div>
+-->
+
+    <div class="login_bar">
+    </div>
+
+    <form id="auth_form" action="/login/" method="post" class="Form FancyForm AuthForm">
+        <ul>
+            <li>
+                <div class="input ">
+                    <input id="id_email" name="email" type="text" value="" placeholder="梨花树注册邮箱">
+                    {{ xsrf_form_html() }}
+                    <!--<label>梨花树注册邮箱</label>-->
+                    <span class="fff"></span>
+                    {% if errMsg %}
+                    <div id="email_msgr" class="msgr left-arrow " style="display:block">
+						<span class="txt">{{ errMsg }}</span>
+						<span class="arrow">◣</span>
+						<span class="arrow-mask"></span>
+					</div>	
+					{% end %}
+                 </div>
+            </li>
+            <li>
+                <div class="input">
+                    <input id="id_password" name="password" type="password" placeholder="密码">
+                    <!--<label>密码</label>-->
+                    <span class="fff"></span>
+                    <div id="password_msgr" class="msgr left-arrow" >
+                        <span class="txt"></span>
+                        <span class="arrow">◣</span>
+                        <span class="arrow-mask"></span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="non_inputs">
+            <a id="login_btn" href="#" onclick="$('#auth_form').submit(); return false;" class="btn btn18 wbtn">
+                <strong> 登录</strong>
+                <span></span>
+            </a>
+            <a id="reset_password" href="#" onclick="return false;" class="less">忘记了密码？</a>
+            <a id="back_to_login" href="#" onclick="return false;" class="less">哦，又想起来了!</a>
+            <p>
+                <a id="invite_me" href="/signup/" class="less">还没有梨花树帐号？立即注册</a>
+            </p>
+        </div>
+        <input type="hidden" name="next" value="">
+    </form>
+    <div id="reset_msg" style="display: none;" class="success"></div>
+</div>
+
+   </div>
+    <div class="clear"></div>
+    <div id="page_overlay" style="display: none;" class="overlay"></div>
+{% end %}
+
+{% block script %}
+
+<script type="text/javascript">
+
+	$("#auth_form #id_email").bind('keyup',function(e) {
+	    if(e.keyCode==13){
+	        $('#id_password').focus();
+	    } 
+	});
+	
+	$("#auth_form #id_password").bind('keyup',function(e) {
+	    if(e.keyCode==13){
+	        $('#auth_form').submit();
+	    } 
+	});
+	
+</script>
+
+{% end %}

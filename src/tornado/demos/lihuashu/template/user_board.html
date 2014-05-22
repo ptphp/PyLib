@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="view" class="profile">
+		{% include "common/header.html" %}
+		
+		<div id="wrapper" class="wrapper bl">
+			
+			<div id="ProfileSidebar">
+				{% include "sl/userDetail.html" %}	
+			</div>
+		
+			<div class="UserPinContainner">
+				<div id="ctx_bar">
+					<p class="bar-links">										
+					<span class="selected">画板</span>
+					&nbsp;·&nbsp;
+					<a href="/user/{{u_user['key']}}/pins/">采集</a>
+					&nbsp;·&nbsp;
+					<a href="/user/{{u_user['key']}}/likes/">喜欢</a>
+					</p>
+				</div>
+				
+				<div id="waterfall">
+					{{boards}}
+				</div>
+			</div>
+			<div class="clear"></div>
+    		{% include "sl/loadingbar.html" %}
+		</div>
+		
+		<div class="clear"></div>
+		<div id="page_overlay" style="display: none;" class="overlay"></div>
+		{% include "common/elevator.html" %}		
+		
+</div>
+{% end %}
+
+
+
+
+
+
+
+
+

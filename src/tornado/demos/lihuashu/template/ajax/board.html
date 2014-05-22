@@ -1,0 +1,100 @@
+<script>
+	$(function(){
+		$("#BoardList").click(function(){			
+			$("#BoardListBody").show();
+		});
+		$(".BoardCategory").click(function(){
+			$("#BoardListBody").hide();
+			c_data = $(this).attr('data');
+			c_data_text = $(this).find("span").text();
+			//alert(c_data);
+			$("#id_category").val(c_data);
+			$("#BoardList").text(c_data_text);
+		});		
+		
+	})
+	function getCookie(name) {
+	    var r = document.cookie.match("\\b" + name + "=([^;]*)\\b");
+	    return r ? r[1] : undefined;
+	}
+	function addBorad(){
+		
+		if($("#id_title").val() == ''){
+			alert('画板标题 is null');
+			return false;
+		}
+		
+		if($("#id_category").val() == ''){
+			alert('画板分类 is null');
+			return false;
+		}
+		
+		var data = {}
+		data.title = $("#id_title").val();
+		data.category = $("#id_category").val();
+		data._xsrf = getCookie("_xsrf");
+		url = "/ajax/addboard/";
+		$.post(url,data,function(res){		
+			if (res.code != 0){
+				alert(res.data);				
+			}else{
+				alert(res.data);
+				location.href = "/";
+			}
+		},"json")
+		return false;
+	}
+</script>
+
+<div id="CreateBoard" style="display: block; " class="ModalContainer  destroy">
+    <div class="modal wide ">
+        <div class="header">
+            <a href="#" onclick="$.zxxbox.hide(); return false" class="close"><strong>Close</strong><span></span></a>
+            <h2>创建画板</h2>
+        </div>
+        <form action="/ajax/addboard/" method="POST" id="bordForm" class="Form StaticForm nm">
+        	{{ xsrf_form_html() }}
+            <ul>
+                <li class="nbt">
+                    <input id="id_title" type="text" name="title" value="">
+                    <label>
+                        画板标题
+                    </label>
+                    <span class="fff"></span>
+                </li>
+                <li>
+                    <input id="id_category" type="hidden" name="category" value="">
+                    <div class="BoardListOverlay">
+                    </div>
+                    <div class="BoardSelector BoardPicker CategoryPicker">
+                        <div class="current">
+                            <span id="BoardList" class="CurrentBoard">选择分类</span>
+							<span class="DownArrow"></span>
+                        </div>
+                        <div class="BoardList" id="BoardListBody">
+                            <div class="BoardListBody">
+                                <ul>
+                                    {% for cat in cats %}
+                                    <li class="BoardCategory" data="{{ cat['key'] }}">
+                                        <span>{{ cat['name'] }}</span>
+                                    </li>
+                                    {% end %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <label>
+                        画板分类
+                    </label>
+                </li>
+            </ul>
+            <div class="Submit">
+                <a href="#" onclick="return addBorad();" class="btn btn18 wbtn"><strong>创建画板</strong><span></span></a>
+                <div class="CreateBoardStatus msgr">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="overlay">
+    </div>
+</div>

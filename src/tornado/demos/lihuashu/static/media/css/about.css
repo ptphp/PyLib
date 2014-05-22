@@ -1,0 +1,272 @@
+.wfx {
+	width:960px
+}
+h1,h2,h3,#nav,#nav li a {
+	color:#555
+}
+h1 {
+	margin:10px 0 20px;
+	font-size:20px;
+	text-align:center
+}
+#main h2 {
+	height:20px;
+	padding:0 0 0 14px;
+	margin:0 0 16px;
+	background:url(../img/about/hx_bg.gif) no-repeat left center;
+	font-size:16px;
+	clear:left
+}
+h3 {
+	font-size:16px;
+	font-weight:400
+}
+h3,p {
+	margin:0;
+	padding:0 0 12px 14px;
+	line-height:22px
+}
+ol {
+	margin-left:32px
+}
+ol li {
+	list-style-type:decimal
+}
+ol li h3,ol li p {
+	padding-left:0
+}
+hr {
+	border:0;
+	margin-top:30px
+}
+#page {
+	color:#444;
+	font-size:14px
+}
+.wrapper {
+	width:960px
+}
+#huaban {
+	padding-left:40px
+}
+#nav {
+	width:190px;
+	float:left;
+	margin-top:30px;
+	margin-left:-30px
+}
+#nav li {
+	width:190px;
+	height:40px;
+	font-size:16px;
+	line-height:40px;
+	text-align:right
+}
+#nav li.selected {
+	background:url(../img/about/li.png) no-repeat 0 0
+}
+#nav li:hover {
+	background:url(../img/about/li.png) no-repeat 0 -40px
+}
+#nav li a,#nav li span {
+	padding-right:40px;
+	display:block;
+	font-weight:400
+}
+#nav li a:hover {
+	text-decoration:none
+}
+#main {
+	width:740px;
+	padding-left:30px;
+	margin-top:30px;
+	float:left
+}
+.usage-item {
+	margin-bottom:30px;
+	overflow:hidden;
+	width:690px
+}
+.demo-desc {
+	width:440px;
+	float:left;
+	width:350px;
+	float:left
+}
+.usage-item .demo-image {
+	width:220px;
+	margin-right:34px;
+	padding-left:15px;
+	float:left
+}
+ul#body_tabs li ul li {
+	margin-bottom:50px
+}
+ul#body_tabs li ul li.arrow {
+	display:none
+}
+ul#body_tabs li ul li img {
+	margin-top:15px;
+	display:block
+}
+ul#body_tabs li ul li p {
+	margin:100px 0 0 20px
+}
+#btn_tabs {
+	margin-top:5px
+}
+.faq {
+	margin-bottom:25px;
+	padding:15px 15px 0 15px;
+	background:#fff;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	-webkit-box-shadow:1px 1px 2px rgba(0,0,0,.3);
+	-moz-box-shadow:1px 1px 2px rgba(0,0,0,.3);
+	box-shadow:1px 1px 2px rgba(0,0,0,.3)
+}
+.faq .answer a {
+	color:#CB2027
+}
+.faq-content {
+	margin:0;
+	padding-bottom:15px;
+	line-height:22px
+}
+span.q,span.a {
+	font-size:16px;
+	padding-right:5px
+}
+a.contact {
+	color:#2690D7;
+	font-weight:700
+}
+a.qq {
+	text-decoration:none
+}
+.faq a.mv {
+	position:static;
+	border:0;
+	margin:10px 0;
+	display:block
+}
+#mv_holder h2 {
+	background:0;
+	padding:0 0 8px
+}
+input.code-holder {
+	width:498px
+}
+img.tool-intro {
+	padding:0 0 15px 15px
+}
+.newbies-guide {
+	padding-bottom:30px
+}
+.slide {
+	height:350px
+}
+.slide .arrow-left,.slide .arrow-right {
+	width:30px;
+	height:350px;
+	float:left;
+	background:url("../img/about/next_prev_sprite.png") left center no-repeat;
+	cursor:pointer
+}
+.slide .arrow-left {
+	visibility:hidden
+}
+.slide .arrow-left:hover {
+	background-position:-30px center
+}
+.slide .arrow-left:active {
+	background-position:-60px center
+}
+.slide .arrow-right {
+	background-position:-90px center
+}
+.slide .arrow-right:hover {
+	background-position:-120px center
+}
+.slide .arrow-right:active {
+	background-position:-150px center
+}
+.slide .box {
+	width:640px;
+	height:350px;
+	float:left;
+	overflow:hidden
+}
+.slide .box .inner {
+	position:relative
+}
+.slide .box .inner img {
+	display:none;
+	opacity:0;
+	position:absolute;
+	left:0;
+	top:0
+}
+.slide .box .inner img.setup1 {
+	display:block;
+	opacity:1
+}
+.newbies-guide .description {
+	font-size:16px;
+	margin:15px 30px 0;
+	font-weight:700
+}
+.newbies-guide h2 {
+	font-size:20px;
+	font-family:"微软雅黑","helvetica neue",arial,sans-serif;
+	background:0;
+	height:auto;
+	padding-left:30px
+}
+.share h3 {
+	font-size:14px;
+	font-weight:700
+}
+.share dl {
+	margin:0 30px 5px;
+	padding-bottom:20px
+}
+.share dt {
+	font-weight:700;
+	margin:5px 0 5px
+}
+.share dd {
+	text-indent:2em;
+	font-size:12px
+}
+.share p {
+	text-indent:2em
+}
+.share a {
+	font-weight:700
+}
+.share a.external {
+	font-weight:400
+}
+.share textarea,.share code {
+	font-family:Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace
+}
+.share textarea {
+	font-size:12px;
+	color:#000
+}
+.share .custom input {
+	margin:0 0 0 14px
+}
+.share .custom span {
+	display:inline-block;
+	width:100px
+}
+.share .preview img {
+	cursor:pointer
+}
+h1.share {
+	font-size:20px;
+	text-align:left
+}

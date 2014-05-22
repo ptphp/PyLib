@@ -1,0 +1,7 @@
+<?php $cur_uri = $request -> uri();?>
+
+<ul id="nav">
+<?php foreach ($menu['about'] as $item => $value):?>
+	<li<?php if ($cur_uri == $menu['about'][$item]['href']):?> class = "selected"<?php endif;?>><a href="<?php echo Url::site($menu['about'][$item]['href'], true);?>"><?php echo __($item);?></a></li>
+<?php endforeach;?>
+</ul>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN"/>
+<title>GARNING!</title>
+
+
+
+<meta name="description" content="GARNING," />
+<link type="text/css" href="{{static_url('garning/media/css/common.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/garning.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/reg.css')}}" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.js')}}"></script>
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.zxxbox.3.0.js')}}"></script>
+</head>
+<body>
+<!-- start header -->
+<div class="header-wraper container_24">
+	<div class="header"><div class="logo grid_13 "><h1><a href="/">GARNING.COM</a></h1></div>
+<div class="search-bar grid_8 alpha">
+	<form action="/search/" method="post" name="search" id="search">
+	<input class="input" name="keyword" type="text" id="keyword" value="" style="float:left;" placeholder="搜索">
+	<input class="submit" type="submit" value=""></input>
+	</form>
+</div>
+<div class="header-login grid_3">
+	<div class="r">
+		<a href="/login/" class="login-btn">登录</a>
+		<a href="/register/" class="regist-btn">注册</a>
+	</div>
+</div></div>
+</div>
+<!-- end .header -->
+
+<!-- start navbar -->
+<div class="clear"></div>
+<div class="navbar-wraper"><div class="container_24"><div class="grid_24 navbar">
+<ul>
+	<li class = "on"><a href="/">首页</a></li>
+	<li><a href="/magazine/">杂志</a></li>
+	<li><a href="/recommend/">推荐</a></li>
+	<li><a href="/model/">模特</a></li>
+	<li><a href="/preferential/">优惠</a></li>
+	<li><a href="/groupbuy/">团购</a></li>
+	<li><a href="/shop/">商家</a></li>
+</ul>
+</div></div></div>
+<!-- end navbar -->
+
+<div class="clear"></div>
+<div class="main-wraper container_24"><div class="grid_24">
+    <div class="p t s">
+
+            <div class="grid_20 prefix_2 loginpage">
+                    <h1>很遗憾注册失败</h1>
+                    <p>
+						可能现在嘉宁网很忙呀，你的注册提交不成功.或者你可以再试多次<a href="/register/">注册</a>看看，或者到<a href="/">嘉宁网首页</a>先晃一晃？
+                    </p>
+
+
+					<div class="clear"></div>
+
+            </div>
+        <div class="clear"></div>
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4fb29e2cd465365d07f42f7a2894418d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

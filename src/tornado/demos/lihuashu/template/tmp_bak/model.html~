@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN"/>
+<title>GARNING!</title>
+
+
+
+
+<meta name="description" content="GARNING," />
+<link type="text/css" href="{{static_url('garning/media/css/common.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/garning.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/reg.css')}}" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.js')}}"></script>
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.zxxbox.3.0.js')}}"></script>
+</head>
+<body>
+<!-- start header -->
+<div class="header-wraper container_24">
+	<div class="header"><div class="logo grid_13 "><h1><a href="/">GARNING.COM</a></h1></div>
+<div class="search-bar grid_8 alpha">
+	<form action="/search/" method="post" name="search" id="search">
+	<input class="input" name="keyword" type="text" id="keyword" value="" style="float:left;" placeholder="搜索">
+	<input class="submit" type="submit" value=""></input>
+	</form>
+</div>
+<div class="header-login grid_3">
+	<div class="r">
+		<a href="/login/" class="login-btn">登录</a>
+		<a href="/register/" class="regist-btn">注册</a>
+	</div>
+</div></div>
+</div>
+<!-- end .header -->
+
+<!-- start navbar -->
+<div class="clear"></div>
+<div class="navbar-wraper"><div class="container_24"><div class="grid_24 navbar">
+<ul>
+	<li><a href="/">首页</a></li>
+	<li><a href="/magazine/">杂志</a></li>
+	<li><a href="/recommend/">推荐</a></li>
+	<li class = "on"><a href="/model/">模特</a></li>
+	<li><a href="/preferential/">优惠</a></li>
+	<li><a href="/groupbuy/">团购</a></li>
+	<li><a href="/shop/">商家</a></li>
+</ul>
+</div></div></div>
+<!-- end navbar -->
+
+<div class="clear"></div>
+<div class="main-wraper container_24"><h2 class="grid_24 model">明星达人</h2>
+
+<div class="grid_24 model-top alpha omega">
+	<div class="p t s">
+		<a href="./person/book.html"><img src="{{static_url('garning/media/images/r218_328/4.jpg')}}" alt=""></a>		<a href="./person/book.html"><img src="{{static_url('garning/media/images/r218_328/2.jpg')}}" alt=""></a>		<a href="./person/book.html"><img src="{{static_url('garning/media/images/r218_328/1.jpg')}}" alt=""></a>		<a href="./person/book.html"><img src="{{static_url('garning/media/images/r218_328/6.jpg')}}" alt=""></a>		<div class="clear"></div>
+	</div>
+</div>
+
+
+<div class="clear"></div>
+
+<div class="grid_18 alpha">
+	<div class="grid_18 alpha omega">
+		<div class="t s" style="*width:700px;overflow:hidden;"><a href=""><img src="{{static_url('garning/media/images/ad710/5.jpg')}}" alt=""></a></div>
+	</div>
+	<div class="model-left model-2">
+		<div class="grid_6 alpha">
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/4.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">小清新27</a><span>＋加关注</span></p>
+<p><em class="v3">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/51.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">淡蓝色水滴</a><span>＋加关注</span></p>
+<p><em class="v7">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/11.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">乔仔</a><span>＋加关注</span></p>
+<p><em class="v7">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/41.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">美物FAN</a><span>＋加关注</span></p>
+<p><em class="v5">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/12.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">梨小橙C</a><span>＋加关注</span></p>
+<p><em class="v1">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/14.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">小狐狸西瓜</a><span>＋加关注</span></p>
+<p><em class="v7">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/48.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">小清新27</a><span>＋加关注</span></p>
+<p><em class="v7">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/7.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">Giovanna516</a><span>＋加关注</span></p>
+<p><em class="v3">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/34.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">毛毛维奥薇</a><span>＋加关注</span></p>
+<p><em class="v7">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/22.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">淡蓝色水滴</a><span>＋加关注</span></p>
+<p><em class="v2">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/24.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">小狐狸西瓜</a><span>＋加关注</span></p>
+<p><em class="v7">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+		</div>
+		<div class="grid_6">
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/23.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">小清新27</a><span>＋加关注</span></p>
+<p><em class="v1">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/33.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">美物FAN</a><span>＋加关注</span></p>
+<p><em class="v6">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/35.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">Giovanna516</a><span>＋加关注</span></p>
+<p><em class="v2">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/15.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">小狐狸西瓜</a><span>＋加关注</span></p>
+<p><em class="v5">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/5.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">love谦谦</a><span>＋加关注</span></p>
+<p><em class="v2">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/1.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">梨小橙C</a><span>＋加关注</span></p>
+<p><em class="v7">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/48.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">乔仔</a><span>＋加关注</span></p>
+<p><em class="v1">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/46.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">penguin</a><span>＋加关注</span></p>
+<p><em class="v3">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/45.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">小蘑菇啾啾</a><span>＋加关注</span></p>
+<p><em class="v2">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/43.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">KHUNNIE</a><span>＋加关注</span></p>
+<p><em class="v5">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/13.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">小清新27</a><span>＋加关注</span></p>
+<p><em class="v2">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+		</div>
+		<div class="grid_6 omega">
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/3.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">丹逆儿</a><span>＋加关注</span></p>
+<p><em class="v1">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/52.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">Giovanna516</a><span>＋加关注</span></p>
+<p><em class="v6">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/61.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">love谦谦</a><span>＋加关注</span></p>
+<p><em class="v5">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/27.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">蘇蘇蘇3</a><span>＋加关注</span></p>
+<p><em class="v4">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/35.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">毛毛维奥薇</a><span>＋加关注</span></p>
+<p><em class="v2">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/9.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">CICI团购小组</a><span>＋加关注</span></p>
+<p><em class="v6">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/21.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">浅悦</a><span>＋加关注</span></p>
+<p><em class="v1">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/65.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">袅袅香榭</a><span>＋加关注</span></p>
+<p><em class="v5">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/57.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">love谦谦</a><span>＋加关注</span></p>
+<p><em class="v4">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/29.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">小蘑菇啾啾</a><span>＋加关注</span></p>
+<p><em class="v3">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+			<div class="p t s"><a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/r200/14.jpg')}}" alt="">
+</a>
+<p><a href="./person/book.html">毛毛维奥薇</a><span>＋加关注</span></p>
+<p><em class="v4">资深爱美丽：</em></p>
+<p>甜美风搭配达人</p>
+</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="grid_6 omega">
+	<div class="model-right p t s">
+		<h3 class="model">本周荣耀榜</h3>
+		<ul class="heartslist">
+			
+<li>
+	<b>1</b>
+	<a href="./person/book.html" class="img"><img src="{{static_url('garning/media/images/r32_32/120.jpg')}}" alt=""></a>
+	<div>
+		<p><a href="./person/book.html">penguin</a></p>
+		<p>分享了<a href="">104</a>个宝贝</p>
+		<p>收到<a href="">615</a>个喜欢<span>&nbsp;</span></p>
+	</div>
+</li>
+			
+<li>
+	<b>1</b>
+	<a href="./person/book.html" class="img"><img src="{{static_url('garning/media/images/r32_32/160.jpg')}}" alt=""></a>
+	<div>
+		<p><a href="./person/book.html">小狐狸西瓜</a></p>
+		<p>分享了<a href="">195</a>个宝贝</p>
+		<p>收到<a href="">3028</a>个喜欢<span>&nbsp;</span></p>
+	</div>
+</li>
+			
+<li>
+	<b>1</b>
+	<a href="./person/book.html" class="img"><img src="{{static_url('garning/media/images/r32_32/38.jpg')}}" alt=""></a>
+	<div>
+		<p><a href="./person/book.html">小蘑菇啾啾</a></p>
+		<p>分享了<a href="">150</a>个宝贝</p>
+		<p>收到<a href="">4140</a>个喜欢<span>&nbsp;</span></p>
+	</div>
+</li>
+			
+<li>
+	<b>1</b>
+	<a href="./person/book.html" class="img"><img src="{{static_url('garning/media/images/r32_32/105.jpg')}}" alt=""></a>
+	<div>
+		<p><a href="./person/book.html">KHUNNIE</a></p>
+		<p>分享了<a href="">188</a>个宝贝</p>
+		<p>收到<a href="">3202</a>个喜欢<span>&nbsp;</span></p>
+	</div>
+</li>
+			
+<li>
+	<b>1</b>
+	<a href="./person/book.html" class="img"><img src="{{static_url('garning/media/images/r32_32/154.jpg')}}" alt=""></a>
+	<div>
+		<p><a href="./person/book.html">美物FAN</a></p>
+		<p>分享了<a href="">82</a>个宝贝</p>
+		<p>收到<a href="">911</a>个喜欢<span>&nbsp;</span></p>
+	</div>
+</li>
+			
+<li>
+	<b>1</b>
+	<a href="./person/book.html" class="img"><img src="{{static_url('garning/media/images/r32_32/107.jpg')}}" alt=""></a>
+	<div>
+		<p><a href="./person/book.html">毛毛维奥薇</a></p>
+		<p>分享了<a href="">159</a>个宝贝</p>
+		<p>收到<a href="">3529</a>个喜欢<span>&nbsp;</span></p>
+	</div>
+</li>
+			
+<li>
+	<b>1</b>
+	<a href="./person/book.html" class="img"><img src="{{static_url('garning/media/images/r32_32/88.jpg')}}" alt=""></a>
+	<div>
+		<p><a href="./person/book.html">小蘑菇啾啾</a></p>
+		<p>分享了<a href="">155</a>个宝贝</p>
+		<p>收到<a href="">1247</a>个喜欢<span>&nbsp;</span></p>
+	</div>
+</li>
+			
+<li>
+	<b>1</b>
+	<a href="./person/book.html" class="img"><img src="{{static_url('garning/media/images/r32_32/68.jpg')}}" alt=""></a>
+	<div>
+		<p><a href="./person/book.html">蘇蘇蘇3</a></p>
+		<p>分享了<a href="">1</a>个宝贝</p>
+		<p>收到<a href="">1267</a>个喜欢<span>&nbsp;</span></p>
+	</div>
+</li>
+			
+<li>
+	<b>1</b>
+	<a href="./person/book.html" class="img"><img src="{{static_url('garning/media/images/r32_32/75.jpg')}}" alt=""></a>
+	<div>
+		<p><a href="./person/book.html">毛毛维奥薇</a></p>
+		<p>分享了<a href="">27</a>个宝贝</p>
+		<p>收到<a href="">1490</a>个喜欢<span>&nbsp;</span></p>
+	</div>
+</li>
+			
+<li>
+	<b>1</b>
+	<a href="./person/book.html" class="img"><img src="{{static_url('garning/media/images/r32_32/62.jpg')}}" alt=""></a>
+	<div>
+		<p><a href="./person/book.html">penguin</a></p>
+		<p>分享了<a href="">70</a>个宝贝</p>
+		<p>收到<a href="">691</a>个喜欢<span>&nbsp;</span></p>
+	</div>
+</li>
+			
+<li>
+	<b>1</b>
+	<a href="./person/book.html" class="img"><img src="{{static_url('garning/media/images/r32_32/3.jpg')}}" alt=""></a>
+	<div>
+		<p><a href="./person/book.html">小狐狸西瓜</a></p>
+		<p>分享了<a href="">137</a>个宝贝</p>
+		<p>收到<a href="">2394</a>个喜欢<span>&nbsp;</span></p>
+	</div>
+</li>
+			
+<li>
+	<b>1</b>
+	<a href="./person/book.html" class="img"><img src="{{static_url('garning/media/images/r32_32/9.jpg')}}" alt=""></a>
+	<div>
+		<p><a href="./person/book.html">小蘑菇啾啾</a></p>
+		<p>分享了<a href="">101</a>个宝贝</p>
+		<p>收到<a href="">2989</a>个喜欢<span>&nbsp;</span></p>
+	</div>
+</li>
+		</ul>
+		<div class="clear"></div>
+		<h3 class="model">本周最多关注</h3>
+		<ul class="medalstar">
+			<li>
+	<a href="./person/book.html" class="img">
+		<img src="{{static_url('garning/media/images/r32_32/25.jpg')}}" alt="">
+	</a>
+	<div>
+		<p><a href="./person/book.html">毛毛维奥薇</a></p>
+		<p>每周发宝之星</p>
+	</div>
+	<span><a href=""><img src="{{static_url('garning/media/images/small_w/small_w2.png')}}" ></a></span>
+</li>			<li>
+	<a href="./person/book.html" class="img">
+		<img src="{{static_url('garning/media/images/r32_32/115.jpg')}}" alt="">
+	</a>
+	<div>
+		<p><a href="./person/book.html">梨小橙C</a></p>
+		<p>每周发宝之星</p>
+	</div>
+	<span><a href=""><img src="{{static_url('garning/media/images/small_w/small_w4.png')}}" ></a></span>
+</li>			<li>
+	<a href="./person/book.html" class="img">
+		<img src="{{static_url('garning/media/images/r32_32/19.jpg')}}" alt="">
+	</a>
+	<div>
+		<p><a href="./person/book.html">love谦谦</a></p>
+		<p>每周发宝之星</p>
+	</div>
+	<span><a href=""><img src="{{static_url('garning/media/images/small_w/small_w1.png')}}" ></a></span>
+</li>			<li>
+	<a href="./person/book.html" class="img">
+		<img src="{{static_url('garning/media/images/r32_32/104.jpg')}}" alt="">
+	</a>
+	<div>
+		<p><a href="./person/book.html">淡蓝色水滴</a></p>
+		<p>每周发宝之星</p>
+	</div>
+	<span><a href=""><img src="{{static_url('garning/media/images/small_w/small_w2.png')}}" ></a></span>
+</li>			<li>
+	<a href="./person/book.html" class="img">
+		<img src="{{static_url('garning/media/images/r32_32/70.jpg')}}" alt="">
+	</a>
+	<div>
+		<p><a href="./person/book.html">小蘑菇啾啾</a></p>
+		<p>每周发宝之星</p>
+	</div>
+	<span><a href=""><img src="{{static_url('garning/media/images/small_w/small_w4.png')}}" ></a></span>
+</li>			<li>
+	<a href="./person/book.html" class="img">
+		<img src="{{static_url('garning/media/images/r32_32/129.jpg')}}" alt="">
+	</a>
+	<div>
+		<p><a href="./person/book.html">毛毛维奥薇</a></p>
+		<p>每周发宝之星</p>
+	</div>
+	<span><a href=""><img src="{{static_url('garning/media/images/small_w/small_w5.png')}}" ></a></span>
+</li>		</ul>
+		<div class="clear"></div>
+	</div>
+
+	<div class="dresscats p t s">
+		<h3 class="model">衣服</h3>
+		<ul>
+			<li>
+	<h4>网友热荐</h4>
+				<a href="">Uniqlo</a>
+			<a href="">OL</a>
+			<a href="">雪纺</a>
+			<a href="">毛衣</a>
+			<a href="">MANGO</a>
+	</li>
+
+
+			<li>
+	<h4>2012春夏</h4>
+				<a href="">OL</a>
+			<a href="">韩系</a>
+			<a href="">几何</a>
+			<a href="">蕾丝</a>
+			<a href="">蕾丝</a>
+			<a href="">面膜</a>
+			<a href="">ZARA</a>
+			<a href="">丝芙兰</a>
+			<a href="">ZA</a>
+			<a href="">高跟鞋</a>
+			<a href="">袜套</a>
+	</li>
+
+
+			<li>
+	<h4>2012春夏</h4>
+				<a href="">连衣裙</a>
+			<a href="">ZARA</a>
+			<a href="">H&M</a>
+			<a href="">日系</a>
+			<a href="">高跟鞋</a>
+			<a href="">时尚</a>
+			<a href="">丝芙兰</a>
+			<a href="">淑女</a>
+			<a href="">双肩包</a>
+	</li>
+
+
+			<li>
+	<h4>时尚品牌</h4>
+				<a href="">个性</a>
+			<a href="">透视</a>
+			<a href="">运动</a>
+			<a href="">淑女</a>
+			<a href="">Uniqlo</a>
+			<a href="">毛衣</a>
+			<a href="">风衣</a>
+			<a href="">裸色</a>
+			<a href="">眼影</a>
+			<a href="">欧美</a>
+			<a href="">衬衫</a>
+	</li>
+
+
+			<li>
+	<h4>荷叶边</h4>
+				<a href="">H&M</a>
+			<a href="">透视</a>
+			<a href="">祛痘</a>
+			<a href="">镂空</a>
+			<a href="">袜套</a>
+			<a href="">蕾丝</a>
+			<a href="">平底鞋</a>
+			<a href="">OL</a>
+	</li>
+
+
+			<li>
+	<h4>荷叶边</h4>
+				<a href="">蕾丝</a>
+			<a href="">资生堂</a>
+			<a href="">镂空</a>
+			<a href="">睫毛膏</a>
+			<a href="">淑女</a>
+			<a href="">运动</a>
+			<a href="">香奈儿</a>
+			<a href="">MANGO</a>
+			<a href="">卫衣</a>
+	</li>
+
+
+		</ul>
+		<div class="clear"></div>
+	</div>
+
+</div></div>
+
+<!-- start footer -->
+<div class="clear"></div>
+<div class=" footer t p"><div class="container_24"><div class=" grid_24 "><div class="foot-nav">
+	<a href="" class="foot-nav-item-1">关于嘉宁</a>
+	<a href="" class="foot-nav-item-2">投资合作</a>
+	<a href="" class="foot-nav-item-3">联系我们</a>
+	<a href="" class="foot-nav-item-4">免责声明</a>
+	<a href="" class="foot-nav-item-5">帮助中心</a>
+	<a href="" class="foot-nav-item-6">模特精灵</a>
+	<a href="" class="foot-nav-item-7">投放广告</a>
+</div>
+<div class="partner">合作伙伴: 广州摄影网 梨花树网</div>
+<div class="copyright">Copyright &copy Garning.com All Rights Reseved&nbsp;<a href="">粤ICP备20090008号</a></div>
+</div></div></div>
+<!-- end footer -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4fb29e2cd465365d07f42f7a2894418d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

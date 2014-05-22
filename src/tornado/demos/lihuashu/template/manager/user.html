@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	
+	<title>Hello! Admin</title>
+
+	<link type="text/css" href="{{static_url('manager/style.css')}}" rel="stylesheet" /> <!-- the layout css file -->
+	<link type="text/css" href="{{static_url('manager/css/jquery.cleditor.css')}}" rel="stylesheet" />
+	
+	<script type='text/javascript' src='{{static_url('manager/js/jquery-1.4.2.min.js')}}'></script>	<!-- jquery library -->
+	<script type='text/javascript' src='{{static_url('manager/js/jquery-ui-1.8.5.custom.min.js')}}'></script> <!-- jquery UI -->
+	<script type='text/javascript' src='{{static_url('manager/js/cufon-yui.js')}}'></script> <!-- Cufon font replacement -->
+	<script type='text/javascript' src='{{static_url('manager/js/ColaborateLight_400.font.js')}}'></script> <!-- the Colaborate Light font -->
+	<script type='text/javascript' src='{{static_url('manager/js/easyTooltip.js')}}'></script> <!-- element tooltips -->
+	<script type='text/javascript' src='{{static_url('manager/js/jquery.tablesorter.min.js')}}'></script> <!-- tablesorter -->
+	
+	<!--[if IE 8]>
+		<script type='text/javascript' src='{{static_url('manager/js/excanvas.js')}}'></script>
+		<link rel="stylesheet" href="{{static_url('manager/css/IEfix.css')}}" type="text/css" media="screen" />
+	<![endif]--> 
+ 
+	<!--[if IE 7]>
+		<script type='text/javascript' src='{{static_url('manager/js/excanvas.js')}}'></script>
+		<link rel="stylesheet" href="{{static_url('manager/css/IEfix.css')}}" type="text/css" media="screen" />
+	<![endif]--> 
+	
+	<script type='text/javascript' src='{{static_url('manager/js/visualize.jQuery.js')}}'></script> <!-- visualize plugin for graphs / statistics -->
+	<script type='text/javascript' src='{{static_url('manager/js/iphone-style-checkboxes.js')}}'></script> <!-- iphone like checkboxes -->
+	<script type='text/javascript' src='{{static_url('manager/js/jquery.cleditor.min.js')}}'></script> <!-- wysiwyg editor -->
+
+	<script type='text/javascript' src='{{static_url('manager/js/custom.js')}}'></script> <!-- the "make them work" script -->
+	<script type='text/javascript'>
+		jQuery.noConflict();
+		function removeRow(id){
+			if(!confirm("a u sure?")){
+				return false;
+			}
+			jQuery.get("/manager/user/delete/"+id,function(){				
+				jQuery("#"+id).fadeOut(1000).remove();				
+			})
+		}
+		
+	</script>
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="bgwrap">
+			<div id="primary_left">
+        
+				<div id="logo">
+					<a href="#dashboard.html" title="Dashboard"><img style="margin:20px 40px" src="{{static_url('media/img/logo_38.png')}}" alt="" /></a>
+				</div> <!-- logo end -->
+
+				<div id="menu"> <!-- navigation menu -->
+					<ul>
+						<li class="current"><a href="/manager/user/"><img src="{{static_url('manager/assets/icons/small_icons_3/users.png')}}" alt=""/><span>Users</span></a></li>
+						<li><a href="/manager/cat/"><img src="{{static_url('manager/assets/icons/small_icons_3/posts.png')}}" alt=""/><span>Category</span></a></li>
+						<li><a href="/manager/board/"><img src="{{static_url('manager/assets/icons/small_icons_3/settings.png')}}" alt=""/><span>Board</span></a></li>
+						<li><a href="/manager/pin/"><img src="{{static_url('manager/assets/icons/small_icons_3/media.png')}}" alt=""/><span>Pin</span></a></li>
+						<li><a href="/manager/comment/"><img src="{{static_url('manager/assets/icons/small_icons_3/notes.png')}}" alt=""/><span>Commnet</span></a></li>
+					</ul>
+				</div> <!-- navigation menu end -->
+			</div> <!-- sidebar end -->
+
+			<div id="primary_right">
+				<div class="inner">
+					
+					<h1>User Lists</h1>
+					<p>..</p>
+					
+					<table class="normal tablesorter fullwidth">
+						<thead>
+							<tr>
+								<th>Select</th>
+								<th>email</th>
+								<th>User Image</th>
+								<th>nickname</th>
+								<th>createTime</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% from common.function import formatTime %}
+							{% for user in data %}
+							<tr class="odd" id="{{ user['key'] }}">
+								<td><input type="checkbox" class="iphone" /></td>
+								<td>{{ user['email'] }}</td>
+								<td title="{{user}}">
+									{% if user['avatar'] %}
+									<img src="{{user['avatar']}}" alt="" />
+									{% else %}
+									<img src="{{static_url('manager/assets/avatar.png')}}" alt="" />
+									{% end %}									
+								</td>
+								<td>{{ user['nickname'] }}</td>
+								<td>{{ formatTime(user['createTime']) }}</td>
+								<td>
+									<a href="#" title="Edit this user" class="tooltip table_icon"><img src="{{static_url('manager/assets/icons/actions_small/Pencil.png')}}" alt="" /></a> 
+									<a href="#" title="Preferences" class="tooltip table_icon"><img src="{{static_url('manager/assets/icons/actions_small/Preferences.png')}}" alt="" /></a>
+									<a href="javascript:void(0);" onclick="removeRow('{{ user['key'] }}')" title="Delete this user" class="tooltip table_icon"><img src="{{static_url('manager/assets/icons/actions_small/Trash.png')}}" alt="" /></a>
+								</td>
+							</tr>
+							{% end %}
+						</tbody>
+					</table>
+				
+				
+				</div> <!-- inner -->
+			</div> <!-- primary_right -->
+		</div> <!-- bgwrap -->
+	</div> <!-- container -->
+</body>
+</html>

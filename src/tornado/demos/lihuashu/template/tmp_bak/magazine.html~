@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN"/>
+<title>GARNING!</title>
+
+
+
+<meta name="description" content="GARNING," />
+<link type="text/css" href="{{static_url('garning/media/css/common.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/garning.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/reg.css')}}" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.js')}}"></script>
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.zxxbox.3.0.js')}}"></script>
+</head>
+<body>
+<!-- start header -->
+<div class="header-wraper container_24">
+	<div class="header"><div class="logo grid_13 "><h1><a href="/">GARNING.COM</a></h1></div>
+<div class="search-bar grid_8 alpha">
+	<form action="/search/" method="post" name="search" id="search">
+	<input class="input" name="keyword" type="text" id="keyword" value="" style="float:left;" placeholder="搜索">
+	<input class="submit" type="submit" value=""></input>
+	</form>
+</div>
+<div class="header-login grid_3">
+	<div class="r">
+		<a href="/login/" class="login-btn">登录</a>
+		<a href="/register/" class="regist-btn">注册</a>
+	</div>
+</div></div>
+</div>
+<!-- end .header -->
+
+<!-- start navbar -->
+<div class="clear"></div>
+<div class="navbar-wraper"><div class="container_24"><div class="grid_24 navbar">
+<ul>
+	<li><a href="/">首页</a></li>
+	<li class = "on"><a href="/magazine/">杂志</a></li>
+	<li><a href="/recommend/">推荐</a></li>
+	<li><a href="/model/">模特</a></li>
+	<li><a href="/preferential/">优惠</a></li>
+	<li><a href="/groupbuy/">团购</a></li>
+	<li><a href="/shop/">商家</a></li>
+</ul>
+</div></div></div>
+<!-- end navbar -->
+
+<div class="clear"></div>
+<div class="main-wraper container_24"><div class="grid_24 magazine_tab">
+	<a class="mt_rj_on" href="">推荐</a>
+	<a class="mt_om" href="">欧美</a>
+	<a class="mt_tm" href="">甜美</a>
+	<a class="mt_fg" href="">复古</a>
+	<a class="mt_gx" href="">个性</a>
+	<a class="mt_rx" href="">日系</a>
+	<a class="mt_qt" href="">其他</a>
+	<a class="mt_zzs" style="width: 145px; margin-right: 0;" href="javascript:void(0);">我的杂志</a>
+</div>
+
+
+<h2 class="grid_24 mag"><a href="" class="more">查看更多</a>复古</h2>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">家居服</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/1239.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/580.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/764.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/976.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/613.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1475.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/117.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/367.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/251.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>24185个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">彩妆</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/175.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1577.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/646.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/219.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1339.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1346.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1077.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/937.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/545.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>29169个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">镂空</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/1146.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/371.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/554.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/167.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/696.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/381.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/874.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1511.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/974.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>85800个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">双肩包</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/573.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/423.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/980.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1025.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1337.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1632.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1051.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/723.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/967.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>11092个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">几何</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/1519.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/45.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1662.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1459.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/56.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1539.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1560.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/703.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/770.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>25545个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">香水</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/523.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/920.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1094.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/52.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1452.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/158.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1084.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1602.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/702.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>16937个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">荷叶边</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/681.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/476.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1612.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/962.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1034.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/673.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1464.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/240.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/265.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>77600个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">欧美</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/1314.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1565.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/12.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1443.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1373.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/847.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/974.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1235.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/936.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>38046个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+
+
+<h2 class="grid_24 mag"><a href="" class="more">查看更多</a>复古</h2>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">复古</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/440.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/647.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1527.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1311.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/927.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/717.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1560.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/428.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/122.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>66136个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">指甲油</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/908.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1612.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1681.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1223.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1286.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1638.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/408.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/909.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1169.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>28671个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">镂空</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/205.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1267.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1490.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/178.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/897.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/643.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/13.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/557.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/588.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>93412个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">日系</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/101.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/689.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/423.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1580.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/133.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/811.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1483.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/663.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1145.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>37680个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">个性</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/23.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/276.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1123.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/687.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/218.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/798.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1077.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1320.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1247.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>24229个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">甜美</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/991.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1393.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/492.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1122.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/196.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1163.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/254.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1164.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1405.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>92456个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">荷叶边</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/1615.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/784.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1113.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1518.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/980.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/257.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1634.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/105.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1101.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>20063个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">口红</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/345.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1000.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/238.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1270.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1469.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1526.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1586.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1576.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1699.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>94091个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+
+
+<h2 class="grid_24 mag"><a href="" class="more">查看更多</a>复古</h2>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">印花</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/1194.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1586.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1468.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1645.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/966.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1012.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/320.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/452.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1172.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>18024个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">甜美</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/1581.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/565.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1027.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/608.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/415.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1633.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/165.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1641.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/4.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>91689个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">面膜</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/159.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/31.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/223.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1090.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1559.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1697.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1608.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/276.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/523.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>93048个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">祛痘</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/666.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/632.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1190.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/132.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1254.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1024.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/294.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1281.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/244.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>45478个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">雪纺</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/658.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/134.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1627.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/699.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1402.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/871.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1306.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/192.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/693.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>91554个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">复古</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/562.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/605.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1420.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/95.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/565.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/535.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1553.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1573.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/18.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>18018个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">香奈儿</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/1048.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1345.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/428.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/614.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/156.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/819.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/279.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/226.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/577.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>29350个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">平底鞋</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/1461.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/645.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1321.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/529.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/170.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1226.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1324.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/124.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/816.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>20922个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+<div class="clear"></div>
+
+
+<!---------------------------hack ie-------------------------->
+<div class="grid_18 mag_new_left" style="*width:720px; *margin-left:0; ">
+	<h2 class="grid_18 mag">新晋杂志</h2>
+		<div class="grid_6 s2 t alpha"><div class="p2 groupbox"><h3><a href="">OL</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/1308.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1057.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1124.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1503.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1135.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1537.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/804.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/326.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1452.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>50052个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+		<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">指甲油</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/272.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/604.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/771.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1474.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/176.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/908.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1671.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/520.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/941.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>85619个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+		<div class="grid_6 s2 t omega"><div class="p2 groupbox"><h3><a href="">裸色</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/1020.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1644.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/258.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/148.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/213.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/663.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/161.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/787.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/600.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>27039个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+		<div class="grid_6 s2 t alpha"><div class="p2 groupbox"><h3><a href="">手表</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/1114.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/141.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1142.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/451.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1448.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/898.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1627.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1526.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1646.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>27355个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+		<div class="grid_6 s2 t"><div class="p2 groupbox"><h3><a href="">双肩包</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/855.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1580.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/851.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1001.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/394.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/837.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1313.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1241.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1553.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>74383个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+		<div class="grid_6 s2 t omega"><div class="p2 groupbox"><h3><a href="">补水</a></h3>
+<a href="/share/" class="img">
+	<img src="{{static_url('garning/media/images/70_70/177.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/405.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1589.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1171.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/643.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/673.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/205.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1483.jpg')}}" alt="">
+	<img src="{{static_url('garning/media/images/70_70/1598.jpg')}}" alt="">
+</a>
+
+<p><a href="">去看看</a>85302个分享</p>
+<div class="clear"></div>
+
+
+<!--
+#Zencoding#
+(h3>a{衬衫})+(a>img*9)+p{123个分享}>a{去看看}
+--></div></div>
+</div>
+
+
+<div class="grid_6 mag_new_right" style="*width:240px; *margin-left:-5px; *margin-right:0;">
+	<div class="p2 t s">
+		<h3 class="mag">TOP10</h3>
+		<ul class="magtopten-list">
+			
+<li>
+	<b>1</b>
+	<a href="" class="img"><img src="{{static_url('garning/media/images/128_128/5.jpg')}}" alt="" width="48px" height="48px"></a>
+	<div>
+		<a href="">现世安稳岁月静好..</a>
+		<p>主编：<a href="./person/book.html">蘇蘇蘇3</a></p>
+		<p>粉丝：<a href="">396528</a></p>
+	</div>
+</li>			
+<li>
+	<b>1</b>
+	<a href="" class="img"><img src="{{static_url('garning/media/images/128_128/6.jpg')}}" alt="" width="48px" height="48px"></a>
+	<div>
+		<a href="">私有收藏夹</a>
+		<p>主编：<a href="./person/book.html">浅悦</a></p>
+		<p>粉丝：<a href="">303290</a></p>
+	</div>
+</li>			
+<li>
+	<b>1</b>
+	<a href="" class="img"><img src="{{static_url('garning/media/images/128_128/7.jpg')}}" alt="" width="48px" height="48px"></a>
+	<div>
+		<a href="">甜美日系控</a>
+		<p>主编：<a href="./person/book.html">陈寳寳</a></p>
+		<p>粉丝：<a href="">132692</a></p>
+	</div>
+</li>			
+<li>
+	<b>1</b>
+	<a href="" class="img"><img src="{{static_url('garning/media/images/128_128/6.jpg')}}" alt="" width="48px" height="48px"></a>
+	<div>
+		<a href="">跟我一起找同款</a>
+		<p>主编：<a href="./person/book.html">KHUNNIE</a></p>
+		<p>粉丝：<a href="">684320</a></p>
+	</div>
+</li>			
+<li>
+	<b>1</b>
+	<a href="" class="img"><img src="{{static_url('garning/media/images/128_128/5.jpg')}}" alt="" width="48px" height="48px"></a>
+	<div>
+		<a href="">❃文艺青年聚集地❃</a>
+		<p>主编：<a href="./person/book.html">KHUNNIE</a></p>
+		<p>粉丝：<a href="">33879</a></p>
+	</div>
+</li>			
+<li>
+	<b>1</b>
+	<a href="" class="img"><img src="{{static_url('garning/media/images/128_128/10.jpg')}}" alt="" width="48px" height="48px"></a>
+	<div>
+		<a href="">爱美丽的早春look</a>
+		<p>主编：<a href="./person/book.html">小狐狸西瓜</a></p>
+		<p>粉丝：<a href="">741095</a></p>
+	</div>
+</li>			
+<li>
+	<b>1</b>
+	<a href="" class="img"><img src="{{static_url('garning/media/images/128_128/8.jpg')}}" alt="" width="48px" height="48px"></a>
+	<div>
+		<a href="">黑天鹅</a>
+		<p>主编：<a href="./person/book.html">菠萝拌蜜</a></p>
+		<p>粉丝：<a href="">773861</a></p>
+	</div>
+</li>			
+<li>
+	<b>1</b>
+	<a href="" class="img"><img src="{{static_url('garning/media/images/128_128/1.jpg')}}" alt="" width="48px" height="48px"></a>
+	<div>
+		<a href="">现世安稳岁月静好喜..</a>
+		<p>主编：<a href="./person/book.html">袅袅香榭</a></p>
+		<p>粉丝：<a href="">438566</a></p>
+	</div>
+</li>			
+<li>
+	<b>1</b>
+	<a href="" class="img"><img src="{{static_url('garning/media/images/128_128/9.jpg')}}" alt="" width="48px" height="48px"></a>
+	<div>
+		<a href="">白菜帮</a>
+		<p>主编：<a href="./person/book.html">penguin</a></p>
+		<p>粉丝：<a href="">786205</a></p>
+	</div>
+</li>			
+<li>
+	<b>1</b>
+	<a href="" class="img"><img src="{{static_url('garning/media/images/128_128/3.jpg')}}" alt="" width="48px" height="48px"></a>
+	<div>
+		<a href="">极简主义</a>
+		<p>主编：<a href="./person/book.html">陈寳寳</a></p>
+		<p>粉丝：<a href="">123230</a></p>
+	</div>
+</li>		</ul>
+		<div class="clear"></div>
+	</div>
+
+</div></div>
+
+<!-- start footer -->
+<div class="clear"></div>
+<div class=" footer t p"><div class="container_24"><div class=" grid_24 "><div class="foot-nav">
+	<a href="" class="foot-nav-item-1">关于嘉宁</a>
+	<a href="" class="foot-nav-item-2">投资合作</a>
+	<a href="" class="foot-nav-item-3">联系我们</a>
+	<a href="" class="foot-nav-item-4">免责声明</a>
+	<a href="" class="foot-nav-item-5">帮助中心</a>
+	<a href="" class="foot-nav-item-6">模特精灵</a>
+	<a href="" class="foot-nav-item-7">投放广告</a>
+</div>
+<div class="partner">合作伙伴: 广州摄影网 梨花树网</div>
+<div class="copyright">Copyright &copy Garning.com All Rights Reseved&nbsp;<a href="">粤ICP备20090008号</a></div>
+</div></div></div>
+<!-- end footer -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4fb29e2cd465365d07f42f7a2894418d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

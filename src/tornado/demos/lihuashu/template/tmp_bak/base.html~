@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh" slick-uniqueid="1">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>{% block sitename %}梨花树{% end %} - {% block title %}分享艺术视觉盛宴{% end %}</title>
+
+	<meta name="keywords" content="{% block keywords %}梨花树,梨花树网,画板,家居,旅行,服饰搭配,发型,创意设计,旅行,街拍,摄影,婚纱,手工,时尚,{% end %}">
+	<meta name="description" content="{% block description %}提供艺术、绘画、电影、音乐等艺术相关的推荐、收藏评论，以及独特的艺术文化。{% end %}">
+	{% block css %}
+	<link type="text/css" href="{{static_url('media/css/main.dev.css')}}" rel="stylesheet" media="screen" />
+	{% end %}
+	
+	{% block js %}
+	<script type="text/javascript" src="{{static_url('media/js/jquery-1.7.1.min.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('media/js/jquery.isotope.min.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('media/js/jquery.endless-scroll-1.3.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('media/js/global.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('media/js/jquery.zxxbox.3.0-min.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('media/js/jquery.pageslide.js')}}"></script>	
+	{% end %}
+	
+	{% include "common/fuckie.html" %}
+	
+	{% include "common/appdatascript.html" %}
+</head>
+<body>
+{% block content %}梨花树艺术社区{% end %}
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<?php $urlname = $request -> param('id');?>
+
+<?php $cats_1 = LHS::cats(1);?>
+<div class="cats ">
+	<a href="<?php echo Url::site('all/all', true);?>" title="" class="<?php if($urlname == 'all' || !isset($urlname)):?>selected <?php endif;?> all"><span>全部</span></a>
+	<?php foreach ($cats_1 as $cat):?>
+		<a href="<?php echo Url::site('all/'.$cat['urlname'], true);?>" title="<?php echo $cat['title'];?>" class="<?php if($cat['urlname'] == $urlname):?>selected <?php endif;?><?php echo $cat['urlname'];?>"><span><?php echo $cat['name'];?></span></a>
+	<?php endforeach;?>
+</div>
+
+<?php $cats_2 = LHS::cats(2);?>
+<div class="cats ">
+	<?php foreach ($cats_2 as $cat):?>
+		<a href="<?php echo Url::site('all/'.$cat['urlname'], true);?>" title="<?php echo $cat['title'];?>" class="<?php if($cat['urlname'] == $urlname):?>selected <?php endif;?><?php echo $cat['urlname'];?>"><span><?php echo $cat['name'];?></span></a>
+	<?php endforeach;?>
+</div>
+
+<?php $cats_3 = LHS::cats(3);?>
+<div class="cats ">
+	<a href="<?php echo Url::site('favorite/beauty', true);?>" title="气质美女,纯美妹纸,俏皮女孩,性感美女,丝袜美女,泳装写真,制服诱惑,COS女王,童颜教主,大眼萝莉" class=" beauty"><span>美女</span></a>
+	<?php foreach ($cats_3 as $cat):?>
+		<a href="<?php echo Url::site('all/'.$cat['urlname'], true);?>" title="<?php echo $cat['title'];?>" class="<?php if($cat['urlname'] == $urlname):?>selected <?php endif;?><?php echo $cat['urlname'];?>"><span><?php echo $cat['name'];?></span></a>
+	<?php endforeach;?>
+</div>
+
+<div class="cats ">
+			<a href="http://localhost:88/lihuashu/all/taomm" title="" class="taomm"><span>淘女郎潮搭</span></a>
+			<a href="http://localhost:88/lihuashu/all/modeling_hair" title="头发造型,短发造型,新娘造型,发饰搭配,韩式编发,彩妆技巧,美容贴士,美甲教程,护肤心得,日系妆容,可爱妆容,非主流妆容" class="modeling_hair"><span>造型/妆发</span></a>
+			<a href="http://localhost:88/lihuashu/all/wedding_events" title="唯美婚纱,完美嫁衣,婚礼布置,婚礼现场,婚礼鲜花,婚礼钻戒,中式婚礼,西式婚礼,婚礼指南" class="wedding_events"><span>婚纱/婚礼</span></a>
+			<a href="http://localhost:88/lihuashu/all/apparel" title="服饰搭配,达人街拍,热门单品,潮流趋势,穿衣心得,奢品服饰,时尚资讯,美女街拍,明星街拍,欧美街拍,韩国街拍" class="apparel"><span>服饰/搭配/街拍</span></a>
+			<a href="http://localhost:88/lihuashu/all/kids" title="超萌写真,可爱宝贝,孩童趣事,童年玩物,童趣漫画,童年百态" class="kids"><span>童真</span></a>
+			<a href="http://localhost:88/lihuashu/all/diy_crafts" title="手工DIY,布艺玩偶,新奇玩具,搞怪玩具,编织技巧,废物利用,折纸大全" class="diy_crafts"><span>手工/布艺/玩物</span></a>
+	</div>

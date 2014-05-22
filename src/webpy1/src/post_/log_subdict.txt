@@ -1,0 +1,2298 @@
+------------
+stationdistance : 
+
+------------
+postRegLogin : 
+0
+------------
+BuildingEra : 
+10
+------------
+Title : 
+春城花园城三期
+------------
+xiaoqu : 
+春城花园城三期
+------------
+gongjiaozhan : 
+
+------------
+xianluzhoubian : 
+
+------------
+area : 
+120
+------------
+radioHasAccount : 
+1
+------------
+Phone : 
+13855698654
+------------
+huxingwei : 
+1
+------------
+type : 
+0
+------------
+diduan2 : 
+[|#|@]
+------------
+ObjectType : 
+3
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+ditiezhan : 
+
+------------
+gongjiaoxian : 
+
+------------
+PicDesc : 
+
+------------
+goblianxiren : 
+苏大生
+------------
+localArea : 
+1411
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+distancetime : 
+
+------------
+Content : 
+<SPAN id=comp-paste-div-700><font color='red'>花园城三期春城花园城三期春城春城花园城三期春城花园城三期春城花园城三期</font></SPAN>
+------------
+daxue : 
+
+------------
+diduan : 
+[|#|@]
+------------
+gobalsokey : 
+春城花园城三期|春城花园城三期|3居室,3居,3室|2层,2楼|500|120平米|普通住宅|简单装修
+------------
+IsBiz : 
+1
+------------
+PicPos : 
+0
+------------
+FitType : 
+2
+------------
+chanquan : 
+1
+------------
+dizhi : 
+
+------------
+fukuanfangshi : 
+1
+------------
+localDiduan : 
+5910
+------------
+Toward : 
+1
+------------
+xiaoqu_view : 
+春城花园城三期
+------------
+hiddenTextBoxJoinValue : 
+春城花园城三期:苏大生:liseor004
+------------
+ditiexian : 
+
+------------
+jushishuru : 
+3
+------------
+MinPrice : 
+500
+------------
+busdistance : 
+
+------------
+zonglouceng : 
+6
+======================================================
+------------
+postRegLogin : 
+0
+------------
+Title : 
+春城花园城三期
+------------
+stationdistance : 
+
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+radioHasAccount : 
+1
+------------
+dizhi : 
+
+------------
+distancetime : 
+
+------------
+xianluzhoubian : 
+
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+xiaoqu : 
+春城花园城三期
+------------
+fukuanfangshi : 
+1
+------------
+Content : 
+<SPAN id=comp-paste-div-700><font color='red'>花园城三期春城花园城三期春城春城花园城三期春城花园城三期春城花园城三期</font></SPAN>
+------------
+ditiezhan : 
+
+------------
+localDiduan : 
+5910
+------------
+daxue : 
+
+------------
+PicDesc : 
+
+------------
+zonglouceng : 
+6
+------------
+Toward : 
+1
+------------
+gongjiaoxian : 
+
+------------
+jushishuru : 
+3
+------------
+PicPos : 
+0
+------------
+MinPrice : 
+500
+------------
+gobalsokey : 
+3居室,3居,3室|2层,2楼|普通住宅|简单装修
+------------
+area : 
+120
+------------
+goblianxiren : 
+苏大生
+------------
+hiddenTextBoxJoinValue : 
+春城花园城三期::500:苏大生
+------------
+IsBiz : 
+1
+------------
+localArea : 
+1411
+------------
+ditiexian : 
+
+------------
+Phone : 
+13855698654
+------------
+gongjiaozhan : 
+
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+FitType : 
+2
+------------
+huxingwei : 
+1
+------------
+busdistance : 
+
+------------
+HireType : 
+2
+------------
+ObjectType : 
+3
+======================================================
+------------
+postRegLogin : 
+0
+------------
+Title : 
+春城花园城三期
+------------
+stationdistance : 
+
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+radioHasAccount : 
+1
+------------
+dizhi : 
+
+------------
+distancetime : 
+
+------------
+xianluzhoubian : 
+
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+xiaoqu : 
+春城花园城三期
+------------
+fukuanfangshi : 
+1
+------------
+Content : 
+<SPAN id=comp-paste-div-700><font color='red'>花园城三期春城花园城三期春城春城花园城三期春城花园城三期春城花园城三期</font></SPAN>
+------------
+ditiezhan : 
+
+------------
+localDiduan : 
+5910
+------------
+daxue : 
+
+------------
+PicDesc : 
+
+------------
+zonglouceng : 
+6
+------------
+Toward : 
+1
+------------
+gongjiaoxian : 
+
+------------
+jushishuru : 
+3
+------------
+PicPos : 
+0
+------------
+MinPrice : 
+500
+------------
+gobalsokey : 
+3居室,3居,3室|2层,2楼|普通住宅|简单装修
+------------
+area : 
+120
+------------
+goblianxiren : 
+苏大生
+------------
+hiddenTextBoxJoinValue : 
+春城花园城三期::500:苏大生
+------------
+IsBiz : 
+1
+------------
+localArea : 
+1411
+------------
+ditiexian : 
+
+------------
+Phone : 
+13855698654
+------------
+gongjiaozhan : 
+
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+FitType : 
+2
+------------
+huxingwei : 
+1
+------------
+busdistance : 
+
+------------
+HireType : 
+2
+------------
+ObjectType : 
+3
+======================================================
+------------
+postRegLogin : 
+0
+------------
+Title : 
+春城花园城三期
+------------
+stationdistance : 
+
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+radioHasAccount : 
+1
+------------
+dizhi : 
+
+------------
+distancetime : 
+
+------------
+xianluzhoubian : 
+
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+xiaoqu : 
+春城花园城三期
+------------
+fukuanfangshi : 
+1
+------------
+Content : 
+<SPAN id=comp-paste-div-700><font color='red'>花园城三期春城花园城三期春城春城花园城三期春城花园城三期春城花园城三期</font></SPAN>
+------------
+ditiezhan : 
+
+------------
+localDiduan : 
+5910
+------------
+daxue : 
+
+------------
+PicDesc : 
+
+------------
+zonglouceng : 
+6
+------------
+Toward : 
+1
+------------
+gongjiaoxian : 
+
+------------
+jushishuru : 
+3
+------------
+PicPos : 
+0
+------------
+MinPrice : 
+500
+------------
+gobalsokey : 
+3居室,3居,3室|2层,2楼|普通住宅|简单装修
+------------
+area : 
+120
+------------
+goblianxiren : 
+苏大生
+------------
+hiddenTextBoxJoinValue : 
+春城花园城三期::500:苏大生
+------------
+IsBiz : 
+1
+------------
+localArea : 
+1411
+------------
+ditiexian : 
+
+------------
+Phone : 
+13855698654
+------------
+gongjiaozhan : 
+
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+FitType : 
+2
+------------
+huxingwei : 
+1
+------------
+busdistance : 
+
+------------
+HireType : 
+2
+------------
+ObjectType : 
+3
+======================================================
+------------
+postRegLogin : 
+0
+------------
+Title : 
+高档小区精装三房两厅
+------------
+stationdistance : 
+
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+radioHasAccount : 
+1
+------------
+dizhi : 
+
+------------
+distancetime : 
+
+------------
+xianluzhoubian : 
+
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+xiaoqu : 
+春城花园城三期
+------------
+fukuanfangshi : 
+1
+------------
+Content : 
+<SPAN id=comp-paste-div-700>小区，管家式物业管理，家具家电全配套的，液晶电视，布衣沙发，装修很</SPAN>
+------------
+ditiezhan : 
+
+------------
+localDiduan : 
+5910
+------------
+daxue : 
+
+------------
+PicDesc : 
+
+------------
+zonglouceng : 
+6
+------------
+Toward : 
+1
+------------
+gongjiaoxian : 
+
+------------
+jushishuru : 
+3
+------------
+PicPos : 
+0
+------------
+MinPrice : 
+500
+------------
+gobalsokey : 
+3居室,3居,3室|2层,2楼|普通住宅|简单装修
+------------
+area : 
+120
+------------
+goblianxiren : 
+苏大生
+------------
+hiddenTextBoxJoinValue : 
+春城花园城三期::500:苏大生
+------------
+IsBiz : 
+1
+------------
+localArea : 
+1411
+------------
+ditiexian : 
+
+------------
+Phone : 
+13855698654
+------------
+gongjiaozhan : 
+
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+FitType : 
+2
+------------
+huxingwei : 
+1
+------------
+busdistance : 
+
+------------
+HireType : 
+2
+------------
+ObjectType : 
+3
+======================================================
+------------
+postRegLogin : 
+0
+------------
+Title : 
+高档小区精装三房两厅
+------------
+stationdistance : 
+
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+radioHasAccount : 
+1
+------------
+dizhi : 
+
+------------
+distancetime : 
+
+------------
+xianluzhoubian : 
+
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+xiaoqu : 
+春城花园城三期
+------------
+fukuanfangshi : 
+1
+------------
+Content : 
+<SPAN id=comp-paste-div-700>小区，管家式物业管理，家具家电全配套的，液晶电视，布衣沙发，装修很</SPAN>
+------------
+ditiezhan : 
+
+------------
+localDiduan : 
+5910
+------------
+daxue : 
+
+------------
+PicDesc : 
+
+------------
+zonglouceng : 
+6
+------------
+Toward : 
+1
+------------
+gongjiaoxian : 
+
+------------
+jushishuru : 
+3
+------------
+PicPos : 
+0
+------------
+MinPrice : 
+500
+------------
+gobalsokey : 
+3居室,3居,3室|2层,2楼|普通住宅|简单装修
+------------
+area : 
+120
+------------
+goblianxiren : 
+苏大生
+------------
+hiddenTextBoxJoinValue : 
+春城花园城三期::500:苏大生
+------------
+IsBiz : 
+1
+------------
+localArea : 
+1411
+------------
+ditiexian : 
+
+------------
+Phone : 
+13855698654
+------------
+gongjiaozhan : 
+
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+FitType : 
+2
+------------
+huxingwei : 
+1
+------------
+busdistance : 
+
+------------
+HireType : 
+2
+------------
+ObjectType : 
+3
+======================================================
+------------
+postRegLogin : 
+0
+------------
+Title : 
+高档小区精装三房两厅
+------------
+stationdistance : 
+
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+radioHasAccount : 
+1
+------------
+dizhi : 
+
+------------
+distancetime : 
+
+------------
+xianluzhoubian : 
+
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+xiaoqu : 
+春城花园城三期
+------------
+fukuanfangshi : 
+1
+------------
+Content : 
+<SPAN id=comp-paste-div-700>具家电全配套的，液晶电视，布衣沙发，装修很</SPAN>
+------------
+ditiezhan : 
+
+------------
+localDiduan : 
+5910
+------------
+daxue : 
+
+------------
+PicDesc : 
+
+------------
+zonglouceng : 
+6
+------------
+Toward : 
+1
+------------
+gongjiaoxian : 
+
+------------
+jushishuru : 
+3
+------------
+PicPos : 
+0
+------------
+MinPrice : 
+500
+------------
+gobalsokey : 
+3居室,3居,3室|2层,2楼|普通住宅|简单装修
+------------
+area : 
+120
+------------
+goblianxiren : 
+苏大生
+------------
+hiddenTextBoxJoinValue : 
+春城花园城三期::500:苏大生
+------------
+IsBiz : 
+1
+------------
+localArea : 
+1411
+------------
+ditiexian : 
+
+------------
+Phone : 
+13855698654
+------------
+gongjiaozhan : 
+
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+FitType : 
+2
+------------
+huxingwei : 
+1
+------------
+busdistance : 
+
+------------
+HireType : 
+2
+------------
+ObjectType : 
+3
+======================================================
+------------
+stationdistance : 
+
+------------
+postRegLogin : 
+0
+------------
+BuildingEra : 
+10
+------------
+Title : 
+高档小区精装三房两厅
+------------
+xiaoqu : 
+春城花园城三期
+------------
+gongjiaozhan : 
+
+------------
+xianluzhoubian : 
+
+------------
+area : 
+120
+------------
+radioHasAccount : 
+1
+------------
+Phone : 
+13855698654
+------------
+huxingwei : 
+1
+------------
+type : 
+0
+------------
+diduan2 : 
+[|#|@]
+------------
+ObjectType : 
+3
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+ditiezhan : 
+
+------------
+gongjiaoxian : 
+
+------------
+PicDesc : 
+
+------------
+goblianxiren : 
+苏大生
+------------
+localArea : 
+1411
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+distancetime : 
+
+------------
+Content : 
+<SPAN id=comp-paste-div-700>具家电全配套的，液晶电视，布衣沙发，装修很</SPAN>
+------------
+daxue : 
+
+------------
+diduan : 
+[|#|@]
+------------
+gobalsokey : 
+高档小区精装三房两厅|春城花园城三期|3居室,3居,3室|2层,2楼|500|120平米|普通住宅|简单装修
+------------
+IsBiz : 
+1
+------------
+PicPos : 
+0
+------------
+FitType : 
+2
+------------
+chanquan : 
+1
+------------
+dizhi : 
+
+------------
+fukuanfangshi : 
+1
+------------
+localDiduan : 
+5910
+------------
+Toward : 
+1
+------------
+xiaoqu_view : 
+春城花园城三期
+------------
+hiddenTextBoxJoinValue : 
+春城花园城三期:苏大生:liseor666
+------------
+ditiexian : 
+
+------------
+jushishuru : 
+3
+------------
+MinPrice : 
+500
+------------
+busdistance : 
+
+------------
+zonglouceng : 
+6
+======================================================
+------------
+stationdistance : 
+
+------------
+postRegLogin : 
+0
+------------
+BuildingEra : 
+10
+------------
+Title : 
+高档小区精装三房两厅
+------------
+xiaoqu : 
+春城花园城三期
+------------
+gongjiaozhan : 
+
+------------
+xianluzhoubian : 
+
+------------
+area : 
+120
+------------
+radioHasAccount : 
+1
+------------
+Phone : 
+13855698654
+------------
+huxingwei : 
+1
+------------
+type : 
+0
+------------
+diduan2 : 
+[|#|@]
+------------
+ObjectType : 
+3
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+ditiezhan : 
+
+------------
+gongjiaoxian : 
+
+------------
+PicDesc : 
+
+------------
+goblianxiren : 
+苏大生
+------------
+localArea : 
+1411
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+distancetime : 
+
+------------
+Content : 
+<SPAN id=comp-paste-div-700>高档小区精装三房两厅具家电全配套的，液晶电视，布衣沙发，装修很</SPAN>
+------------
+daxue : 
+
+------------
+diduan : 
+[|#|@]
+------------
+gobalsokey : 
+高档小区精装三房两厅|春城花园城三期|3居室,3居,3室|2层,2楼|500|120平米|普通住宅|简单装修
+------------
+IsBiz : 
+1
+------------
+PicPos : 
+0
+------------
+FitType : 
+2
+------------
+chanquan : 
+1
+------------
+dizhi : 
+
+------------
+fukuanfangshi : 
+1
+------------
+localDiduan : 
+5910
+------------
+Toward : 
+1
+------------
+xiaoqu_view : 
+春城花园城三期
+------------
+hiddenTextBoxJoinValue : 
+春城花园城三期:苏大生:liseor666
+------------
+ditiexian : 
+
+------------
+jushishuru : 
+3
+------------
+MinPrice : 
+500
+------------
+busdistance : 
+
+------------
+zonglouceng : 
+6
+======================================================
+------------
+stationdistance : 
+
+------------
+postRegLogin : 
+0
+------------
+BuildingEra : 
+10
+------------
+Title : 
+高档小区精装三房两厅
+------------
+xiaoqu : 
+春城花园城三期
+------------
+gongjiaozhan : 
+
+------------
+xianluzhoubian : 
+
+------------
+area : 
+120
+------------
+radioHasAccount : 
+1
+------------
+Phone : 
+13855698654
+------------
+huxingwei : 
+1
+------------
+type : 
+0
+------------
+diduan2 : 
+[|#|@]
+------------
+ObjectType : 
+3
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+ditiezhan : 
+
+------------
+gongjiaoxian : 
+
+------------
+PicDesc : 
+
+------------
+goblianxiren : 
+苏大生
+------------
+localArea : 
+1411
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+distancetime : 
+
+------------
+Content : 
+<SPAN id=comp-paste-div-700>高档小区精装三房两厅具家电全配套的，液晶电视，布衣沙发，装修很</SPAN>
+------------
+daxue : 
+
+------------
+diduan : 
+[|#|@]
+------------
+gobalsokey : 
+高档小区精装三房两厅|春城花园城三期|3居室,3居,3室|2层,2楼|500|120平米|普通住宅|简单装修
+------------
+IsBiz : 
+1
+------------
+PicPos : 
+0
+------------
+FitType : 
+2
+------------
+chanquan : 
+1
+------------
+dizhi : 
+
+------------
+fukuanfangshi : 
+1
+------------
+localDiduan : 
+5910
+------------
+Toward : 
+1
+------------
+xiaoqu_view : 
+春城花园城三期
+------------
+hiddenTextBoxJoinValue : 
+春城花园城三期:苏大生:liseor666
+------------
+ditiexian : 
+
+------------
+jushishuru : 
+3
+------------
+MinPrice : 
+500
+------------
+busdistance : 
+
+------------
+zonglouceng : 
+6
+======================================================
+------------
+postRegLogin : 
+0
+------------
+Title : 
+高档小区精装三房两厅
+------------
+stationdistance : 
+
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+radioHasAccount : 
+1
+------------
+dizhi : 
+
+------------
+distancetime : 
+
+------------
+xianluzhoubian : 
+
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+xiaoqu : 
+秀水苑
+------------
+fukuanfangshi : 
+1
+------------
+Content : 
+<SPAN id=comp-paste-div-700>高档小区精装三房两厅具家电全配套的，液晶电视，布衣沙发，装修很</SPAN>
+------------
+ditiezhan : 
+
+------------
+localDiduan : 
+5511
+------------
+daxue : 
+
+------------
+PicDesc : 
+
+------------
+zonglouceng : 
+6
+------------
+Toward : 
+1
+------------
+gongjiaoxian : 
+
+------------
+jushishuru : 
+3
+------------
+PicPos : 
+0
+------------
+MinPrice : 
+500
+------------
+gobalsokey : 
+3居室,3居,3室|2层,2楼|普通住宅|简单装修
+------------
+area : 
+120
+------------
+goblianxiren : 
+苏大生
+------------
+hiddenTextBoxJoinValue : 
+秀水苑::500:苏大生
+------------
+IsBiz : 
+1
+------------
+localArea : 
+11383
+------------
+ditiexian : 
+
+------------
+Phone : 
+13855698654
+------------
+gongjiaozhan : 
+
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+FitType : 
+2
+------------
+huxingwei : 
+1
+------------
+busdistance : 
+
+------------
+HireType : 
+2
+------------
+ObjectType : 
+3
+======================================================
+------------
+postRegLogin : 
+0
+------------
+Title : 
+高档小区精装三房两厅
+------------
+stationdistance : 
+
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+radioHasAccount : 
+1
+------------
+dizhi : 
+
+------------
+distancetime : 
+
+------------
+xianluzhoubian : 
+
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+xiaoqu : 
+秀水苑
+------------
+fukuanfangshi : 
+1
+------------
+Content : 
+<SPAN id=comp-paste-div-700>秀水苑高档小区精装，布衣沙发，装修很</SPAN>
+------------
+ditiezhan : 
+
+------------
+localDiduan : 
+5511
+------------
+daxue : 
+
+------------
+PicDesc : 
+
+------------
+zonglouceng : 
+6
+------------
+Toward : 
+1
+------------
+gongjiaoxian : 
+
+------------
+jushishuru : 
+3
+------------
+PicPos : 
+0
+------------
+MinPrice : 
+500
+------------
+gobalsokey : 
+3居室,3居,3室|2层,2楼|普通住宅|简单装修
+------------
+area : 
+120
+------------
+goblianxiren : 
+苏大生
+------------
+hiddenTextBoxJoinValue : 
+秀水苑::500:苏大生
+------------
+IsBiz : 
+1
+------------
+localArea : 
+11383
+------------
+ditiexian : 
+
+------------
+Phone : 
+13855698654
+------------
+gongjiaozhan : 
+
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+FitType : 
+2
+------------
+huxingwei : 
+1
+------------
+busdistance : 
+
+------------
+HireType : 
+2
+------------
+ObjectType : 
+3
+======================================================
+------------
+postRegLogin : 
+0
+------------
+Title : 
+高档小区精装三房两厅
+------------
+stationdistance : 
+
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+radioHasAccount : 
+1
+------------
+dizhi : 
+
+------------
+distancetime : 
+
+------------
+xianluzhoubian : 
+
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+xiaoqu : 
+秀水苑
+------------
+fukuanfangshi : 
+1
+------------
+Content : 
+<SPAN id=comp-paste-div-700>秀水苑高档小区精装，布衣沙发，装修很</SPAN>
+------------
+ditiezhan : 
+
+------------
+localDiduan : 
+5511
+------------
+daxue : 
+
+------------
+PicDesc : 
+
+------------
+zonglouceng : 
+6
+------------
+Toward : 
+1
+------------
+gongjiaoxian : 
+
+------------
+jushishuru : 
+3
+------------
+PicPos : 
+0
+------------
+MinPrice : 
+500
+------------
+gobalsokey : 
+3居室,3居,3室|2层,2楼|普通住宅|简单装修
+------------
+area : 
+120
+------------
+goblianxiren : 
+苏大生
+------------
+hiddenTextBoxJoinValue : 
+秀水苑::500:苏大生
+------------
+IsBiz : 
+1
+------------
+localArea : 
+11383
+------------
+ditiexian : 
+
+------------
+Phone : 
+13855698654
+------------
+gongjiaozhan : 
+
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+FitType : 
+2
+------------
+huxingwei : 
+1
+------------
+busdistance : 
+
+------------
+HireType : 
+2
+------------
+ObjectType : 
+3
+======================================================
+------------
+stationdistance : 
+
+------------
+postRegLogin : 
+0
+------------
+BuildingEra : 
+10
+------------
+Title : 
+高档小区精装三房两厅
+------------
+xiaoqu : 
+秀水苑
+------------
+gongjiaozhan : 
+
+------------
+xianluzhoubian : 
+
+------------
+area : 
+120
+------------
+radioHasAccount : 
+1
+------------
+Phone : 
+13855698654
+------------
+huxingwei : 
+1
+------------
+type : 
+0
+------------
+diduan2 : 
+[|#|@]
+------------
+ObjectType : 
+3
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+ditiezhan : 
+
+------------
+gongjiaoxian : 
+
+------------
+PicDesc : 
+
+------------
+goblianxiren : 
+苏大生
+------------
+localArea : 
+11383
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+distancetime : 
+
+------------
+Content : 
+<SPAN id=comp-paste-div-700>要求一年一付，不含物业费，次价格</SPAN>
+------------
+daxue : 
+
+------------
+diduan : 
+[|#|@]
+------------
+gobalsokey : 
+高档小区精装三房两厅|秀水苑|3居室,3居,3室|2层,2楼|500|120平米|普通住宅|简单装修
+------------
+IsBiz : 
+1
+------------
+PicPos : 
+0
+------------
+FitType : 
+2
+------------
+chanquan : 
+1
+------------
+dizhi : 
+
+------------
+fukuanfangshi : 
+1
+------------
+localDiduan : 
+5511
+------------
+Toward : 
+1
+------------
+xiaoqu_view : 
+秀水苑
+------------
+hiddenTextBoxJoinValue : 
+秀水苑:苏大生:liseor666
+------------
+ditiexian : 
+
+------------
+jushishuru : 
+3
+------------
+MinPrice : 
+500
+------------
+busdistance : 
+
+------------
+zonglouceng : 
+6
+======================================================
+------------
+stationdistance : 
+
+------------
+postRegLogin : 
+0
+------------
+BuildingEra : 
+10
+------------
+Title : 
+三房两厅高档小区精装
+------------
+xiaoqu : 
+秀水苑
+------------
+gongjiaozhan : 
+
+------------
+xianluzhoubian : 
+
+------------
+area : 
+120
+------------
+radioHasAccount : 
+1
+------------
+Phone : 
+13855698654
+------------
+huxingwei : 
+1
+------------
+type : 
+0
+------------
+diduan2 : 
+[|#|@]
+------------
+ObjectType : 
+3
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+ditiezhan : 
+
+------------
+gongjiaoxian : 
+
+------------
+PicDesc : 
+
+------------
+goblianxiren : 
+苏大生
+------------
+localArea : 
+
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+distancetime : 
+
+------------
+Content : 
+<SPAN id=comp-paste-div-700>高档小区精装要求一年一付，高档小区精装不含物业费，次价格</SPAN>
+------------
+daxue : 
+
+------------
+diduan : 
+[|#|@]
+------------
+gobalsokey : 
+三房两厅高档小区精装|秀水苑|3居室,3居,3室|2层,2楼|500|120平米|普通住宅|简单装修
+------------
+IsBiz : 
+1
+------------
+PicPos : 
+0
+------------
+FitType : 
+2
+------------
+chanquan : 
+1
+------------
+dizhi : 
+
+------------
+fukuanfangshi : 
+1
+------------
+localDiduan : 
+
+------------
+Toward : 
+1
+------------
+xiaoqu_view : 
+秀水苑
+------------
+hiddenTextBoxJoinValue : 
+秀水苑:苏大生:liseor666
+------------
+ditiexian : 
+
+------------
+jushishuru : 
+3
+------------
+MinPrice : 
+500
+------------
+busdistance : 
+
+------------
+zonglouceng : 
+6
+======================================================
+------------
+postRegLogin : 
+0
+------------
+Title : 
+三房两厅高档小区精装
+------------
+stationdistance : 
+
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+radioHasAccount : 
+1
+------------
+dizhi : 
+
+------------
+distancetime : 
+
+------------
+xianluzhoubian : 
+
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+xiaoqu : 
+秀水苑
+------------
+fukuanfangshi : 
+1
+------------
+Content : 
+<SPAN id=comp-paste-div-700>档小区精装不含物业费，次精装要求一年一付，高档小区精装不含物业费，次价格</SPAN>
+------------
+ditiezhan : 
+
+------------
+localDiduan : 
+
+------------
+daxue : 
+
+------------
+PicDesc : 
+
+------------
+zonglouceng : 
+6
+------------
+Toward : 
+1
+------------
+gongjiaoxian : 
+
+------------
+jushishuru : 
+3
+------------
+PicPos : 
+0
+------------
+MinPrice : 
+500
+------------
+gobalsokey : 
+3居室,3居,3室|2层,2楼|普通住宅|简单装修
+------------
+area : 
+120
+------------
+goblianxiren : 
+苏大生
+------------
+hiddenTextBoxJoinValue : 
+秀水苑::500:苏大生
+------------
+IsBiz : 
+1
+------------
+localArea : 
+
+------------
+ditiexian : 
+
+------------
+Phone : 
+13855698654
+------------
+gongjiaozhan : 
+
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+FitType : 
+2
+------------
+huxingwei : 
+1
+------------
+busdistance : 
+
+------------
+HireType : 
+2
+------------
+ObjectType : 
+3
+======================================================
+------------
+stationdistance : 
+
+------------
+postRegLogin : 
+0
+------------
+BuildingEra : 
+10
+------------
+Title : 
+精装三房两厅
+------------
+xiaoqu : 
+秀水苑
+------------
+gongjiaozhan : 
+
+------------
+xianluzhoubian : 
+
+------------
+area : 
+120
+------------
+radioHasAccount : 
+1
+------------
+Phone : 
+13855698654
+------------
+huxingwei : 
+1
+------------
+type : 
+0
+------------
+diduan2 : 
+[|#|@]
+------------
+ObjectType : 
+3
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+ditiezhan : 
+
+------------
+gongjiaoxian : 
+
+------------
+PicDesc : 
+
+------------
+goblianxiren : 
+苏大生
+------------
+localArea : 
+11383
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+distancetime : 
+
+------------
+Content : 
+<SPAN id=comp-paste-div-700>物业费，次价格</SPAN>
+------------
+daxue : 
+
+------------
+diduan : 
+[|#|@]
+------------
+gobalsokey : 
+精装三房两厅|秀水苑|3居室,3居,3室|2层,2楼|500|120平米|普通住宅|简单装修
+------------
+IsBiz : 
+1
+------------
+PicPos : 
+0
+------------
+FitType : 
+2
+------------
+chanquan : 
+1
+------------
+dizhi : 
+
+------------
+fukuanfangshi : 
+1
+------------
+localDiduan : 
+5511
+------------
+Toward : 
+1
+------------
+xiaoqu_view : 
+秀水苑
+------------
+hiddenTextBoxJoinValue : 
+秀水苑:苏大生:liseor666
+------------
+ditiexian : 
+
+------------
+jushishuru : 
+3
+------------
+MinPrice : 
+500
+------------
+busdistance : 
+
+------------
+zonglouceng : 
+6
+======================================================
+------------
+stationdistance : 
+
+------------
+postRegLogin : 
+0
+------------
+BuildingEra : 
+10
+------------
+Title : 
+精装三房两厅
+------------
+xiaoqu : 
+秀水苑
+------------
+gongjiaozhan : 
+
+------------
+xianluzhoubian : 
+
+------------
+area : 
+120
+------------
+radioHasAccount : 
+1
+------------
+Phone : 
+13855698654
+------------
+huxingwei : 
+1
+------------
+type : 
+0
+------------
+diduan2 : 
+[|#|@]
+------------
+ObjectType : 
+3
+------------
+fileUploadInput : 
+filename= Content-Type: application/octet-stream
+------------
+ditiezhan : 
+
+------------
+gongjiaoxian : 
+
+------------
+PicDesc : 
+
+------------
+goblianxiren : 
+苏大生
+------------
+localArea : 
+11383
+------------
+backFunction : 
+$.c.Uploader.finish
+------------
+huxingshi : 
+3
+------------
+HouseAllocation : 
+8
+------------
+huxingting : 
+2
+------------
+Floor : 
+2
+------------
+distancetime : 
+
+------------
+Content : 
+<SPAN id=comp-paste-div-700>物业费，次价格物业费，次价格物业费，次价格物业费，次价格</SPAN>
+------------
+daxue : 
+
+------------
+diduan : 
+[|#|@]
+------------
+gobalsokey : 
+精装三房两厅|秀水苑|3居室,3居,3室|2层,2楼|500|120平米|普通住宅|简单装修
+------------
+IsBiz : 
+1
+------------
+PicPos : 
+0
+------------
+FitType : 
+2
+------------
+chanquan : 
+1
+------------
+dizhi : 
+
+------------
+fukuanfangshi : 
+1
+------------
+localDiduan : 
+5511
+------------
+Toward : 
+1
+------------
+xiaoqu_view : 
+秀水苑
+------------
+hiddenTextBoxJoinValue : 
+秀水苑:苏大生:liseor666
+------------
+ditiexian : 
+
+------------
+jushishuru : 
+3
+------------
+MinPrice : 
+500
+------------
+busdistance : 
+
+------------
+zonglouceng : 
+6
+======================================================

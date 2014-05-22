@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block css %}
+    <link type="text/css" href="{{static_url('media/css/main.dev.css')}}" rel="stylesheet" media="screen" />
+    <link type="text/css" href="{{static_url('media/css/login.css')}}" rel="stylesheet" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" href="{{static_url('media/css/ie6.css')}}"><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="{{static_url('media/css/ie7.css')}}"><![endif]-->
+{% end %}
+
+{% block js %}
+    <script type="text/javascript" src="{{static_url('media/js/jquery-1.7.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('media/js/jquery.isotope.min.js')}}"></script>
+    <!--[if lt IE 7]><script src="{{static_url('media/js/ie6.js')}}"></script><![endif]-->
+{% end %}
+
+{% block content %}
+	<div id="page" >
+		<div id="signup">
+			<a href="{{ escape(handler.settings["site_host"]) }}"><h1 id="login_logo"></h1></a>
+			<div class="login_bar"></div>
+			<h3>嗨！你可以一分钟完成注册</h3>
+
+	<!--
+	<div class="social_buttons">
+		<div class="inset">
+			<a href="/lihuashu/oauth/weibo/signup" class="weibo login_button">
+				<div class="logo_wrapper">
+					<span class="logo"></span>
+				</div>
+				<span>用微博帐号注册</span>
+			</a>
+		</div>
+		<div style="margin-right:0" class="inset">
+			<a href="/lihuashu/oauth/douban/signup" class="douban login_button">
+				<div class="logo_wrapper">
+					<span class="logo"></span>
+				</div>
+				<span>用豆瓣帐号注册</span>
+			</a>
+		</div>
+		<div class="inset">
+			<a href="/lihuashu/oauth/renren/signup" class="renren login_button">
+				<div class="logo_wrapper">
+					<span class="logo"></span>
+				</div>
+				<span>用人人帐号注册</span>
+			</a>
+		</div>
+		<div style="margin-right:0" class="inset">
+			<a href="/lihuashu/oauth/qzone/signup" class="qzone login_button">
+				<div class="logo_wrapper">
+					<span class="logo"></span>
+				</div>
+				<span>用QQ帐号注册</span>
+			</a>
+		</div>
+	</div>
+	-->
+
+</div>
+<br>
+<div class="clear"></div>
+
+<div id="login">
+	<form id="auth_form" action="/signup/" method="post" class="Form FancyForm AuthForm">
+		<ul>
+			<li>
+				<div class="input ">
+					<input id="id_email" name="email" type="text" value="" placeholder="梨花树注册邮箱">
+					{{ xsrf_form_html() }}
+					<!--<label>梨花树注册邮箱</label>-->
+					<span class="fff"></span>
+					{% if errMsg['email'] %}
+					<div id="email_msgr" class="msgr left-arrow " style="display:block">
+						<span class="txt">{{ errMsg['email'] }}</span>
+						<span class="arrow">◣</span>
+						<span class="arrow-mask"></span>
+					</div>
+					{% end %}
+					
+				</div>
+			</li>
+			<li>
+				<div class="input">
+					<input id="id_password" name="password" type="password" placeholder="密码">
+					<!--<label>密码</label>-->
+					<span class="fff"></span>
+					{% if errMsg['password'] %}
+					<div id="email_msgr" class="msgr left-arrow " style="display:block">
+						<span class="txt">{{ errMsg['password'] }}</span>
+						<span class="arrow">◣</span>
+						<span class="arrow-mask"></span>
+					</div>
+					{% end %}
+					
+				</div>
+			</li>
+			<li>
+				<div class="input">
+					<input id="id_password_confirm" name="repassword" type="password" placeholder="再次输入密码">
+					<!--<label>再次输入密码</label>-->
+					<span class="fff"></span>
+				{% if errMsg['repassword'] %}
+					<div id="email_msgr" class="msgr left-arrow " style="display:block">
+						<span class="txt">{{ errMsg['repassword'] }}</span>
+						<span class="arrow">◣</span>
+						<span class="arrow-mask"></span>
+					</div>
+					{% end %}
+					
+				</div>
+			</li>		
+			<li>
+				<div class="input">
+					<input id="id_nickname" name="nickname" type="text" placeholder="输入昵称">
+					<!--<label>输入昵称</label>-->
+					<span class="fff"></span>
+					{% if errMsg['nickname'] %}
+					<div id="email_msgr" class="msgr left-arrow " style="display:block">
+						<span class="txt">{{ errMsg['nickname'] }}</span>
+						<span class="arrow">◣</span>
+						<span class="arrow-mask"></span>
+					</div>
+					{% end %}
+					
+				</div>
+			</li>
+		</ul>
+		<div class="non_inputs">
+			<a id="login_btn" href="#" onclick="$('#auth_form').submit(); return false; " class="btn btn18 wbtn">
+				<strong>注册</strong>
+				<span></span>
+			</a>
+			<p>
+				<a id="invite_me" href="/login/" class="less">已经有梨花树帐号？立即登录</a>
+			</p>
+
+		</div>
+	</form>
+	<div id="reset_msg" style="display: none;" class="success"></div>
+</div>
+
+</div>
+	<div class="clear"></div>
+	<div id="page_overlay" style="display: none;" class="overlay"></div>
+{% end %}
+{% block script %}
+
+<script type="text/javascript">
+$("#auth_form #id_email").bind('keyup',function(e) {
+    if(e.keyCode==13){
+        $('#id_password').focus();
+    } 
+});
+
+$("#auth_form #id_password").bind('keyup',function(e) {
+    if(e.keyCode==13){
+        $('#id_password_confirm').focus();
+    } 
+});
+
+$("#auth_form #id_password_confirm").bind('keyup',function(e) {
+    if(e.keyCode==13){
+        $('#auth_form').submit();
+    } 
+});
+
+</script>	
+
+{% end %}

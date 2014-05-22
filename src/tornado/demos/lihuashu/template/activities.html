@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+	<div id="page" class="view">
+		<div id="msgl">
+    <div id="msgl_header">
+        <div class="bg">
+        </div>
+        <div class="fg">
+            <div class="wrapper">
+                <a id="msgl_logo" href="/"><img src="{{static_url("media/img/logo_grey.png")}}" width="98" height="34" alt=""></a>
+                <a id="msgl_hide" href="javascript:parent.$.pageslide.close();" class="pageslide-close" title="返回">返回</a>
+            </div>
+        </div>
+    </div>
+    <div id="msgl_body">
+        <div class="wrapper">
+            <ul class="nav">
+            	
+            	 <li class="mentions">
+                    <a href="/message/mentions/">@提到我的</a>
+                </li>
+                <li class="activities current">
+                    <a href="/message/activities/">我的消息</a>
+                </li>
+            </ul>
+            <ol class="activities">
+            </ol>
+            <a class="load-more"><strong>更多</strong><span></span></a>
+        </div>
+    </div>
+</div>
+	</div>de "common/elevator.html" %}
+	</div>
+{% end %}

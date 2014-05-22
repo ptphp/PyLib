@@ -1,0 +1,33 @@
+<div class="cats ">
+	<a href="/" title="" class="{% if urlname == 'All' %}selected {% end %}all"><span>全部</span></a>
+		
+	{% for cat in cats['cat1'] %}
+		<a href="/category/{{ cat['key'] }}/" title="{{ cat['title'] }}" 
+			class="{% if urlname == cat['key'] %}selected {% end %}{{ cat['key'] }}">
+				<span>{{ cat['name'] }}</span></a>
+	{% end %}
+</div>
+
+<div class="cats ">
+	{% for cat in cats['cat2'] %}
+		<a href="/category/{{ cat['key'] }}/" title="{{ cat['title'] }}" 
+			class="{% if urlname == cat['key'] %}selected {% end %}{{ cat['key'] }}">
+				<span>{{ cat['name'] }}</span></a>
+	{% end %}
+</div>
+<div class="cats ">
+	{% for cat in cats['cat3'] %}
+		<a href="/category/{{ cat['key'] }}/" title="{{ cat['title'] }}" 
+			class="{% if urlname == cat['key'] %}selected {% end %}{{ cat['key'] }}">
+				<span>{{ cat['name'] }}</span></a>
+	{% end %}
+</div>
+
+
+<div class="cats ">
+	{% for cat in cats['cat4'] %}
+		<a href="/category/{{ cat['key'] }}/" title="{{ cat['title'] }}" 
+			class="{% if urlname == cat['key'] %}selected {% end %}{{ cat['key'] }}">
+				<span>{{ cat['name'] }}</span></a>
+	{% end %}
+</div>

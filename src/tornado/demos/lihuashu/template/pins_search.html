@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div id="page">
+		{% include "common/header.html" %}		
+		<div id="ctx_bar" class="board">
+	        <p>
+	            <a href="/"><span class="selected">采集</span></a>&nbsp;
+	            <span class="greyselected">— 搜索结果: <span class="hilight">{{query}}<span></span></span></span>
+	        </p>
+	    </div>
+		<div class="wrapper">
+			<div id="waterfall">
+					{{marks}}
+			</div>
+		    <div class="clear"></div>
+		    {% include "sl/loadingbar.html" %}		
+		</div>
+
+		<div class="clear"></div>
+		<div id="page_overlay" style="display: none;" class="overlay"></div>
+		{% include "common/elevator.html" %}
+	</div>
+{% end %}

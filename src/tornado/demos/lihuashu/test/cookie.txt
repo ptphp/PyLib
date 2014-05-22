@@ -1,0 +1,9 @@
+# Netscape HTTP Cookie File
+# http://www.netscape.com/newsref/std/cookie_spec.html
+# This is a generated file!  Do not edit.
+
+localhost.local	FALSE	/	FALSE	1345271116	_xsrf	838833aca769477e97683a5059cfcd69
+localhost.local	FALSE	/	FALSE	1345362205	user_email	"ZmFuZ3RlZUBxcS5jb20=|1342770205|61471663e8fd1bac2e7d5fd2d7b60c5065e6e53a"
+localhost.local	FALSE	/	FALSE	1345362205	user_key	"ZDljOTNmMTBkMjM5MTFlMThkOTAwMDBjMjkxZmQ1YzA=|1342770205|1e3dcdde95c2c853bad7e77182517beefcb49f68"
+localhost.local	FALSE	/	FALSE	1345362205	user_nickname	am9zZXBo|1342770205|75081bc6c5731eea2087d9bc18503060928cccbc
+localhost.local	FALSE	/	FALSE	1345362205	user_urlname	am9zZXBo|1342770205|59497a52910dee550410e09f5d6d7c27358c13d1

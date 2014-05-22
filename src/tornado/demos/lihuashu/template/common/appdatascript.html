@@ -1,0 +1,15 @@
+<script type="text/javascript">
+	var app          = app || {};
+	app["host"]      = "{{ escape(handler.settings["site_host"]) }}";
+	app["imghost"]   = "{{ escape(handler.settings["site_imgserver"]) }}";
+	app["timestamp"] = {{ escape(handler.settings["site_timenow"]) }};
+	app["settings"]  = {};	
+	{% block logined %}
+	app["logined"]  = false;		
+	{% end %}	
+	app["req"]       = {"sid":"","user":{}};
+	app["page"] = {
+		"url": "/"
+	};
+	//alert(app["logined"]);
+</script>

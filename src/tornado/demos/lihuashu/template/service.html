@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block css %}
+<style type="text/css">
+      .bar {
+        width: 100%;
+      }
+      
+      #progress {
+        background: #eee;
+        border: 1px solid #222;
+        margin-top: 20px;
+      }
+      #progressbar {
+        width: 0px;
+        height: 24px;
+        background: #98D718;
+      }
+</style>
+{% end %}
+
+{% block content %}
+{% include "ajax/ajaxupload.html" %}
+    <script type="text/javascript">
+      $(function() {
+        $('form').uploadProgress({
+          /* scripts locations for safari */
+          jqueryPath: "{{static_url('media/js/jquery-1.7.1.min.js')}}",
+          uploadProgressPath: "{{static_url('media/js/jquery.uploadProgress.js')}}",
+          start:function(){},
+          uploading: function(upload) {$('#percents').html(upload.percents+'%');},
+          interval: 2000
+          });
+      });
+    </script>
+
+    <form id="upload" enctype="multipart/form-data" action="/upload/" method="post">
+        <input name="ifile" type="file"/>
+        {{ xsrf_form_html() }}
+        <input type="submit" value="Upload"/>
+      </form>
+    
+      <div id="uploading">
+        <div id="progress" class="bar">
+          <div id="progressbar">&nbsp;</div>
+        </div>
+      </div>
+    <div id="percents"></div>
+
+{% end %}

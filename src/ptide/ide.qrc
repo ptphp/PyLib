@@ -1,0 +1,13 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>images/new.png</file>
+    <file>images/print.png</file>
+    <file>images/save.png</file>
+    <file>images/undo.png</file>    
+    <file>images/back.png</file>
+    <file>images/stop.png</file>
+    <file>images/reload.png</file>
+    <file>images/next.png</file>
+    <file>images/home.png</file>
+</qresource>
+</RCC>

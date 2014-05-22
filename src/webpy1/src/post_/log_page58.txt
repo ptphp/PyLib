@@ -1,0 +1,187 @@
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZGyrnCa6v1AL1915zlFdVS5SsCei" />
+</div>
+
+    
+<script>parent.window.location.href='http://my.58.com/InfoPressSuccess/?infoid=6356759235720&cityinfo=sh&cateinfo=%e6%88%bf%e4%ba%a7%e4%bf%a1%e6%81%af-%e4%ba%8c%e6%89%8b%e6%88%bf&type=0&postsms=0'</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZGyrnCa6v1AL1915zlFdVS5SsCei" />
+</div>
+
+    
+<script>parent.window.location.href='http://my.58.com/InfoPressSuccess/?infoid=6356766799495&cityinfo=sh&cateinfo=%e6%88%bf%e4%ba%a7%e4%bf%a1%e6%81%af-%e7%a7%9f%e6%88%bf&type=0&postsms=0'</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZGyrnCa6v1AL1915zlFdVS5SsCei" />
+</div>
+
+    
+<script>var errorInfo;try{if(parent){errorInfo=parent.$.c.Error;}else{errorInfo=$.c.Error;}}catch(ex){errorInfo=$.c.Error;}if(!errorInfo) { errorInfo = $.c.Error; } errorInfo.S_Message({'t':'INFOREPEATE','Order':'1','msg':['这条信息已经被您自己或别人发布过，请返回修改这条信息的详细描述！'],'user':{'uid':56597921,'uname':'liseor004','ucr':10,'maxpostcount':0,'curpostcount':0,'curcate':'租房'},'cb':'1'});</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZGyrnCa6v1AL1915zlFdVS5SsCei" />
+</div>
+
+    
+<script>var errorInfo;try{if(parent){errorInfo=parent.$.c.Error;}else{errorInfo=$.c.Error;}}catch(ex){errorInfo=$.c.Error;}if(!errorInfo) { errorInfo = $.c.Error; } errorInfo.S_Message({'t':'INFOREPEATE','Order':'1','msg':['这条信息已经被您自己或别人发布过，请返回修改这条信息的详细描述！'],'user':{'uid':56597921,'uname':'liseor004','ucr':10,'maxpostcount':0,'curpostcount':0,'curcate':'租房'},'cb':'1'});</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZGyrnCa6v1AL1915zlFdVS5SsCei" />
+</div>
+
+    
+<script>parent.window.location.href='http://my.58.com/InfoPressSuccess/?infoid=6356793201026&cityinfo=sh&cateinfo=%e6%88%bf%e4%ba%a7%e4%bf%a1%e6%81%af-%e7%a7%9f%e6%88%bf&type=0&postsms=0'</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZGyrnCa6v1AL1915zlFdVS5SsCei" />
+</div>
+
+    
+<script>var errorInfo;try{if(parent){errorInfo=parent.$.c.Error;}else{errorInfo=$.c.Error;}}catch(ex){errorInfo=$.c.Error;}if(!errorInfo) { errorInfo = $.c.Error; } errorInfo.S_Message({'t':'INFOREPEATE','Order':'1','msg':['这条信息已经被您自己或别人发布过，请返回修改这条信息的详细描述！'],'user':{'uid':54512737286,'uname':'liseor666','ucr':10,'maxpostcount':0,'curpostcount':0,'curcate':'租房'},'cb':'1'});</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZGyrnCa6v1AL1915zlFdVS5SsCei" />
+</div>
+
+    
+<script>parent.window.location.href='http://my.58.com/InfoPressSuccess/?infoid=6356810196232&cityinfo=sh&cateinfo=%e6%88%bf%e4%ba%a7%e4%bf%a1%e6%81%af-%e7%a7%9f%e6%88%bf&type=0&postsms=0'</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZGyrnCa6v1AL1915zlFdVS5SsCei" />
+</div>
+
+    
+<script>var errorInfo;try{if(parent){errorInfo=parent.$.c.Error;}else{errorInfo=$.c.Error;}}catch(ex){errorInfo=$.c.Error;}if(!errorInfo) { errorInfo = $.c.Error; } errorInfo.S_Message({'t':'INFOREPEATE','Order':'1','msg':['这条信息已经被您自己或别人发布过，请返回修改这条信息的详细描述！'],'user':{'uid':54512737286,'uname':'liseor666','ucr':10,'maxpostcount':0,'curpostcount':0,'curcate':'二手房'},'cb':'1'});</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZGyrnCa6v1AL1915zlFdVS5SsCei" />
+</div>
+
+    
+<script>parent.window.location.href='http://my.58.com/InfoPressSuccess/?infoid=6356806350598&cityinfo=sh&cateinfo=%e6%88%bf%e4%ba%a7%e4%bf%a1%e6%81%af-%e4%ba%8c%e6%89%8b%e6%88%bf&type=0&postsms=0'</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZJwlzxasoBN8fcWZ2ThU38zmhmLy" />
+</div>
+
+    
+<script>var errorInfo;try{if(parent){errorInfo=parent.$.c.Error;}else{errorInfo=$.c.Error;}}catch(ex){errorInfo=$.c.Error;}if(!errorInfo) { errorInfo = $.c.Error; } errorInfo.S_Message({'t':'INFOREPEATE','Order':'1','msg':['这条信息已经被您自己或别人发布过，请返回修改这条信息的详细描述！'],'user':{'uid':54512737286,'uname':'liseor666','ucr':10,'maxpostcount':0,'curpostcount':0,'curcate':'二手房'},'cb':'1'});</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZJwlzxasoBN8fcWZ2ThU38zmhmLy" />
+</div>
+
+    
+<script>var errorInfo;try{if(parent){errorInfo=parent.$.c.Error;}else{errorInfo=$.c.Error;}}catch(ex){errorInfo=$.c.Error;}if(!errorInfo) { errorInfo = $.c.Error; } errorInfo.S_Message({'t':'INFOREPEATE','Order':'1','msg':['这条信息已经被您自己或别人发布过，请返回修改这条信息的详细描述！'],'user':{'uid':54512737286,'uname':'liseor666','ucr':10,'maxpostcount':0,'curpostcount':0,'curcate':'租房'},'cb':'1'});</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZJwlzxasoBN8fcWZ2ThU38zmhmLy" />
+</div>
+
+    
+<script>parent.window.location.href='http://my.58.com/InfoPressSuccess/?infoid=6357022664968&cityinfo=su&cateinfo=%e6%88%bf%e4%ba%a7%e4%bf%a1%e6%81%af-%e7%a7%9f%e6%88%bf&type=0&postsms=0'</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZJwlzxasoBN8fcWZ2ThU38zmhmLy" />
+</div>
+
+    
+<script>parent.window.location.href='http://my.58.com/InfoPressSuccess/?infoid=6357050140679&cityinfo=su&cateinfo=%e6%88%bf%e4%ba%a7%e4%bf%a1%e6%81%af-%e4%ba%8c%e6%89%8b%e6%88%bf&type=0&postsms=0'</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZJwlzxasoBN8fcWZ2ThU38zmhmLy" />
+</div>
+
+    
+<script>parent.window.location.href='http://my.58.com/InfoPressSuccess/?infoid=6357108419844&cityinfo=su&cateinfo=%e6%88%bf%e4%ba%a7%e4%bf%a1%e6%81%af-%e4%ba%8c%e6%89%8b%e6%88%bf&type=0&postsms=0'</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZJwlzxasoBN8fcWZ2ThU38zmhmLy" />
+</div>
+
+    
+<script>parent.window.location.href='http://my.58.com/InfoPressSuccess/?infoid=6357103743878&cityinfo=su&cateinfo=%e6%88%bf%e4%ba%a7%e4%bf%a1%e6%81%af-%e7%a7%9f%e6%88%bf&type=0&postsms=0'</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZJwlzxasoBN8fcWZ2ThU38zmhmLy" />
+</div>
+
+    
+<script>parent.$.c.Error.showError('补充说明不足10个字');</script></form>
+======================================================
+
+    <script>document.domain="58.com"</script>
+
+    <form name="form1" method="post" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxNDcyMzQ4MTVkZJwlzxasoBN8fcWZ2ThU38zmhmLy" />
+</div>
+
+    
+<script>parent.window.location.href='http://my.58.com/InfoPressSuccess/?infoid=6357274449029&cityinfo=su&cateinfo=%e6%88%bf%e4%ba%a7%e4%bf%a1%e6%81%af-%e4%ba%8c%e6%89%8b%e6%88%bf&type=0&postsms=0'</script></form>
+======================================================

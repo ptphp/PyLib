@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN"/>
+<title>GARNING!</title>
+
+
+
+<meta name="description" content="GARNING," />
+<link type="text/css" href="{{static_url('garning/media/css/common.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/garning.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/reg.css')}}" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.js')}}"></script>
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.zxxbox.3.0.js')}}"></script>
+</head>
+<body>
+<!-- start header -->
+<div class="header-wraper container_24">
+	<div class="header"><div class="logo grid_13 "><h1><a href="/">GARNING.COM</a></h1></div>
+<div class="search-bar grid_8 alpha">
+	<form action="/search/" method="post" name="search" id="search">
+	<input class="input" name="keyword" type="text" id="keyword" value="" style="float:left;" placeholder="搜索">
+	<input class="submit" type="submit" value=""></input>
+	</form>
+</div>
+<div class="header-login grid_3">
+	<div class="r">
+		<a href="/login/" class="login-btn">登录</a>
+		<a href="/register/" class="regist-btn">注册</a>
+	</div>
+</div></div>
+</div>
+<!-- end .header -->
+
+<!-- start navbar -->
+<div class="clear"></div>
+<div class="navbar-wraper"><div class="container_24"><div class="grid_24 navbar">
+<ul>
+	<li><a href="/">首页</a></li>
+	<li><a href="/magazine/">杂志</a></li>
+	<li><a href="/recommend/">推荐</a></li>
+	<li><a href="/model/">模特</a></li>
+	<li><a href="/preferential/">优惠</a></li>
+	<li><a href="/groupbuy/">团购</a></li>
+	<li class = "on"><a href="/shop/">商家</a></li>
+</ul>
+</div></div></div>
+<!-- end navbar -->
+
+<div class="clear"></div>
+<div class="main-wraper container_24">
+<div class="grid_24">
+	<div class="top-shop-header p t s">
+		<div class="info">
+			时尚编辑也网购？美容达人也上网买保养品？
+			论坛里的搭配红人天天都淘宝？她们都去哪里逛？<br>
+			
+			她们都潜伏在嘉宁网分享宝贝！嘉宁网精选时尚MM们的私房推荐，
+			为你奉上好店100，让你立刻变身潮爆时尚买手！<br>
+		</div>
+	</div>
+</div>
+
+<div class="grid_24">
+<div class="grid_5 alpha">
+		<div class="p t s top-shop-cat">
+			<div class="item"><h3><a href="" class="name current">全部精选</a></h3></div>
+<div class="item">
+	<h3><a href="" class="name ">风格</a></h3>
+	<ul>
+		<li><a href="">欧美混搭</a></li>
+		<li><a href="">高街休闲</a></li>
+		<li><a href="">日韩杂志款</a></li>
+		<li><a href="">欧美混搭</a></li>
+	</ul>
+</div>
+<div class="clear"></div>
+
+<div class="item">
+	<h3><a href="" class="name  current-2">看点</a></h3>
+	<ul>
+		<li><a href="">手套</a></li>
+		<li><a href="">小清新</a></li>
+		<li><a href="">高街休闲</a></li>
+		<li><a href="">欧美混搭</a></li>
+	</ul>
+</div>
+<div class="clear"></div>		</div>
+		
+</div>
+
+
+<div class="grid_19 omega" style="overflow:hidden;*margin-right:-12px; *margin-left:-3px;">
+	<div class="p t s" style="*padding:10px">
+		<div class="clear"></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">裳品荟</h4>
+	<div class="stat">
+		推荐人数：<span>3385</span><br>
+		店铺看点：
+		<a href="">时尚</a>
+		<a href="">几何</a>
+		<a href="">高跟鞋</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/43.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/21.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/53.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">啦啦小牛 MISS lala 带一点小欧美的啦啦..</h4>
+	<div class="stat">
+		推荐人数：<span>5687</span><br>
+		店铺看点：
+		<a href="">时尚</a>
+		<a href="">指甲油</a>
+		<a href="">拼色</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/9.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/26.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/24.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">ROCKLIFE 外贸日单欧单韩单女装 古董包包..</h4>
+	<div class="stat">
+		推荐人数：<span>4858</span><br>
+		店铺看点：
+		<a href="">简约</a>
+		<a href="">假领子</a>
+		<a href="">毛衣</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/52.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/3.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/26.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">瓦萨比★真正韩国人开的店铺★</h4>
+	<div class="stat">
+		推荐人数：<span>3543</span><br>
+		店铺看点：
+		<a href="">荷叶边</a>
+		<a href="">裸色</a>
+		<a href="">宽手镯</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/2.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/34.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/38.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">jwl旗舰店</h4>
+	<div class="stat">
+		推荐人数：<span>4778</span><br>
+		店铺看点：
+		<a href="">雪纺</a>
+		<a href="">家居服</a>
+		<a href="">印花</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/55.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/32.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/17.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">SUKIIRED：A SHOP ABOUT THE FASHION WE WEAR</h4>
+	<div class="stat">
+		推荐人数：<span>3292</span><br>
+		店铺看点：
+		<a href="">荷叶边</a>
+		<a href="">资生堂</a>
+		<a href="">牛仔裤</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/24.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/6.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/48.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">啦啦小牛 MISS lala 带一点小欧美的啦啦..</h4>
+	<div class="stat">
+		推荐人数：<span>2881</span><br>
+		店铺看点：
+		<a href="">指甲油</a>
+		<a href="">民族</a>
+		<a href="">OL</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/35.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/25.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/27.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">★★★黑桃皇后★★★12月16日大量冬装上..</h4>
+	<div class="stat">
+		推荐人数：<span>3035</span><br>
+		店铺看点：
+		<a href="">韩系</a>
+		<a href="">毛线帽</a>
+		<a href="">祛痘</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/38.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/18.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/5.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">DAJINGSHOP(大竟店) :圣诞节前新品即将上..</h4>
+	<div class="stat">
+		推荐人数：<span>4152</span><br>
+		店铺看点：
+		<a href="">牛仔裤</a>
+		<a href="">韩系</a>
+		<a href="">唇膏</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/44.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/15.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/55.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">jwl旗舰店</h4>
+	<div class="stat">
+		推荐人数：<span>3436</span><br>
+		店铺看点：
+		<a href="">高跟鞋</a>
+		<a href="">TOPSHOP</a>
+		<a href="">袜套</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/52.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/41.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/18.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">啦啦小牛 MISS lala 带一点小欧美的啦啦..</h4>
+	<div class="stat">
+		推荐人数：<span>4588</span><br>
+		店铺看点：
+		<a href="">保湿</a>
+		<a href="">眼影</a>
+		<a href="">ZA</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/3.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/6.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/34.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">裳品荟</h4>
+	<div class="stat">
+		推荐人数：<span>5777</span><br>
+		店铺看点：
+		<a href="">资生堂</a>
+		<a href="">风衣</a>
+		<a href="">高跟鞋</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/5.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/29.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/45.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">福佑居 源自上海的高端珠宝首饰</h4>
+	<div class="stat">
+		推荐人数：<span>4020</span><br>
+		店铺看点：
+		<a href="">手表</a>
+		<a href="">毛线帽</a>
+		<a href="">毛衣</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/37.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/29.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/45.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">miss Y miss &amp; 错过Y小姐</h4>
+	<div class="stat">
+		推荐人数：<span>4032</span><br>
+		店铺看点：
+		<a href="">卫衣</a>
+		<a href="">TOPSHOP</a>
+		<a href="">手表</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/33.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/31.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/43.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">jwl旗舰店</h4>
+	<div class="stat">
+		推荐人数：<span>2444</span><br>
+		店铺看点：
+		<a href="">时尚</a>
+		<a href="">裸色</a>
+		<a href="">个性</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/21.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/2.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/48.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="grid_9"><div class="shop_item">
+	<a href="" class="click_area" style="display: none;"></a>
+	<a href="" class="link_btn" style="height: 199px; display: none; "></a>
+	<h4 class="title">LELESHOP "包"裹你的秘密 仅12.12新品八</h4>
+	<div class="stat">
+		推荐人数：<span>2534</span><br>
+		店铺看点：
+		<a href="">Dior</a>
+		<a href="">口红</a>
+		<a href="">雪纺</a>
+	</div>
+	<div class="goods_list">
+		<img src="{{static_url('garning/media/images/90_90/11.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/5.jpg')}}" alt="">
+		<img src="{{static_url('garning/media/images/90_90/34.jpg')}}" alt="">
+	</div>
+</div></div>
+		<div class="clear"></div>
+
+		<div class="c">
+	<div id="pageNav" class="bgcnt">
+		<a class="currentpage">1</a>
+		<a href="">2</a>
+		<a href="">3</a>
+		<a href="">4</a>
+		<a href="">5</a>
+		<a href="">6</a>
+		<a href="">7</a>
+		<a href="">8</a>
+		<a href="">9</a>
+		<i>...</i>
+		<a href="">203</a>
+		<a href="" class="pageNext">下一页&gt;</a>
+		<a href="" style="background: none; border: none; height: 58px; width: 55px; position: absolute; right: 0; top: 0;"> </a>
+	</div>
+</div>		<div class="clear"></div>
+		<div class="shopDarenbot">
+	<h2 class="shopDarenbot_title f14"><span style=" padding-right: 5px">
+		<a href="">更多&gt;&gt;</a></span>最新分享的宝贝</h2>
+	<div class="shop_daren">
+		<ul class="darenShare">
+			<li><img src="{{static_url('garning/media/images/120_120/1.jpg')}}" alt=""></li>
+			<li><img src="{{static_url('garning/media/images/120_120/3.jpg')}}" alt=""></li>
+			<li><img src="{{static_url('garning/media/images/120_120/3.jpg')}}" alt=""></li>
+			<li><img src="{{static_url('garning/media/images/120_120/2.jpg')}}" alt=""></li>
+			<li><img src="{{static_url('garning/media/images/120_120/3.jpg')}}" alt=""></li>
+		</ul>
+	</div>
+	<div class="follow_brand">
+		达人最关注的品牌：
+		<a href="">古琦</a>
+		<a href="">Zara</a>
+		<a href="Chanel">Chanel</a>
+		<a href="">普拉达</a>
+		<a href="H%26M">H&amp;M</a>
+		<a href="GAP">GAP</a>
+		<a href="">Mango</a>
+		<a href="">Diesel</a>
+		<a href="">Uniqlo</a>
+		<a href="Ochirly">Ochirly</a>
+		<a href="">江南布衣</a>
+		<a href="Jcrew">Jcrew</a>
+		<a href="">匡威</a>
+		<a href="">Promod</a>
+	</div>
+	<div class="shop_ad">
+		<div style="*width:700px;overflow:hidden;"><a href=""><img src="{{static_url('garning/media/images/ad710/4.jpg')}}" alt=""></a></div>
+	</div>
+	<div class="follow_detail">嘉宁网是一个沸腾着血拼快感的时尚<a href="/">艺术社区</a>。这里为你筛选了各类<a href="/shop/top/1000">风格</a>、各种<a href="/shop/top/1001">看点</a>的<a href="/shop">淘宝店铺</a>；这里有各路<a href="/findfs/main/recommend">网购达人</a>与你分享淘宝购物心得；这里有黄钻买家为你<a href="/ask">答疑解惑</a>，更有嘉宁网每日<a href="tuan">精选团购</a>与你分享。去<a href="http://www.baidu.com/s?bs=site%3A%28cheshi.com%29+%CF%D6%B4%FA&amp;f=8&amp;wd=site%3A%28meilishuo.com%29+%CC%D4%B1%A6%B4%EF%C8%CB">百度</a>搜索更多<a href="http://www.baidu.com/s?bs=site%3A%28meilishuo.com%29+%BF%DA%B1%AE%BA%C3%B5%EA&amp;f=8&amp;wd=site%3A%28meilishuo.com%29+%BF%DA%B1%AE%BA%C3%B5%EA">口碑好店</a></div>
+</div>	</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+<script type="text/javascript">
+
+$(function(){
+	$('.shop_item').each(function(){
+		var o = $(this);
+		o.hover(function(){
+			o.find('.link_btn').height(o.height()-6).show();
+		}, function(){
+			o.find('.link_btn').hide();
+		});
+	});
+});
+
+</script>
+</div>
+
+<!-- start footer -->
+<div class="clear"></div>
+<div class=" footer t p"><div class="container_24"><div class=" grid_24 "><div class="foot-nav">
+	<a href="" class="foot-nav-item-1">关于嘉宁</a>
+	<a href="" class="foot-nav-item-2">投资合作</a>
+	<a href="" class="foot-nav-item-3">联系我们</a>
+	<a href="" class="foot-nav-item-4">免责声明</a>
+	<a href="" class="foot-nav-item-5">帮助中心</a>
+	<a href="" class="foot-nav-item-6">模特精灵</a>
+	<a href="" class="foot-nav-item-7">投放广告</a>
+</div>
+<div class="partner">合作伙伴: 广州摄影网 梨花树网</div>
+<div class="copyright">Copyright &copy Garning.com All Rights Reseved&nbsp;<a href="">粤ICP备20090008号</a></div>
+</div></div></div>
+<!-- end footer -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4fb29e2cd465365d07f42f7a2894418d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

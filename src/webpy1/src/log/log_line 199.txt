@@ -1,0 +1,2 @@
+can not fetch txtCommunity  or hidCommunityID ======================================================
+can not fetch txtCommunity  or hidCommunityID ======================================================

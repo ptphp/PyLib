@@ -1,0 +1,123 @@
+<div class="hwfx">
+
+<div id="header">
+	<div class="wrapper">
+		<a id="lihuashu" href="{{ escape(handler.settings["site_host"]) }}">
+			<img src="{{static_url('media/img/logo_38.png')}}" width="100" height="26" alt="{{ escape(handler.settings["site_name"]) }}">
+		</a>
+		<div id="menu_bar">
+			<ul id="menu" class="menu">
+			{% if current_user!= None %}
+
+				<li id="nav_user">
+					<a href="/user/{{user['user_key']}}/" class="nav">
+           			{% if user['avatar'] %}
+						<img width="25px" height="25px" src="{{user['avatar']}}">
+					{% else %}
+						<img width="25px" height="25px" src="{{static_url('media/img/iconor-25x25.png')}}">
+					{% end %}
+					</a>
+					<ul>
+						<li>
+							<a href="/user/{{ user['user_key'] }}/">画板</a>
+						</li>
+						<li>
+							<a href="/user/{{ user['user_key'] }}/pins/">采集</a>
+						</li>
+						<li>
+							<a href="/user/{{ user['user_key'] }}/likes/">喜欢</a>
+						</li>
+						<li class="mentions divider">
+							<a href="/message/mentions/" class="x" id="nav_user_mentions">@我的</a>
+						</li>
+						<li class="activities">
+							<a href="/message/activities/" class="x" id="nav_user_activities">我的消息</a>
+						</li>
+						<li class="divider">
+							<a href="/invites/">邀请&amp;查找好友</a>
+						</li>
+						<li class="divider">
+							<a href="/settings/">帐号设置</a>
+						</li>
+						<li>
+							<a href="/logout/">退出登录</a>
+						</li>
+					</ul>
+				</li>
+			{% end %}
+			{% if current_user==None %}
+				<li id="nav_login">
+					<a href="/login/" class="nav"><span>登录</span><em></em></a>
+					<ul>
+						<li><a href="/login/">登录</a></li>
+						<li><a href="/signup/">立即注册</a></li>
+					</ul>
+				</li>
+			{% end %}
+
+				<!--
+				<li id="nav_about">
+					<a href="<?php echo Url::site('about', true); ?>" class="nav"><span>关于</span><em></em></a>
+					<ul>
+						<li><a href="<?php echo Url::site('about', true);?>">关于梨花树</a></li>
+						<li><a href="<?php echo Url::site('about/goodies', true);?>">采集工具</a></li>
+						<li><a href="<?php echo Url::site('about/goodies/chrome', true);?>">Chrome 扩展</a></li>
+						<li><a target="_blank" href="<?php echo Url::site('blog', true);?>">梨花树访谈</a></li>
+						<li><a href="<?php echo Url::site('about/help', true);?>">帮助</a></li><li>
+						<a href="<?php echo Url::site('about/contact', true);?>">联系我们</a></li>
+						<li><a href="<?php echo Url::site('feedback', true);?>">用户反馈</a></li>
+					</ul>
+				</li>
+
+				<li id="nav_mobile">
+					<a href="<?php echo Url::site('apps', true);?>" class="nav"><span>手机</span><em></em></a>
+					<ul>
+						<li><a href="<?php echo Url::site('apps', true);?>">iPhone 客户端</a></li>
+						<li><a href="<?php echo Url::site('apps', true);?>">Android 客户端</a></li>
+					</ul>
+				</li>
+				-->
+			{% if current_user %}
+				<li id="nav_add">
+					<a href="##" title="添加" class="nav"></a>
+				</li>
+			{% end %}
+			</ul>
+			<!--
+			<div id="search">
+				<form id="search_form" method="get" action="<?php echo Url::site('search', true);?>" class="text">
+					<input id="query" type="text" size="27" name="q" autocomplete="off" placeholder="搜索你喜欢的" value="" class="default_value">
+					<a id="search_lens" href="#" onclick="$('#search_form').submit();return false;"></a>
+				</form>
+			</div>
+			-->
+		</div>
+	</div>
+</div>
+
+</div>
+
+{% if current_user %}
+<script type="text/javascript">
+$("#nav_add a.nav").click(function(){
+
+	$.zxxbox.ajax(
+		"/uploader/choice/",
+		{},
+		{
+			bar: false,
+			bg:false,
+			//bgclose: true,
+			btnclose:false,
+			onshow:function(){
+				$("body").css("overflow", "hidden");
+			},
+			onclose:function(){
+				$("body").css("overflow", "visible");
+			},
+		}
+	);
+
+});
+</script>
+{% end %}

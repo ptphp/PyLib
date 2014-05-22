@@ -1,0 +1,272 @@
+.tutor {
+	padding:10px;
+	display:inline-block;
+	background-color:#FFF9E2;
+	font-size:18px;
+	position:relative;
+	margin-bottom:15px
+}
+.wfx .tutor {
+	padding:25px 15px;
+	display:block
+}
+a.pin-link,.notice a.pin-link {
+	margin-right:20px;
+	color:#B20000;
+	text-decoration:underline
+}
+.pin-button,.ie-button {
+	border:1px solid #CCC;
+	border-radius:5px;
+	padding:4px 16px;
+	margin-right:20px;
+	position:relative;
+	font-size:18px;
+	background:url(/img/about/btn_bg.gif) repeat-x;
+	cursor:move
+}
+.pin-button:hover,.ie-button:hover {
+	color:#000;
+	text-decoration:none
+}
+.drag-arrow {
+	width:190px;
+	height:190px;
+	display:none;
+	position:absolute;
+	bottom:-41px;
+	right:-170px;
+	background:url(/img/about/arrow.png) no-repeat;
+	z-index:4
+}
+.key-tip {
+	font-size:20px;
+	margin-left:10px
+}
+.tip-words {
+	font-size:16px;
+	font-weight:400
+}
+.pin-button:hover .drag-arrow {
+	display:inline-block
+}
+h2 {
+	height:20px;
+	padding:0 0 0 14px;
+	margin:0 0 16px;
+	background:url(/img/about/hx_bg.gif) no-repeat left center;
+	font-size:16px;
+	clear:left
+}
+input.code-holder {
+	width:498px
+}
+.tools-holder {
+	padding-bottom:15px
+}
+.tools-holder a.store,.tools-holder a.mozilla,.tools-holder a.local {
+	display:block;
+	height:30px;
+	line-height:30px;
+	padding-left:40px;
+	font-weight:700;
+	margin-bottom:5px
+}
+.tools-holder a.store {
+	background:url('/img/about/store_logo.png') no-repeat left center
+}
+.tools-holder a.mozilla {
+	background:url('/img/about/mozilla_addons_32.png') no-repeat left center
+}
+.faq {
+	margin-bottom:25px;
+	padding:15px 15px 0 15px;
+	background:#fff;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	-webkit-box-shadow:1px 1px 2px rgba(0,0,0,.3);
+	-moz-box-shadow:1px 1px 2px rgba(0,0,0,.3);
+	box-shadow:1px 1px 2px rgba(0,0,0,.3)
+}
+.slidefaq {
+	margin-top:20px;
+	font-size:14px
+}
+.slidefaq a {
+	color:#CB2027
+}
+.slidefaq h2,#main .slidefaq h2 {
+	margin:0;
+	padding:0 0 0 26px;
+	background:url("/img/about/browser_icons.png?0.png") no-repeat 0 0
+}
+.slidefaq h2.ie,#main .slidefaq h2.ie {
+	background-position:0 -22px
+}
+.slidefaq h2.zhouhongyi,#main .slidefaq h2.zhouhongyi {
+	background-position:0 -44px
+}
+.slidefaq h2.sougou,#main .slidefaq h2.sougou {
+	background-position:0 -66px
+}
+.slidefaq h2.maxthon,#main .slidefaq h2.maxthon {
+	background-position:0 -219px
+}
+.slidefaq h2.firefox,#main .slidefaq h2.firefox {
+	background-position:0 -88px
+}
+.slidefaq h2.zhouhongyichrome,#main .slidefaq h2.zhouhongyichrome {
+	background-position:0 -155px
+}
+.slidefaq h2.chrome,#main .slidefaq h2.chrome {
+	background-position:0 -110px
+}
+.slidefaq h2.safari,#main .slidefaq h2.safari {
+	background-position:0 -132px
+}
+.slidefaq h2.ios,#main .slidefaq h2.ios {
+	background-position:0 -198px
+}
+.slidefaq h2.other-problams,#main .slidefaq h2.other-problams {
+	background-position:0 -176px
+}
+.slidefaq h2.opera,#main .slidefaq h2.opera {
+	background-position:0 -240px
+}
+.slidefaq .faq {
+	padding-bottom:15px;
+	cursor:pointer;
+	margin-bottom:15px
+}
+.slidefaq .faq:hover {
+	background:#F7F7F7
+}
+.slidefaq .faq.open:hover {
+	background:#fff
+}
+.slidefaq .faq .content {
+	overflow:hidden
+}
+.slidefaq .faq .content .inner {
+	margin:15px 15px 0;
+	border-top:1px dashed #E5E5E5
+}
+.slidefaq .faq .content .inner h3,.slidefaq .faq .content .inner p {
+	padding:0;
+	margin:20px 0 10px
+}
+.slidefaq .faq .content .inner h3 {
+	font-size:16px;
+	font-weight:700
+}
+ul#how_to_use li img {
+	margin-top:15px;
+	display:block
+}
+ul#how_to_use li span {
+	font-size:20px;
+	color:#333;
+	margin-top:20px;
+	padding-left:28px;
+	background:url(/img/about/icon_no.png) left top no-repeat;
+	line-height:24px;
+	height:24px;
+	display:block;
+	font-weight:700
+}
+ul#how_to_use li.two span {
+	background-position:left -27px
+}
+ul#how_to_use li.three span {
+	background-position:left -54px
+}
+ul#how_to_use li {
+	margin-bottom:50px
+}
+.tool-image {
+	margin-top:20px
+}
+.tool-image img {
+	padding-bottom:15px
+}
+#goodies_tabs {
+	font-size:14px
+}
+ul.faq li.l,ul.faq li.r {
+	float:left;
+	width:332px
+}
+ul.faq li.l {
+	margin-right:30px
+}
+.tool-unit {
+	background:#EEE;
+	padding:15px
+}
+.tool-unit h3 {
+	padding:0
+}
+.download-button {
+	width:300px;
+	height:60px;
+	cursor:pointer;
+	margin-top:-6px
+}
+#firefox_download_button .download-button {
+	background:url("/img/about/btn_sprite.png") no-repeat scroll -622px 0 transparent
+}
+#firefox_download_button .download-button:hover {
+	background-position:-622px -60px
+}
+#firefox_download_button .download-button:active {
+	background-position:-622px -120px
+}
+#download_button .download-button {
+	background:url("/img/about/btn_sprite.png") left top no-repeat
+}
+#download_button .download-button:hover {
+	background-position:left -60px
+}
+#download_button .download-button:active {
+	background-position:left -120px
+}
+#download_button.installed .download-button {
+	background-position:left -180px
+}
+.maxthon #download_button .download-button {
+	background-position:-942px 0
+}
+.maxthon #download_button .download-button:hover {
+	background-position:-942px -60px
+}
+.maxthon #download_button .download-button:active {
+	background-position:-942px -120px
+}
+#download_activex {
+	font-size:16px;
+	color:#B20000;
+	padding-left:40px;
+	display:block;
+	height:32px;
+	line-height:32px;
+	background:url("/img/about/ie_addon_download_btn.png") 0 0 no-repeat
+}
+ul.unq {
+	padding-bottom:15px
+}
+#chrome_addon_intro,#firefox_addon_intro,#maxthon_addon_intro {
+	margin-top:50px
+}
+.tool-unit .bio {
+	margin-top:50px
+}
+#activex_intro {
+	margin-top:7px
+}
+#bookmark_intro {
+	margin-top:45px
+}
+#bookmark_bio {
+	margin-top:15px
+}

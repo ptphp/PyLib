@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block content %}
+
+<script>
+	$(function(){
+		$("#BoardList").click(function(){			
+			$("#BoardListBody").show();
+			
+		});
+		$(".BoardCategory").click(function(){
+			$("#BoardListBody").hide();
+			c_data = $(this).attr('data');
+			c_data_text = $(this).find("span").text();
+			$("#id_board").val(c_data);
+			//alert(c_data);
+			$("#BoardList").text(c_data_text);
+		});		
+		$("#board_name_input").change(function(){			
+			$("#btnCreate").removeClass('disabled');
+		})
+	})
+	
+	function checkBoard(){
+		
+		if($("#id_board").val() == ''){
+			alert('画板标题 is null');
+			return false;
+		}
+		
+		if($("#id_content").val() == ''){
+			alert('content is null');
+			return false;
+		}
+		return true;
+	 }
+	 
+	 function getCookie(name) {
+	    var r = document.cookie.match("\\b" + name + "=([^;]*)\\b");
+	    return r ? r[1] : undefined;
+	}
+	function addBorad(){
+		
+		if($("#board_name_input").val() == ''){
+			alert('画板标题 is null');
+			return false;
+		}
+		
+		var data = {}
+		data.title = $("#board_name_input").val();
+		data.category = '';
+		data._xsrf = getCookie("_xsrf");
+		url = "/ajax/addboard/";
+		$.post(url,data,function(res){		
+			if (res.code != 0){
+				alert(res.data)			
+			}else{	
+				alert(res.data);
+				obj = res.obj;
+				html = "";
+				
+				html += "<li class=\"BoardCategory\" data=\""+obj.key+"\">";
+                html += "    <span>"+$("#board_name_input").val()+"</span>";
+                html += "</li>";
+                $("#ul_board_list").prepend(html);
+			}
+		},'json')
+		return false;
+	}
+</script>
+
+
+<form id="upload" enctype="multipart/form-data" action="/service/form/" method="post">
+
+<div id="UploadPin" style="display: block;" class="ModalContainer destroy">
+    <div class="modal wide ">
+        <div class="header">
+            <a href="/" class="close"><strong>Close</strong><span></span></a>
+            <h2>收藏</h2>
+        </div>
+
+        <div class="pbt">
+            <div class="ImagePicker">
+                <img src="{{static_url('media/img/load2.gif')}}" alt="Loading Indicator" class="load">
+                <div class="Images pin carousel-container">
+                    <div class="carousel-clip">
+                        <ul class="carousel-list">
+                            <li>
+                                <img src="{{ thumb_url }}" alt="Media" id="imediapic" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Arrows">
+                    <a href="#" class="imagePickerNext picker">下一张&nbsp;→<span class="imagePickerNextArrow"></span></a>
+                    <a href="#" class="imagePickerPrevious picker">←&nbsp;上一张<span class="imagePickerPreviousArrow"></span></a>
+                </div>
+            </div>
+            <div class="pin-form">
+                <div class="BoardListOverlay">
+                </div>
+                <div class="BoardSelector BoardPicker">
+                	<input type="hidden" name="board" id="id_board" value=""/>
+                    <div class="current" id="BoardList">
+                        <span class="CurrentBoard">选择</span>
+                        <span class="DownArrow"></span>
+                    </div>
+                    <div class="BoardList" id="BoardListBody">
+                        <div class="BoardListBody" style="height: 150px; ">
+                            <ul id="ul_board_list">                               
+                                {% for board in boards %}
+                                <li class="BoardCategory" data="{{ board['key'] }}">
+                                    <span>{{ board['title'] }}</span>
+                                </li>
+                                {% end %}
+                            </ul>
+                        </div>
+                        <div class="CreateBoard">
+                            <input id="board_name_input" type="text" placeholder="创建新画板">
+                            <a href="#" onclick="return addBorad();" id="btnCreate" class="nf btn btn18 wbtn disabled"><strong> 创建</strong><span></span></a>
+                            <div class="CreateBoardStatus">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="InputArea">
+                    <ul class="Form FancyForm">
+                        <li class="nmb">
+                            <textarea rows="2" name="content" id="id_content" class="DescriptionTextarea" registered-at="registered" autocomplete="off">
+                            </textarea>
+                            <ul class="ac-choices" style="display: none; z-index: 42; opacity: 0; ">
+                            </ul>
+                            <label>
+                                描述一下这个作品…
+                            </label>
+                            {{ xsrf_form_html() }}
+                            <input type="hidden" name="pic_url" value="{{pic_url}}"/>
+                            <input type="hidden" name="thumb_url" value="{{thumb_url}}"/>
+                            
+                            <span class="fff"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="CreateBoardStatus error mainerror">
+                </div>
+                <div class="Buttons">
+                    <input type="submit" onclick="return checkBoard()" value="发布" class="btn btn18 wbtn ajax_upload_btn" />
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="overlay">
+    </div>
+</div>
+</form>
+{% end %}

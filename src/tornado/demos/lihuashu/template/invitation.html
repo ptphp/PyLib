@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div id="page">
+		{% include "common/settings_header.html" %}	
+		<div class="wfx">
+    <div style="margin:50px auto" class="Form StaticForm">
+    <h3>邀请好友关注我</h3>
+        <ul>
+            <li style="padding:50px 0 100px 0;">
+                <p>点击即可复制链接地址，用QQ,MSN等发送给朋友。对方加入后将自动关注你。</p>        
+                <input id="id_invite" type="text" name="invite" value="{{i_url}}{{user['user_key']}}" maxlength="175" style="width:70%">
+                <a href="" style="margin-left: 12px;" class="btn btn18 wbtn"><strong> 复制链接</strong><span></span></a>
+            </li>
+
+        </ul>
+
+    </div>    
+</div>
+	</div>
+	<div class="clear"></div>
+	<div id="page_overlay" style="display: none;" class="overlay"></div>
+	{% include "common/elevator.html" %}
+{% end %}

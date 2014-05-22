@@ -1,0 +1,255 @@
+{% from common.function import formatTime %}
+
+<div class="wfx">
+	<div class="CloseupLeft">
+		<div data-id="529167" data-seq="4" class="Board wfc" style="margin-bottom:15px;">
+			<h3>{{mark['board']['title']}}</h3>
+			<div class="pin-count">({{len(mark['board']['pins'])}})</div>
+			<a href="/boards/{{mark['board']['key']}}/" class="link x">
+				{%for pic in mark['board']['pin_pics'] %}
+				<img src="{{pic}}">
+				{% end %}
+			</a>
+		</div>		
+    </div>
+
+	<div class="CloseupRight">
+		<div class="wt clearfix">
+			<div id="PinPinner">
+				<a id="PinnerImage" href="/user/{{ mark['user']['key'] }}/" class="img">	
+					
+					{% if mark['user']['avatar']%}
+					<img src="{{mark['user']['avatar']}}">
+					{% else %}
+					<img src="{{static_url('media/img/iconor-50x50.png')}}">
+					{% end %}								
+								
+								
+				</a>
+				<p id="PinnerName">
+					<a href="/user/{{ mark['user']['key'] }}/">{{ mark['user']['nickname'] }}</a>					
+					<span class="less">&nbsp;从&nbsp;</span>
+					<a href="/boards/{{ mark['board']['key'] }}/"> {{ mark['board']['title'] }} </a>
+				</p>
+				<p id="PinnerStats" class="less">发表于&nbsp;
+					<span data-ts="" class="ts-words">{{ formatTime(mark['pin']['createTime']) }}</span>
+				</p>
+			</div>
+			<div id="PinActionButtons">
+				<!--
+				<p id="pin_source" class="light">采自
+					<a href="<?php echo $pin -> link ;?>" target="_blank" rel="nofollow" onclick="try{_gaq.push(['_trackEvent', 'Pin Links', '<?php echo $pin -> source ;?>', '<?php echo $pin -> link ;?>']);}catch(e){}" class="jd-link"><?php echo $pin -> source ;?></a>
+				</p>-->
+				<ul>
+					<li class="repin-button">
+						<a data-id="{{mark['pin']['key']}}" href="javascript:void(0)" class="btn btn13 wbtn"><strong><em></em>收藏</strong><span></span></a>
+					</li>
+					<li class="like-button">
+						<a rel="{{like['rel']}}" data-id="{{mark['pin']['key']}}" title="喜欢" href="javascript:void(0)" onclick="return false;" class="like btn wbtn">
+							<strong><em></em>{{like['str']}}</strong><span></span></a>
+					</li>				
+					<li class="hate-button">
+						<a rel="{{hate['rel']}}" data-id="{{mark['pin']['key']}}" title="讨厌" href="javascript:void(0)" onclick="return false;" class="like btn wbtn">
+							<strong><em></em>{{hate['str']}}</strong><span></span></a>
+					</li>
+				</ul>
+			</div>
+
+			{% if current_user =='www.lihuashu.com' %}
+			<div id="pin_img" data-id="<?php echo $pin -> pinid ;?>" data-media-type="<?php echo $pin -> mediatype ;?>" data-orig-source="<?php echo $pin -> origsource ;?>" class="pin-img">
+			    <a href="<?php echo $pin -> link ;?>" target="_blank" rel="nofollow" onclick="try{_gaq.push(['_trackEvent', 'Pin Links', '<?php echo $pin -> source ;?>', '<?php echo $pin -> link ;?>']);}catch(e){}" class="jd-link" style="display: none; ">
+					<img alt="<?php echo $user -> username ;?>采集到<?php echo $board -> title ;?>" src="<?php echo $site['imgserver'].'/';?><?php echo $img -> key ;?>_fw554">
+				</a>
+				<a id="zoomr_show" title="查看原图" style="display: none; "></a>
+			    <embed src="<?php echo $pin -> origsource ;?>" allowFullScreen="true" quality="high" width="<?php echo $site['video_width'];?>" height="<?php echo $site['video_height'];?>" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+			</div>
+			{% else %}
+			<div id="pin_img" data-id="{{mark['pin']['key']}}" data-media-type="<?php echo $pin -> mediatype ;?>" data-orig-source="<?php echo $pin -> origsource ;?>" class="pin-img">
+				<a href="#" rel="nofollow" onclick="try{_gaq.push(['_trackEvent', 'Pin Links', '<?php echo $pin -> source ;?>', '<?php echo $pin -> link ;?>']);}catch(e){}" class="jd-link">
+					<img src="{{ mark['pin']['pic'] }}" alt="{{ mark['user']['nickname'] }}">
+				</a>
+				<a href="#zoomr" class="second" id="zoomr_show" title="查看原图"></a>
+				
+				<!-- href="<?php echo Url::site('pins/'.$pin_id.'/zoom', true);?>" -->
+			</div>
+			{% end %}
+<!--
+			<div id="pin_caption" class="pin-caption">
+				<p class="text"></p>
+				<p class="via less">转采自&nbsp;
+					<a href="/zzy010810012/" class="x">小林沧怒</a>&nbsp;的&nbsp;<a href="/boards/346942/" class="x">DIY</a>
+				</p>
+				<p class="origin less">最初由&nbsp;
+					<a href="/x41408/" class="x">liu_uil</a>&nbsp;采集到&nbsp;<a href="/boards/217687/" class="x">折纸</a>
+				</p>
+			</div>
+-->
+			<div id="pin_comments">
+				{% for comment in mark['comments'] %}	
+					<div data-id="{{ comment['key'] }}" class="comment clearfix" style="background-color: transparent; ">
+					<div id="comment_action_btns" class="fr">
+					<a data-name="" title="回复" class="pinViewReplyButton"></a>
+					<a data-url="" title="删除" class="DeleteComment"></a>
+					</div>
+					<a href="/user/{{comment['userInfo']['key']}}/" title="'" class="img x">
+					{% if comment['userInfo']['avatar'] %}						
+						<img src="{{comment['userInfo']['avatar']}}" class="avatar">
+					{% else %}
+						<img src="{{static_url('media/img/iconor-50x50.png')}}" class="avatar">
+					{% end %}					
+					
+					</a>
+					<p class="meta">
+					<a href="/user/{{comment['userInfo']['key']}}/" class="author">{{comment['userInfo']['nickname']}}</a>
+					&nbsp;-&nbsp;<span data-ts="" class="ts-words">{{ formatTime(comment['createTime']) }}</span>说：'
+					</p>
+					<p class="text">{{ comment['rawtext'] }}</p>
+					</div>
+				{% end %}
+			</div>
+
+			{% if current_user %}
+			<div id="PinAddComment" data-id="<?php echo $pin -> pinid ;?>" class="clearfix">
+				<div id="PinInputArea">
+					<a href="#" title="{{ mark['user']['nickname'] }}" class="img x">
+						
+					<img src="{{static_url('media/img/iconor-50x50.png')}}" class="avatar">
+					
+					</a>
+					<div class="InputContainer Form FancyForm">						
+						<textarea id="CloseupComment" name="caption" placeholder="添加评论或把采集@给好友"></textarea>
+						<!--<label>添加评论或把采集@给好友</label>-->
+						<span class="fff"></span>
+					</div>
+					<div id="PinAddCommentControls" style="display:none;">
+						<a id="PostComment" href="#" onclick="postComment();return false;" class="1disabled btn btn13 wbtn">
+							<strong> 添加评论</strong>
+							<span></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			{% else %}
+			<div id="PinAddComment" data-id="<?php echo $pin -> pinid ;?>" class="clearfix">
+				<div id="PinInputArea">
+					<a href="javascript:;" title="avatar" class="img">
+					{% if current_user!='www.lihuashu.com' %}
+						<img src="{{static_url('media/img/iconor-50x50.png')}}" class="avatar">
+					{% else %}
+						<img src="<?php echo $site['imgserver'].$user_info['avatarkey'].'_sq75';?>" class="avatar">
+					{% end %}
+					</a>
+					<div class="InputContainer Form FancyForm">
+						<textarea id="CloseupComment" name="caption" attr="inner:text;keyup:textcheck;keypress:textsel;keydown:textdown" disabled="disabled"></textarea>
+						<label class="unauth">回复需要<a href="/login/">登录</a>或<a target="_blank" href="/signup/">立即注册梨花树帐号</a></label>
+						<span class="fff"></span>
+					</div>
+					<div id="PinAddCommentControls" style="display:none;">
+						<a id="PostComment" href="#" onclick="return false;" class="disabled btn btn13 wbtn"><strong> 添加评论</strong><span></span></a>
+					</div>
+				</div>
+			</div>
+			{% end %}
+
+			<div id="pin_likes" class="hidden PinActivity clearfix">
+				<h4>这些人喜欢</h4>
+			</div>
+			<div id="PinRepins" class="hidden PinActivity clearfix">
+				<h4>被这些人转采</h4>
+			</div>
+<!--
+			<div id="pin_toolbar">
+				<ul>
+					<li>
+						<div class="PriorAndNext">
+							<a id="prev_disabled" title="上一张" class="prev disabled"></a>
+							<a href="#/pins/3982789/" title="下一张" class="next  x self"></a>
+						</div>
+					</li>
+					<li class="share-text">分享到</li>
+					<li id="weibo_competition">
+						<div class="noti">
+							<a href="#http://apps.weibo.com/share/" target="_blank">微分享大赛ing</a>
+							<!--a.close(title="关闭", onclick="this.getparent('li').dispose();cookie.write('weibo_competition_hide', 1, {duration: 30});")-->
+						<!--</div>
+					</li>
+					<li id="share_to_weibo" class="share-btn"><span>微博</span></li>
+					<li id="share_to_douban" class="share-btn"><span>豆瓣</span></li>
+					<li id="share_to_Qzone" class="share-btn"><span>空间</span></li>
+				</ul>
+			</div>
+-->
+		</div>
+	</div>
+</div>
+
+<div id="zoomr" style="display:none;">
+	<div id="zoomr_toolbar">
+		<div class="bg"></div>
+		<div class="fg">
+			<a id="zoomr_logo" href="/"><img src="{{static_url('media/img/logo_grey.png')}}" width="98" height="34" alt="梨花树"></a>
+			<a id="zoomr_hide" href="javascript:$.pageslide.close()" title="返回">返回</a>
+			
+		</div>
+	</div>
+	<div id="zoomr_body">
+		<img id="zoomr_img" src="{{ mark['pin']['pic'] }}" width="<?php echo $img -> width ;?>" height="<?php echo $img -> height ;?>" alt="采集图片">
+	</div>
+</div>
+<input id="pinid" type="hidden" value="{{ mark['pin']['key'] }}">
+<script>
+function postComment()
+	{
+        
+        var txt = $('#CloseupComment').val().trim();
+        var pinid = $("#pinid").val().trim();
+        if(txt == ''){
+          alert('好歹输两个字吧,亲!');
+        }
+        //var url = app.host + app.page.url + "/comments";
+        var url = "/ajax/comment/";
+        //alert(url);
+        _xsrf = document.cookie.match("\\b_xsrf=([^;]*)\\b")[1];
+        $.post(url,{"text":txt,'_xsrf':_xsrf,'pinid':pinid},function(data){
+            //$("span").html(result);
+            //alert(data);
+            if(data.code == 1){            	
+            	alert(data.data);
+            	return false;
+            }else if(data.code == 0){         
+            	
+            	var comment = data.obj;
+				if(comment.userInfo.avatar){
+        			avatar_url = comment.userInfo.avatar;
+        		}else{
+        			avatar_url ='{{static_url('media/img/iconor-50x50.png')}}';	        			
+        		}
+	            var item = '<div data-id="' + comment.key + '" class="comment clearfix" style="background-color: transparent; ">'
+	              + '<div id="comment_action_btns" class="fr">'
+	              + '<a data-name="' + comment.key  + '" title="回复" class="pinViewReplyButton"></a>'
+	              //+ '<a data-url="' + url + '/' + datum.comment_id + '" title="删除" class="DeleteComment"></a>'
+	              + '</div>'
+	              + '<a href="/user/'+comment.userInfo.key+'/" title="" class="img x">'
+	              //+ '<img src="' + info.avatar + '" class="avatar">'
+	              + '<img src="'+avatar_url+'" class="avatar">'
+	             
+	              + '</a>'
+	              + '<p class="meta">'
+	              + '<a href="#" class="author">' + comment.userInfo.nickname + '</a>&nbsp;-&nbsp;<span data-ts="' + comment.createTime + '" class="ts-words">刚才</span>说：'
+	              + '</p>'
+	              + '<p class="text">' + comment.rawtext + '</p>'
+	              + '</div>';
+	
+	            $('#pin_comments').show(3000).append(item);
+	            $('#CloseupComment').val('');
+	            	
+            }else{            	
+            	alert("system error");
+            }
+            
+
+        },"json");
+    }
+</script>
+
+

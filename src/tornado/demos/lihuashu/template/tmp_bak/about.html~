@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block css %}
+	<link type="text/css" href="{{static_url('media/css/main.dev.css')}}" rel="stylesheet" media="screen" />
+	<link rel="stylesheet" href="{{static_url('media/css/about.css')}}">
+	<link rel="stylesheet" href="{{static_url('media/css/goodies.css')}}">
+{% end %}
+
+{% content%}
+	<div id="page" >
+		<div class="hwfx">
+		{% include "common/header.html" %}
+		</div>
+		<div class="wfx">
+			{% include "sl/about_nav.html" %}
+			<div id="main">
+			{% include "about_inside.html" %}
+			</div>
+		</div>
+
+	</div>
+	<div class="clear"></div>
+	<div id="page_overlay" style="display: none;" class="overlay"></div>
+	{% include "common/elevator.html" %}
+{% end %}

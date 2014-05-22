@@ -1,0 +1,9 @@
+		<div data-id="{{board['key']}}" data-seq="{{board['key']}}" class="Board wfc" style="margin-bottom:15px;">
+			<h3>{{board['title']}}</h3>
+			<div class="pin-count">({{len(board['pins'])}})</div>
+			<a href="/boards/{{board['key']}}/" class="link x">
+				{% for pic in board['pin_pics']%}
+				<img src="{{pic}}">
+				{% end %}
+			</a>
+		</div>

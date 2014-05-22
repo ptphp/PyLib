@@ -1,0 +1,30 @@
+
+<div id="nav_bar">
+	<div class="wrapper">
+		<ul id="nav" class="menu">
+			<!--
+			<li class="client">
+				<a href="/apps/" title="梨花树移动客户端">梨花树移动客户端</a>
+			</li>
+			<div id="client_tip" class="pointy-tip">
+				<div class="pointy-tip-body">
+					<span class="arrow">◣</span><span class="arrow-mask"></span>
+					<h5 class="title">梨花树移动客户端发布啦！</h5>
+				</div>
+			</div>
+			-->
+			{% if current_user !=None %}
+			<li><a href="/following/" class="nav following selected"><span>你关注的采集</span><em></em></a></li>
+			{% end %}
+			<li>
+				<a href="/popular/" class="nav popular"><span>热门采集</span><em></em></a>
+			</li>
+			<li>
+				<a href="/boards/popular/" class="nav boards-popular"><span>热门画板</span><em></em></a>
+			</li>
+			<li>
+				<a href="/" class="nav all selected"><span>最近采集</span><em></em></a>
+			</li>
+		</ul>
+	</div>
+</div>

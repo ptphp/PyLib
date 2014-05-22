@@ -1,0 +1,62 @@
+			<div data-id="{{ mark['pin']['key'] }}" data-seq="{{ mark['pin']['key'] }}" class="pin wfc" style="margin-bottom:15px;">
+					<div class="pinimg">
+					<a href="/mark/{{ mark['pin']['key'] }}/" class="img x">
+						<img src="{{ mark['thumb']['url'] }}" width="192" height="256" alt="">
+					</a>
+
+					<div class="pinact">
+						<a href="#" onclick="return false;" class="collect">收藏</a>
+						<a href="#" onclick="return false;" class="like">喜欢</a>
+						<a href="#" onclick="return false;" class="hate">讨厌</a>
+						<a href="#" onclick="return false;" class="comment">评价</a>
+					</div>
+				</div>
+					<p class="description">{{ mark['pin']['rawtext'] }}</p>
+					
+					<p class="stats less"></p>
+					
+					<div class="convo attribution clearfix">
+						<p>
+							<a href="/user/{{mark['user']['key']}}/" title="" class="img x">
+								{% if mark['user']['avatar']%}
+								<img src="{{mark['user']['avatar']}}">
+								{% else %}
+								<img src="{{static_url('media/img/iconor-25x25.png')}}">
+								{% end %}
+								
+							</a>
+							<a href="/user/{{mark['user']['key']}}/"> {{ mark['user']['nickname'] }} /</a>&nbsp;采集到&nbsp;
+							<a href="/boards/{{mark['board']['key']}}/">{{ mark['board']['title'] }}</a>
+						</p>
+						<a title="回复" class="replyButton"></a>
+					</div>
+					
+					<div style="" class="comments muted">
+					{% for comment in mark['comments'] %}
+						<div class="convo attribution clearfix">
+							<p><a href="/user/{{comment['user']}}/" title="" class="img x">		
+								{% if comment['userInfo']['avatar']%}
+								<img src="{{mark['user']['avatar']}}">
+								{% else %}
+								<img src="{{static_url('media/img/iconor-25x25.png')}}">
+								{% end %}
+								</a>	<a href="/user/{{comment['user']}}/" title="" class="img x">	
+								{{ comment['userInfo']['nickname'] }}</a>&nbsp;
+								{{ comment['rawtext'] }}</p>
+								<a title="回复" class="replyButton"></a>
+						</div>
+					{% end %}					
+					</div>
+					
+					<div style="display: none;" class="write convo clearfix">
+						<a href="/lihuashu/jinlisha1" title="默然相爱寂静喜欢" class="img x ">
+							<img src="">
+						</a>
+						<form action="/lihuashu/pins/3889706/comments" method="POST">
+							<textarea placeholder="添加评论或把采集@给好友" class="GridComment ani-affected " registered-at="registered" autocomplete="off"></textarea>
+							<ul class="ac-choices" style="display: none; z-index: 42; opacity: 0; "></ul>
+							<a href="#" onclick="return false" class="grid_comment_button"></a>
+						</form>
+					</div>
+				</div>
+

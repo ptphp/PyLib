@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<button id='id1'>PYTHON</button>
+		<button id='id2'>close</button>
+		<iframe src="http://www.iteye.com/"
+                   width="790" height="590"
+                   scrolling="yes"
+                   frameborder="0"
+                   align="center"></iframe>
+	</body>
+	<script type="text/javascript" language="JavaScript">
+			document.getElementById('id1').onclick=function(){
+				s = python.openMap();
+				alert(s)
+			}
+			document.getElementById('id2').onclick=function(){
+				python.close();
+			}
+	</script>
+</html>
+

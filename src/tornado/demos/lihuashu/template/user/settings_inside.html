@@ -1,0 +1,185 @@
+<a id="settings_return" href="/following/">返回</a>
+
+<div id="page" class="wfx profile">
+    <form id="profile_edit" action="/settings/" method="post" name="profile_edit" class="Form StaticForm">
+        {{ xsrf_form_html() }}
+        <h3>帐号设置</h3>
+        <ul>
+            <li>
+                <label for="id_email">
+                    帐号邮箱
+                </label>
+                <div class="Right">
+                    <input id="id_email" type="text" name="user[email]" value="{{current_user}}" maxlength="75" class="btn btn18 rbtn disabled" readonly="readonly" disabled="disabled">
+                    
+
+            {% if current_user=='www.lihuashu.com' %}
+                    <!-- a href="<?php echo Url::site('settings/subscription');?>" style="margin-left: 12px;" class="btn btn18 wbtn"><strong> 订阅设置</strong><span></span></a -->
+                </div>
+            {% end %}
+
+            </li>
+            <li id="email_field">
+                <label>
+                    密码
+                </label>
+                <div class="Right">
+                    <a href="/password/update/" class="btn btn18 wbtn"><strong>修改密码</strong><span></span></a>
+                </div>
+            </li>
+            <li>
+                <label for="id_username">
+                    昵称
+                </label>
+                <div class="Right">
+                    <input id="id_username" type="text" name="user_nickname" value="{{ user['nickname'] }}">
+                </div>
+            </li>
+            {% if current_user=='www.lihuashu.com' %}
+            <li class="urlname">
+                <label for="id_urlname">
+                    个性网址
+                </label>
+                <div class="Right">
+                    <input id="id_urlname" type="text" name="user_urlname" value="{{user['nickname']}}"><span class="help_text urlname_available">http://lihuashu.com/your/</span>
+                </div>
+            </li>
+            {% end %}
+            <li>
+                <label for="id_avatar">
+                    头像
+                </label>
+                <div class="Right">
+                    <div class="current_avatar_wrapper fl">
+                        <img src="{{ static_url("media/img/load2.gif") }}" style="display:hidden;" class="load">
+					<div id="avatar_user">
+                    {% if user['avatar'] != '' %}
+                        <img width="124px" height="124px" id="current_avatar" src="{{user['avatar']}}" class="fl">
+                    {% else %}
+                        <img width="124px" height="124px" id="current_avatar" src="{{ static_url("media/img/iconor-100x100.png") }}" class="fl">
+                    {% end %}
+                    </div>
+                    </div>
+                    <div style="padding-left: 12px;position:relative;" class="NoInput fl">
+                        <p>
+                            <a id="avatar_upload_button" href="#" onclick="return false;" class="upload_avatar btn btn18 wbtn"><strong>上传头像</strong><span></span></a>
+                            <a id="avatar_upload_button" href="#" onclick="ajaxFileUpload();" class="upload_avatar btn btn18 wbtn"><strong>上传</strong><span></span></a>
+                            <input name="f_file" type="file" style="position:absolute;width:90px;height:27px;margin-top:-36px;Z-index:1000;
+    opacity:0;filter: alpha(opacity=0);" id="t_file" onchange="f_file.value=this.value" />  
+
+                            <div style="position: absolute; opacity: 0.01; overflow-x: hidden; overflow-y: hidden; ">
+                                <iframe src="javascript:'<html></html>'" frameborder="no" border="0" name="IFrame_h1bzy8tc" id="IFrame_h1bzy8tc" style="display: none; ">
+                                </iframe>
+                                <input type="file" name="file" size="1" style="position: absolute; top: 0px; left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; ">
+                            </div>
+                        </p>
+
+            {% if current_user=='www.lihuashu.com' %}
+                        <!--
+                        <p>
+                            <a data="qzone" href="#" onclick="return false;" class="refresh_avatar btn btn18 wbtn"><strong> 从QQ空间同步头像</strong><span></span></a>
+                        </p>
+                        -->
+                        <!--if user.bindings.taobao--><!--  p: abtn.refresh_avatar(size="18", data="taobao") 从淘宝同步头像-->
+            {% end %}
+
+                    </div>
+                </div>
+            </li>
+
+            {% if current_user=='www.lihuashu.com' %}
+            <!--
+            <li class="NoInput">
+                <label>
+                    新浪微博
+                </label>
+                <div class="Right NoInput">
+                    <p>
+                        <a id="weibo_connect" href="/oauth/weibo/binding/" class="connect btn btn18 wbtn"><strong> 绑定新浪微博</strong><span></span></a>
+                    </p>
+                </div>
+            </li>
+            <li class="NoInput">
+                <label>
+                    豆瓣
+                </label>
+                <div class="Right NoInput">
+                    <p>
+                        <a id="douban_connect" href="/oauth/douban/binding/" class="connect btn btn18 wbtn"><strong> 绑定豆瓣</strong><span></span></a>
+                    </p>
+                </div>
+            </li>
+            <li class="NoInput">
+                <label>
+                    人人网
+                </label>
+                <div class="Right NoInput">
+                    <p>
+                        <a id="renren_connect" href="/oauth/renren/binding/" class="connect btn btn18 wbtn"><strong> 绑定人人网</strong><span></span></a>
+                    </p>
+                </div>
+            </li>
+        -->
+        <!--
+            <li class="NoInput">
+                <label>
+                    QQ空间
+                </label>
+                <div class="Right NoInput">
+                    <p>
+                        <a href="http://qzone.qq.com/" target="_blank"><span>qzone.qq.com</span></a>
+                        <a id="qzone_connect" href="/oauth/qzone/binding/" style="margin-left: 12px;" class="connect btn btn18 wbtn"><strong> 重新绑定QQ空间</strong><span></span></a>
+                        <input type="hidden" name="qzone_connected" value="1">--><!-- label(for="hide_qzone")<input id="hide_qzone" type="checkbox" name="status[hide_qzone]"/>不在主页显示我的QQ空间 -->
+                        <!--
+                    </p>
+                </div>
+            </li>
+        -->
+            <!--
+            <li class="NoInput">
+                <label>
+                    腾讯微博
+                </label>
+                <div class="Right NoInput">
+                    <p>
+                        <a id="tqq_connect" href="/oauth/tqq/binding/" class="connect btn btn18 wbtn"><strong> 绑定腾讯微博</strong><span></span></a>
+                    </p>
+                </div>
+            </li>
+            -->
+            <!--li.NoInput--><!--  label 淘宝--><!--  .Right.NoInput--><!--    p--><!--      if user.bindings.taobao--><!--        abtn#taobao_connect.connect(size="18", href="/oauth/taobao/binding/") 重新绑定淘宝--><!--      else--><!--        abtn#taobao_connect.connect(size="18", href="/oauth/taobao/binding/") 绑定淘宝-->
+            {% end %}
+            <li>
+                <label for="id_about">
+                    关于自己
+                </label>
+                <div class="Right">
+                    <textarea id="id_about" name="user_description" rows="3" cols="54">{{ user['desc'] }}</textarea>
+                </div>
+            </li>
+            <li>
+                <label for="id_location">
+                    所在城市
+                </label>
+                <div class="Right">
+                    <input id="id_location" type="text" name="user_city" value="{{ user['city'] }}">
+                </div>
+            </li>
+            <li>
+                <label for="id_url">
+                    个人主页
+                </label>
+                <div class="Right">
+                    <input id="id_url" type="text" name="user_url" value="{{ user['url'] }}">
+                </div>
+            </li>
+        </ul>
+        <div class="Submit">
+            {% if current_user=='www.lihuashu.com' %}
+            <a id="submit_btn" href="#" onclick="$('#profile_edit').submit();return false;" class="btn btn24 rbtn"><strong>保存设置</strong><span></span></a>
+            {% end %}
+            <input type="submit" value="保存设置" class="btn btn18 wbtn ajax_upload_btn" />
+        </div>
+    </form>
+
+</div>

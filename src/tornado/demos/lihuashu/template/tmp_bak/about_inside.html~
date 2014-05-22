@@ -1,0 +1,66 @@
+
+<div class="faq">
+    <h2 class="faq-title">什么是梨花树？</h2>
+    <p class="faq-content">
+        梨花树帮你收集、发现网络上你喜欢的事物。 极易上手，玩味无限。
+        <br>
+        你可以通过它来收集灵感，保存有用的素材，计划旅行，或是晒晒想要的东西，充分展现你的个性。
+        <br>
+        用你喜欢的方式给采集的图片分类。需要时，通过这些图片，你可以链接回到原来的网页。
+        <br>
+        更棒的是，你还可以浏览别人收集的有趣内容，发现新知，得到启发，结识志趣相投的朋友。
+        <br>
+        <a id="mv_trigger" href="#" onclick="document.getElementById('mv_holder').style.display='block';return false;" title="观看视频，了解到梨花树网，帮你采集，发现网络上你喜欢的美好事物。你可以用它收集灵感，保存有用的素材，计划旅行，晒晒自己想要的家居， 服饰搭配，发型和婚纱." class="mv"></a>梨花树，采集你喜欢的。
+        <br>
+    </p>
+</div>
+<div class="faq">
+    <h2 class="faq-title">梨花树可以做什么？</h2>
+    <ul class="clearfix">
+        <li class="usage-item">
+            <a href="http://huaban.com/pitouchen/" class="demo-image"><img src="<?php echo Url::site('media/img/about');?>/img01.jpg" alt="私人灵感盒"></a>
+            <div class="demo-desc">
+                <h3>随身的灵感书</h3>
+                <p>
+                    平面设计师小陈，爱摇滚，疯设计。他用梨花树收集灵感和创意。每一个采集的描述备注都代表他的设计态度。“不论是工作素材，还是个人嗜好，梨花树就是我的一本随身的灵感想法书。一般人我不告诉！”
+                </p>
+            </div>
+        </li>
+        <li class="usage-item">
+            <a href="http://huaban.com/xiaoling/" class="demo-image"><img src="<?php echo Url::site('media/img/about');?>/img02.jpg" alt="晓玲小姐的穿搭宝典"></a>
+            <div class="demo-desc">
+                <h3>只做自己</h3>
+                <p>
+                    晓玲是位时尚达人。无论是欧美范还是韩系都是大爱。她的梨花树收集所有她喜欢的鞋子、衣服、包包、妆发以及她自己的搭配心得。这一个个的画板就是她的个人风格，她的画板里，有没有你喜欢的呢？
+                </p>
+            </div>
+        </li>
+        <li class="usage-item">
+            <a href="http://huaban.com/zmcjlove/" class="demo-image"><img src="<?php echo Url::site('media/img/about');?>/img03.jpg" alt="我们的小家"></a>
+            <div class="demo-desc">
+                <h3>我的家，是这样的</h3>
+                <p>
+                    志明与春娇是杭州的一对准新人，他们用画板来规划甜蜜的二人世界。聪明的他们，用梨花树收集各自喜欢的家装风格、婚礼企划、和跟家人或其他的梨花树好友一起交流新家的装修意见。
+                </p>
+            </div>
+        </li>
+        <li class="usage-item">
+            <a href="http://huaban.com/destination/" class="demo-image"><img src="<?php echo Url::site('media/img/about');?>/img04.jpg" alt="边走边看"></a>
+            <div class="demo-desc">
+                <h3>计划美好的旅途</h3>
+                <p>
+                    老刘，作为一个资深驴友，每次出发前，他会将许多关于目的地的信息采集到梨花树，并用梨花树与驴友们交换意见，这让他可以轻松规划出一次完美的旅行。
+                </p>
+            </div>
+        </li>
+        <li class="usage-item">
+            <a href="http://huaban.com/aka005/" class="demo-image"><img src="<?php echo Url::site('media/img/about');?>/img05.jpg" alt="卡卡爱萌物"></a>
+            <div class="demo-desc">
+                <h3>沉淀时间的美好</h3>
+                <p>
+                    阿卡，18岁，大二，爱好广泛，标准的小清新90后女孩。她用梨花树来收集喜欢的卡通人物、偶像照片、以及各种她中意的美图、萌物。那些可以代表她18岁的东西，记录着她青春的记忆。
+                </p>
+            </div>
+        </li>
+    </ul>
+</div>

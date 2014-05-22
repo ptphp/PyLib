@@ -1,0 +1,54 @@
+<style type="text/css">
+.corner-stamp {
+	float: right;
+	margin-right:13px;
+}
+</style>
+
+<div id="BoardMeta" class="corner-stamp" style="margin-bottom:15px;">
+				<h3 class="nmt">创建者</h3>
+				<div id="BoardUser">
+					<a href="/user/{{b_user['key']}}/" title="{{b_user['nickname']}}" class="img x">
+						{% if b_user['avatar']%}
+						<img style="width:75px;height:75px" src="{{b_user['avatar']}}">
+						{% else %}
+						<img style="width:75px;height:75px" src="{{static_url('media/img/iconor-25x25.png')}}">
+						{% end %}
+					</a>
+					<span id="BoardUserName">
+						<a href="/user/{{b_user['key']}}/" title="{{b_user['nickname']}}" class="x">
+							{{b_user['nickname']}}</a>
+					</span>
+				</div>	
+
+				<div class="category-display">
+					<h3>所属分类</h3>
+					<a href="/category/{{b_category['key']}}/" class="board-category x">{{b_category['name']}}</a>
+				</div>
+			
+<!--
+			<h3>关注者<span>(共1361人，<a href="http://www.lihuashu.org/lihuashu/boards/279542/followers">查看所有</a>)</span></h3>
+			<div id="BoardUsers">
+				<a href="/p174792/" title="未忘924" class="img x">
+					<img src="http://img.hb.aicdn.com/db5023ccbb713d22dedbdb1d8a6affa0886464cb508d-K5nBWK_sq75">
+				</a>
+				<a href="/m194777/" title="酸式盐海" class="img x">
+					<img src="http://img.hb.aicdn.com/0d694dc9dd2cb4a7ef0f3a227feb1bdd909ae5b340e3-y33nEk_sq75">
+				</a>
+				<a href="/sdf19891003/" title="MrMusic" class="img x">
+					<img src="http://img.hb.aicdn.com/39eeed0945bb0632a825bbebea4d8459fc94310910af-P7JRh7_sq75">
+				</a>
+				<a href="/j215665/" title="楚俊峰" class="img x">
+					<img src="http://img.hb.aicdn.com/fc0967f645bd4a50523f4fcbc11f197936b1b83b77b6-afAT0o_sq75">
+				</a>
+			</div>
+			-->
+			<div class="clear"></div>
+			<h3>其它画板</h3>
+			<div id="BoardBoards">
+				{% for b_board in b_boards %}
+				<a href="/boards/{{b_board['key']}}/" class="x">{{b_board['title']}}<span class="stats">{{len(b_board['pins'])}}</span></a>
+				{% end %}
+			</div>
+
+		</div>

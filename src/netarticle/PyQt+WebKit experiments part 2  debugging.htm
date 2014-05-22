@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+
+<title>PyQt+WebKit experiments part 2: debugging</title>
+    <link rel="stylesheet" href="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/style.css" type="text/css">
+    <link rel="stylesheet" href="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/wp-support.css" type="text/css">
+    <link rel="alternate" href="http://agateau.com/feed" title="Recent Blog Posts" type="application/atom+xml">
+    <link rel="stylesheet" href="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/_pygments.css" type="text/css">
+
+<link rel="stylesheet" href="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/colorbox.css">
+<script src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/jquery_002.js"></script>
+<script src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/jquery.js"></script>
+<script>
+function onReady() {
+    $('a.image-reference').colorbox({rel:'gal', maxWidth:'100%', maxHeight:'100%'});
+}
+$(document).ready(onReady);
+</script>
+<script src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/embed.js" async="" type="text/javascript"></script><script charset="UTF-8" async="" src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/thread.js"></script><link href="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/defaults.css" type="text/css" rel="stylesheet"><script charset="UTF-8" async="" src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/disqus.js"></script><link href="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/theme.css" type="text/css" rel="stylesheet"><script charset="UTF-8" async="" src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/theme.js"></script><script charset="UTF-8" async="" src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/event.js"></script></head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="navigation">
+            <ul>
+                <li><a href="http://agateau.com/">Blog</a></li>
+                <li><a href="http://agateau.com/archive/">Archive</a></li>
+                <li><a href="http://agateau.com/article-series/">Article Series</a></li>
+                <li><a href="http://agateau.com/talks/">Talks</a></li>
+                <li><a href="http://agateau.com/projects/">Projects</a></li>
+                <li><a href="http://agateau.com/tags/">Tags</a></li>
+            </ul>
+        </div>
+        <p>Aurélien's Room</p>
+    </div>
+    <div class="body">
+        
+  <h1>PyQt+WebKit experiments part 2: debugging</h1>
+  
+  <p class="date">written on Friday, February 3, 2012</p>
+  
+
+  <p>(This is part 2 of the <a href="http://agateau.com/article-series/pyqtwebkit-experiments/">PyQt+WebKit experiments series</a>)</p>
+<p>In <a href="http://agateau.com/2012/01/20/swimming-against-the-stream-or-preparing-for-next-stream-change-pyqtwebkit-experiments/">Part 1</a>
+ I described how to embed WebKit in a PyQt application and how to expose
+ PyQt objects in WebKit and manipulate them with JavaScript.</p>
+<p>Even if you are a great JavaScript master, you can't avoid the 
+occasional typo while writing JavaScript code in your application. This 
+can be quite frustrating with QtWebKit because it likes to stay quiet: 
+it won't tell you about any error.</p>
+<p>Let's have a look at an example.</p>
+<p>First here is loader.py, a simple Python script which loads a block of HTML:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">PyQt4.QtCore</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">PyQt4.QtGui</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">PyQt4.QtWebKit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">class</span> <span class="nc">Window</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Window</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="n">QWebView</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">setMargin</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">Window</span><span class="p">()</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">setHtml</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+<p>
+</p><p>And here is "broken.html", our broken HTML code:</p>
+<div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">brokenFunction</span><span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">result</span><span class="p">;</span>
+    <span class="nx">result</span> <span class="o">=</span> <span class="nx">arg1</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="nx">result</span> <span class="o">+=</span> <span class="nx">arg2</span><span class="p">;</span>
+    <span class="nx">resul</span> <span class="o">/=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+Complex computation:
+<span class="nt">&lt;script&gt;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">brokenFunction</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+<p>
+</p><p>Notice the missing 't' in "resul /= 4"?</p>
+<p>The last-resort, grandpa-debugged-js-this-way, debugging tool is 
+still there: the mighty alert() function. Just stuff your code with 
+calls to alert() and be happy... Anyone ever wrote code like that?</p>
+<div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">brokenFunction</span><span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">result</span><span class="p">;</span>
+    <span class="nx">result</span> <span class="o">=</span> <span class="nx">arg1</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"1"</span><span class="p">);</span>
+    <span class="nx">result</span> <span class="o">+=</span> <span class="nx">arg2</span><span class="p">;</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"2"</span><span class="p">);</span>
+    <span class="nx">resul</span> <span class="o">/=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"3"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+Complex computation:
+<span class="nt">&lt;script&gt;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">brokenFunction</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+<p>
+</p><p>Easy enough, no? With the great alert() function we can quickly 
+pinpoint the bug in our brokenFunction() is between alert("2") and 
+alert("3").</p>
+<h2>Can we do better?</h2>
+<p>alert()-style debugging gets old very fast. Clicking that "OK" button
+ is a pain. Fortunately, there is a way to get more useful feedback from
+ our PyQt application.</p>
+<p>The job of the QWebView class is to show the content of a QWebPage 
+instance. By default QWebView creates its own instance of QWebPage, but 
+it is possible to replace this instance with our own QWebPage. The 
+QWebPage class has a few virtual methods. Among them, the 
+javaScriptConsoleMessage() method is the one we are looking for: it is 
+called every time console.log() is called from JavaScript.</p>
+<p>Here is an implementation of WebPage which uses Python logging module to get JavaScript console messages out:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">from</span> <span class="nn">PyQt4.QtWebKit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">class</span> <span class="nc">WebPage</span><span class="p">(</span><span class="n">QWebPage</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Makes it possible to use a Python logger to print javascript console messages</span>
+<span class="sd">    """</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">WebPage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">logger</span><span class="p">:</span>
+            <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logger</span>
+
+    <span class="k">def</span> <span class="nf">javaScriptConsoleMessage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">lineNumber</span><span class="p">,</span> <span class="n">sourceID</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s">"JsConsole(</span><span class="si">%s</span><span class="s">:</span><span class="si">%d</span><span class="s">): </span><span class="si">%s</span><span class="s">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">sourceID</span><span class="p">,</span> <span class="n">lineNumber</span><span class="p">,</span> <span class="n">msg</span><span class="p">))</span>
+</pre></div>
+<p>
+</p><p>And here is "loader-log.py", a loader which uses this class:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">PyQt4.QtCore</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">PyQt4.QtGui</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">PyQt4.QtWebKit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="kn">from</span> <span class="nn">webpage</span> <span class="kn">import</span> <span class="n">WebPage</span>
+
+<span class="k">class</span> <span class="nc">Window</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Window</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="n">QWebView</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">setPage</span><span class="p">(</span><span class="n">WebPage</span><span class="p">())</span>
+
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">setMargin</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">Window</span><span class="p">()</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">setHtml</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+<p>
+</p><p>If we load "broken.html" with "loader-log.py" we get the following on stderr:</p>
+<p></p><pre><code>$ python loader-log.py broken.html
+WARNING:root:JsConsole(undefined:0): ReferenceError: Can't find variable: resul
+</code></pre><p>
+</p><p>That should make it easier to find and fix our bug, even if we don't get very useful file names or line numbers.</p>
+<p>javaScriptConsoleMessage() receives all console messages. This means 
+our logger will also print out calls to console.log(). Here is 
+"console-log.html":</p>
+<div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">chattyFunction</span><span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">result</span><span class="p">;</span>
+    <span class="nx">result</span> <span class="o">=</span> <span class="nx">arg1</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"result"</span> <span class="o">+</span> <span class="nx">result</span><span class="p">);</span>
+    <span class="nx">result</span> <span class="o">+=</span> <span class="nx">arg2</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"result"</span> <span class="o">+</span> <span class="nx">result</span><span class="p">);</span>
+    <span class="nx">result</span> <span class="o">/=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"result"</span> <span class="o">+</span> <span class="nx">result</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+Complex computation:
+<span class="nt">&lt;script&gt;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">chattyFunction</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+<p>
+</p><p>When loaded with "loader-log.py", we get this output:</p>
+<p></p><pre><code>$ python loader-log.py console-log.html
+WARNING:root:JsConsole(about:blank:5): result: 4
+WARNING:root:JsConsole(about:blank:5): result: 7
+WARNING:root:JsConsole(about:blank:5): result: 1.75
+</code></pre><p>
+</p><h2>Not good enough?</h2>
+<p>Getting the output of console.log() is nice, but modern browsers have
+ much more efficient tools: if you open "broken.html" with Rekonq and 
+look at the output in the Web Inspector Console, you can not only see 
+console output, but you can also easily inspect your HTML tree and many 
+other things.</p>
+<a href="http://agateau.com/2012/02/03/pyqtwebkit-experiments-part-2-debugging/rekonq-webinspector.png"><img src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/thumb_rekonq-webinspector.png" title="Rekonq Web Inspector" alt="" class="aligncenter size-medium wp-image-1083" height="148" width="300"></a>
+<p>Like us, Rekonq uses QtWebKit, so is there a way to get a similar tool?</p>
+<p>It is actually possible. Rekonq uses a class named QWebInspector. All
+ that is necessary to get a nice inspector tool for our application is 
+to:</p>
+<ol>
+<li>Get the QWebView page</li>
+<li>set the QWebSettings.DeveloperExtrasEnabled attribute on this page</li>
+<li>Instantiate a QWebInspector</li>
+<li>Pass the view page to the inspector</li>
+</ol>
+<p>Here is "loader-webinspector.py", a new HTML loader which can show a web inspector when one presses F12:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">PyQt4.QtCore</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">PyQt4.QtGui</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">PyQt4.QtWebKit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="kn">from</span> <span class="nn">webpage</span> <span class="kn">import</span> <span class="n">WebPage</span>
+
+<span class="k">class</span> <span class="nc">Window</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Window</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="n">QWebView</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setupInspector</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">splitter</span> <span class="o">=</span> <span class="n">QSplitter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">splitter</span><span class="o">.</span><span class="n">setOrientation</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Vertical</span><span class="p">)</span>
+
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">setMargin</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">splitter</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">splitter</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">webInspector</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">setupInspector</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">page</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">page</span><span class="p">()</span>
+        <span class="n">page</span><span class="o">.</span><span class="n">settings</span><span class="p">()</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="n">QWebSettings</span><span class="o">.</span><span class="n">DeveloperExtrasEnabled</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">webInspector</span> <span class="o">=</span> <span class="n">QWebInspector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">webInspector</span><span class="o">.</span><span class="n">setPage</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+
+        <span class="n">shortcut</span> <span class="o">=</span> <span class="n">QShortcut</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">shortcut</span><span class="o">.</span><span class="n">setKey</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Key_F12</span><span class="p">)</span>
+        <span class="n">shortcut</span><span class="o">.</span><span class="n">activated</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">toggleInspector</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">webInspector</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">toggleInspector</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">webInspector</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">webInspector</span><span class="o">.</span><span class="n">isVisible</span><span class="p">())</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">Window</span><span class="p">()</span>
+    <span class="n">html</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">setHtml</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+<p>
+</p><p>The four steps I described are done in the "setupInspector()" method.</p>
+<p>And here is "console-webinspector.html":</p>
+<div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">chattyFunction</span><span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">result</span><span class="p">;</span>
+    <span class="nx">result</span> <span class="o">=</span> <span class="nx">arg1</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"result: %d"</span><span class="p">,</span> <span class="nx">result</span><span class="p">);</span>
+    <span class="nx">result</span> <span class="o">+=</span> <span class="nx">arg2</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s2">"result: %d"</span><span class="p">,</span> <span class="nx">result</span><span class="p">);</span>
+    <span class="nx">result</span> <span class="o">/=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">"result: %d"</span><span class="p">,</span> <span class="nx">result</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+Complex computation:
+<span class="nt">&lt;script&gt;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">chattyFunction</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+<p>
+</p><p>It is similar to "console-log.html" but takes advantage of two new features which do not work with the previous approach:</p>
+<ul>
+<li>printf-style formatting: that is, printing the value of <code>result</code> with <code>"result: %d", result</code>, not <code>"result: " + result</code></li>
+<li>log categorization: you can use console.warn() and console.error() 
+to get different type of output. These methods worked with the previous 
+approach, but the categorization was lost.</li>
+</ul>
+<p>Loading "console-webinspector.html" with "loader-webinspector.py" and pressing F12 we get this:</p>
+<a href="http://agateau.com/2012/02/03/pyqtwebkit-experiments-part-2-debugging/loader-webinspector.png"><img src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/thumb_loader-webinspector.png" title="Loader with Web Inspector" alt="" class="aligncenter size-medium wp-image-1082" height="146" width="300"></a>
+<h2>Closing words</h2>
+<p>These two approaches should help you track down the nastiest bugs in 
+your embedded JavaScript code. The Web Inspector approach is probably 
+the most powerful one, but the Python logging approach can also be 
+useful when tracking down bugs where it is more practical to have one 
+single log output for both the PyQt and the JavaScript sides.</p>
+<a href="http://flattr.com/thing/477037/PyQtWebKit-experiments-part-2-debugging" target="_blank">
+<img src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
+
+
+  
+  <p class="tags">This entry was tagged
+    
+      <a href="http://agateau.com/tags/Misc./">Misc.</a>, 
+      <a href="http://agateau.com/tags/pyqt/">pyqt</a> and 
+      <a href="http://agateau.com/tags/webkit/">webkit</a>
+  </p>
+  
+
+  
+    <a name="comments"></a>
+    
+<div id="disqus_thread"><div style="display: none;" id="dsq-content-stub"><img alt="DISQUS" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAAARCAYAAAH4YIFjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABwdJREFUeNpi/P//PwMhwAIiGBkZGeK6V8JVh9rqdfrc0ixnEDb+wPD2rAAjMSYBBBBRisDWwKxCthIE/q8Q+A8yhCiTAAIIrCi+ZxVMZSAQr19UGs4IMxWd/X8Rw3/GOKDhW43fgzwF1hX7n5EJ2dSp2QFNUKcZwJ31/78CkvPBGkGGMXidSUTWCxBAxAUAEQAcJzCvIXsDBPwsNBU2nbj+AMpdsFA8PAHsLZj3QC5D9hrIAEtN+RMwAzRkxcB0iK3eQ6iQIRAnoMTE//8CyHwmWHQdv/7QAiZ44/ErMP383acsqNB5iMnPlsFdsUZ6IU3CCCCA4AYBw8kBJgj06gGkmHJAFgPyQV4ExeQEoNgHJHUBQMoAWRzoerBeYHgeQOJ/APIvQPkNUP4EuIdADBAGBRMQOABxQcakdSipHZldNGvL2zWHL8kD1d0HieVN33QYqnc/EAfULNwJVw8KTniQwvjAdPz/SEwKmL1KfC5QjwEQr4e5AyVdA3P4ASCe8O3nb1whmtib6r3IXlfpATBEFbpWH9ygJSdmBtXrOHPbyZWPXn1AqOZRwDSBS+YHo82SOQwiZnYMoS+EGC42nGdYzBiAnKpgGAbeA3ECkjwYQNnzH758///6o5cgofVIagy+/vgFF//y/ecHJLn1/18AA+/teZBcPZL4eSTxBJg7AAKIaomRmpkeV2IG5UcDpMSsAM2zF4BiG9DUFaCLQxPwBWCC/QBkg/QqoCVuEN4ASuDIaWc/DIMSItBxH0GCrkaqCVBxWO4BJWBQcK/PmrL+I1S8H0i9h4mjFfX7GTRyIdEuHzIfZtb/Zdw3oGyQnvP/d9pNgRc+MLCwJMxxWk7AI6Ar+YCWVSLLyYkJzIYlZqC6RGBhbg/lFwDlQHoDgfgALLfhjY8/X9XhpWPs/wWM7odyMBwDylU8nOzyILYIH3cZslxBgM0cKHM+MOTAGCZnri7XCdS7ASgGLsc/fPlug9cxlrO/wUvYxYwJwCgLwHAMcrVlqCJ9BVlchJ+7EhRyQPwAyGaAFnhgsOPMzUhQroLVAU76yp/gGp/vtQbTr45pwMWOp1oDQ6QQiGEi6+EJGLmah0YJQ6CVtu3ivecKYHIpE9b8BPqcDSnawHSSu8m3eTvPyAHlzsPkDl25/wXMYAOq+XgtBFwIfn/GwCAOSq8HYCGCsNh8+hvksgYZIJchDkjljAKoHAKVJ6ByBbnmA5XESOL1oFIZSc9/cJkC1IukPuH/z/cw8fswdwyqcgYgwAaVYwYbQEnDSI1LbGABEDcCC1lYS4yhfO42n+fvPm9GKsAZkfJDA7RcwwYmQM1CbpUUADU3AB3AjxJ7wFwAFGsAqp2A0mBDahww8Gv4Mvrf2AKXWyMzgeHbk3wwh5X/DGPkR1OoHlCmn49cGCABkL8SgZn8ANbAQQaV4ZBK6yGwgbDr3G2GNx+/gkqShMTe1V///vsnA/KYjoKECjBwMPQCW0EngOrNQWxbHQWGFA8zBlAj5eztpwwbjl9lyPG1DFOUEAIFDqxJB6ksoC1ZN2NVsDm7zt4GNUhBgdUPrXwckWtQOJB0VQE2XRF8UQt9hodrIGw+FaDcWVjAwAshhsD7kAbPO2Dr78ZEBoZfHxQYHNYbwEogvIGjKSfOiNysBpaEL/acv8MODBhuUX7u00BhVVx6DZWlxHcDAxQEDl95AMZQAGqHLlSSFIanAnZWll0/f/8Bs2OcDB+5GavJVyGZtevsrYdL9p2XQ6rZGcnKI54nZRj2uoMCAVr4K8JkQAKgJsdEYN12AbmYYSGqYGJk/NC8bO91WHKUFRXgwace6ElDIF4PjHWHc3eeMZy98xSU8mB1mwE0FSQCU8ECZiZGVpi+yw9eLIfVlUyMjIf+/f/Pu/bIlTtIdSX5hauo+RagxxMZfr2fwHB3IT/Dy4MMDI/BzTABaP2aAGzmgPpN4gQDB1pmgIA+EAfcfvoGXl/mB1hXFuBxCLDs6oc26kBJZiIoxShLCqs9e/tp+vdfv8ENB08Tdf9FwHKsMtxxTfvK/SGgbHfx3vNyoL2g7DjR30r74vqjV2yA6lXgbnI2WtoH4yhEfGF4sAISSTcm9wOzDcidoE6lPTBLwRuyDMoJ5+DZagnLJIb/f3mh5edGcKoRs+5neHUUUgZxiIrhrK2wFchc7KwMmsByANjiAZUfoGzhCEpJIDlQowOYffqRC2RQS+f1x68HNx6/ygcqY9A7RMZAc5LcTS/zcLLZwcwB1evAzs/8pfsvwDu9yOplgRECzF4M8a7Gryw05NRB+sDtiC/3HjKcKeaDpgAEADVmNIDlsX4DqFPmCOvvMNxdkAAuX95dQFUPKnv06kEBmQgNOLpV5QbQpAsrcz4QUC+AVJsgqxcgoNcBqQy5QIIdONUDALcn6c0dtMJ9AAAAAElFTkSuQmCC" height="17" width="71"><img alt="..." src="data:image/gif;base64,R0lGODlhEAALAPQAAP///z2LqeLt8dvp7u7090GNqz2LqV+fuJ/F1IW2ycrf51aatHWswaXJ14i4ys3h6FmctUCMqniuw+vz9eHs8fb5+meku+Tu8vT4+cfd5bbT3tbm7PH2+AAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCwAAACwAAAAAEAALAAAFLSAgjmRpnqSgCuLKAq5AEIM4zDVw03ve27ifDgfkEYe04kDIDC5zrtYKRa2WQgAh+QQJCwAAACwAAAAAEAALAAAFJGBhGAVgnqhpHIeRvsDawqns0qeN5+y967tYLyicBYE7EYkYAgAh+QQJCwAAACwAAAAAEAALAAAFNiAgjothLOOIJAkiGgxjpGKiKMkbz7SN6zIawJcDwIK9W/HISxGBzdHTuBNOmcJVCyoUlk7CEAAh+QQJCwAAACwAAAAAEAALAAAFNSAgjqQIRRFUAo3jNGIkSdHqPI8Tz3V55zuaDacDyIQ+YrBH+hWPzJFzOQQaeavWi7oqnVIhACH5BAkLAAAALAAAAAAQAAsAAAUyICCOZGme1rJY5kRRk7hI0mJSVUXJtF3iOl7tltsBZsNfUegjAY3I5sgFY55KqdX1GgIAIfkECQsAAAAsAAAAABAACwAABTcgII5kaZ4kcV2EqLJipmnZhWGXaOOitm2aXQ4g7P2Ct2ER4AMul00kj5g0Al8tADY2y6C+4FIIACH5BAkLAAAALAAAAAAQAAsAAAUvICCOZGme5ERRk6iy7qpyHCVStA3gNa/7txxwlwv2isSacYUc+l4tADQGQ1mvpBAAIfkECQsAAAAsAAAAABAACwAABS8gII5kaZ7kRFGTqLLuqnIcJVK0DeA1r/u3HHCXC/aKxJpxhRz6Xi0ANAZDWa+kEAA7AAAAAAAAAAAA" style="margin:0 0 3px 5px" height="11" width="16"></div><div class="clearfix" style="display: block;" id="dsq-content">      <div id="dsq-global-toolbar" class="dsq-clearfix">        <ul class="dsq-global-toolbar-right dsq-clearfix">                            <li class="dsq-community-box">                <a href="#" class="dsq-toolbar-item dsq-tt" onclick="DISQUS.dtpl.actions.fire('community.show'); return false" title="Expand Community Box"><span class="dsq-toolbar-icon"></span></a>            </li>                            <li class="dsq-global-toolbar-dropdown-container">                    <div id="dsq-toolbar-dropdown">    <a href="#" class="dsq-toolbar-logo dsq-toolbar-item dsq-clearfix"><span class="dsq-toolbar-icon">Disqus</span></a>    <div id="dsq-toolbar-dropdown-wrap" style="display: none">      <ul class="dsq-clearfix">                    <li class="dsq-login-link"><a href="#" onclick="DISQUS.dtpl.actions.fire('auth.login'); return false"><span class="dsq-toolbar-icon"></span><span class="dsq-toolbar-label">Login</span></a></li>                    <li class="dsq-about-link"><a href="http://disqus.com/" target="_blank"><span class="dsq-toolbar-icon"></span><span class="dsq-toolbar-label">About Disqus</span></a></li>      </ul>    </div>  </div>            </li>        </ul>                <ul class="dsq-global-toolbar-left dsq-clearfix">            <li class="dsq-like-thread">                <a href="#" id="dsq-like-thread-button" class="dsq-toolbar-item dsq-clearfix  dsq-tt" onclick="DISQUS.dtpl.actions.fire('thread.vote', 1); return false;" title="I like this page">                    <span class="dsq-toolbar-icon"></span>                    <span class="dsq-toolbar-label">Like</span>                </a>            </li>            <li class="dsq-dislike-thread">                <a href="#" id="dsq-dislike-thread-button" class="dsq-toolbar-item dsq-clearfix  dsq-tt" onclick="DISQUS.dtpl.actions.fire('thread.vote', -1); return false" title="I don't like this page">                    <span class="dsq-toolbar-icon">Dislike</span>                </a>            </li>            <li class="dsq-like-panel">                <ul class="dsq-like-faces dsq-clearfix">                        <li class="dsq-like-activity">    </li>                </ul>            </li>        </ul>            </div>    <div id="dsq-like-tooltip">      <div id="dsq-share-step-1" class="dsq-share-step">        <h3>Glad you liked it. Would you like to share?</h3>        <p class="dsq-tooltip-checkbox"><input id="dsq-share-thread-facebook" value="Facebook" type="checkbox"><label for="dsq-share-thread-facebook"><span class="dsq-facebook">Facebook</span></label></p>        <p class="dsq-tooltip-checkbox"><input id="dsq-share-thread-twitter" value="Twitter" type="checkbox"><label for="dsq-share-thread-twitter"><span class="dsq-twitter">Twitter</span></label></p>        <ul id="dsq-tooltip-actions">                        <li><a href="#" onclick="DISQUS.dtpl.actions.fire('thread.share.send'); return false" class="dsq-primary-action">Share</a></li>                    <li><a href="#" onclick="DISQUS.dtpl.actions.fire('thread.share.cancel'); return false" class="dsq-secondary-action">No thanks</a></li>        </ul>      </div>      <div id="dsq-share-step-2" class="dsq-share-step" style="display:none !important">        <p>Sharing this page …</p>      </div>      <div id="dsq-share-step-3" class="dsq-share-step" style="display:none !important">        <p>Thanks! <a href="#" class="dsq-tooltip-decline" onclick="DISQUS.dtpl.actions.fire('thread.share.cancel'); return false">Close</a></p>      </div>    </div>                            <div id="dsq-sort-by">    <select id="dsq-sort-select" onchange="DISQUS.dtpl.actions.fire('thread.sort', this.value);">              <option value="hot">          Sort by popular now        </option>              <option value="best">          Sort by best rating        </option>              <option value="newest">          Sort by newest first        </option>              <option value="oldest" selected="selected">          Sort by oldest first        </option>          </select>  </div>      <h3>            Showing <span id="dsq-num-posts">9</span> comments        </h3>        <ul id="dsq-comments">            <li id="comment-645750795">  </li><li id="dsq-comment-645750795" data-dsq-comment-id="645750795" class="dsq-comment dsq-clearfix        dsq-comment-is-parent                " style="margin-left:0px;">    <div class="dsq-avatar dsq-tt" title="Expand Hyperion's profile">      <a href="http://disqus.com/guest/77b7f22990c0a840ce0f5aa4f89950dc/" onclick="DISQUS.dtpl.actions.fire('profile.show', 645750795, null); return false">        <img src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/noavatar32.png" class="dsq-deferred-avatar" data-src="http://mediacdn.disqus.com/1349204341/images/noavatar32.png" alt="">      </a>    </div>    <div id="dsq-comment-body-645750795" class="dsq-comment-body">      <div class="dsq-comment-header">        <span class="dsq-commenter-name">Hyperion</span>                <span class="dsq-collapsed-count">                      4 comments collapsed                  </span>                <a href="#" class="dsq-collapse-toggle dsq-collapse" title="Collapse thread" onclick="DISQUS.dtpl.actions.fire('comments.collapse', 645750795); return false;"><span>Collapse</span></a>        <a href="#" class="dsq-collapse-toggle dsq-expand" title="Expand thread" onclick="DISQUS.dtpl.actions.fire('comments.expand', 645750795); return false;"><span>Expand</span></a>      </div>        <div class="dsq-comment-message" id="dsq-comment-message-645750795">                <div class="dsq-comment-text" id="dsq-comment-text-645750795">        <p>You should avoid "*"-Imports! Even if you just want to show something it is better to write pythonic code :-)</p>      </div>                        </div>            <!-- edit box dynamically inserted here -->      <div id="dsq-append-edit-645750795"></div>        <div class="dsq-comment-footer">    <ul class="dsq-comment-actions">              <li id="dsq-like-645750795">          <span class="dsq-like-thumb dsq-font">A</span>          <a href="#" onclick="DISQUS.dtpl.actions.fire('comments.like', this,645750795); return false">Like</a>        </li>                          <li>          <a href="#" class="dsq-comment-reply" onclick="DISQUS.dtpl.actions.fire('comments.reply',645750795, this); return false">Reply</a>        </li>         </ul>    <ul class="dsq-comment-meta">      <li>  <a href="#comment-645750795" onclick="DISQUS.dtpl.actions.fire('comments.permalink', 645750795);" title="Link to comment by Hyperion">          8 months ago      </a></li>            <li style="display:none">          <a href="#" id="dsq-comment-like-count-645750795" class="dsq-comment-like-count" onclick="return DISQUS.dtpl.actions.fire('comments.showUserVotes', 645750795); return false">0          Like      </a>      </li>              <li class="dsq-comment-flag" style="visibility: hidden">          <a href="#" class="dsq-comment-flag dsq-font" onclick="return DISQUS.dtpl.actions.fire('comments.report', 645750795, false);">F</a>        </li>          </ul>  </div>      <!-- reply box dynamically inserted here -->      <div id="dsq-append-reply-645750795"></div>    </div>  </li>  <!-- new replies dynamically inserted here -->  <li id="dsq-append-post-645750795"></li>            <li id="comment-645750799">  </li><li id="dsq-comment-645750799" data-dsq-comment-id="645750799" class="dsq-comment dsq-clearfix        dsq-comment-is-parent                " style="margin-left:46px;">    <div class="dsq-avatar dsq-tt" title="Expand Aurélien's profile">      <a href="http://disqus.com/guest/6300af216639777da5f4150c2886e95f/" onclick="DISQUS.dtpl.actions.fire('profile.show', 645750799, null); return false">        <img src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/noavatar32.png" class="dsq-deferred-avatar" data-src="http://mediacdn.disqus.com/uploads/anonusers/3133/2310/avatar32.jpg?1281549414" alt="">      </a>    </div>    <div id="dsq-comment-body-645750799" class="dsq-comment-body">      <div class="dsq-comment-header">        <span class="dsq-commenter-name">Aurélien</span>                <span class="dsq-collapsed-count">                      3 comments collapsed                  </span>                <a href="#" class="dsq-collapse-toggle dsq-collapse" title="Collapse thread" onclick="DISQUS.dtpl.actions.fire('comments.collapse', 645750799); return false;"><span>Collapse</span></a>        <a href="#" class="dsq-collapse-toggle dsq-expand" title="Expand thread" onclick="DISQUS.dtpl.actions.fire('comments.expand', 645750799); return false;"><span>Expand</span></a>      </div>        <div class="dsq-comment-message" id="dsq-comment-message-645750799">                <div class="dsq-comment-text" id="dsq-comment-text-645750799">        <p>I
+ usually do this, but I don't think it really matters for PyQt4 classes.
+ Since all Qt classes are prefixed with "Q" it is clear where they come 
+from.</p>      </div>                        </div>            <!-- edit box dynamically inserted here -->      <div id="dsq-append-edit-645750799"></div>        <div class="dsq-comment-footer">    <ul class="dsq-comment-actions">              <li id="dsq-like-645750799">          <span class="dsq-like-thumb dsq-font">A</span>          <a href="#" onclick="DISQUS.dtpl.actions.fire('comments.like', this,645750799); return false">Like</a>        </li>                          <li>          <a href="#" class="dsq-comment-reply" onclick="DISQUS.dtpl.actions.fire('comments.reply',645750799, this); return false">Reply</a>        </li>         </ul>    <ul class="dsq-comment-meta">      <li>  <a href="#comment-645750799" onclick="DISQUS.dtpl.actions.fire('comments.permalink', 645750799);" title="Link to comment by Aurélien">          8 months ago      </a></li>              <li>          <a onclick="DISQUS.dtpl.actions.fire('comments.showParent', 645750795); return false" href="#comment-645750795" title="Jump to comment">            in reply to Hyperion          </a>        </li>            <li style="display:none">          <a href="#" id="dsq-comment-like-count-645750799" class="dsq-comment-like-count" onclick="return DISQUS.dtpl.actions.fire('comments.showUserVotes', 645750799); return false">0          Like      </a>      </li>              <li class="dsq-comment-flag" style="visibility: hidden">          <a href="#" class="dsq-comment-flag dsq-font" onclick="return DISQUS.dtpl.actions.fire('comments.report', 645750799, false);">F</a>        </li>          </ul>  </div>      <!-- reply box dynamically inserted here -->      <div id="dsq-append-reply-645750799"></div>    </div>  </li>  <!-- new replies dynamically inserted here -->  <li id="dsq-append-post-645750799"></li>            <li id="comment-645750801">  </li><li id="dsq-comment-645750801" data-dsq-comment-id="645750801" class="dsq-comment dsq-clearfix        dsq-comment-is-parent                " style="margin-left:92px;">    <div class="dsq-avatar dsq-tt" title="Expand Hyperion's profile">      <a href="http://disqus.com/guest/77b7f22990c0a840ce0f5aa4f89950dc/" onclick="DISQUS.dtpl.actions.fire('profile.show', 645750801, null); return false">        <img src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/noavatar32.png" class="dsq-deferred-avatar" data-src="http://mediacdn.disqus.com/1349204341/images/noavatar32.png" alt="">      </a>    </div>    <div id="dsq-comment-body-645750801" class="dsq-comment-body">      <div class="dsq-comment-header">        <span class="dsq-commenter-name">Hyperion</span>                <span class="dsq-collapsed-count">                      2 comments collapsed                  </span>                <a href="#" class="dsq-collapse-toggle dsq-collapse" title="Collapse thread" onclick="DISQUS.dtpl.actions.fire('comments.collapse', 645750801); return false;"><span>Collapse</span></a>        <a href="#" class="dsq-collapse-toggle dsq-expand" title="Expand thread" onclick="DISQUS.dtpl.actions.fire('comments.expand', 645750801); return false;"><span>Expand</span></a>      </div>        <div class="dsq-comment-message" id="dsq-comment-message-645750801">                <div class="dsq-comment-text" id="dsq-comment-text-645750801">        <p>Yes
+ it matters; of course the problems might seem less important than in 
+other cases, but think of your own class you design. In context of Qt it
+ will start with "Q" either... and there you are ;-)</p>      </div>                        </div>            <!-- edit box dynamically inserted here -->      <div id="dsq-append-edit-645750801"></div>        <div class="dsq-comment-footer">    <ul class="dsq-comment-actions">              <li id="dsq-like-645750801">          <span class="dsq-like-thumb dsq-font">A</span>          <a href="#" onclick="DISQUS.dtpl.actions.fire('comments.like', this,645750801); return false">Like</a>        </li>                          <li>          <a href="#" class="dsq-comment-reply" onclick="DISQUS.dtpl.actions.fire('comments.reply',645750801, this); return false">Reply</a>        </li>         </ul>    <ul class="dsq-comment-meta">      <li>  <a href="#comment-645750801" onclick="DISQUS.dtpl.actions.fire('comments.permalink', 645750801);" title="Link to comment by Hyperion">          8 months ago      </a></li>              <li>          <a onclick="DISQUS.dtpl.actions.fire('comments.showParent', 645750799); return false" href="#comment-645750799" title="Jump to comment">            in reply to Aurélien          </a>        </li>            <li style="display:none">          <a href="#" id="dsq-comment-like-count-645750801" class="dsq-comment-like-count" onclick="return DISQUS.dtpl.actions.fire('comments.showUserVotes', 645750801); return false">0          Like      </a>      </li>              <li class="dsq-comment-flag" style="visibility: hidden">          <a href="#" class="dsq-comment-flag dsq-font" onclick="return DISQUS.dtpl.actions.fire('comments.report', 645750801, false);">F</a>        </li>          </ul>  </div>      <!-- reply box dynamically inserted here -->      <div id="dsq-append-reply-645750801"></div>    </div>  </li>  <!-- new replies dynamically inserted here -->  <li id="dsq-append-post-645750801"></li>            <li id="comment-645750802">  </li><li id="dsq-comment-645750802" data-dsq-comment-id="645750802" class="dsq-comment dsq-clearfix                        " style="margin-left:138px;">    <div class="dsq-avatar dsq-tt" title="Expand Aurélien's profile">      <a href="http://disqus.com/guest/6300af216639777da5f4150c2886e95f/" onclick="DISQUS.dtpl.actions.fire('profile.show', 645750802, null); return false">        <img src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/noavatar32.png" class="dsq-deferred-avatar" data-src="http://mediacdn.disqus.com/uploads/anonusers/3133/2310/avatar32.jpg?1281549414" alt="">      </a>    </div>    <div id="dsq-comment-body-645750802" class="dsq-comment-body">      <div class="dsq-comment-header">        <span class="dsq-commenter-name">Aurélien</span>                <span class="dsq-collapsed-count">                      1 comment collapsed                  </span>                <a href="#" class="dsq-collapse-toggle dsq-collapse" title="Collapse thread" onclick="DISQUS.dtpl.actions.fire('comments.collapse', 645750802); return false;"><span>Collapse</span></a>        <a href="#" class="dsq-collapse-toggle dsq-expand" title="Expand thread" onclick="DISQUS.dtpl.actions.fire('comments.expand', 645750802); return false;"><span>Expand</span></a>      </div>        <div class="dsq-comment-message" id="dsq-comment-message-645750802">                <div class="dsq-comment-text" id="dsq-comment-text-645750802">        <p>Just
+ like I would never create a class starting with "Q" when writing Qt C++
+ code, I will never create a class starting with "Q" when writing PyQt 
+code.</p>      </div>                        </div>            <!-- edit box dynamically inserted here -->      <div id="dsq-append-edit-645750802"></div>        <div class="dsq-comment-footer">    <ul class="dsq-comment-actions">              <li id="dsq-like-645750802">          <span class="dsq-like-thumb dsq-font">A</span>          <a href="#" onclick="DISQUS.dtpl.actions.fire('comments.like', this,645750802); return false">Like</a>        </li>                          <li>          <a href="#" class="dsq-comment-reply" onclick="DISQUS.dtpl.actions.fire('comments.reply',645750802, this); return false">Reply</a>        </li>         </ul>    <ul class="dsq-comment-meta">      <li>  <a href="#comment-645750802" onclick="DISQUS.dtpl.actions.fire('comments.permalink', 645750802);" title="Link to comment by Aurélien">          8 months ago      </a></li>              <li>          <a onclick="DISQUS.dtpl.actions.fire('comments.showParent', 645750801); return false" href="#comment-645750801" title="Jump to comment">            in reply to Hyperion          </a>        </li>            <li style="display:none">          <a href="#" id="dsq-comment-like-count-645750802" class="dsq-comment-like-count" onclick="return DISQUS.dtpl.actions.fire('comments.showUserVotes', 645750802); return false">0          Like      </a>      </li>              <li class="dsq-comment-flag" style="visibility: hidden">          <a href="#" class="dsq-comment-flag dsq-font" onclick="return DISQUS.dtpl.actions.fire('comments.report', 645750802, false);">F</a>        </li>          </ul>  </div>      <!-- reply box dynamically inserted here -->      <div id="dsq-append-reply-645750802"></div>    </div>  </li>  <!-- new replies dynamically inserted here -->  <li id="dsq-append-post-645750802"></li>            <li id="comment-457712066">  </li><li id="dsq-comment-457712066" data-dsq-comment-id="457712066" class="dsq-comment dsq-clearfix        dsq-comment-is-parent                " style="margin-left:0px;">    <div class="dsq-avatar dsq-tt" title="Expand Hyperion's profile">      <a href="http://disqus.com/guest/77b7f22990c0a840ce0f5aa4f89950dc/" onclick="DISQUS.dtpl.actions.fire('profile.show', 457712066, null); return false">        <img src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/noavatar32.png" class="dsq-deferred-avatar" data-src="http://mediacdn.disqus.com/1349204341/images/noavatar32.png" alt="">      </a>    </div>    <div id="dsq-comment-body-457712066" class="dsq-comment-body">      <div class="dsq-comment-header">        <span class="dsq-commenter-name">Hyperion</span>                <span class="dsq-collapsed-count">                      4 comments collapsed                  </span>                <a href="#" class="dsq-collapse-toggle dsq-collapse" title="Collapse thread" onclick="DISQUS.dtpl.actions.fire('comments.collapse', 457712066); return false;"><span>Collapse</span></a>        <a href="#" class="dsq-collapse-toggle dsq-expand" title="Expand thread" onclick="DISQUS.dtpl.actions.fire('comments.expand', 457712066); return false;"><span>Expand</span></a>      </div>        <div class="dsq-comment-message" id="dsq-comment-message-457712066">                <div class="dsq-comment-text" id="dsq-comment-text-457712066">        <p>You should avoid "*"-Imports! Even if you just want to show something it is better to write pythonic code :-)</p>      </div>                        </div>            <!-- edit box dynamically inserted here -->      <div id="dsq-append-edit-457712066"></div>        <div class="dsq-comment-footer">    <ul class="dsq-comment-actions">              <li id="dsq-like-457712066">          <span class="dsq-like-thumb dsq-font">A</span>          <a href="#" onclick="DISQUS.dtpl.actions.fire('comments.like', this,457712066); return false">Like</a>        </li>                          <li>          <a href="#" class="dsq-comment-reply" onclick="DISQUS.dtpl.actions.fire('comments.reply',457712066, this); return false">Reply</a>        </li>         </ul>    <ul class="dsq-comment-meta">      <li>  <a href="#comment-457712066" onclick="DISQUS.dtpl.actions.fire('comments.permalink', 457712066);" title="Link to comment by Hyperion">          8 months ago      </a></li>            <li style="display:none">          <a href="#" id="dsq-comment-like-count-457712066" class="dsq-comment-like-count" onclick="return DISQUS.dtpl.actions.fire('comments.showUserVotes', 457712066); return false">0          Like      </a>      </li>              <li class="dsq-comment-flag" style="visibility: hidden">          <a href="#" class="dsq-comment-flag dsq-font" onclick="return DISQUS.dtpl.actions.fire('comments.report', 457712066, false);">F</a>        </li>          </ul>  </div>      <!-- reply box dynamically inserted here -->      <div id="dsq-append-reply-457712066"></div>    </div>  </li>  <!-- new replies dynamically inserted here -->  <li id="dsq-append-post-457712066"></li>            <li id="comment-457712596">  </li><li id="dsq-comment-457712596" data-dsq-comment-id="457712596" class="dsq-comment dsq-clearfix        dsq-comment-is-parent                " style="margin-left:46px;">    <div class="dsq-avatar dsq-tt" title="Expand Aurélien's profile">      <a href="http://disqus.com/guest/6300af216639777da5f4150c2886e95f/" onclick="DISQUS.dtpl.actions.fire('profile.show', 457712596, null); return false">        <img src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/noavatar32.png" class="dsq-deferred-avatar" data-src="http://mediacdn.disqus.com/uploads/anonusers/3133/2310/avatar32.jpg?1281549414" alt="">      </a>    </div>    <div id="dsq-comment-body-457712596" class="dsq-comment-body">      <div class="dsq-comment-header">        <span class="dsq-commenter-name">Aurélien</span>                <span class="dsq-collapsed-count">                      3 comments collapsed                  </span>                <a href="#" class="dsq-collapse-toggle dsq-collapse" title="Collapse thread" onclick="DISQUS.dtpl.actions.fire('comments.collapse', 457712596); return false;"><span>Collapse</span></a>        <a href="#" class="dsq-collapse-toggle dsq-expand" title="Expand thread" onclick="DISQUS.dtpl.actions.fire('comments.expand', 457712596); return false;"><span>Expand</span></a>      </div>        <div class="dsq-comment-message" id="dsq-comment-message-457712596">                <div class="dsq-comment-text" id="dsq-comment-text-457712596">        <p>I
+ usually do this, but I don't think it really matters for PyQt4 classes.
+ Since all Qt classes are prefixed with "Q" it is clear where they come 
+from.</p>      </div>                        </div>            <!-- edit box dynamically inserted here -->      <div id="dsq-append-edit-457712596"></div>        <div class="dsq-comment-footer">    <ul class="dsq-comment-actions">              <li id="dsq-like-457712596">          <span class="dsq-like-thumb dsq-font">A</span>          <a href="#" onclick="DISQUS.dtpl.actions.fire('comments.like', this,457712596); return false">Like</a>        </li>                          <li>          <a href="#" class="dsq-comment-reply" onclick="DISQUS.dtpl.actions.fire('comments.reply',457712596, this); return false">Reply</a>        </li>         </ul>    <ul class="dsq-comment-meta">      <li>  <a href="#comment-457712596" onclick="DISQUS.dtpl.actions.fire('comments.permalink', 457712596);" title="Link to comment by Aurélien">          8 months ago      </a></li>              <li>          <a onclick="DISQUS.dtpl.actions.fire('comments.showParent', 457712066); return false" href="#comment-457712066" title="Jump to comment">            in reply to Hyperion          </a>        </li>            <li style="display:none">          <a href="#" id="dsq-comment-like-count-457712596" class="dsq-comment-like-count" onclick="return DISQUS.dtpl.actions.fire('comments.showUserVotes', 457712596); return false">0          Like      </a>      </li>              <li class="dsq-comment-flag" style="visibility: hidden">          <a href="#" class="dsq-comment-flag dsq-font" onclick="return DISQUS.dtpl.actions.fire('comments.report', 457712596, false);">F</a>        </li>          </ul>  </div>      <!-- reply box dynamically inserted here -->      <div id="dsq-append-reply-457712596"></div>    </div>  </li>  <!-- new replies dynamically inserted here -->  <li id="dsq-append-post-457712596"></li>            <li id="comment-457712598">  </li><li id="dsq-comment-457712598" data-dsq-comment-id="457712598" class="dsq-comment dsq-clearfix        dsq-comment-is-parent                " style="margin-left:92px;">    <div class="dsq-avatar dsq-tt" title="Expand Hyperion's profile">      <a href="http://disqus.com/guest/77b7f22990c0a840ce0f5aa4f89950dc/" onclick="DISQUS.dtpl.actions.fire('profile.show', 457712598, null); return false">        <img src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/noavatar32.png" class="dsq-deferred-avatar" data-src="http://mediacdn.disqus.com/1349204341/images/noavatar32.png" alt="">      </a>    </div>    <div id="dsq-comment-body-457712598" class="dsq-comment-body">      <div class="dsq-comment-header">        <span class="dsq-commenter-name">Hyperion</span>                <span class="dsq-collapsed-count">                      2 comments collapsed                  </span>                <a href="#" class="dsq-collapse-toggle dsq-collapse" title="Collapse thread" onclick="DISQUS.dtpl.actions.fire('comments.collapse', 457712598); return false;"><span>Collapse</span></a>        <a href="#" class="dsq-collapse-toggle dsq-expand" title="Expand thread" onclick="DISQUS.dtpl.actions.fire('comments.expand', 457712598); return false;"><span>Expand</span></a>      </div>        <div class="dsq-comment-message" id="dsq-comment-message-457712598">                <div class="dsq-comment-text" id="dsq-comment-text-457712598">        <p>Yes
+ it matters; of course the problems might seem less important than in 
+other cases, but think of your own class you design. In context of Qt it
+ will start with "Q" either... and there you are ;-)</p>      </div>                        </div>            <!-- edit box dynamically inserted here -->      <div id="dsq-append-edit-457712598"></div>        <div class="dsq-comment-footer">    <ul class="dsq-comment-actions">              <li id="dsq-like-457712598">          <span class="dsq-like-thumb dsq-font">A</span>          <a href="#" onclick="DISQUS.dtpl.actions.fire('comments.like', this,457712598); return false">Like</a>        </li>                          <li>          <a href="#" class="dsq-comment-reply" onclick="DISQUS.dtpl.actions.fire('comments.reply',457712598, this); return false">Reply</a>        </li>         </ul>    <ul class="dsq-comment-meta">      <li>  <a href="#comment-457712598" onclick="DISQUS.dtpl.actions.fire('comments.permalink', 457712598);" title="Link to comment by Hyperion">          8 months ago      </a></li>              <li>          <a onclick="DISQUS.dtpl.actions.fire('comments.showParent', 457712596); return false" href="#comment-457712596" title="Jump to comment">            in reply to Aurélien          </a>        </li>            <li style="display:none">          <a href="#" id="dsq-comment-like-count-457712598" class="dsq-comment-like-count" onclick="return DISQUS.dtpl.actions.fire('comments.showUserVotes', 457712598); return false">0          Like      </a>      </li>              <li class="dsq-comment-flag" style="visibility: hidden">          <a href="#" class="dsq-comment-flag dsq-font" onclick="return DISQUS.dtpl.actions.fire('comments.report', 457712598, false);">F</a>        </li>          </ul>  </div>      <!-- reply box dynamically inserted here -->      <div id="dsq-append-reply-457712598"></div>    </div>  </li>  <!-- new replies dynamically inserted here -->  <li id="dsq-append-post-457712598"></li>            <li id="comment-457712730">  </li><li id="dsq-comment-457712730" data-dsq-comment-id="457712730" class="dsq-comment dsq-clearfix                        " style="margin-left:138px;">    <div class="dsq-avatar dsq-tt" title="Expand Aurélien's profile">      <a href="http://disqus.com/guest/6300af216639777da5f4150c2886e95f/" onclick="DISQUS.dtpl.actions.fire('profile.show', 457712730, null); return false">        <img src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/noavatar32.png" class="dsq-deferred-avatar" data-src="http://mediacdn.disqus.com/uploads/anonusers/3133/2310/avatar32.jpg?1281549414" alt="">      </a>    </div>    <div id="dsq-comment-body-457712730" class="dsq-comment-body">      <div class="dsq-comment-header">        <span class="dsq-commenter-name">Aurélien</span>                <span class="dsq-collapsed-count">                      1 comment collapsed                  </span>                <a href="#" class="dsq-collapse-toggle dsq-collapse" title="Collapse thread" onclick="DISQUS.dtpl.actions.fire('comments.collapse', 457712730); return false;"><span>Collapse</span></a>        <a href="#" class="dsq-collapse-toggle dsq-expand" title="Expand thread" onclick="DISQUS.dtpl.actions.fire('comments.expand', 457712730); return false;"><span>Expand</span></a>      </div>        <div class="dsq-comment-message" id="dsq-comment-message-457712730">                <div class="dsq-comment-text" id="dsq-comment-text-457712730">        <p>Just
+ like I would never create a class starting with "Q" when writing Qt C++
+ code, I will never create a class starting with "Q" when writing PyQt 
+code.</p>      </div>                        </div>            <!-- edit box dynamically inserted here -->      <div id="dsq-append-edit-457712730"></div>        <div class="dsq-comment-footer">    <ul class="dsq-comment-actions">              <li id="dsq-like-457712730">          <span class="dsq-like-thumb dsq-font">A</span>          <a href="#" onclick="DISQUS.dtpl.actions.fire('comments.like', this,457712730); return false">Like</a>        </li>                          <li>          <a href="#" class="dsq-comment-reply" onclick="DISQUS.dtpl.actions.fire('comments.reply',457712730, this); return false">Reply</a>        </li>         </ul>    <ul class="dsq-comment-meta">      <li>  <a href="#comment-457712730" onclick="DISQUS.dtpl.actions.fire('comments.permalink', 457712730);" title="Link to comment by Aurélien">          8 months ago      </a></li>              <li>          <a onclick="DISQUS.dtpl.actions.fire('comments.showParent', 457712598); return false" href="#comment-457712598" title="Jump to comment">            in reply to Hyperion          </a>        </li>            <li style="display:none">          <a href="#" id="dsq-comment-like-count-457712730" class="dsq-comment-like-count" onclick="return DISQUS.dtpl.actions.fire('comments.showUserVotes', 457712730); return false">0          Like      </a>      </li>              <li class="dsq-comment-flag" style="visibility: hidden">          <a href="#" class="dsq-comment-flag dsq-font" onclick="return DISQUS.dtpl.actions.fire('comments.report', 457712730, false);">F</a>        </li>          </ul>  </div>      <!-- reply box dynamically inserted here -->      <div id="dsq-append-reply-457712730"></div>    </div>  </li>  <!-- new replies dynamically inserted here -->  <li id="dsq-append-post-457712730"></li>            <li id="comment-645750804">  </li><li id="dsq-comment-645750804" data-dsq-comment-id="645750804" class="dsq-comment dsq-clearfix                        " style="margin-left:0px;">    <div class="dsq-avatar dsq-tt" title="Expand enzo's profile">      <a href="http://disqus.com/guest/a925741058f1440c69bb74c7deee2c5f/" onclick="DISQUS.dtpl.actions.fire('profile.show', 645750804, null); return false">        <img src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/noavatar32.png" class="dsq-deferred-avatar" data-src="http://mediacdn.disqus.com/1349204341/images/noavatar32.png" alt="">      </a>    </div>    <div id="dsq-comment-body-645750804" class="dsq-comment-body">      <div class="dsq-comment-header">        <span class="dsq-commenter-name">enzo</span>                <span class="dsq-collapsed-count">                      1 comment collapsed                  </span>                <a href="#" class="dsq-collapse-toggle dsq-collapse" title="Collapse thread" onclick="DISQUS.dtpl.actions.fire('comments.collapse', 645750804); return false;"><span>Collapse</span></a>        <a href="#" class="dsq-collapse-toggle dsq-expand" title="Expand thread" onclick="DISQUS.dtpl.actions.fire('comments.expand', 645750804); return false;"><span>Expand</span></a>      </div>        <div class="dsq-comment-message" id="dsq-comment-message-645750804">                <div class="dsq-comment-text" id="dsq-comment-text-645750804">        <p>awesome tutorial</p>      </div>                        </div>            <!-- edit box dynamically inserted here -->      <div id="dsq-append-edit-645750804"></div>        <div class="dsq-comment-footer">    <ul class="dsq-comment-actions">              <li id="dsq-like-645750804">          <span class="dsq-like-thumb dsq-font">A</span>          <a href="#" onclick="DISQUS.dtpl.actions.fire('comments.like', this,645750804); return false">Like</a>        </li>                          <li>          <a href="#" class="dsq-comment-reply" onclick="DISQUS.dtpl.actions.fire('comments.reply',645750804, this); return false">Reply</a>        </li>         </ul>    <ul class="dsq-comment-meta">      <li>  <a href="#comment-645750804" onclick="DISQUS.dtpl.actions.fire('comments.permalink', 645750804);" title="Link to comment by enzo">          5 months ago      </a></li>            <li style="display:none">          <a href="#" id="dsq-comment-like-count-645750804" class="dsq-comment-like-count" onclick="return DISQUS.dtpl.actions.fire('comments.showUserVotes', 645750804); return false">0          Like      </a>      </li>              <li class="dsq-comment-flag" style="visibility: hidden">          <a href="#" class="dsq-comment-flag dsq-font" onclick="return DISQUS.dtpl.actions.fire('comments.report', 645750804, false);">F</a>        </li>          </ul>  </div>      <!-- reply box dynamically inserted here -->      <div id="dsq-append-reply-645750804"></div>    </div>  </li>  <!-- new replies dynamically inserted here -->  <li id="dsq-append-post-645750804"></li>      </ul>        <div id="dsq-pagination">      <ul id="dsq-footer" class="dsq-clearfix">        <div id="dsq-subscribe">            <li>      <a href="#" class="dsq-subscribe-email" onclick="return DISQUS.dtpl.actions.fire('thread.subscribe');">        <span class="dsq-font">M</span> <em>Subscribe by email</em>      </a>    </li>    <li>    <a href="http://agateau.disqus.com/httpagateaucom20120203pyqtwebkit_experiments_part_2_debugging/latest.rss" class="dsq-subscribe-rss">      <span class="dsq-font">S</span> <em>RSS</em>    </a>  </li>    </div>  </ul>    </div>                    <div class="dsq-reply " id="dsq-reply">          <div id="dsq-account-dropdown">                  <a href="#" onclick="DISQUS.dtpl.actions.fire('auth.login'); return false;">Login</a>              </div>      <h3>Add New Comment</h3>        <div class="dsq-avatar">              <img src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/noavatar32.png">          </div>    <div class="dsq-textarea dsq-textarea-reply">      <div class="dsq-textarea-background">        <div style="height: auto;" class="dsq-textarea-wrapper">          <!-- filled dynamically -->        <iframe style="height: 58px;" src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/reply.htm" id="easyXDM_DISQUS_net_default8478_provider" name="easyXDM_DISQUS_net_default8478_provider" frameborder="0" scrolling="no"></iframe></div>                  <div id="dsq-media-preview" class="dsq-media-preview" style="display:none">          </div>                <div class="dsq-post-tools">          <ul>            <li class="dsq-post-as">                                <button type="button" class="dsq-button" onclick="DISQUS.dtpl.actions.fire('comments.validate', null, this);">                    Post as …                  </button>                          </li>                          <li class="dsq-attach-media">                <div class="dsq-attach-media-container">                  <span>Image</span>                  <!-- filled dynamically -->                <iframe src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/upload.htm" id="easyXDM_DISQUS_net_default8479_provider" name="easyXDM_DISQUS_net_default8479_provider" frameborder="0" scrolling="no"></iframe></div>              </li>                        <li class="dsq-share-on dsq-clearfix">                            </li>          </ul>        </div>      </div>    </div>  </div>                      <div class="dsq-trackback-url">      Trackback URL      <input onclick="this.select()" readonly="true" value="http://disqus.com/forums/agateau/httpagateaucom20120203pyqtwebkit_experiments_part_2_debugging/trackback/">    </div>      </div><div>  </div></div>
+<script type="text/javascript">
+    var disqus_url = "http://agateau.com/2012/02/03/pyqtwebkit-experiments-part-2-debugging/";
+var disqus_shortname = "agateau";
+var disqus_title = "PyQt+WebKit experiments part 2: debugging";
+var disqus_developer = 1;
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+
+    </div>
+    <div class="footer">
+        <ul>
+            <li><a href="http://agateau.com/about-me/">About Me</a></li>
+            <li><a href="http://agateau.com/feed">Feed</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=7728056;
+var sc_invisible=1;
+var sc_security="2ef4a631";
+</script>
+<script type="text/javascript" src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/counter_xhtml.js"></script>
+
+
+
+<div style="display: none;" id="cboxOverlay"></div><div style="display: none; padding-bottom: 42px; padding-right: 42px;" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div style="width: 0px; height: 0px; overflow: hidden; float: left;" id="cboxLoadedContent"></div><div style="float: left;" id="cboxTitle"></div><div style="float: left;" id="cboxCurrent"></div><div style="float: left;" id="cboxNext"></div><div style="float: left;" id="cboxPrevious"></div><div style="float: left;" id="cboxSlideshow"></div><div style="float: left;" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><iframe src="PyQt+WebKit%20experiments%20part%202%20%20debugging_files/def.htm" style="position: absolute; top: -2000px; left: 0px;" id="easyXDM_DISQUS_net_default8477_provider" name="easyXDM_DISQUS_net_default8477_provider" frameborder="0"></iframe></body></html>

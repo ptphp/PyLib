@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div id="page">
+		{% include "common/header.html" %}
+		
+		{% include "common/navbar.html" %}
+		<div class="wrapper">
+			<div id="waterfall">
+					{{boards}}
+			</div>
+		    <div class="clear"></div>
+		    {% include "sl/loadingbar.html" %}		
+		</div>
+
+		<div class="clear"></div>
+		<div id="page_overlay" style="display: none;" class="overlay"></div>
+		{% include "common/elevator.html" %}
+	</div>
+{% end %}

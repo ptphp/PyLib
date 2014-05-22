@@ -1,0 +1,182 @@
+------------
+house_floor : 
+2
+------------
+house_totalarea : 
+120
+------------
+house_price : 
+500
+------------
+webid : 
+4
+------------
+broker_id : 
+1111
+------------
+city : 
+2
+------------
+belong : 
+1
+------------
+house_room : 
+3
+------------
+house_toward : 
+1
+------------
+house_drawing : 
+
+------------
+house_toilet : 
+1
+------------
+username : 
+changna19880422
+------------
+house_xqpic : 
+
+------------
+passwd : 
+201106
+------------
+borough_section : 
+5910
+------------
+house_hall : 
+2
+------------
+house_title : 
+昆山花园1111111
+------------
+house_desc : 
+兴华园兴华园兴华园兴华园
+------------
+house_type : 
+3
+------------
+house_deposit : 
+1
+------------
+cityarea_id : 
+1411
+------------
+mobile : 
+13333334444
+------------
+house_age : 
+10
+------------
+house_thumb : 
+
+------------
+house_fitment : 
+2
+------------
+borough_name : 
+兴华园
+------------
+contact : 
+苏大生
+------------
+borough_id : 
+10
+------------
+house_topfloor : 
+6
+------------
+house_kind : 
+1
+======================================================
+------------
+house_floor : 
+2
+------------
+house_totalarea : 
+120
+------------
+house_price : 
+500
+------------
+webid : 
+4
+------------
+broker_id : 
+1111
+------------
+city : 
+2
+------------
+belong : 
+1
+------------
+house_room : 
+3
+------------
+house_toward : 
+1
+------------
+house_drawing : 
+
+------------
+house_toilet : 
+1
+------------
+username : 
+changna19880422
+------------
+house_xqpic : 
+
+------------
+passwd : 
+201106
+------------
+borough_section : 
+5910
+------------
+house_hall : 
+2
+------------
+house_title : 
+昆山花园1111111
+------------
+house_desc : 
+昆山花园昆山花园昆山花园昆山花园
+------------
+house_type : 
+3
+------------
+house_deposit : 
+1
+------------
+cityarea_id : 
+1411
+------------
+mobile : 
+111
+------------
+house_age : 
+10
+------------
+house_thumb : 
+
+------------
+house_fitment : 
+2
+------------
+borough_name : 
+昆山花园
+------------
+contact : 
+苏大生
+------------
+borough_id : 
+10
+------------
+house_topfloor : 
+6
+------------
+house_kind : 
+1
+======================================================

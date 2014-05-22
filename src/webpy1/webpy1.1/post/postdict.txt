@@ -1,0 +1,21 @@
+
+    [house_title] => 上地佳园 出租 看房时间:从即
+    [city] => bj
+    [cityarea_id] => 34
+    [borough_section] => 861
+    [house_type] => 3
+    [house_price] => 1600
+    [house_deposit] => 2
+    [house_totalarea] => 75
+    [house_room] => 2
+    [house_hall] => 1
+    [house_toilet] => 1    
+    [house_topfloor] => 8
+    [house_floor] => 4
+    [house_age] => 
+    [house_toward] => 2
+    [house_fitment] => 0
+    [house_desc] => <p><strong>海淀&nbsp;上地&nbsp;上地佳园&nbsp;2室1厅1卫（简单装修-75㎡）价格：1600元/月</strong></p>
+    [borough_name] => 上地佳园
+    [house_drawing] => 
+    [house_thumb] => 

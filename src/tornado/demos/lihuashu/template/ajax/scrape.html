@@ -1,0 +1,97 @@
+<div id="ScrapePin" style="display: block; " class="ModalContainer  destroy">
+    <div class="modal wide ">
+        <div class="header">
+            <a href="#" onclick="$.zxxbox.hide(); return false" class="close"><strong>Close</strong><span></span></a>
+            <h2>网址采集</h2>
+        </div>
+        <div class="PinTop inputHolder scrapePin">
+            <ul class="Form FancyForm">
+                <li>
+                    <img src="{{static_url('media/img/load2.gif')}}" alt="Loading Indicator" class="load"><a id="ScrapeButton" href="#" onclick="return false;" class="fr btn btn18 wbtn disabled"><strong> 查找图片</strong><span></span></a>
+                    <input id="scrapePinInput" type="text" placeholder="http://">
+                    <!--
+                    <label>
+                        http://
+                    </label>
+                    -->
+                    <span class="fff"></span>
+                </li>
+            </ul>
+        </div>
+        <div style="display:none" class="pbt">
+            <div class="ImagePicker">
+                <img src="{{static_url('media/img/load2.gif')}}" alt="Loading Indicator" class="load">
+                <div class="Images pin carousel-container">
+                    <div class="carousel-clip">
+                        <ul class="carousel-list">
+                            <li>
+                                <img src="{{static_url('media/img/DefaultPin.gif')}}" alt="Media">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Arrows">
+                    <a href="#" class="imagePickerNext picker">下一张&nbsp;→<span class="imagePickerNextArrow"></span></a>
+                    <a href="#" class="imagePickerPrevious picker">←&nbsp;上一张<span class="imagePickerPreviousArrow"></span></a>
+                </div>
+            </div>
+            <div class="pin-form">
+                <div class="BoardListOverlay">
+                </div>
+                <div class="BoardSelector BoardPicker">
+                    <div class="current">
+                        <span class="CurrentBoard">创意</span>
+                        <span class="DownArrow"></span>
+                    </div>
+                    <div class="BoardList">
+                        <div class="BoardListBody" style="height: 150px; ">
+                            <ul>
+                                <li class="BoardCategory" data="440430">
+                                    <span>创意</span>
+                                </li>
+                                <li class="BoardCategory" data="440431">
+                                    <span>家居</span>
+                                </li>
+                                <li class="BoardCategory" data="440432">
+                                    <span>旅行</span>
+                                </li>
+                                <li class="BoardCategory" data="440433">
+                                    <span>想要</span>
+                                </li>
+                                <li class="BoardCategory" data="440434">
+                                    <span>音乐、电影、图书</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="CreateBoard">
+                            <input id="board_name_input" type="text" placeholder="创建新画板"><a href="#" onclick="return false;" class="nf btn btn18 wbtn disabled"><strong> 创建</strong><span></span></a>
+                            <div class="CreateBoardStatus">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="InputArea">
+                    <ul class="Form FancyForm">
+                        <li class="nmb">
+                            <textarea rows="2" name="caption" class="DescriptionTextarea" registered-at="registered" autocomplete="off">
+                            </textarea>
+                            <ul class="ac-choices" style="display: none; z-index: 42; opacity: 0; ">
+                            </ul>
+                            <label>
+                                描述一下这个采集…
+                            </label>
+                            <span class="fff"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="CreateBoardStatus error mainerror">
+                </div>
+                <div class="Buttons">
+                    <a href="#" onclick="return false;" class="btn btn18 rbtn disabled"><strong> 采下来</strong><span></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay">
+    </div>
+</div>

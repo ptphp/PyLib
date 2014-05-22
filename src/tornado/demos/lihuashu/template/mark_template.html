@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div id="page">
+		{% include "common/settings_header.html" %}	
+		
+		{% include "marks.html" %}
+	</div>
+	<div class="clear"></div>
+	<div id="page_overlay" style="display: none;" class="overlay"></div>
+	{% include "common/elevator.html" %}
+{% end %}
+{% block logined %}
+app["logined"]  = {{user['logined']}};
+{% end %}

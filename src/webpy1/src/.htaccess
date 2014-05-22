@@ -1,0 +1,9 @@
+﻿<Files code.py>
+    SetHandler wsgi-script
+    Options ExecCGI FollowSymLinks
+</Files>
+
+
+RewriteEngine On
+
+#RewriteRule ^action/(.*)$ code.py/$1 [L]

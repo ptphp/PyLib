@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div id="page">
+		{% include "common/header.html" %}	
+		
+		{% include "index_inside.html" %}
+	</div>
+	<div class="clear"></div>
+	<div id="page_overlay" style="display: none;" class="overlay"></div>
+	{% include "common/elevator.html" %}
+{% end %}

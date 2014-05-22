@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+	<div id="page">
+		{% include "common/settings_header.html" %}	
+		
+		{% include "user/settings_inside.html" %}
+	</div>
+	<div class="clear"></div>
+	<div id="page_overlay" style="display: none;" class="overlay"></div>
+	{% include "common/elevator.html" %}	
+{% end %}
+{% block script %}
+<script type="text/javascript" src="{{static_url('media/js/ajaxfileupload.js')}}"></script>
+
+
+<script>
+function getCookie(name) {
+	    var r = document.cookie.match("\\b" + name + "=([^;]*)\\b");
+	    return r ? r[1] : undefined;
+}
+
+	 function ajaxFileUpload()
+    {
+    	 $(".load")
+    	 .ajaxStart(function(){
+            $(this).show();
+        })
+        .ajaxComplete(function(){
+            $(this).hide();
+        });
+        
+        $.ajaxFileUpload
+        (        	
+            {
+                url:'/upload/', 
+                secureuri:false,
+                fileElementId:'t_file',
+                xsrf:getCookie('_xsrf'),
+                dataType: 'json',
+                success: function (data, status)
+                {
+                    if(typeof(data.error) != 'undefined')
+                    {
+                        if(data.error != '')
+                        {
+                            alert(data.error);
+                        }else
+                        {
+                            $("#current_avatar").attr('src',data.avatar)                            
+                        }
+                    }
+                },
+                error: function (data, status, e)
+                {
+                    alert(e);
+                }
+            }
+        )
+        
+        return false;
+
+    } 
+	
+</script>
+{% end %}

@@ -1,0 +1,113 @@
+<form id="upload" enctype="multipart/form-data" action="/upload/" method="post">
+   <script type="text/javascript">
+      $(function() {
+        $('form').uploadProgress({
+          /* scripts locations for safari */
+          jqueryPath: "{{static_url('media/js/jquery-1.7.1.min.js')}}",
+          uploadProgressPath: "{{static_url('media/js/jquery.uploadProgress.js')}}",
+          start:function(){},
+          uploading: function(upload) {$('#percents').html(upload.percents+'%');},
+          interval: 2000
+          });
+      });
+      
+    </script>
+<div id="UploadPin" style="display: block; " class="ModalContainer  destroy">
+    <div class="modal wide ">
+        <div class="header">
+            <a href="#" onclick="$.zxxbox.hide(); return false" class="close"><strong>Close</strong><span></span></a>
+            <h2>上传作品</h2>
+        </div>
+        <div class="PinTop">
+            <a id="upload_button" href="#" onclick="return false;" class="btn btn18 wbtn"><strong> 选择图片文件</strong><span></span></a>
+            <input id="iupload" name="ifile" type="file" style="position:absolute;width:127px;height:25px;margin-left:-138px;Z-index:1000;
+    opacity:0;filter: alpha(opacity=0);" id="t_file" onchange="fChange();" />
+            {{ xsrf_form_html() }}
+            <div id="uploading">
+                <div id="progress" class="bar">
+                  <div id="progressbar">&nbsp;</div>
+                </div>
+              </div>
+            <div id="percents"></div>
+
+            <script type="text/javascript">
+                function fChange(){
+                    $(".pbt").show();
+                }
+            </script>
+            <div style="position: absolute; opacity: 0.01; overflow-x: hidden; overflow-y: hidden; ">
+                <iframe src="javascript:'<html></html>'" frameborder="no" border="0" name="IFrame_h1cild9z" id="IFrame_h1cild9z" style="display: none; ">
+                </iframe>
+                <input type="file" name="file" size="1" style="position: absolute; top: 0px; left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; ">
+            </div>
+        </div>
+        <div style="display:none" class="pbt">
+            <div class="ImagePicker">
+                <img src="{{static_url('media/img/load2.gif')}}" alt="Loading Indicator" class="load">
+                <div class="Images pin carousel-container">
+                    <div class="carousel-clip">
+                        <ul class="carousel-list">
+                            <li>
+                                <img src="{{static_url('media/img/default_buddy_icon.jpg')}}" alt="Media" id="imediapic" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Arrows">
+                    <a href="#" class="imagePickerNext picker">下一张&nbsp;→<span class="imagePickerNextArrow"></span></a>
+                    <a href="#" class="imagePickerPrevious picker">←&nbsp;上一张<span class="imagePickerPreviousArrow"></span></a>
+                </div>
+            </div>
+            <div class="pin-form">
+                <div class="BoardListOverlay">
+                </div>
+                <div class="BoardSelector BoardPicker">
+                    <div class="current">
+                        <span class="CurrentBoard">选择</span>
+                        <span class="DownArrow"></span>
+                    </div>
+                    <div class="BoardList">
+                        <div class="BoardListBody" style="height: 150px; ">
+                            <ul>
+                            	{% for board in boads %}
+                                <li class="BoardCategory" data="{{ board[0] }}">
+                                    <span>{{ board[1]['title'] }}</span>
+                                </li>
+                                {% end %}
+                                
+                            </ul>
+                        </div>
+                        <div class="CreateBoard">
+                            <input id="board_name_input" type="text" placeholder="创建新画板"><a href="#" onclick="return false;" class="nf btn btn18 wbtn disabled"><strong> 创建</strong><span></span></a>
+                            <div class="CreateBoardStatus">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="InputArea">
+                    <ul class="Form FancyForm">
+                        <li class="nmb">
+                            <textarea rows="2" name="caption" class="DescriptionTextarea" registered-at="registered" autocomplete="off">
+                            </textarea>
+                            <ul class="ac-choices" style="display: none; z-index: 42; opacity: 0; ">
+                            </ul>
+                            <label>
+                                描述一下这个采集…
+                            </label>
+                            <span class="fff"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="CreateBoardStatus error mainerror">
+                </div>
+                <div class="Buttons">
+                    <a href="#" onclick="return false;" class="btn btn18 rbtn disabled"><strong> 采下来</strong><span></span></a>
+                    <input type="submit" value="Upload"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay">
+    </div>
+</div>
+</form>

@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	
+	<title>Hello! Admin</title>
+
+	<link type="text/css" href="{{static_url('manager/style.css')}}" rel="stylesheet" /> <!-- the layout css file -->
+	<link type="text/css" href="{{static_url('manager/css/jquery.cleditor.css')}}" rel="stylesheet" />
+	
+	<script type='text/javascript' src='{{static_url('manager/js/jquery-1.4.2.min.js')}}'></script>	<!-- jquery library -->
+	<script type='text/javascript' src='{{static_url('manager/js/jquery-ui-1.8.5.custom.min.js')}}'></script> <!-- jquery UI -->
+	<script type='text/javascript' src='{{static_url('manager/js/cufon-yui.js')}}'></script> <!-- Cufon font replacement -->
+	<script type='text/javascript' src='{{static_url('manager/js/ColaborateLight_400.font.js')}}'></script> <!-- the Colaborate Light font -->
+	<script type='text/javascript' src='{{static_url('manager/js/easyTooltip.js')}}'></script> <!-- element tooltips -->
+	<script type='text/javascript' src='{{static_url('manager/js/jquery.tablesorter.min.js')}}'></script> <!-- tablesorter -->
+	
+	<!--[if IE 8]>
+		<script type='text/javascript' src='{{static_url('manager/js/excanvas.js')}}'></script>
+		<link rel="stylesheet" href="{{static_url('manager/css/IEfix.css')}}" type="text/css" media="screen" />
+	<![endif]--> 
+ 
+	<!--[if IE 7]>
+		<script type='text/javascript' src='{{static_url('manager/js/excanvas.js')}}'></script>
+		<link rel="stylesheet" href="{{static_url('manager/css/IEfix.css')}}" type="text/css" media="screen" />
+	<![endif]--> 
+	
+	<script type='text/javascript' src='{{static_url('manager/js/visualize.jQuery.js')}}'></script> <!-- visualize plugin for graphs / statistics -->
+	<script type='text/javascript' src='{{static_url('manager/js/iphone-style-checkboxes.js')}}'></script> <!-- iphone like checkboxes -->
+	<script type='text/javascript' src='{{static_url('manager/js/jquery.cleditor.min.js')}}'></script> <!-- wysiwyg editor -->
+
+	<script type='text/javascript' src='{{static_url('manager/js/custom.js')}}'></script> <!-- the "make them work" script -->
+	<script>
+		jQuery.noConflict();
+		jQuery(function(){
+			
+		})
+
+		
+	</script>
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="bgwrap">
+			<div id="primary_left">
+        
+				<div id="logo">
+					<a href="#dashboard.html" title="Dashboard"><img style="margin:20px 40px" src="{{static_url('media/img/logo_38.png')}}" alt="" /></a>
+				</div> <!-- logo end -->
+
+				<div id="menu"> <!-- navigation menu -->
+					<ul>
+						<li><a href="/manager/user/"><img src="{{static_url('manager/assets/icons/small_icons_3/users.png')}}" alt=""/><span>Users</span></a></li>
+						<li><a href="/manager/cat/"><img src="{{static_url('manager/assets/icons/small_icons_3/posts.png')}}" alt=""/><span>Category</span></a></li>
+						<li><a href="/manager/board/"><img src="{{static_url('manager/assets/icons/small_icons_3/settings.png')}}" alt=""/><span>Board</span></a></li>
+						<li><a href="/manager/pin/"><img src="{{static_url('manager/assets/icons/small_icons_3/media.png')}}" alt=""/><span>Pin</span></a></li>
+						<li><a href="#"><img src="{{static_url('manager/assets/icons/small_icons_3/notes.png')}}" alt=""/><span>Comment</span></a></li>
+					</ul>
+				</div> <!-- navigation menu end -->
+			</div> <!-- sidebar end -->
+
+			<div id="primary_right">
+				<div class="inner">
+					
+					<h1>Add Comments</h1>
+					<form name="form" action="/manager/comment/new/" method="post">
+						{{ xsrf_form_html() }}
+					<fieldset>
+						<legend>Information</legend>						
+						<p>
+							<label>rawtext:</label>
+							<input class="sf" name="rawtext" type="text" value="{{ data['rawtext'] }}" />
+							<span class="field_desc"></span>
+						</p>
+				
+						<p>
+							<label>Pin:</label>
+							<select name="pin" id="data_pin" class="dropdown">
+								{% for pin in data_pin %}
+								<option value="{{ pin.key}}" {% if data['pin_key'] == pin.key %} selected {% end %}>{{ pin.rawtext}}</option>
+								{% end %}
+							</select>
+						</p>
+						
+						<p>
+							<label>User:</label>
+							<select name="user" id="data_user" class="dropdown">
+								{% for user in data_user %}
+								<option value="{{ user.key}}" {% if data['user_key'] == user.key %} selected {% end %}>{{ user.email}}</option>
+								{% end %}
+							</select>
+						</p>
+						<hr />			
+						
+						<div class="clearboth"></div>
+						<input class="lf" name="key" type="hidden" value="{{data['key']}}" /> 
+						<p>
+							<input class="button" type="submit" value="Submit" /> 
+							<input class="button" type="reset" value="Reset" />
+						</p>
+					</fieldset>
+				</form>
+					<div class="clearboth"></div>
+				
+				</div> <!-- inner -->
+			</div> <!-- primary_right -->
+		</div> <!-- bgwrap -->
+	</div> <!-- container -->
+</body>
+</html>

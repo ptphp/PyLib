@@ -1,0 +1,91 @@
+<div id="Add" style="display: block; " class="ModalContainer ">
+    <div class="modal wide PaddingLess">
+        <div class="header">
+            <a href="#" class="close" onclick="$.zxxbox.hide(); return false"><strong>Close</strong><span></span></a>
+            <h2>采摘</h2>
+        </div>
+        <p id="PinIt">
+            使用书签小工具在浏览其它网站时直接采集上面的图片<a href="about/goodies">点击这里</a>添加书签工具
+        </p>
+        <div id="OpenLinks">
+            <a id="OpenScrapePin" onclick="app.showDialog('scrape_pin');return false;" class="cell">
+                <div id="scrape" class="icon">
+                </div>
+                <span>网址采集</span></a>
+            <a id="OpenUploadPin" onclick="app.showDialog('upload_pin');return false;" class="cell">
+                <div id="upload" class="icon">
+                </div>
+                <span>上传采集</span></a>
+            <a id="OpenCreateBoard" onclick="app.showDialog('create_board');return false;" class="cell">
+                <div id="board" class="icon">
+                </div>
+                <span>新建画板</span></a>
+        </div>
+    </div>
+    <div class="overlay">
+    </div>
+</div>
+
+<script type="text/javascript">
+$("a#OpenScrapePin").click(function(){
+    $.zxxbox.ajax(
+        "ajax/scrape/",
+        {},
+        {
+            bar: false,
+            bg:false,
+            //bgclose: true,
+            btnclose:false,
+            onshow:function(){
+                $("body").css("overflow", "hidden");
+            },
+            onclose:function(){
+                $("body").css("overflow", "visible");
+            },
+        }
+    );
+
+});
+
+
+$("a#OpenUploadPin").click(function(){
+    $.zxxbox.ajax(
+        "ajax/upload/",
+        {},
+        {
+            bar: false,
+            bg:false,
+            //bgclose: true,
+            btnclose:false,
+            onshow:function(){
+                $("body").css("overflow", "hidden");
+            },
+            onclose:function(){
+                $("body").css("overflow", "visible");
+            },
+        }
+    );
+
+});
+
+$("a#OpenCreateBoard").click(function(){
+    $.zxxbox.ajax(
+        "ajax/board/",
+        {},
+        {
+            bar: false,
+            bg:false,
+            //bgclose: true,
+            btnclose:false,
+            onshow:function(){
+                $("body").css("overflow", "hidden");
+            },
+            onclose:function(){
+                $("body").css("overflow", "visible");
+            },
+        }
+    );
+
+});
+
+</script>

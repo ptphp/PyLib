@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN"/>
+<title>GARNING!/嘉宁网/注册帐号</title>
+
+<meta name="description" content="GARNING," />
+<link type="text/css" href="{{static_url('garning/media/css/common.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/garning.css')}}" rel="stylesheet" media="screen" />
+
+<link type="text/css" href="{{static_url('garning/media/css/backend.css')}}" rel="stylesheet" media="screen" />
+
+
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.js')}}"></script>
+
+<script type="text/javascript" src="{{static_url('garning/media/js/masonry/jquery.masonry.min.js')}}"></script>
+<script type="text/javascript" src="{{static_url('garning/media/js/masonry/jquery.endless-scroll-1.3.js')}}"></script>
+
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.zxxbox.3.0.js')}}"></script>
+</head>
+<body>
+<!-- start header -->
+<div class="header-wraper container_24">
+	<div class="header"><div class="logo grid_8"><h1><a href="/">GARNING.COM</a></h1></div>
+<div class="search-bar grid_8">
+	<form action="/search/" method="post" name="search" id="search">
+	{{ xsrf_form_html() }}
+	<input class="input" name="keyword" type="text" id="keyword" value="" style="float:left;" placeholder="搜索">
+	<input class="submit" type="submit" value=""></input>
+	</form>
+</div>
+<div class="header-user-menu grid_8">
+
+<div class="menu">  
+    <ul>
+        <li><a href="#" class="menu-item" id="share-btn">＋分享我喜欢的</a></li>
+        <li><a href="#" class="menu-item submenu">{{nickname}} 
+            <!--[if IE 7]><!--></a><!--<![endif]-->  
+            <!--[if lte IE 6]><table><tr><td><![endif]-->  
+            <ul class="submenu-cnt">  
+                <li><a href="../person/editor.html">我的杂志</a></li>
+                <li><a href="../person/share.html">我的分享</a></li>
+                <li class="bb"><a href="../mytuan/mytickets.html">我的团购</a></li>
+                <li><a href="../invitation.html">邀请朋友</a></li>
+                <li class="bb"><a href="../settings/setpersonal.html">设置账号</a></li>
+                <li class="bb"><a href="/logout/">退出</a></li>
+            </ul>  
+            <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+        </li>  
+        <li><a href="#" class="menu-item submenu">消息
+            <!--[if IE 7]><!--></a><!--<![endif]-->  
+            <!--[if lte IE 6]><table><tr><td><![endif]-->  
+            <ul class="submenu-cnt">  
+                <li><a href="../msg/care.html">查看关注</a></li>
+                <li><a href="../msg/atme.html">查看@我的</a></li>
+                <li><a href="../msg/private.html">查看私信</a></li>
+                <li><a href="../msg/sys.html">查看系统消息</a></li>
+                <li class="bb"><a href="../msg/likeme.html">查看喜欢我的</a></li>
+            </ul>  
+            <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+        </li> 
+
+    </ul>  
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+
+$(function(){
+        //使用zxxbox的Ajax方法加载外部内容
+    $("#share-btn").click(function(){
+        $.zxxbox.ajax("http://localhost/garning/ajax/sharebox");                         
+    });
+
+
+});
+
+</script>
+
+</div>
+</div>
+<!-- end .header -->

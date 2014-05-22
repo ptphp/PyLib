@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div id="page">
+		{% include "common/header.html" %}
+		
+		
+{% include "common/navbar_board.html" %}
+<div class="wrapper">
+	<div id="waterfall">
+
+		{% include "sl/userInfo.html" %}
+		{{ marks }}
+	</div>
+    <div class="clear"></div>
+    {% include "sl/loadingbar.html" %}
+</div>
+
+
+		<div class="clear"></div>
+		<div id="page_overlay" style="display: none;" class="overlay"></div>
+		{% include "common/elevator.html" %}
+	</div>
+{% end %}
+
+
+
+
+
+
+<script>
+$(function(){
+	$('.grid_comment_button').live('click',
+	    function() {
+	        var $currentpin = $(this).closest('.pin');
+	        var txt = $currentpin.find('.GridComment').val().trim();
+	        var item ='';
+	        if(txt == ''){
+	          alert('好歹输两个字吧,亲!');
+	        }
+	        var url = "/ajax/comment/";
+	        //alert(url);
+	        var pinid = $(this).closest('.pin').attr('data-id');
+	        
+	        _xsrf = document.cookie.match("\\b_xsrf=([^;]*)\\b")[1];
+	        $.post(url,{"text":txt,'_xsrf':_xsrf,'pinid':pinid},function(data){
+	            //$("span").html(result);
+	        	if(data.code == 1){	        		
+	        		alert(data.data);	        		
+	        	}else if(data.code == 0){	        		
+	        		var comment = data.obj;		
+		            var item = '<div class="comment convo clearfix">'
+		                    + '<a href="#" title="" class="img x"><img src="{{static_url('media/img/iconor-50x50.png')}}"></a>'
+		                    + '<p><a href="#" class="author">' + comment.nickname + '</a>:&nbsp;' + comment.rawtext + '</p>'
+		                    + '<a title="回复" class="replyButton"></a>'
+		                    + '</div>';
+		            $currentpin.find('.comments').append(item);
+		            $currentpin.find('.GridComment').val('');
+		            $currentpin.find('.write').hide();
+		            $container.isotope();		            
+	        	}else{	        		
+	        		alert("system errot");
+	        	}	            
+	
+	        },"json");
+	});
+		
+})
+
+</script>

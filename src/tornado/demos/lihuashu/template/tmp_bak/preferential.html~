@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN"/>
+<title>GARNING!</title>
+
+
+<meta name="description" content="GARNING," />
+<link type="text/css" href="{{static_url('garning/media/css/common.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/garning.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/reg.css')}}" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.js')}}"></script>
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.zxxbox.3.0.js')}}"></script>
+</head>
+<body>
+<!-- start header -->
+<div class="header-wraper container_24">
+	<div class="header"><div class="logo grid_13 "><h1><a href="/">GARNING.COM</a></h1></div>
+<div class="search-bar grid_8 alpha">
+	<form action="/search/" method="post" name="search" id="search">
+	<input class="input" name="keyword" type="text" id="keyword" value="" style="float:left;" placeholder="搜索">
+	<input class="submit" type="submit" value=""></input>
+	</form>
+</div>
+<div class="header-login grid_3">
+	<div class="r">
+		<a href="/login/" class="login-btn">登录</a>
+		<a href="/register/" class="regist-btn">注册</a>
+	</div>
+</div></div>
+</div>
+<!-- end .header -->
+
+<!-- start navbar -->
+<div class="clear"></div>
+<div class="navbar-wraper"><div class="container_24"><div class="grid_24 navbar">
+<ul>
+	<li><a href="/">首页</a></li>
+	<li><a href="/magazine/">杂志</a></li>
+	<li><a href="/recommend/">推荐</a></li>
+	<li><a href="/model/">模特</a></li>
+	<li class = "on"><a href="/preferential/">优惠</a></li>
+	<li><a href="/groupbuy/">团购</a></li>
+	<li><a href="/shop/">商家</a></li>
+</ul>
+</div></div></div>
+<!-- end navbar -->
+
+<div class="clear"></div>
+<div class="main-wraper container_24"><div class="grid_24 welfare-navbar">
+	<!--
+    <em><a href="">最热</a><a href="">最新</a></em>
+    -->
+    <div class="tit">福利社</div>
+	
+
+    <span class="on"><a href=""> 热门福利</a></span>
+    <span><a href="">试用试穿</a></span>
+</div>
+<div class="clear"></div>
+
+<div class="grid_24 alpha omegat">
+	<div class="t s">
+		<div id="J_Slide" class="loading">
+    <ol class="ks-switchable-content">
+        <li><a href=""><img src="" alt="">
+        			<object width="950px" height="100px">
+        				<param name="allowScriptAccess" value="always"/>
+        				<param name="movie" value="{{static_url('garning/media/swf/gzsy.swf')}}" />
+        				<embed src="{{static_url('garning/media/swf/gzsy.swf')}}" type="application/x-shockwave-flash" width="950px" height="100px" allowScriptAccess="always"></embed>
+        			</object>
+        
+        </a></li>
+        <li class="hidden"><a href=""><img src="{{static_url('garning/media/images/ad950/2.jpg')}}" alt=""></a></li>
+    </ol>
+</div>
+
+<style type="text/css">
+        #J_Slide {
+    position: relative;
+    1width: 470px;
+        height: 100px;
+        1border: 1px solid #B6D1E6;
+        overflow: hidden;
+    }
+
+    #J_Slide .ks-switchable-nav {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        z-index: 99;
+    }
+
+    #J_Slide .ks-switchable-nav li {
+        float: left;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        margin-left: 3px;
+        background-color: #FCF2CF;
+        border: 1px solid #F47500;
+        color: #D94B01;
+        text-align: center;
+        cursor: pointer;
+        list-style: none;
+    }
+
+    #J_Slide .ks-switchable-nav li.ks-active {
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        margin-top: -1px;
+        color: #FFF;
+        background-color: #FFB442;
+        font-weight: bold;
+    }
+
+    #J_Slide .ks-switchable-content {
+        margin: 0;
+        padding: 0;
+    }
+    #J_Slide .ks-switchable-content li {
+        height: 100px;
+        1width: 470px;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    #J_Slide .ks-switchable-nav li,
+    #J_Slide .ks-switchable-trigger-content {
+        position: relative;
+    }
+
+    #J_Slide .ks-switchable-trigger-mask {
+        position: absolute;
+        right: 0;
+        width: 18px;
+        height: 18px;
+        background-color: #FF9415;
+        visibility: hidden
+    }
+
+    #J_Slide .ks-active .ks-switchable-trigger-mask {
+        visibility: visible
+    }
+
+    .list li {
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        list-style-type: circle;
+    }
+</style>
+<script type="text/javascript" src="{{static_url('garning/media/js/preferential.js')}}"></script>	</div>
+</div>
+
+
+<div class="grid_6 push_18 welfare-right">
+	<div class="p t s welfare-open">
+		<div class="welfare-date"><b class="month">三月</b><p class="date">26</p></div>
+		<p>福利社开通<strong>136</strong>天，已为<strong>5904</strong>位MM提供福利</p>
+	</div>
+
+	<div class="t s">
+	<p class="welfare-prompt">每天都有新鲜的福利提供给嘉人们，记得每天来看看哦！</p>
+	</div>
+
+	<div class="p t s welfare-sns">
+		<h3>关注嘉宁网</h3>
+		<h4>第一时间获取福利情报</h4>
+		<div>
+			<a class="ico1" href="">你好吗</a>
+			<a class="ico2" href="">我想你</a>
+			<a class="ico3" href="">我爱你</a>
+			<a class="ico4" style="margin-right: 0;" href="">你爱我</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div class="p t s">
+		<h3 class="f14">试穿试用合作</h3>
+		<ul class="l18 mt10">
+			<li>想为嘉人们提供优质试用试穿？</li>
+			<li>赶快联系我们吧！</li>
+			<li><span class="hw62 left tr">QQ：</span>547092001</li>
+			
+			<li><span class="hw62 left tr">电话：</span>18925086700</li>
+			<li><span class="hw62 left tr">工作时间：</span>24 x 78:30-17:30</li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="grid_18 pull_6 alpha welfare-left">
+	<div class="welfare-item"><div class="p2 t s">
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/29.jpg')}}" alt="" style="width:315px;height:220px;">
+</a>
+<h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<div class="buy">
+	<div>
+		<h4>200份福利</h4>
+		<p><strong>15732</strong>人已参加</p>
+	</div>
+	<a href=""><strong></strong></a>
+
+</div>
+</div></div>
+	<div class="welfare-item item-r"><div class="p2 t s">
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/23.jpg')}}" alt="" style="width:315px;height:220px;">
+</a>
+<h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<div class="buy">
+	<div>
+		<h4>200份福利</h4>
+		<p><strong>15732</strong>人已参加</p>
+	</div>
+	<a href=""><strong></strong></a>
+
+</div>
+</div></div>
+	<div class="welfare-item"><div class="p2 t s">
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/3.jpg')}}" alt="" style="width:315px;height:220px;">
+</a>
+<h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<div class="buy">
+	<div>
+		<h4>200份福利</h4>
+		<p><strong>15732</strong>人已参加</p>
+	</div>
+	<a href=""><strong></strong></a>
+
+</div>
+</div></div>
+	<div class="welfare-item item-r"><div class="p2 t s">
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/21.jpg')}}" alt="" style="width:315px;height:220px;">
+</a>
+<h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<div class="buy">
+	<div>
+		<h4>200份福利</h4>
+		<p><strong>15732</strong>人已参加</p>
+	</div>
+	<a href=""><strong></strong></a>
+
+</div>
+</div></div>
+	<div class="welfare-item"><div class="p2 t s">
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/20.jpg')}}" alt="" style="width:315px;height:220px;">
+</a>
+<h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<div class="buy">
+	<div>
+		<h4>200份福利</h4>
+		<p><strong>15732</strong>人已参加</p>
+	</div>
+	<a href=""><strong></strong></a>
+
+</div>
+</div></div>
+	<div class="welfare-item item-r"><div class="p2 t s">
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/31.jpg')}}" alt="" style="width:315px;height:220px;">
+</a>
+<h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<div class="buy">
+	<div>
+		<h4>200份福利</h4>
+		<p><strong>15732</strong>人已参加</p>
+	</div>
+	<a href=""><strong></strong></a>
+
+</div>
+</div></div>
+	<div class="welfare-item"><div class="p2 t s">
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/13.jpg')}}" alt="" style="width:315px;height:220px;">
+</a>
+<h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<div class="buy">
+	<div>
+		<h4>200份福利</h4>
+		<p><strong>15732</strong>人已参加</p>
+	</div>
+	<a href=""><strong></strong></a>
+
+</div>
+</div></div>
+	<div class="welfare-item item-r"><div class="p2 t s">
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/24.jpg')}}" alt="" style="width:315px;height:220px;">
+</a>
+<h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<div class="buy">
+	<div>
+		<h4>200份福利</h4>
+		<p><strong>15732</strong>人已参加</p>
+	</div>
+	<a href=""><strong></strong></a>
+
+</div>
+</div></div>
+	<div class="clear"></div>
+	<div class="welfare-more"><a href="" target="_blank">查看更多试穿&gt;&gt;</a></div>
+</div>
+</div>
+
+<!-- start footer -->
+<div class="clear"></div>
+<div class=" footer t p"><div class="container_24"><div class=" grid_24 "><div class="foot-nav">
+	<a href="" class="foot-nav-item-1">关于嘉宁</a>
+	<a href="" class="foot-nav-item-2">投资合作</a>
+	<a href="" class="foot-nav-item-3">联系我们</a>
+	<a href="" class="foot-nav-item-4">免责声明</a>
+	<a href="" class="foot-nav-item-5">帮助中心</a>
+	<a href="" class="foot-nav-item-6">模特精灵</a>
+	<a href="" class="foot-nav-item-7">投放广告</a>
+</div>
+<div class="partner">合作伙伴: 广州摄影网 梨花树网</div>
+<div class="copyright">Copyright &copy Garning.com All Rights Reseved&nbsp;<a href="">粤ICP备20090008号</a></div>
+</div></div></div>
+<!-- end footer -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4fb29e2cd465365d07f42f7a2894418d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

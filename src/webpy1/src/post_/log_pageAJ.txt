@@ -1,0 +1,493 @@
+------------
+chkHaveMicro : 
+
+------------
+radSaleType : 
+1
+------------
+chkHaveElect : 
+1
+------------
+radIsDolmus : 
+2
+------------
+radUseType : 
+81
+------------
+chkHaveBroad : 
+
+------------
+chkHaveTel : 
+
+------------
+radFitment : 
+91
+------------
+txtPayNum : 
+3
+------------
+txtProFloor : 
+2
+------------
+txtHallNum : 
+2
+------------
+pwd : 
+201106
+------------
+chkHaveHotwater : 
+
+------------
+txtProPrice : 
+500
+------------
+txtToiletNum : 
+1
+------------
+chkHaveRefr : 
+
+------------
+chkHaveTvbox : 
+
+------------
+txtFloorNum : 
+6
+------------
+hidact : 
+save
+------------
+chkHaveTv : 
+
+------------
+txtCommunity : 
+昆山花园
+------------
+chkHaveAir : 
+
+------------
+name : 
+changna19880422
+------------
+txtExplain : 
+<p> 昆山花园昆山花园昆山花园昆山花园</p>
+------------
+chkHaveGas : 
+1
+------------
+txtProName : 
+昆山花园
+------------
+useImgs : 
+{'Model': ['d:/111.jpg', 'd:/111.jpg'], 'Comm': [], 'Room': []}
+------------
+chkHaveWarm : 
+
+------------
+chkHaveWash : 
+
+------------
+txtHouseAge : 
+2001
+------------
+txtRoomNum : 
+3
+------------
+txtDepositNum : 
+1
+------------
+txtAreaNum : 
+120
+------------
+txtUserDefine : 
+
+------------
+radHouseOri : 
+1
+------------
+chkHaveWater : 
+1
+======================================================
+------------
+txtCommunity : 
+昆山花园
+------------
+txtProPrice : 
+500
+------------
+name : 
+changna19880422
+------------
+txtExplain : 
+<p> 昆山花园昆山花园昆山花园昆山花园</p>
+------------
+txtProFloor : 
+2
+------------
+radUseType : 
+81
+------------
+radSaleType : 
+1
+------------
+radFitment : 
+91
+------------
+txtProName : 
+昆山花园
+------------
+useImgs : 
+{'Model': ['d:/111.jpg', 'd:/111.jpg'], 'Comm': [], 'Room': []}
+------------
+txtHallNum : 
+2
+------------
+pwd : 
+201106
+------------
+radCurrentState : 
+2
+------------
+txtHouseAge : 
+2001
+------------
+txtToiletNum : 
+1
+------------
+txtRoomNum : 
+3
+------------
+txtFloorNum : 
+6
+------------
+txtAreaNum : 
+120
+------------
+txtUserDefine : 
+
+------------
+radHouseOri : 
+1
+------------
+hidact : 
+save
+======================================================
+------------
+txtCommunity : 
+昆山花园
+------------
+txtProPrice : 
+500
+------------
+name : 
+changna19880422
+------------
+txtExplain : 
+<p> 昆山花园昆山花园昆山花园昆山花园</p>
+------------
+txtProFloor : 
+2
+------------
+radUseType : 
+81
+------------
+radSaleType : 
+1
+------------
+radFitment : 
+91
+------------
+txtProName : 
+昆山花园
+------------
+useImgs : 
+{'Model': ['d:/111.jpg', 'd:/111.jpg'], 'Comm': [], 'Room': []}
+------------
+txtHallNum : 
+2
+------------
+pwd : 
+201106
+------------
+radCurrentState : 
+2
+------------
+txtHouseAge : 
+2001
+------------
+txtToiletNum : 
+1
+------------
+txtRoomNum : 
+3
+------------
+txtFloorNum : 
+6
+------------
+txtAreaNum : 
+120
+------------
+txtUserDefine : 
+
+------------
+radHouseOri : 
+1
+------------
+hidact : 
+save
+======================================================
+------------
+txtCommunity : 
+昆山花园
+------------
+txtProPrice : 
+500
+------------
+name : 
+changna19880422
+------------
+txtExplain : 
+<p> 昆山花园昆山花园昆山花园昆山花园</p>
+------------
+txtProFloor : 
+2
+------------
+radUseType : 
+81
+------------
+radSaleType : 
+1
+------------
+radFitment : 
+91
+------------
+txtProName : 
+昆山花园
+------------
+useImgs : 
+{'Model': ['d:/111.jpg', 'd:/111.jpg'], 'Comm': [], 'Room': []}
+------------
+txtHallNum : 
+2
+------------
+pwd : 
+201106
+------------
+radCurrentState : 
+2
+------------
+txtHouseAge : 
+2001
+------------
+txtToiletNum : 
+1
+------------
+txtRoomNum : 
+3
+------------
+txtFloorNum : 
+6
+------------
+txtAreaNum : 
+120
+------------
+txtUserDefine : 
+
+------------
+radHouseOri : 
+1
+------------
+hidact : 
+save
+======================================================
+------------
+txtCommunity : 
+东湖大郡(一至三期)
+------------
+txtProPrice : 
+500
+------------
+name : 
+changna19880422
+------------
+txtExplain : 
+<p> 昆山花园昆山花园昆山花园昆山花园</p>
+------------
+txtProFloor : 
+2
+------------
+radUseType : 
+81
+------------
+radSaleType : 
+1
+------------
+radFitment : 
+91
+------------
+txtProName : 
+昆山花园
+------------
+useImgs : 
+{'Model': ['d:/111.jpg', 'd:/111.jpg'], 'Comm': [], 'Room': []}
+------------
+txtHallNum : 
+2
+------------
+pwd : 
+201106
+------------
+radCurrentState : 
+2
+------------
+txtHouseAge : 
+2001
+------------
+txtToiletNum : 
+1
+------------
+txtRoomNum : 
+3
+------------
+txtFloorNum : 
+6
+------------
+txtAreaNum : 
+120
+------------
+txtUserDefine : 
+
+------------
+radHouseOri : 
+1
+------------
+hidact : 
+save
+======================================================
+------------
+txtCommunity : 
+东湖大郡
+------------
+txtProPrice : 
+500
+------------
+name : 
+changna19880422
+------------
+txtExplain : 
+<p> 昆山花园昆山花园昆山花园昆山花园</p>
+------------
+txtProFloor : 
+2
+------------
+radUseType : 
+81
+------------
+radSaleType : 
+1
+------------
+radFitment : 
+91
+------------
+txtProName : 
+昆山花园
+------------
+useImgs : 
+{'Model': ['d:/111.jpg', 'd:/111.jpg'], 'Comm': [], 'Room': []}
+------------
+txtHallNum : 
+2
+------------
+pwd : 
+201106
+------------
+radCurrentState : 
+2
+------------
+txtHouseAge : 
+2001
+------------
+txtToiletNum : 
+1
+------------
+txtRoomNum : 
+3
+------------
+txtFloorNum : 
+6
+------------
+txtAreaNum : 
+120
+------------
+txtUserDefine : 
+
+------------
+radHouseOri : 
+1
+------------
+hidact : 
+save
+======================================================
+------------
+txtCommunity : 
+绿地启航社
+------------
+txtProPrice : 
+500
+------------
+name : 
+changna19880422
+------------
+txtExplain : 
+<p> 昆山花园昆山花园昆山花园昆山花园</p>
+------------
+txtProFloor : 
+2
+------------
+radUseType : 
+81
+------------
+radSaleType : 
+1
+------------
+radFitment : 
+91
+------------
+txtProName : 
+昆山花园
+------------
+useImgs : 
+{'Model': ['d:/111.jpg', 'd:/111.jpg'], 'Comm': [], 'Room': []}
+------------
+txtHallNum : 
+2
+------------
+pwd : 
+201106
+------------
+radCurrentState : 
+2
+------------
+txtHouseAge : 
+2001
+------------
+txtToiletNum : 
+1
+------------
+txtRoomNum : 
+3
+------------
+txtFloorNum : 
+6
+------------
+txtAreaNum : 
+120
+------------
+txtUserDefine : 
+
+------------
+radHouseOri : 
+1
+------------
+hidact : 
+save
+======================================================

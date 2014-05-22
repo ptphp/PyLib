@@ -1,0 +1,19 @@
+
+INSERT INTO `fke_area` (`id`, `areaname`, `areacode`, `city`, `sorts`, `gjid`, `gjname`, `58id`, `58name`) VALUES
+(NULL, '玉山城南', NULL, 30, NULL, NULL, NULL, 11864, '玉山城南'),
+(NULL, '玉山城北', NULL, 30, NULL, NULL, NULL, 11863, '玉山城北'),
+(NULL, '玉山城东', NULL, 30, NULL, NULL, NULL, 12603, '玉山城东'),
+(NULL, '玉山城西', NULL, 30, NULL, NULL, NULL, 12602, '玉山城西'),
+(NULL, '周市', NULL, 30, NULL, NULL, NULL, 11861, '周市'),
+(NULL, '巴城', NULL, 30, NULL, NULL, NULL, 11860, '巴城'),
+(NULL, '张浦', NULL, 30, NULL, NULL, NULL, 12437, '张浦'),
+(NULL, '陆家', NULL, 30, NULL, NULL, NULL, 12438, '陆家'),
+(NULL, '花桥', NULL, 30, NULL, NULL, NULL, 12439, '花桥'),
+(NULL, '千灯', NULL, 30, NULL, NULL, NULL, 12440, '千灯'),
+(NULL, '千灯', NULL, 30, NULL, NULL, NULL, 12604, '老城区'),
+(NULL, '昆山周边', NULL, 30, NULL, NULL, NULL, 11858, '昆山周边');
+
+
+(203, '昆山', NULL, 23, NULL, NULL, NULL, 16, '昆山');
+
+

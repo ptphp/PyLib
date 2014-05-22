@@ -1,0 +1,39 @@
+<h1>{{u_user['nickname']}}</h1>
+				<p>
+					<a href="#"><span>{{counts['fans']}}</span>个粉丝</a>,&nbsp; 
+					<a href="#">关注<span>{{counts['follow']}}</span>人</a>
+				</p>
+				<div id="ProfileImage">
+					<a href="/user/{{u_user['key']}}/" title="beibei" class="img x">
+						{% if u_user['avatar']%}
+						<img src="{{u_user['avatar']}}">
+						{% else %}
+						<img style="width:192px;height:192px" src="{{static_url('media/img/iconor-25x25.png')}}">
+						{% end %}
+						</a>
+						
+					<a data-id="{{u_user['key']}}" rel="0" id="followuser" href="javascript:void(0)" class="followuser btn rbtn">
+						<strong> 
+						关注</strong>
+						<span></span></a>
+				</div>
+				<p class="muted">{{u_user['desc']}}</p>
+				<p class="less">{{u_user['city']}}</p>
+				
+				<!--
+				<ul id="ProfileLinks">
+					<li id="ProfileLinksWebsite">
+						<a href="http://momoka3.blog.163.com/" title="访问beibei的个人主页" target="_blank" class="btn wbtn"><strong>
+							<img src="http://www.lihuashu.org/lihuashu/media/img/ProfileIconWebsite.png" 
+							alt="访问个人主页" style="margin-top: 3px;"></strong><span></span></a>
+					</li>
+				</ul>
+				
+				
+				<ol class="activity">
+					<li><a href="/pins/2213339/" class="img">
+					<img src="http://img.hb.aicdn.com/e96e1ff5f9c2fc6da9a08ac876fab8780b71e69c2a82b-GTeTXI_sq75"></a>
+					<a href="http://www.lihuashu.org/lihuashu/bono">beibei</a>&nbsp;采集&nbsp;<a href="/pins/2213339/">
+						#婚礼布置# 养眼、大...</a>&nbsp;到&nbsp;<a href="/boards/284978/">摄影</a>
+					</li>
+				</ol>-->

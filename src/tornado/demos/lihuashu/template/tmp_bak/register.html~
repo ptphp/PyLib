@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN"/>
+<title>GARNING!/嘉宁网/注册帐号</title>
+
+
+
+<meta name="description" content="GARNING," />
+<link type="text/css" href="{{static_url('garning/media/css/common.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/garning.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/reg.css')}}" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.js')}}"></script>
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.zxxbox.3.0.js')}}"></script>
+</head>
+<body>
+<!-- start header -->
+<div class="header-wraper container_24">
+	<div class="header"><div class="logo grid_13 "><h1><a href="/">GARNING.COM</a></h1></div>
+<div class="search-bar grid_8 alpha">
+	<form action="/search/" method="post" name="search" id="search">
+	<input class="input" name="keyword" type="text" id="keyword" value="" style="float:left;" placeholder="搜索">
+	<input class="submit" type="submit" value=""></input>
+	</form>
+</div>
+<div class="header-login grid_3">
+	<div class="r">
+		<a href="/login/" class="login-btn">登录</a>
+		<a href="/register/" class="regist-btn">注册</a>
+	</div>
+</div></div>
+</div>
+<!-- end .header -->
+
+<!-- start navbar -->
+<div class="clear"></div>
+<div class="navbar-wraper"><div class="container_24"><div class="grid_24 navbar">
+<ul>
+	<li class = "on"><a href="/">首页</a></li>
+	<li><a href="/magazine/">杂志</a></li>
+	<li><a href="/recommend/">推荐</a></li>
+	<li><a href="/model/">模特</a></li>
+	<li><a href="/preferential/">优惠</a></li>
+	<li><a href="/groupbuy/">团购</a></li>
+	<li><a href="/shop/">商家</a></li>
+</ul>
+</div></div></div>
+<!-- end navbar -->
+
+<div class="clear"></div>
+<div class="main-wraper container_24"><div class="grid_24">
+	<div id="RegForm" class="register-page-wrapper p t s" style="padding-top:50px; padding-left: 100px;">
+	<div class="grid_11 newRegFromMain mt14">
+		<h3 class="f24">欢迎加入嘉宁网</h3>
+
+		<form action="/register/" method="post" id="form">
+			<div class="oneline">
+				<div class="inputBox left">
+	        		<input type="text" class="input1" name="email" id="email" value="电子邮箱" onblur="if($(this).val()===''){$(this).val('电子邮箱');};return registerAction.blurEmailInput();" onfocus="if($(this).val()==='电子邮箱'){$(this).val('');};return registerAction.focusEmailInput();">
+	        		{{ xsrf_form_html() }}
+				</div>
+			</div>
+			<p>这是你以后的帐号，推荐选个常用或好记的邮箱</p>
+
+			<div class="oneline t">
+				<div class="inputBox left">
+					<input type="text" class="input1" name="nickname" id="nickname" value="昵称" onblur="if($(this).val()===''){$(this).val('昵称');};return registerAction.blurNicknameInput();" onfocus="if($(this).val()==='昵称'){$(this).val('');};return registerAction.focusNicknameInput();">
+				</div>	
+			</div>
+			<p>第一印象很重要，起个好听的昵称吧</p>
+
+			<div class="oneline t">
+				<div class="inputBox left" id="showpassword">
+					<input type="password" class="input1" name="password" id="password" value="" onblur="if($(this).val()===''){$('#showpassword').hide();$('#hidepassword').show();}return registerAction.blurPasswordInput();" onfocus="return registerAction.focusPasswordInput();">
+				</div>
+				<div class="inputBox left" id="hidepassword">
+					<input type="text" class="input1" name="hidepassword" value="请输入密码" onfocus="$('#hidepassword').hide();$('#showpassword').show().find('input').focus();">
+				</div>
+			</div>
+			<p>请输入密码</p>
+			
+			<div class="oneline t">
+				<div class="inputBox left" id="showpassword2">
+					<input type="password" class="input1" name="repassword" id="repassword" value="" onblur="if($(this).val()===''){$('#showpassword2').hide();$('#hidepassword2').show();}return registerAction.blurPasswordInput();" onfocus="return registerAction.focusPasswordInput();">
+				</div>
+				<div class="inputBox left" id="hidepassword2">
+					<input type="text" class="input1" name="hiderepassword" value="请重复输入密码" onfocus="$('#hidepassword2').hide();$('#showpassword2').show().find('input').focus();"><!-- $('#rePwdRow').show();$('#checkcode').show(); -->
+				</div>
+			</div>
+			<p>请重复输入密码</p>		
+
+
+
+			<div class="oneline">
+				<div class="inputBox left hackBox" id="gender-wrapper">
+					<input name="sex" id="genderF" type="radio" value="female" class="info_radio01" onblur="return registerAction.blurGenderRadio();">&nbsp;女
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<input name="sex" type="radio" id="genderM" value="male" checked class="info_radio01" onblur="return registerAction.blurGenderRadio();">&nbsp;男
+				</div>
+			</div>
+
+			<div class="t">
+				<div class="inputBox">
+					<input type="submit" value="立即注册" id="newRegister_submit" class="regFormBtn">
+	         </div>
+			</div>
+
+			<div class="oneline t">
+				<div class="inputBox left" style="border:0px;">
+					<input type="checkbox" id="agreement" checked="checked" onclick="clickAgreement();">
+	                	我同意授权嘉宁网对个人分享内容的使用权</a>
+	         </div>
+			</div>
+
+		</form>
+	
+		</div>
+	
+		<div class="grid_12 newRegFromRight " style="width: 300px; margin-top:30px">
+			<h4 class="f16">用嘉宁网账号<a href="/login/" style="color:#f69;">登录</a></h4>
+			<div class="mt30 f16n">嘉宁社区现有 {{userscount}} 居民
+				<!--
+				<div class="mt10" style="width:280px;">
+					<a class="reg_sinaweibo" href=""></a>
+					<a class="reg_qq" href=""></a>
+					<a class="reg_taobao" href=""></a>
+					<a class="reg_renren" href="" ></a>
+					<a class="reg_wangyi" href=""></a>
+					<a class="reg_txweibo" href=""></a>
+					<a class="reg_douban" href=""></a>
+					<a class="reg_baidu" href=""></a>
+				</div>
+				-->
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div></div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4fb29e2cd465365d07f42f7a2894418d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

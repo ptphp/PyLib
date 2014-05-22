@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN"/>
+<title>GARNING!</title>
+
+
+<meta name="description" content="GARNING," />
+<link type="text/css" href="{{static_url('garning/media/css/common.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/garning.css')}}" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{static_url('garning/media/css/reg.css')}}" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.js')}}"></script>
+<script type="text/javascript" src="{{static_url('garning/media/js/jquery.zxxbox.3.0.js')}}"></script>
+</head>
+<body>
+<!-- start header -->
+<div class="header-wraper container_24">
+	<div class="header"><div class="logo grid_13 "><h1><a href="/">GARNING.COM</a></h1></div>
+<div class="search-bar grid_8 alpha">
+	<form action="/search/" method="post" name="search" id="search">
+	<input class="input" name="keyword" type="text" id="keyword" value="" style="float:left;" placeholder="搜索">
+	<input class="submit" type="submit" value=""></input>
+	</form>
+</div>
+<div class="header-login grid_3">
+	<div class="r">
+		<a href="/login/" class="login-btn">登录</a>
+		<a href="/register/" class="regist-btn">注册</a>
+	</div>
+</div></div>
+</div>
+<!-- end .header -->
+
+<!-- start navbar -->
+<div class="clear"></div>
+<div class="navbar-wraper"><div class="container_24"><div class="grid_24 navbar">
+<ul>
+	<li><a href="/">首页</a></li>
+	<li><a href="/magazine/">杂志</a></li>
+	<li><a href="/recommend/">推荐</a></li>
+	<li><a href="/model/">模特</a></li>
+	<li><a href="/preferential/">优惠</a></li>
+	<li class = "on"><a href="/groupbuy/">团购</a></li>
+	<li><a href="/shop/">商家</a></li>
+</ul>
+</div></div></div>
+<!-- end navbar -->
+
+<div class="clear"></div>
+<div class="main-wraper container_24"><div class="grid_24 t">
+<div id="J_Slide" class="loading">
+    <ol class="ks-switchable-content">
+        <li><a href=""><a href=""><img src="{{static_url('garning/media/images/ad950/1.jpg')}}" alt=""></a></li>
+        <li class="hidden"><a href=""><img src="{{static_url('garning/media/images/ad950/1.jpg')}}" alt=""></a></li>
+    </ol>
+</div>
+
+<style type="text/css">
+        #J_Slide {
+    position: relative;
+    1width: 470px;
+        height: 100px;
+        1border: 1px solid #B6D1E6;
+        overflow: hidden;
+    }
+
+    #J_Slide .ks-switchable-nav {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        z-index: 99;
+    }
+
+    #J_Slide .ks-switchable-nav li {
+        float: left;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        margin-left: 3px;
+        background-color: #FCF2CF;
+        border: 1px solid #F47500;
+        color: #D94B01;
+        text-align: center;
+        cursor: pointer;
+        list-style: none;
+    }
+
+    #J_Slide .ks-switchable-nav li.ks-active {
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        margin-top: -1px;
+        color: #FFF;
+        background-color: #FFB442;
+        font-weight: bold;
+    }
+
+    #J_Slide .ks-switchable-content {
+        margin: 0;
+        padding: 0;
+    }
+    #J_Slide .ks-switchable-content li {
+        height: 100px;
+        1width: 470px;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    #J_Slide .ks-switchable-nav li,
+    #J_Slide .ks-switchable-trigger-content {
+        position: relative;
+    }
+
+    #J_Slide .ks-switchable-trigger-mask {
+        position: absolute;
+        right: 0;
+        width: 18px;
+        height: 18px;
+        background-color: #FF9415;
+        visibility: hidden
+    }
+
+    #J_Slide .ks-active .ks-switchable-trigger-mask {
+        visibility: visible
+    }
+
+    .list li {
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        list-style-type: circle;
+    }
+</style>
+<script type="text/javascript" src="{{static_url('garning/media/js/preferential.js')}}"></script></div>
+
+
+<div class="grid_24 t2 alpha omega tuan-navbar">
+	<em><a href="">邀请好友购买返 5 元</a></em>
+	<span class="on"><a href="" class="tuan-nav-1">本期团购</a></span>
+	<span><a href="" class="tuan-nav-2">往期团购</a></span>
+	<span><a href="" class="tuan-nav-3">如何团购</a></span>
+</div>
+
+<div class="grid_18 alpha tuan-left">
+
+	<div class="tuan-prom p t2 s">
+		<div class="buyblock">
+	<h3>当日精选：<a href="">49元还包邮！韩国代购同款褶皱灯笼袖拼色雪纺连衣裙！唯美冰沙色邂逅完美廓形，打造春季蜜糖girl！
+		轻薄材质，蓬松下摆，突出曼妙曲线！裸粉宝蓝气质两色可选！邀请好友首次购买获5元返利！</a></h3>
+	
+	
+	<a href="" class="img">
+		<img src="{{static_url('garning/media/images/t443_288/1.jpg')}}" alt="" style="width:443px;height:288px;">
+	</a>
+	
+	<div class="buy">
+		<a href=""><strong>￥49.00</strong></a>
+		<div>
+			<p><span>现价</span><span>原价</span><span>节省</span></p>
+			<p><span>￥49.00</span><span><del>￥69.00</del></span><span>￥20</span></p>
+		</div>
+	</div>
+	
+	<div class="deadline">
+		<img src="{{static_url('garning/media/images/expire.jpg')}}" alt="">
+		<p><strong id="">天 22时 41分 41.5秒</strong></p>
+	</div>
+	
+	<div class="buystatus">
+		<p><strong>人已购买</strong></p>
+		<img src="{{static_url('garning/media/images/bought.jpg')}}">
+	</div>
+	
+	<div class="clear"></div>
+</div>	</div>
+	
+	<div class="p2 t2 s ">
+		<div class="clear"></div>
+		<div class="tuan-item"><div class="p2 t s"><h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/35.jpg')}}" alt="" >
+</a>
+
+<div class="buy">
+	<div>
+		<p>现价&nbsp;<strong>￥49.00</strong></p>
+		<p>原价&nbsp;<del>￥69.00</del></p>
+		<p>节省&nbsp;<strong>￥20</strong></p>
+	</div>
+	<a href=""><strong>￥49.00</strong></a>
+</div>
+
+<p class="buystatus">0天2小时4分3514人已购买</p></div></div>
+		<div class="tuan-item item-r"><div class="p2 t s"><h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/4.jpg')}}" alt="" >
+</a>
+
+<div class="buy">
+	<div>
+		<p>现价&nbsp;<strong>￥49.00</strong></p>
+		<p>原价&nbsp;<del>￥69.00</del></p>
+		<p>节省&nbsp;<strong>￥20</strong></p>
+	</div>
+	<a href=""><strong>￥49.00</strong></a>
+</div>
+
+<p class="buystatus">0天2小时4分3514人已购买</p></div></div>
+		<div class="tuan-item"><div class="p2 t s"><h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/13.jpg')}}" alt="" >
+</a>
+
+<div class="buy">
+	<div>
+		<p>现价&nbsp;<strong>￥49.00</strong></p>
+		<p>原价&nbsp;<del>￥69.00</del></p>
+		<p>节省&nbsp;<strong>￥20</strong></p>
+	</div>
+	<a href=""><strong>￥49.00</strong></a>
+</div>
+
+<p class="buystatus">0天2小时4分3514人已购买</p></div></div>
+		<div class="tuan-item item-r"><div class="p2 t s"><h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/7.jpg')}}" alt="" >
+</a>
+
+<div class="buy">
+	<div>
+		<p>现价&nbsp;<strong>￥49.00</strong></p>
+		<p>原价&nbsp;<del>￥69.00</del></p>
+		<p>节省&nbsp;<strong>￥20</strong></p>
+	</div>
+	<a href=""><strong>￥49.00</strong></a>
+</div>
+
+<p class="buystatus">0天2小时4分3514人已购买</p></div></div>
+		<div class="tuan-item"><div class="p2 t s"><h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/11.jpg')}}" alt="" >
+</a>
+
+<div class="buy">
+	<div>
+		<p>现价&nbsp;<strong>￥49.00</strong></p>
+		<p>原价&nbsp;<del>￥69.00</del></p>
+		<p>节省&nbsp;<strong>￥20</strong></p>
+	</div>
+	<a href=""><strong>￥49.00</strong></a>
+</div>
+
+<p class="buystatus">0天2小时4分3514人已购买</p></div></div>
+		<div class="tuan-item item-r"><div class="p2 t s"><h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/4.jpg')}}" alt="" >
+</a>
+
+<div class="buy">
+	<div>
+		<p>现价&nbsp;<strong>￥49.00</strong></p>
+		<p>原价&nbsp;<del>￥69.00</del></p>
+		<p>节省&nbsp;<strong>￥20</strong></p>
+	</div>
+	<a href=""><strong>￥49.00</strong></a>
+</div>
+
+<p class="buystatus">0天2小时4分3514人已购买</p></div></div>
+		<div class="tuan-item"><div class="p2 t s"><h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/18.jpg')}}" alt="" >
+</a>
+
+<div class="buy">
+	<div>
+		<p>现价&nbsp;<strong>￥49.00</strong></p>
+		<p>原价&nbsp;<del>￥69.00</del></p>
+		<p>节省&nbsp;<strong>￥20</strong></p>
+	</div>
+	<a href=""><strong>￥49.00</strong></a>
+</div>
+
+<p class="buystatus">0天2小时4分3514人已购买</p></div></div>
+		<div class="tuan-item item-r"><div class="p2 t s"><h3><a href="">【63元还包邮！奢华刺绣雪纺连衣裙】</a></h3>
+<a href="" class="img">
+	<img src="{{static_url('garning/media/images/t315_220/18.jpg')}}" alt="" >
+</a>
+
+<div class="buy">
+	<div>
+		<p>现价&nbsp;<strong>￥49.00</strong></p>
+		<p>原价&nbsp;<del>￥69.00</del></p>
+		<p>节省&nbsp;<strong>￥20</strong></p>
+	</div>
+	<a href=""><strong>￥49.00</strong></a>
+</div>
+
+<p class="buystatus">0天2小时4分3514人已购买</p></div></div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+
+
+<div class="grid_6 omega tuan-right">
+
+	<div class="p t2 s btr">
+		<p><a href="http://www.020psp.com/recruitment.html">广摄网VIP会员卡,享用5年仅￥100!</a></p>
+		<p class="tuan-qianggou">
+			<a href="http://www.020psp.com/recruitment.html" target="_blank">
+				<span class="ico_jian pa"></span>
+				<img src="{{static_url('garning/media/images/tuang_qiang.jpg')}}" >
+			</a>
+		</p>
+		<p><a class="r" href="http://www.020psp.com/recruitment.html" target="_blank">访问广州摄影网咨询购买&gt;&gt;</a></p>
+		<div class="clear"></div>
+	</div>
+
+
+	<div class="p t2 s btr">
+		<h4>想知道明天嘉宁网团什么吗？</h4>
+		<div class="subscribe_content">
+			<input type="text" id="sub_email" name="sub_email" maxlength="24" style="border:1px solid #EDBACB;" value="输入E-mail，订阅每期团购消息" onfocus="changeFocus(this)" onblur="loseFocus(this)">
+			<input type="button" id="sub_button" value="订阅" style="border:1px solid #EDBACB;background-color: #FEF3F7;" onclick="subscribeTuan(this)">
+			<div class="clear-fix"></div>
+		</div>
+	</div>
+
+	<div class="p t2 s btr">
+		<h4><a href="">你想团什么?点击这里告诉我们</a></h4>
+		<div class="want-tuan">
+			<a href=""><img src="{{static_url('garning/media/images/want_tuan.gif')}}" alt="你想团什么？点击这里告诉我们" title="我要团"></a>
+		</div>
+	</div>
+
+		
+	<div class="p t2 s btr">
+		<h3>分享到：</h3>
+		<div class="tuan-share">
+			<div onclick="tuanObj.shareToQzone();return false;" class="share_to_qzone">
+				<span class="s_qzone">&nbsp;&nbsp;</span>QQ空间</div>
+			<div onclick="tuanObj.shareToRenren();return false;" class="share_to_renren">人人网</div>
+			<div onclick="tuanObj.shareToWeibo(); return false;" class="share_to_sina">新浪微博</div>
+			<div onclick="tuanObj.shareToKaixin();return false;" class="share_to_kaixin">开心网</div>
+			<div onclick="tuanObj.shareToDouban();return false;" class="share_to_douban">豆瓣</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div class="p t2 s btr ">		
+		<h3>邀请有奖</h3>
+		<div class="tuan-invite">
+			<a href="">每邀请一位好友首次购买，你将获<span>5</span>元返利</a>
+		</div>
+		<a href="">» 点击获取您的专用邀请链接</a>
+	</div>
+
+	<div class="p t2 s btr ">
+		<h3>客服</h3>
+		<div class="tuan-phone">18925086700</div>
+		<p>QQ：<a href="" style="vertical-align:middle;"> <img border="0" src="http://wpa.qq.com/pa?p=2:4000800588:41" alt=" 点击这里给我发消息"="" title="点击这里给我发消息"></a></p>
+		<p>Email：insion@garning.com</p>
+		<p>客服时间：24 x 7 10:30-19:30</p>
+		<p><a class="red" style="font-size: 12px; text-decoration: underline" href="javascript:;" onclick="return showSendPmsgBox('美丽团');">嘉宁网团购答疑</a></p>
+	</div>
+
+	<div class="p t2 s btr ">
+		<h3>团购合作</h3>
+		<div class="tuan-hezuo">
+			希望在嘉宁网组织团购么？请<a class="red" href="">提交团购信息</a>
+		</div>
+		<div class="f12">
+			<p>重要声明：</p>
+			<p>1、嘉宁网团购合作只有“提交团购信息”这一个渠道，审核通过后才会有专员联系；</p>
+			<p>2、近期有“嘉宁网电商合作01”这个旺旺冒充嘉宁网工作人员诈骗，请电商们提高警惕；</p>
+			<p>3、嘉宁网官方只有在双方都签署协议后并收到协议，才会在开团前一天收取押金；</p>
+			<p>4、请电商们切勿在没有收到盖有公司公章的协议前，给任何人任何账户打钱，造成的一切损失嘉宁网概不负责！</p>
+		</div>
+	</div>
+
+		
+	<div class="p t2 s btr">
+		<h3>关注我们</h3>
+			<div class="share_to_sina">
+				新浪微博
+				<a class="red" href="http://weibo.com/wwwgarningcom">关注我们</a>
+			</div>
+			<div class="share_to_renren">
+				人人主页
+				<a class="red" href="http://weibo.com/wwwgarningcom" >关注我们</a>
+			</div>
+			<div class="share_to_qq">
+				腾讯微博
+				<a class="red" href="http://weibo.com/wwwgarningcom">关注我们</a>
+			</div>
+			<div class="clear"></div>
+	</div>
+	
+	<div class="p t2 s btr">
+		<h3>温馨提示：</h3>
+		<div style="font-size: 12px;">
+			嘉宁网努力为会员寻找优质团购宝贝，请大家根据自己需求理性消费。对于可能遇到的问题，请即时与我们联系，我们会尽力帮你解决。
+			嘉宁网对此活动拥有最终解释权。
+		</div>
+	</div>
+
+</div>
+
+
+</div>
+
+<!-- start footer -->
+<div class="clear"></div>
+<div class=" footer t p"><div class="container_24"><div class=" grid_24 "><div class="foot-nav">
+	<a href="" class="foot-nav-item-1">关于嘉宁</a>
+	<a href="" class="foot-nav-item-2">投资合作</a>
+	<a href="" class="foot-nav-item-3">联系我们</a>
+	<a href="" class="foot-nav-item-4">免责声明</a>
+	<a href="" class="foot-nav-item-5">帮助中心</a>
+	<a href="" class="foot-nav-item-6">模特精灵</a>
+	<a href="" class="foot-nav-item-7">投放广告</a>
+</div>
+<div class="partner">合作伙伴: 广州摄影网 梨花树网</div>
+<div class="copyright">Copyright &copy Garning.com All Rights Reseved&nbsp;<a href="">粤ICP备20090008号</a></div>
+</div></div></div>
+<!-- end footer -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4fb29e2cd465365d07f42f7a2894418d' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

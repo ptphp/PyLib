@@ -1,0 +1,111 @@
+json的输出采用的当前url后加请求 
+
+你需要在后台判断请求的类型 
+
+刘润芝 00:15:04
+具体来说
+要判断
+HTTP_X_REQUESTED_WITH
+和
+HTTP_X_PJAX两个头是否存在以及内容 
+刘润芝 00:15:23
+这是一 
+比如
+http://110.152.63.91/lihuashu/
+
+用户访问这个地址时,服务器先输出一部分数据,比如20条 
+
+然后用户向下滚动时, 向服务器请求
+http://110.152.63.91/lihuashu/?page=3&callback=jQuery171005489448783919215_1335024899965&_=1335025159238
+ 
+类似这样的 
+此时,服务器需要返回的数据就不是html了 
+而是jsonp 
+
+
+http://110.152.63.91/lihuashu/all/all
+也是类似的 
+
+刘润芝 00:19:40
+Request URL:
+http://110.152.63.91/lihuashu/all/all?page=1&callback=jQuery17109105664473026991_1335025262384&_=1335025283268
+
+Request Method:GET 
+其他也类似
+另外 
+
+http://110.152.63.91/lihuashu/pins/3889653
+ 
+
+http://110.152.63.91/lihuashu/pins/3889653/zoom
+ 
+
+pins页和pins/zoom页 
+
+有这么几种办法 
+
+可以在pins页里直接写一段内容,点查看原图时,客户端直接动作,不用发请求 
+也可以不在pins页里写,而用ajax请求 
+
+我的意思是
+http://110.152.63.91/lihuashu/pins/3889653/zoom
+这一页可以要也可以不要 
+
+另外,你的图片命名要有规则的 
+
+原图
+缩图
+再次缩图
+avatar图
+
+这几个类型的图片名称有规则 
+http://110.152.63.91/img/imgs/84169ab7e6f1abaae2f3ef9edf6f398623e508217aa22-L1TgpL_fw554
+ 
+http://110.152.63.91/img/imgs/84169ab7e6f1abaae2f3ef9edf6f398623e508217aa22-L1TgpL
+ 
+http://110.152.63.91/img/imgs//84169ab7e6f1abaae2f3ef9edf6f398623e508217aa22-L1TgpL_fw192
+
+http://110.152.63.91/img/imgs//84169ab7e6f1abaae2f3ef9edf6f398623e508217aa22-L1TgpL_sq75
+
+但重点是后缀 
+也可以ajax请求 
+
+如果命名不这样的话 
+
+搞来搞去 
+
+比较麻烦 
+_sq75
+_fw192
+_fw554 
+刘润芝 00:30:48
+''
+_sq75
+_fw192
+_fw554 
+
+分别是不同的后缀 
+
+当然,你也可以做其他规则 
+
+
+http://huaban.com/favorite/beauty/
+
+http://huaban.com/all/videos/
+ 
+http://huaban.com/favorite/beauty/
+  这个有什么想说的？
+昌雄 00:35:59
+这个和其他通用的页面没什么分别啊～
+
+哦 就是收藏
+
+http://huaban.com/boards/popular/
+
+http://huaban.com/j152177/followers/
+ 
+
+followers要不要 
+followers我打算用内页那种画版的形式代替
+
+

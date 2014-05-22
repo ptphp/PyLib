@@ -1,0 +1,934 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xml:lang="" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta name="author" content="QQ Group Team">
+<meta name="generator" content="GVIM 7.2">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="robots" content="all">
+<meta name="copyright" content="腾讯公司 版权所有">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>搜索群 - 腾讯QQ群</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+<link href="http://s.qun.qq.com/god/m/css/frame.zh-cn.css?_=53495" rel="stylesheet" type="text/css" media="screen">
+<link href="http://s.qun.qq.com/god/m/css/ui.zh-cn.css?_=53495" rel="stylesheet" type="text/css" media="screen">
+<link href="http://s.qun.qq.com/god/m/css/edit.zh-cn.css?_=53495" rel="stylesheet" type="text/css" media="screen">
+<!--[if IE 6]>
+<link href="http://s.qun.qq.com/god/m/css/ie6.zh-cn.css?_=53495" rel="stylesheet" type="text/css" media="screen" id="cssIE6" />
+<![endif]-->
+<!--[if IE 7]>
+<link href="http://s.qun.qq.com/god/m/css/ie7.zh-cn.css?_=53495" rel="stylesheet" type="text/css" media="screen" id="cssIE7" />
+<![endif]-->
+<!--[if IE 8]>
+<link href="http://s.qun.qq.com/god/m/css/ie8.zh-cn.css?_=53495" rel="stylesheet" type="text/css" media="screen" id="cssIE8" />
+<![endif]-->
+</head><body onload="document.execCommand('BackgroundImageCache',false,true)" class="">
+<div id="header" class="clear headerBlue">
+    <div class="navMain">
+        <a class="logo" title="腾讯QQ群" rel="internal" rev="#index" href="/air/#">腾讯QQ群</a>
+        <div class="mygroup" id="trUserGroups"></div>
+        <input type="hidden" name="fmg" value="0">
+        <div class="loginSearch">
+            <div class="fl">
+                <div class="fl" id="trUserStatus"><div class="fl"><a href="/air/#" rel="signin" title="登录">登录</a></div><span>&nbsp;&nbsp;|&nbsp;</span></div>
+                <div class="helpArea">
+                    <a href="http://user.qzone.qq.com/qun" rel="external" title="博客">博客</a>
+		    <a href="http://t.qq.com/qq_qun" rel="external" title="微博">微博</a>
+		    <a href="http://support.qq.com/group" rel="external" title="反馈">反馈</a>
+		    <a href="http://service.qq.com/category/group.html" rel="external" title="帮助">帮助</a>
+		    <span id="edHeadLink" style="display: none; ">&nbsp;|&nbsp;<a id="embedcodelink" href="/air/#embedcode" rev="#embedcode" rel="internal" title="加群帮手">加群帮手</a></span>
+                </div>
+            </div>
+            <form class="undis" id="topSearchForm" onsubmit="return false" style="display: none; " have="0">
+		<div class="topSearchFormPadder">
+			<div class="input"><input class="soft" type="text" id="topSearchKey" value="" style="color: rgb(161, 161, 161); "></div>
+			<div class="action fl"><input type="submit" value=" " id="topSearchFormbot" class="bot"></div>
+		</div>
+            </form>
+	    <div class="naviRight"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="groupNavs" style="display: none; ">
+    <div class="groupInfo" id="trGroupBase" title=""></div> 
+	<div id="newNav" class="nav skinBlue">
+		<div class="navLeft"></div>
+		<div class="navRight"></div>
+		<div class="navMiddle" id="navList"></div>
+		<div id="navMore" class="navMore skinBlue"><div id="navMorePadder" class="navMorePadder"></div></div>
+	</div>
+	<div style="position: absolute; width: 460px; height: 50px; left: 453px; top: 5px; background-image: url(http://s.qun.qq.com/god//images/lv2/lv2_background.png); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; z-index: 9998; background-position: initial initial; background-repeat: initial initial; "><div style="position: absolute; left: 290px; top: 16px; width: 73px; height: 22px; background-image: url(http://s.qun.qq.com/god//images/lv2/normal.png); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; cursor: pointer; background-position: initial initial; background-repeat: initial initial; "></div><div style="position: absolute; left: 370px; top: 16px; width: 84px; height: 22px; background-image: url(http://s.qun.qq.com/god//images/lv2/normal.png); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; cursor: pointer; background-position: 100% 0%; background-repeat: no-repeat no-repeat; "></div></div></div>
+
+<div id="container" class="module clear group" style="position: relative; ">	<div class="searchArea">
+		<form id="findForm" action="/#search" modth="get" onsubmit="return false">
+			<a class="fl" title="SOSO" rel="external" href="http://soso.qq.com"><img align="absmiddle" class="soso" src="http://s.qun.qq.com/god/images/space.gif"></a>
+			<div class="inputl">
+                <input type="text" id="searchKey" autocomplete="off" maxlength="128" class="w" value="%E4%BC%81%E4%B8%9A%E7%AE%A1%E7%90%86">
+				<div id="smarts" class="smarts">
+				</div>
+
+            </div>
+			<div class="fl"><input type="submit" value="找群" class="bot" id="searchSubmit"></div>
+            <div class="fl"><a rel="internal" rev="#adsearch" href="/air/#adsearch">高级查找</a></div>
+			<div class="cl"></div>
+
+			<input type="hidden" name="vcode" value="">
+            <input type="hidden" name="cl" value="">
+            <input type="hidden" name="cnum" value="0">
+            <input type="hidden" name="tx" value="%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586" ff="">
+            <input type="hidden" id="pages" name="pg" value="2">
+            <input type="hidden" name="st" value="0">
+            <input type="hidden" name="c1" value="0">
+            <input type="hidden" name="c2" value="0">
+            <input type="hidden" name="c3" value="0">
+            <input type="hidden" name="ecd" value="0">
+            <input type="hidden" id="smartKey" value="">
+		</form>
+<!--
+		<div id="vcode" class="undis">
+			<div>
+				验证码：<input id="searchVcode" type="text" size="12" name="vcode" />
+			</div>
+			<div class="cl">
+				<span class="fl"><img align="absmiddle" alt="看不清,换一张？点击更新验证码" style="vertical-align:middle;" title="看不清,换一张？点击更新验证码" style="cursor:hand" height="53" width="130" id="vcodeimage" src="javascript:void(0)" /></span>
+				<span class="fl"><a href="javascript:void(0)" id="vcodelink">看不清，换一张！</a></span>
+			</div>
+			<div id="tips" class="fcred cl"></div>
+		</div>
+-->
+        <input type="hidden" name="clt" value="0">
+        <input type="hidden" name="fromclt" value="0">
+	</div>
+    <div class="miniModule">
+                        <div id="searchstill">
+		<div id="searchSuc" style="display:none">
+			<div class="tit" id="searchresultTits"></div>
+			<div id="pagePartTop" class="botList"></div>
+			<div id="Result"></div>
+			<div id="pagePartBottom" class="botList"></div>
+		</div>
+		<div id="searchFail" style="display:none">
+		</div>
+            </div>
+                </div>
+
+    <div class="rightNav">
+		<div class="rightLevelShow">
+			<span class="rlsTop"><span class="rlsTopLeft"></span><span class="rlsTopRight"></span></span>
+			<h2>升级风向标</h2>
+			<div class="rlsPadder">
+				<ul class="rlsContent">
+					<!--<li>
+						<div class="groupTypePic">
+							<div class="ty{$T.r.GF}"></div>
+							<a href="/air/{$T.r.MD}" target="_blank"><img src="http://qun.qq.com/cgi/svr/face/getface?type=4&fid=200{$T.r.GF}&uin={$T.r.MD}" /></a>
+						</div>
+						<div class="rlsGroupInfo">
+							<a href="">hello</a>
+							<p>升级为<strong>1</strong>级皇冠群</p>
+						</div>
+					</li>
+					<li>
+						<div class="groupTypePic">
+							<div class="ty{$T.r.GF}"></div>
+							<a href="/air/{$T.r.MD}" target="_blank"><img src="http://qun.qq.com/cgi/svr/face/getface?type=4&fid=200{$T.r.GF}&uin={$T.r.MD}" /></a>
+						</div>
+						<div class="rlsGroupInfo">
+							<a href="">hello</a>
+							<p>升级为<strong>1</strong>级皇冠群</p>
+						</div>
+					</li>
+					<li>
+						<div class="groupTypePic">
+							<div class="ty{$T.r.GF}"></div>
+							<a href="/air/{$T.r.MD}" target="_blank"><img src="http://qun.qq.com/cgi/svr/face/getface?type=4&fid=200{$T.r.GF}&uin={$T.r.MD}" /></a>
+						</div>
+						<div class="rlsGroupInfo">
+							<a href="">hello</a>
+							<p>升级为<strong>1</strong>级皇冠群</p>
+						</div>
+					</li>-->
+				</ul>
+				<div class="clearer"></div>
+			</div>
+			<span class="rlsBottom"><span class="rlsBottomLeft"></span><span class="rlsBottomRight"></span></span>
+		</div>
+        <div class="rightTop"></div>
+        <div class="rightBorder">
+            <div class="tit">
+				热门标签
+            </div>
+            			<ul class="hotType">
+				<li>
+                    <a rel="internal" rev="#search/st/0/tx/%E7%BE%8E%E5%A5%B3" href="/air/#search/st/0/tx/%E7%BE%8E%E5%A5%B3" class="fcyellow">美女</a> | <a rel="internal" rev="#search/st/0/tx/%E5%9C%B0%E4%B8%8B%E5%9F%8E%E4%B8%8E%E5%8B%87%E5%A3%AB" href="/air/#search/st/0/tx/%E5%9C%B0%E4%B8%8B%E5%9F%8E%E4%B8%8E%E5%8B%87%E5%A3%AB" class="fcgreen">地下城与勇士</a> | <a rel="internal" rev="#search/st/0/tx/%E8%BD%A6%E5%8F%8B" href="/air/#search/st/0/tx/%E8%BD%A6%E5%8F%8B">车友</a> 
+                </li>
+				<li>
+                    <a rel="internal" rev="#search/st/0/tx/%E8%82%A1%E7%A5%A8" href="/air/#search/st/0/tx/%E8%82%A1%E7%A5%A8" class="fcred">股票</a> | <a rel="internal" rev="#search/st/0/tx/%E5%AF%BB%E4%BB%99" href="/air/#search/st/0/tx/%E5%AF%BB%E4%BB%99">寻仙</a> | <a rel="internal" rev="#search/st/0/tx/%E6%90%9E%E7%AC%91" href="/air/#search/st/0/tx/%E6%90%9E%E7%AC%91">搞笑</a> | <a rel="internal" rev="#search/st/0/tx/%E8%8B%B1%E8%AF%AD" href="/air/#search/st/0/tx/%E8%8B%B1%E8%AF%AD">英语</a>
+                </li>
+                <li>
+                    <a rel="internal" rev="#search/st/0/tx/%E9%A9%B4%E5%8F%8B" href="/air/#search/st/0/tx/%E9%A9%B4%E5%8F%8B" class="fcyellow">驴友</a> | <a rel="internal" rev="#search/st/0/tx/%E5%91%A8%E6%9D%B0%E4%BC%A6" href="/air/#search/st/0/tx/%E5%91%A8%E6%9D%B0%E4%BC%A6" class="fcred">周杰伦</a> | <a rel="internal" rev="#search/st/0/tx/%E5%B0%8F%E6%B2%88%E9%98%B3" href="/air/#search/st/0/tx/%E5%B0%8F%E6%B2%88%E9%98%B3" class="fcgreen">小沈阳</a> 
+                </li>
+				<li>
+                    <a rel="internal" rev="#search/st/0/tx/%E9%9D%9E%E4%B8%BB%E6%B5%81" href="/air/#search/st/0/tx/%E9%9D%9E%E4%B8%BB%E6%B5%81">非主流</a> | <a rel="internal" rev="#search/st/0/tx/%E7%A9%BF%E8%B6%8A%E7%81%AB%E7%BA%BF" href="/air/#search/st/0/tx/%E7%A9%BF%E8%B6%8A%E7%81%AB%E7%BA%BF">穿越火线</a> | <a rel="internal" rev="#search/st/0/tx/%E4%BA%A4%E5%8F%8B" href="/air/#search/st/0/tx/%E4%BA%A4%E5%8F%8B" class="fcred">交友</a> 
+                </li>
+				<li>
+                    <a rel="internal" rev="#search/st/0/tx/%E6%B1%82%E8%81%8C" href="/air/#search/st/0/tx/%E6%B1%82%E8%81%8C">求职</a> | <a rel="internal" rev="#search/st/0/tx/QQ%E4%BC%9A%E5%91%98" href="/air/#search/st/0/tx/QQ%E4%BC%9A%E5%91%98">QQ会员</a> | <a rel="internal" rev="#search/st/0/tx/%E5%8A%A8%E6%BC%AB" href="/air/#search/st/0/tx/%E5%8A%A8%E6%BC%AB" class="fcyellow">动漫</a> | <a rel="internal" rev="#search/st/0/tx/%E5%88%9B%E4%B8%9A" href="/air/#search/st/0/tx/%E5%88%9B%E4%B8%9A">创业</a>
+                </li>
+			</ul>
+        </div>
+        <div class="rightBottom"></div>
+
+                <div class="rightTop"></div>
+        <div class="rightBorder">
+            <div class="tit">
+				群分类
+            </div>
+            			<ul class="groupTypes">
+                <li><a rel="internal" rev="#search/st/0/cl/1/c1/1" href="/air/#search/st/0/cl/1/c1/1">购物</a></li><li><a rel="internal" rev="#search/st/0/cl/2/c1/2" href="/air/#search/st/0/cl/2/c1/2">追星族</a></li><li><a rel="internal" rev="#search/st/0/cl/3/c1/3" href="/air/#search/st/0/cl/3/c1/3">影视音乐</a></li><li><a rel="internal" rev="#search/st/0/cl/4/c1/4" href="/air/#search/st/0/cl/4/c1/4">游戏</a></li><li><a rel="internal" rev="#search/st/0/cl/5/c1/5" href="/air/#search/st/0/cl/5/c1/5">置业安居</a></li><li><a rel="internal" rev="#car" href="/air/car">车行天下</a></li><li><a rel="internal" rev="#search/st/0/cl/7/c1/7" href="/air/#search/st/0/cl/7/c1/7">星座缘分</a></li><li><a rel="internal" rev="#search/st/0/cl/8/c1/8" href="/air/#search/st/0/cl/8/c1/8">动漫</a></li><li><a rel="internal" rev="#search/st/0/cl/9/c1/9" href="/air/#search/st/0/cl/9/c1/9">考试/培训</a></li><li><a rel="internal" rev="#search/st/0/cl/10/c1/10" href="/air/#search/st/0/cl/10/c1/10">体育联盟</a></li><li><a rel="internal" rev="#search/st/0/cl/11/c1/11" href="/air/#search/st/0/cl/11/c1/11">职业交流</a></li><li><a rel="internal" rev="#search/st/0/cl/12/c1/12" href="/air/#search/st/0/cl/12/c1/12">技术联盟</a></li><li><a rel="internal" rev="#search/st/0/cl/13/c1/13" href="/air/#search/st/0/cl/13/c1/13">同事录</a></li><li><a rel="internal" rev="#search/st/0/cl/14/c1/14" href="/air/#search/st/0/cl/14/c1/14">老乡会</a></li><li><a rel="internal" rev="#search/st/0/cl/15/c1/15" href="/air/#search/st/0/cl/15/c1/15">旅游</a></li><li><a rel="internal" rev="#search/st/0/cl/16/c1/16" href="/air/#search/st/0/cl/16/c1/16">同城对碰</a></li><li><a rel="internal" rev="#search/st/0/cl/17/c1/17" href="/air/#search/st/0/cl/17/c1/17">读书会</a></li><li><a rel="internal" rev="#search/st/0/cl/18/c1/18" href="/air/#search/st/0/cl/18/c1/18">生活休闲</a></li><li><a rel="internal" rev="#search/st/0/cl/19/c1/19" href="/air/#search/st/0/cl/19/c1/19">商业金融</a></li><li><a rel="internal" rev="#search/st/0/cl/20/c1/20" href="/air/#search/st/0/cl/20/c1/20">其他</a></li><li><a rel="internal" rev="#search/st/0/cl/21/c1/21" href="/air/#search/st/0/cl/21/c1/21">原创空间</a></li><li><a rel="internal" rev="#search/st/0/cl/22/c1/22" href="/air/#search/st/0/cl/22/c1/22">同学</a></li>			</ul>
+			<div class="cl"></div>
+        </div>
+        <div class="rightBottom"></div>
+
+        <div class="rightTop"></div>
+        <div class="rightBorder">
+            <div class="tit">
+				帮助
+            </div>
+			<ul class="searchRule">
+				<li class="fcgreen">Q:如何让群搜索排名靠前？</li>
+				<li>1.同等条件下，等级越高的排名越靠前。<a rel="external" href="http://qun.qq.com/air/#level">查看详情</a></li>
+                <li><br></li>
+				<li class="fcgreen">Q:什么是群活跃度？</li>
+				<li>1.群活跃度由一周内新增人气值、贡献值、参与值组成；</li>
+				<li>2.活跃度=周人气值X1+周贡献值X2+周参与值X3。</li>
+                <li><br></li>
+				<li class="fcgreen">Q:为什么找不到我的群？</li>
+				<li>1.群搜索只覆盖约80%的群；</li>
+				<li>2.资料含不雅文字的不显示。</li>
+                <li><br></li>
+				<li class="fcgreen">Q:为什么我的群资料不准确？</li>
+				<li>1.成员数变更需要3天同步；</li>
+				<li>2.修改的资料需要3天同步；</li>
+                <li>3.群等级搜索排名每天更新。</li>
+                <li class="tr"><a rel="external" href="http://service.qq.com/category/982_1.html">更多帮助</a></li>
+			</ul>
+        </div>
+        <div class="rightBottom"></div>
+            </div>
+    <div class="cl"></div>
+        <textarea id="ResultTits" style="display:none">
+    &lt;![CDATA[
+    {#template MAIN}
+            &lt;div class="fl"&gt;
+                {#if $("input[name=tx]").val() != ''}
+                    {#if $("input[name=st]").val() == 0}
+                        最相关
+                    {#else}
+                        &lt;a rel="internal" rev="#search/c1/0/c2/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/st/0" href="/air/#search/c1/0/c2/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/st/0"&gt;最相关&lt;/a&gt;
+                    {#/if}
+                    |
+                {#/if}
+                {#if $("input[name=st]").val() == 4}
+                    最活跃
+                {#else}
+                    &lt;a rel="internal" rev="#search/c1/0/c2/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/st/4" href="/air/#search/c1/0/c2/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/st/4"&gt;最活跃&lt;/a&gt;
+                {#/if}
+                |  
+                {#if $("input[name=st]").val() == 1}
+                    最新建
+                {#else}
+                    &lt;a rel="internal" rev="#search/c1/0/c2/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/st/1" href="/air/#search/c1/0/c2/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/st/1"&gt;最新建&lt;/a&gt;
+                {#/if}
+                | 
+                {#if $("input[name=st]").val() == 3}
+                    最多人
+                {#else}
+                    &lt;a rel="internal" rev="#search/c1/0/c2/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/st/3" href="/air/#search/c1/0/c2/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/st/3"&gt;最多人&lt;/a&gt;
+		{#/if}
+                |  
+                {#if $("input[name=st]").val() == 2}
+                    最高级
+                {#else}
+                    &lt;a rel="internal" rev="#search/c1/0/c2/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/st/2" href="/air/#search/c1/0/c2/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/st/2"&gt;最高级&lt;/a&gt;
+                {#/if}
+
+            &lt;/div&gt;
+            &lt;div class="fr"&gt;搜索到{#if $T.TotalNum &gt; 100000 }超过&lt;span class="fcred"&gt;十万条&lt;/span&gt;{#else}约 &lt;span class="fcred"&gt;{$T.TotalNum}&lt;/span&gt; 条{#/if}结果&lt;/div&gt;
+    {#/template MAIN}
+    ]]&gt;
+    </textarea>
+    <textarea id="ResultTemplate" style="display:none">
+    &lt;![CDATA[
+    {#template MAIN}
+        &lt;ul class="searchResult"&gt;
+            {#foreach $T as r}
+                &lt;li id="g_{$T.r.GE}"&gt;
+                    &lt;div class="groupTypePic"&gt;
+                        {#if $T.r.GD &gt; 0 }&lt;div class="ty{$T.r.GD}"&gt;&lt;/div&gt;{#/if}
+                        &lt;img src="http://face6.qun.qq.com/cgi/svr/face/getface?type=4&amp;fid=200{$T.r.GD}&amp;uin={$T.r.GE}" /&gt;
+			&lt;a href="/air/#level" target="_blank"&gt;
+				&lt;img id="grade_{$T.r.GE}" height="20" align="absmiddle" width="20" class="grade " src="http://s.qun.qq.com/god/images/space.gif" /&gt;
+			&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="groupInfo"&gt;
+                        &lt;div class="fl"&gt;
+                            {#if $T.r.GF == 1}
+                                &lt;span class="f14"&gt;{GF.sretag($T.r.TI)}&lt;/span&gt; &lt;span class="fcgray"&gt;({$T.r.GE})&lt;/span&gt;
+                            {#else}
+				&lt;span class="f14"&gt;{GF.sretag($T.r.TI)}&lt;/span&gt; &lt;span class="fcgray"&gt;({$T.r.GE})&lt;/span&gt;                             {#/if}
+		    &lt;/div&gt;
+						
+                        &lt;div class="fr"&gt;
+			&lt;div class="joinGroup"&gt;&lt;/div&gt;&lt;div class="fl"&gt;&lt;a href="javascript:void(0)" class="join" rel="join" rev='{$T.r.GE}'&gt;申请加入&lt;/a&gt;&lt;/div&gt;
+		
+                                                    &lt;/div&gt;
+                        &lt;div class="cl"&gt;
+				&lt;div class="fl"&gt;{$T.r.GC}人 | {GF.showclass($T.r.CL)} | { GF.strftime($T.r.RQ, '$YYYY$-$MM$-$DD$')} 创建 | &lt;/div&gt;
+				&lt;div class="act{I.L.groupact($T.r.GA,1,17,35,80,137)}"&gt; &lt;/div&gt;
+                            &lt;div class="cl"&gt; &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;p&gt;{GF.sretag($T.r.TX)}&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="cl"&gt;&lt;/div&gt;                
+                &lt;/li&gt;
+            {#/for}
+        &lt;/ul&gt;
+    {#/template MAIN}
+    ]]&gt;
+    </textarea>
+        <textarea id="searchResultPage" style="display:none">
+        &lt;![CDATA[
+        {#template MAIN}
+        &lt;div class="pageArea" style="display:{#if $T.ap&gt;1}block{#else}none{#/if}"&gt;
+            &lt;span class="fl"&gt;&lt;a {#if $T.preview}rel="internal" rev="#search/st/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/c1/{$P.c1}/c2/{$P.c2}/pg/{ $T.p-1 }" href="/air/#search/st/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/c1/{$P.c1}/c2/{$P.c2}/pg/{ $T.p-1 }"{#/if} {#if !$T.preview}class="n"{#/if}&gt;上一页&lt;/a&gt;&lt;/span&gt;
+            &lt;span class="fl"&gt;
+            {#if $T.first}&lt;a rel="internal" rev="#search/st/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/c1/{$P.c1}/c2/{$P.c2}/pg/1" href="/air/#search/st/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/c1/{$P.c1}/c2/{$P.c2}/pg/1" &gt;1&lt;/a&gt;{#/if}
+            {#if $T.fsplit}...{#/if}
+            {#for i=$T.start to $T.end step=1}
+                {#if $T.i == $T.p}
+                    &lt;em&gt;{$T.i}&lt;/em&gt;
+                {#else}
+                    &lt;a rel="internal" rev="#search/st/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/c1/{$P.c1}/c2/{$P.c2}/pg/{$T.i}"  href="/air/#search/st/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/c1/{$P.c1}/c2/{$P.c2}/pg/{$T.i}" &gt;{$T.i}&lt;/a&gt;
+                {#/if}
+            {#/for}
+            {#if $T.lsplit}...{#/if}
+            {#if $T.last}&lt;a rel="internal" rev="#search/st/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/c1/{$P.c1}/c2/{$P.c2}/pg/{$T.ap}"  href="/air/#search/st/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/c1/{$P.c1}/c2/{$P.c2}/pg/{$T.ap}" &gt;{$T.ap}&lt;/a&gt;{#/if}
+            &lt;/span&gt;
+            &lt;span class="fl"&gt;&lt;a {#if $T.next}rel="internal" rev="#search/st/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/c1/{$P.c1}/c2/{$P.c2}/pg/{ $T.p+1 }" href="/air/#search/st/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/c1/{$P.c1}/c2/{$P.c2}/pg/{ $T.p+1 }"{#/if} {#if !$T.next}class="n"{#/if}&gt;下一页&lt;/a&gt;&lt;/span&gt;
+            &lt;span class="showPage"&gt;&lt;input type="text" id="gotopage" value="" size="3" class="inputPage" /&gt;&lt;/span&gt;
+            &lt;span class="fl"&gt;&lt;input type="button" value="查看" class="input" act="gotopage" forward="#search/st/0/tx/%25E4%25BC%2581%25E4%25B8%259A%25E7%25AE%25A1%25E7%2590%2586/c1/{$P.c1}/c2/{$P.c2}/pg/" /&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        {#/template MAIN}
+        ]]&gt;
+    </textarea>
+    <div id="noresult" style="display:none">
+        <div class="searcherror">
+            <h3 class="ResultTit">搜索到0条结果</h3>
+            <div act="numother0">
+                <p>抱歉，没有找到您想查找的群</p>
+                <p>建议您：</p>
+                <p class="spl">·更换搜索关键字再试，群名称建议不要使用 1)生僻的词组 2)火星文</p>
+                <p class="spl">·将问题反馈给我们：<a rel="external" href="http://support.qq.com/group/" target="_blank">QQ客服论坛</a></p>
+            </div>
+        </div>
+    </div>
+    <div id="errorresult" style="display:none">
+        <div class="searcherror">
+            <h3 class="ResultTit">搜索到0条结果</h3>
+            <div act="num70">
+                <p>抱歉，没有找到您想查找的群</p>
+                <!--<p>可能的原因是：<span class="fcred">敏感关键字</span></p>-->
+                <p>建议您：</p>
+                <p class="spl">·更换搜索关键字再试</p>
+                <p class="spl">·将问题反馈给我们：<a rel="external" href="http://support.qq.com/group/" target="_blank">QQ客服论坛</a></p>
+            </div>
+        </div>
+	</div>
+
+</div>
+
+<div id="operator" class="module hide clear"></div>
+
+<div id="footer">
+    <div><a href="http://qun.qq.com/air/#announce" target="_blank">关于腾讯公司整治低俗内容的公告</a></div>
+    <div>Copyright © 1998 - 2011 Tencent. All Rights Reserved</div>
+    <div>腾讯公司 版权所有</div>
+</div>
+
+<div id="adArea">
+	<div class="header">
+		<a href="javascript:void(0);"></a>
+		<span></span>
+	</div>
+	<div class="body"></div>
+</div>
+<div id="trLogPrinter" class="hide small"></div>
+
+<!-- all templates -->
+<p style="display:none"><textarea id="tLogPrinter" rows="0" cols="0">&lt;![CDATA[
+{#template MAIN}
+&lt;div class="context"&gt;
+    &lt;div class="title clear"&gt;
+	&lt;div class="text"&gt;本窗口对用户不可见&lt;/div&gt;
+	&lt;div class="close"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="content"&gt;
+	&lt;div class="print"&gt;&lt;/div&gt;
+	{#if 'sim' == $T.env || 'strs' == $T.env}
+	&lt;div class="sign clear"&gt;
+	    &lt;div class="text"&gt;
+		&lt;input type="text" name="xuin" /&gt;
+	    &lt;/div&gt;
+	    &lt;div class="submit"&gt;
+		&lt;input type="submit" value="submit" /&gt;
+		&lt;input type="button" value="cancel" /&gt;
+	    &lt;/div&gt;
+	&lt;/div&gt;
+	{#/if}
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="control"&gt;
+    &lt;div class="text"&gt;您当前处于{$P.envName}环境&lt;/div&gt;
+    &lt;div class="loggerAction"&gt;
+	{#if 'live' == $T.env || 'exp' == $T.env}
+	&lt;a href="javascript:void(0)" class="loggerSwitch"&gt;切换到{$P.envSwitch}环境&lt;/a&gt;
+	{#/if}
+	&lt;a href="javascript:void(0)" class="loggerView"&gt;查看日志&lt;/a&gt;
+	{#if 'sim' == $T.env || 'strs' == $T.env}
+	| &lt;a href="javascript:void(0)" class="fake"&gt;伪造登录&lt;/a&gt;
+	{#/if}
+    &lt;/div&gt;
+&lt;/div&gt;
+{#/template MAIN}
+]]&gt;</textarea></p>
+<!-- user status -->
+<p style="display:none"><textarea id="tUserStatus" rows="0" cols="0">&lt;![CDATA[
+{#template MAIN}
+{#if '0' == $T.id}
+&lt;div class="fl"&gt;&lt;a href="/air/#" rel="signin" title="登录"&gt;登录&lt;/a&gt;&lt;/div&gt;
+{#else}
+&lt;div class="fl"&gt;欢迎您,&nbsp;&nbsp;{GF.nick($T.nick)}&lt;/div&gt;
+&lt;div class="fl"&gt;&nbsp;&nbsp;[&lt;a href="/air/#" rel="signout" title="退出"&gt;退出&lt;/a&gt;]&lt;/div&gt;
+{#/if}
+&lt;span&gt;&nbsp;&nbsp;|&nbsp;&lt;/span&gt;
+{#/template MAIN}
+]]&gt;</textarea></p>
+<!-- user groups -->
+<p style="display:none"><textarea id="tUserGroups" rows="0" cols="0">&lt;![CDATA[
+{#template MAIN}
+&lt;div class="fl"&gt;我的群&lt;/div&gt; &lt;span&gt;&lt;/span&gt;
+&lt;div class="mygroupList"&gt;
+    &lt;div class="topline"&gt;&lt;/div&gt;
+		&lt;h3&gt;&lt;a  rel="internal" rev="#mygroup" href="/air/#mygroup"&gt;&lt;div class="mygroupIco"&gt;&lt;/div&gt;我的群主页&lt;/a&gt;&lt;/h3&gt;
+		&lt;div class="quickJump" id="quickJump" title="请选择需要跳转的模块"&gt;
+			&lt;strong&gt;快速跳转：&lt;/strong&gt;&lt;input type="radio" name="jump" value="1" /&gt;新鲜事&lt;input type="radio" name="jump" value="2" /&gt;相册&lt;input type="radio" name="jump" value="3" /&gt;共享&lt;input type="radio" name="jump" value="4" /&gt;游戏&lt;input type="radio" name="jump" value="5" /&gt;活动
+		&lt;/div&gt;
+    &lt;div class="groupList" id="groupList"&gt;
+	&lt;table border="0" cellpadding="0" cellspacing="0" width="300"&gt;
+	    &lt;tr&gt;
+		&lt;th align="left"&gt;我加入的群&lt;/th&gt;
+		&lt;th align="right"&gt;创建日期&lt;/th&gt;
+	    &lt;/tr&gt;
+	    {#foreach $T.c as record}
+		{#include ROW root=$T.record}
+	    {#/for}
+	&lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+{#/template MAIN}
+{#template ROW}
+&lt;tr&gt;
+    &lt;td&gt;&lt;a href="javascript:void(0)" rel="jump" rev="#{$T.g}" title="{$T.name}"&gt;{GF.retag($T.name)}&lt;/a&gt;&lt;/td&gt;
+    &lt;td align="right"&gt;{GF.strftime($T.create_time, '$YYYY$-$MM$-$DD$')}&lt;/td&gt;
+&lt;/tr&gt;
+{#/template ROW}
+]]&gt;</textarea></p>
+<!-- group info -->
+<p style="display:none"><textarea id="tGroupBase" rows="0" cols="0">&lt;![CDATA[
+{#template MAIN}
+&lt;a rel="internal" rev="#0" href="/air/0" class="groupIcon"&gt;&lt;img src="http://face1.qun.qq.com/cgi/svr/face/getface?type=4&amp;fid=200{$T.type}&amp;uin={$T.id}" /&gt;&lt;/a&gt;
+&lt;div class="groupInfoColumn"&gt;
+	&lt;div class="groupInfoCell"&gt;
+		&lt;h1 class="fl"&gt;{GF.retag($T.name)}&lt;span class="fcgray"&gt;({$T.id})&lt;/span&gt;&lt;/h1&gt;
+		&lt;form id="skinFrom"&gt;
+		&lt;select name="gid" style="display:none"&gt;&lt;option value="{$T.id}" selected&gt;{$T.id}&lt;/option&gt;&lt;/select&gt;
+		&lt;input type="hidden" name="retype" value="3" /&gt;
+		&lt;input type="hidden" name="gacreq" value="" /&gt;
+		&lt;input type="hidden" name="callback" value="" /&gt;
+		&lt;ul class="fl chgSkinBtns" title="点击换肤"&gt;
+			&lt;li id="chgBlue" act="0" class="chgBlueDefault"&gt;&lt;/li&gt;
+			&lt;li id="chgOrange" act="1" class="chgOrangeDefault"&gt;&lt;/li&gt;
+			&lt;li id="chgGreen" act="2" class="chgGreenDefault"&gt;&lt;/li&gt;
+			&lt;li id="chgViolet" act="3" class="chgVioletDefault"&gt;&lt;/li&gt;
+			&lt;li id="chgBlack" act="4" class="chgBlackDefault"&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;div class="groupInfoCell"&gt;
+		&lt;p&gt;&lt;a title="腾讯QQ群" target="_blank" rev="#level" href="/air/#level"&gt;&lt;img class="grade lvl{$T.lvl}" id="levelImg" width="21" height="21" title="{#if $T.lvl == 0}点亮皇冠{#else}{$T.lvl}级皇冠QQ群{#/if}" src="http://s.qun.qq.com/god/images/space.gif" align="absmiddle" /&gt;&lt;/a&gt;&lt;span&gt;&nbsp;{$T.brief}&lt;/span&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class="groupInfoCell"&gt;
+		&lt;ul class="actions"&gt;  
+			&lt;li&gt;&lt;a id="actionReport" href="javascript:void(0);"&gt;举报&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a class="hide" id="actionAdmin" href="/air/0/admin?w=s" rel="internal" rev="#0/admin"&gt;设置&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a class="hide" id="actionJoin" href="/air/0/join?w=s" rel="join" rev="#0/join"&gt;申请加入该群&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt; 
+	&lt;/div&gt;
+&lt;/div&gt;
+{#/template MAIN}
+]]&gt;</textarea></p>
+<!--search vcode-->
+<p style="display:none"><textarea id="trVcode" rows="0" cols="0">&lt;![CDATA[
+{#template MAIN}
+	&lt;div&gt;
+		验证码：&lt;input class="searchVcode" type="text" size="12" name="vcode" /&gt;
+	&lt;/div&gt;
+	&lt;div class="cl"&gt;
+		&lt;span class="fl"&gt;&lt;img align="absmiddle" alt="看不清,换一张？点击更新验证码" style="vertical-align:middle;" title="看不清,换一张？点击更新验证码" style="cursor:hand" height="53" width="130" class="vcodeimage" src="javascript:void(0)" /&gt;&lt;/span&gt;
+		&lt;span class="fl"&gt;&lt;a href="javascript:void(0)" class="vcodelink"&gt;看不清，换一张！&lt;/a&gt;&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class="codetips fcred cl"&gt;&lt;/div&gt;
+{#/template MAIN}
+]]&gt;</textarea></p>
+<!-- join group -->
+<p style="display:none"><textarea id="tJoinGroup" rows="0" cols="0">&lt;![CDATA[
+{#template MAIN}
+&lt;div id="lJoinGroup"&gt;
+    &lt;ul&gt;
+	&lt;li&gt;&lt;div class="w jvContainer"&gt;&lt;/div&gt;&lt;/li&gt;
+	&lt;li&gt;
+	    &lt;div class="fl" &gt;验证码：&lt;/div&gt;
+	    &lt;div class="fl"&gt;
+		&lt;p&gt;
+		    &lt;input size="4" maxlength="4" class="w jvCode" type="texgt"&gt;
+		&lt;/p&gt;
+		&lt;p class="fcgray"&gt;输入下图中的字符，不区分大小写：&lt;/p&gt;
+		&lt;div&gt;
+		    &lt;p class="fl"&gt;
+			&lt;img class="jvImage" alt="看不清,换一张？点击更新验证码" title="看不清,换一张？点击更新验证码" src="about:blank" width="130" height="53"&gt;
+			&lt;a href="javascript:void(0);" class="jvLink"&gt;看不清，换一张！&lt;/a&gt;
+		    &lt;/p&gt;
+		&lt;/div&gt;
+	    &lt;/div&gt;
+	&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+{#/template MAIN}
+]]&gt;</textarea></p>
+<!-- recent share -->
+<p style="display:none"><textarea id="tRecentShare" rows="0" cols="0">&lt;![CDATA[
+{#template MAIN}
+{#if $T.length == 0}
+    &lt;div&gt;
+       目前还没有共享的文件。
+    &lt;/div&gt;
+	{#else}
+    &lt;table class="fixTable tableLine" width="100%" cellspacing="0" cellpadding="0" border="0" id="Feeds_{$P.g}"&gt;
+	{#foreach $T as record}
+		{#include ROW root=$T.record}
+	{#/for}
+    &lt;/table&gt;
+{#/if}
+{#/template MAIN}
+{#template ROW}
+	&lt;tr&gt;
+		&lt;td width="24"&gt;&lt;img src="http://s.qun.qq.com/god/images/space.gif" class="{GF.group.getFiletype($T.lf)}" /&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;a class="admin" href="air/#{$P.g}/addr/detail/u/{$T.u}" rel="internal" rev="#{$P.g}/addr/detail/u/{$T.u}" title="{GF.group.getCards($T.u,20)}({$T.u})"&gt;{GF.group.getCards($T.u, 36,$T.ni)}&lt;/a&gt; &lt;span class="fcgray"&gt;分享了&lt;/span&gt; &lt;a href="{$T.pa}" rel="external"&gt;{$T.lf}&lt;/a&gt;&lt;/td&gt;
+		&lt;td width="100" align="right"&gt;&lt;span class="fcgray"&gt;{GF.group.getSize($T.sz)}&lt;/span&gt;&lt;/td&gt;
+		&lt;td width="40" align="right"&gt;&lt;a href="{$T.pa}" rel="external"&gt;下载&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+{#/template ROW}
+]]&gt;</textarea></p>
+<!-- recent share -->
+<!-- recent photos -->
+<p style="display:none"><textarea id="tRecentPhoto" rows="0" cols="0">&lt;![CDATA[
+{#template MAIN}
+{#if $T.length == 0}
+    &lt;div&gt;
+       群相册还没有新照片~~~快来
+	&lt;a href="javascript:void(0)" rel="internal" rev="#{$P.g}/impress/upload" &gt;抢沙发&lt;/a&gt;
+	，成为照片达人。
+    &lt;/div&gt;
+{#else}
+    &lt;ul&gt;
+    {#foreach $T as record}
+	{#include ROW root=$T.record}
+    {#/for}
+    &lt;/ul&gt;
+{#/if}
+{#/template MAIN}
+{#template ROW}
+&lt;li&gt;
+&lt;p&gt;
+{#if $T.fd }
+&lt;a href="air/#{$P.g}/album/show/alid/{$T.ad}/pid/{$T.pd}" rev="#{$P.g}/album/show/alid/{$T.ad}/pid/{$T.pd}" rel="internal"&gt;
+    &lt;img src="http://imgqun.qq.com/cgi-bin/img?path={$P.g}_{$T.ad}_{$T.fd}_1"/&gt;
+&lt;/a&gt;
+{#else}
+&lt;a href="air/#{$P.g}/impress/show/alid/{$T.ad}/pd/{$T.pd}" rev="#{$P.g}/impress/show/alid/{$T.ad}/pd/{$T.pd}" rel="internal"&gt;
+    &lt;img src="{$T.surl}"/&gt;
+&lt;/a&gt;
+{#/if}
+&lt;/p&gt;
+&lt;/li&gt;
+{#/template ROW}
+]]&gt;</textarea></p>
+<!-- recent posts -->
+<p style="display:none"><textarea id="tRecentPost" rows="0" cols="0">&lt;![CDATA[
+{#template MAIN}
+{#if $T.c.pl.length == 0}
+    &lt;div&gt;
+	群论坛还没有帖子~~~第一个
+	&lt;a href="javascript:void(0)" rel="internal" rev="#{$P.g}/bbs/post" &gt;抢沙发&lt;/a&gt;
+	，成为帖子达人。
+    &lt;/div&gt;
+{#else}
+    &lt;table class="fixTable" width="100%" cellspacing="0" cellpadding="0" border="0"&gt;
+	{#foreach $T.c.pl as record}
+	    {#include ROW root=$T.record}
+	{#/for}
+    &lt;/table&gt;
+{#/if}
+{#/template MAIN}
+{#template ROW}
+&lt;tr&gt;
+    &lt;td class="w" align="left"&gt;
+	&lt;div style="width:330px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;"&gt;
+	{#if $T.f &amp; 0x1}
+	    &lt;img src="http://s.qun.qq.com/god/images/top.png" align="absmiddle" class="top" /&gt;
+	{#/if}
+	&lt;span class="fcgray"&gt; [&lt;a rel="internal" rev="#{$P.g}/bbs/list/cd/{$T.cid}" href="/air/#{$P.g}/bbs/list/cd/{$T.cid}"&gt;{$T.n}&lt;/a&gt;]&lt;/span&gt;
+	&lt;a class="title" rel="internal" rev="#{$P.g}/bbs/view/cd/{$T.cid}/td/{$T.tid}" href="/air/#{$P.g}/bbs/view/cd/{$T.cid}/td/{$T.tid}" title="{$T.t}" &gt;{GF.nick($T.t, 36)}&lt;/a&gt;
+	&lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td width="100" align="left"&gt;&lt;a href="http://s.qun.qq.com/god/#{$P.g}/addr/detail/u/{$T.u}" rev="#{$P.g}/addr/detail/u/{$T.aqq}" rel="internal" title="{$T.an}({$T.aqq})"&gt;{GF.nick($T.ans,36)}&lt;/a&gt;&lt;/td&gt;
+    &lt;td width="70" align="left"&gt;{GF.strftime($T.ct, '$YYYY$-$MM$-$DD$')}&lt;/td&gt;
+    &lt;td width="80" align="right"&gt;{$T.pc}/{$T.vc}&lt;/td&gt;
+&lt;/tr&gt;
+{#/template ROW}
+]]&gt;</textarea></p>
+<!-- feeds -->
+<p style="display:none"><textarea id="tFeed" rows="0" cols="0">&lt;![CDATA[
+{#template MAIN}
+    &lt;table class="fixTable tableLine" width="100%" cellspacing="0" cellpadding="0" border="0" id="Feeds_{$P.g}"&gt;
+	{#foreach $T as record}
+	    {#include ROW root=$T.record}
+	{#/for}
+    &lt;/table&gt;
+{#/template MAIN}
+{#template ROW}
+&lt;tr&gt;
+    &lt;td width="24" align="center" valign="top" class="im"&gt;
+	{#if $T.ft == 0}
+	    &lt;img src="http://s.qun.qq.com/god/images/space.gif" class="feed-photo" align="absmiddle" /&gt;
+	{#elseif $T.ft ==1}
+	    &lt;img src="http://s.qun.qq.com/god/images/space.gif" class="feed-photo" align="absmiddle" /&gt;
+			{#elseif $T.ft ==2}
+				{#if $T.u == 10000}
+				&lt;img src="http://s.qun.qq.com/god/images/space.gif" class="feed-vip" align="absmiddle" /&gt;
+				{#else}
+				&lt;img src="http://s.qun.qq.com/god/images/space.gif" class="feed-bbs" align="absmiddle" /&gt;
+				{#/if}
+	{#elseif $T.ft ==3}
+	    &lt;img src="http://s.qun.qq.com/god/images/space.gif" class="feed-bbs" align="absmiddle" /&gt;
+	{#elseif $T.ft ==4}
+	    &lt;img src="http://s.qun.qq.com/god/images/space.gif" class="feed-qm" align="absmiddle" /&gt;
+	{#elseif $T.ft ==5}
+	    &lt;img src="http://s.qun.qq.com/god/images/space.gif" class="feed-impress" align="absmiddle" /&gt;
+	{#elseif $T.ft ==9}
+	    &lt;img src="http://s.qun.qq.com/god/images/space.gif" class="feed-chatlog" align="absmiddle" /&gt;
+	{#elseif $T.ft ==8}
+	    &lt;img src="http://s.qun.qq.com/god/images/space.gif" class="feed-chatlog" align="absmiddle" /&gt;
+	{#elseif $T.ft ==10}
+	    &lt;img src="http://s.qun.qq.com/god/images/space.gif" class="feed-photo" align="absmiddle" /&gt;
+	{#elseif $T.ft ==11}
+	    &lt;img src="http://s.qun.qq.com/god/images/space.gif" class="feed-photo" align="absmiddle" /&gt;
+	{#elseif $T.ft ==14}
+	    &lt;img src="http://s.qun.qq.com/god/images/space.gif" class="feed-act" align="absmiddle" /&gt;
+	{#elseif $T.ft ==15}
+	    &lt;img src="http://s.qun.qq.com/god/images/space.gif" class="feed-act" align="absmiddle" /&gt;
+	{#elseif $T.ft ==16}
+	    &lt;img src="http://s.qun.qq.com/god/images/space.gif" class="feed-act" align="absmiddle" /&gt;
+	{#/if}
+    &lt;/td&gt;
+		&lt;td valign="top"&gt;
+			&lt;div class="bk"&gt;
+			{#if $T.u == 10000 &amp;&amp; $T.ft == 2}
+				QQ群管理员
+			{#else}
+			&lt;a href="http://s.qun.qq.com/god/#{$P.g}/addr/detail/u/{$T.u}" rev="#{$P.g}/addr/detail/u/{$T.u}" rel="internal" title="{$T.name}({$T.u})"&gt;{GF.retag($T.name)}&lt;/a&gt;
+			{#/if}
+	&lt;span class="fcgray"&gt;{$T.at}&lt;/span&gt;
+		{#if $T.ft == 0}
+				&lt;a rel="internal" rev="#{$P.g}/album/show/alid/{$T.ad}/pid/{$T.pd}" href="http://s.qun.qq.com/god/#{$P.g}/album/show/alid/{$T.ad}/pid/{$T.pd}" &gt;{GF.retag($T.t)}&lt;/a&gt;
+	{#elseif $T.ft == 1}
+	    &lt;a rel="internal" rev="#{$P.g}/album/show/alid/{$T.ad}/pid/{$T.pd}" href="http://s.qun.qq.com/god/#{$P.g}/album/show/alid/{$T.ad}/pid/{$T.pd}" &gt;{GF.retag($T.t)}&lt;/a&gt;&nbsp;&nbsp;  {GF.retag($T.c)}
+			{#elseif $T.ft == 2}
+	    &lt;a rel="internal" rev="#{$P.g}/bbs/view/cd/{$T.cid}/td/{$T.tid}" href="air/#{$P.g}/bbs/view/cd/{$T.cid}/td/{$T.tid}" title="{$T.t}"&gt;{GF.retag($T.tl)}&lt;/a&gt;
+	{#elseif $T.ft == 3}
+	    &lt;a rel="internal" rev="#{$P.g}/bbs/view/cd/{$T.cid}/td/{$T.tid}" href="air/#{$P.g}/bbs/view/cd/{$T.cid}/td/{$T.tid}" title="{$T.t}"&gt;{GF.retag($T.tl)}&lt;/a&gt;&nbsp;  {GF.retag($T.c)}
+	{#elseif $T.ft == 4}
+	    {$T.pl}
+	{#elseif $T.ft == 5}
+	    &lt;span class="b{$T.cl}"&gt;{GF.rretag($T.pl)}&lt;/span&gt;
+	{#elseif $T.ft == 8}
+	    &lt;a rel="internal" rev="#{$P.g}/chatlog/index/st/{GF.strftime($T.ct1, '$YYYY$$MM$$DD$')}/type/1" href="air/#{$P.g}/chatlog/index/st/{GF.strftime($T.ct1, '$YYYY$$MM$$DD$')}/type/1"&gt;{GF.rretag($T.co)}&lt;/a&gt;
+	{#elseif $T.ft == 9}
+	    &lt;a rel="internal" rev="#{$P.g}/chatlog/index/st/{GF.strftime($T.ct1, '$YYYY$$MM$$DD$')}/type/2" href="air/#{$P.g}/chatlog/index/st/{GF.strftime($T.ct1, '$YYYY$$MM$$DD$')}/type/2"&gt;{GF.rretag($T.co)}&lt;/a&gt;
+	{#elseif $T.ft == 10}
+				&lt;a rel="internal" rev="#{$P.g}/impress/show/alid/{$T.ad}/pd/{$T.pd}" href="http://s.qun.qq.com/god/#{$P.g}/impress/show/alid/{$T.ad}/pd/{$T.pd}" &gt;{GF.retag($T.t)}&lt;/a&gt;
+	{#elseif $T.ft == 11}
+	    &lt;a rel="internal" rev="#{$P.g}/impress/show/alid/{$T.ad}/pd/{$T.pd}" href="http://s.qun.qq.com/god/#{$P.g}/impress/show/alid/{$T.ad}/pd/{$T.pd}" &gt;{$T.t}&lt;/a&gt;&nbsp;&nbsp; {GF.retag($T.c)}
+	{#elseif $T.ft == 14}
+	    &lt;a rel="internal" rev="#{$P.g}/activity/show/a/{$T.aid}" href="http://s.qun.qq.com/god/#{$P.g}/activity/show/a/{$T.aid}" &gt;{GF.retag($T.na)}&lt;/a&gt;&nbsp;&nbsp; {$T.c}
+	{#elseif $T.ft == 15}
+	    &lt;a rel="internal" rev="#{$P.g}/activity/show/a/{$T.aid}" href="http://s.qun.qq.com/god/#{$P.g}/activity/show/a/{$T.aid}" &gt;{GF.retag($T.na)}&lt;/a&gt;&nbsp;&nbsp; {$T.c}
+	{#elseif $T.ft == 16}
+	    &lt;a rel="internal" rev="#{$P.g}/impress/show/a/{$T.aid}" href="http://s.qun.qq.com/god/#{$P.g}/activity/show/a/{$T.aid}" &gt;{GF.retag($T.na)}&lt;/a&gt;&nbsp;&nbsp; {GF.retag($T.c)}
+	{#else}
+	{#/if}
+	&lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td width="60" align="right" valign="top"&gt;&lt;span class="fcgray"&gt;{$T.ct}&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+{#/template ROW}
+{#template ROWT}
+{#/template ROWT}
+]]&gt;</textarea></p>
+<!-- intelligent -->
+<p style="display:none"><textarea id="tIntelligent" rows="0" cols="0">&lt;![CDATA[
+{#template MAIN}
+&lt;ul class="fameList"&gt;
+	&lt;li&gt;
+    {#if $T.r1bc &gt; 0}
+			&lt;img src="http://face7.qun.qq.com/cgi/svr/face/getface?type=1&amp;uin={$T.r1bu}" class="user" title="{GF.group.getCards($T.r1bu,20)}({$T.r1bu})" onerror="this.src = 'http://s.qun.qq.com/group/headface/1.jpg'"&gt;              
+	&lt;div class="userInfo"&gt;
+	    &lt;a class="admin" href="air/#{$P.g}/addr/detail/u/{$T.r1bu}" rel="internal" rev="#{$P.g}/addr/detail/u/{$T.r1bu}" title="{GF.group.getCards($T.r1bu,20)}({$T.r1bu})"&gt;{GF.group.getCards($T.r1bu,20)}&lt;/a&gt;
+	    &lt;p&gt;累计{$T.r1bc}篇帖子&lt;/p&gt;
+	&lt;/div&gt;
+    {#else}
+	&lt;img src="http://s.qun.qq.com/god/images/noman.gif" /&gt;
+	&lt;div class="userInfo"&gt;
+	    虚位以待
+	    &lt;p&gt;&lt;a rel="internal" rev="#{$P.g}/bbs/post" href="#{$P.g}/bbs/post"&gt;快来抢呀&lt;/a&gt;&lt;/p&gt;
+	&lt;/div&gt;
+    {#/if}
+    &lt;div class="bbs"&gt;
+       &lt;div&gt;&lt;/div&gt; 帖子达人
+    &lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+    {#if $T.r1ac &gt; 0}
+	&lt;img src="http://face7.qun.qq.com/cgi/svr/face/getface?type=1&amp;uin={$T.r1au}" class="user" title="{GF.group.getCards($T.r1au,20)}({$T.r1au})" onerror="this.src = 'http://s.qun.qq.com/group/headface/1.jpg'"&gt;              
+	&lt;div class="userInfo"&gt;
+	    &lt;a class="admin" href="air/#{$P.g}/addr/detail/u/{$T.r1au}" rel="internal" rev="#{$P.g}/addr/detail/u/{$T.r1au}" title="{GF.group.getCards($T.r1au,20)}({$T.r1au})"&gt;{GF.group.getCards($T.r1au,20)}&lt;/a&gt;
+	    &lt;p&gt;累计{$T.r1ac}张照片&lt;/p&gt;
+	&lt;/div&gt;
+    {#else}
+	&lt;img src="http://s.qun.qq.com/god/images/noman.gif" /&gt;
+	&lt;div class="userInfo"&gt;
+	    虚位以待
+	    &lt;p&gt;&lt;a rel="internal" rev="#{$P.g}/impress/upload" href="#{$P.g}/album/upload"&gt;快来抢呀&lt;/a&gt;&lt;/p&gt;
+	&lt;/div&gt; 
+    {#/if}
+    &lt;div class="photo"&gt;
+       &lt;div&gt;&lt;/div&gt; 照片达人
+    &lt;/div&gt;
+&lt;/li&gt; 
+&lt;li&gt;
+    {#if $T.r1cc &gt; 0}
+	&lt;img src="http://face7.qun.qq.com/cgi/svr/face/getface?type=1&amp;uin={$T.r1cu}" class="user" title="{GF.group.getCards($T.r1cu,20)}({$T.r1cu})" onerror="this.src = 'http://s.qun.qq.com/group/headface/1.jpg'"&gt;              
+	&lt;div class="userInfo"&gt;
+	    &lt;a class="admin" href="air/#{$P.g}/addr/detail/u/{$T.r1cu}" rel="internal" rev="#{$P.g}/addr/detail/u/{$T.r1cu}" title="{GF.group.getCards($T.r1cu,20)}({$T.r1cu})"&gt;{GF.group.getCards($T.r1cu,20)}&lt;/a&gt;
+	    &lt;p&gt;累计{$T.r1cc}条群聊精华&lt;/p&gt;
+	&lt;/div&gt;
+    {#else}
+	&lt;img src="http://s.qun.qq.com/god/images/noman.gif" /&gt;
+	&lt;div class="userInfo"&gt;
+	    虚位以待
+	    &lt;p&gt;快来抢呀&lt;/p&gt;
+	&lt;/div&gt; 
+    {#/if}
+    &lt;div class="chat"&gt;
+       &lt;div&gt;&lt;/div&gt; 聊天达人
+    &lt;/div&gt;
+&lt;/li&gt; 
+&lt;/ul&gt;
+{#/template MAIN}
+]]&gt;</textarea></p>
+<p style="display:none"><textarea id="tFame" rows="0" cols="0">&lt;![CDATA[
+{#template MAIN}
+	&lt;div&gt;&lt;a href="javascript:void()"&gt;&gt;&gt; 随便看看&lt;/a&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;/div&gt;
+{#/template MAIN}
+]]&gt;
+&lt;/p&gt;
+&lt;!--tFame--&gt;
+&lt;p style="display:none"&gt;&lt;textarea id="tFame" rows="0" cols="0"&gt;&lt;![CDATA[
+{#template MAIN}
+&lt;ul class="userListV"&gt;
+&lt;li&gt;
+{#if $T.r1bc &gt; 0}
+    &lt;img class="user" alt="" src="http://face7.qun.qq.com/cgi/svr/face/getface?type=1&amp;uin={$T.r1bu}" title="{GF.group.getCards($T.r1bu,20)}({$T.r1bu})"/&gt;
+    &lt;p&gt;&lt;a href="air/#{$P.g}/addr/detail/u/{$T.r1bu}" rel="internal" rev="#{$P.g}/addr/detail/u/{$T.r1bu}" title="{GF.group.getCards($T.r1bu,20)}({$T.r1bu})"&gt;{GF.group.getCards($T.r1bu,20)}&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;span class="title"&gt;帖子达人&lt;/span&gt;&lt;span class="count"&gt;累计{$T.r1bc}篇帖子&lt;/span&gt;&lt;/p&gt;
+{#else}
+    &lt;img class="user" alt="" src="http://s.qun.qq.com/god/images/defaultuser.gif" title="虚位以待"/&gt;
+    &lt;p class="fcgray"&gt;虚位以待&lt;/p&gt;
+    &lt;p&gt;&lt;a rel="internal" rev="#{$P.g}/bbs/post" href="#{$P.g}/bbs/post"&gt;发表帖子&lt;/a&gt;&lt;span class="count"&gt;争做本期&lt;/span&gt;&lt;span class="title"&gt;帖子达人&lt;/span&gt;&lt;/p&gt;
+{#/if}
+&lt;/li&gt;
+&lt;li&gt;
+{#if $T.r1ac &gt; 0}
+    &lt;img class="user" alt="" src="http://face7.qun.qq.com/cgi/svr/face/getface?type=1&amp;uin={$T.r1au}" title="{GF.group.getCards($T.r1au,20)}({$T.r1au})"/&gt;
+    &lt;p&gt;&lt;a href="air/#{$P.g}/addr/detail/u/{$T.r1au}" rel="internal" rev="#{$P.g}/addr/detail/u/{$T.r1au}" title="{GF.group.getCards($T.r1au,20)}({$T.r1au})"&gt;{GF.group.getCards($T.r1au,20)}&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;span class="title"&gt;照片达人&lt;/span&gt;&lt;span class="count"&gt;累计{$T.r1ac}张照片&lt;/span&gt;&lt;/p&gt;
+{#else}
+    &lt;img class="user" alt="" src="http://s.qun.qq.com/god/images/defaultuser.gif" title="虚位以待"/&gt;
+    &lt;p class="fcgray"&gt;虚位以待&lt;/p&gt;
+    &lt;p&gt;&lt;a rel="internal" rev="#{$P.g}/impress/upload" href="#{$P.g}/album/upload"&gt;上传照片&lt;/a&gt;&lt;span class="count"&gt;争做本期&lt;/span&gt;&lt;span class="title"&gt;照片达人&lt;/span&gt;&lt;/p&gt;
+{#/if}
+&lt;/li&gt;
+&lt;li&gt;
+{#if $T.r1cc &gt; 0}
+    &lt;img class="user" alt="" src="http://face7.qun.qq.com/cgi/svr/face/getface?type=1&amp;uin={$T.r1cu}" title="{GF.group.getCards($T.r1cu,20)}({$T.r1cu})"/&gt;
+    &lt;p&gt;&lt;a href="air/#{$P.g}/addr/detail/u/{$T.r1cu}" rel="internal" rev="#{$P.g}/addr/detail/u/{$T.r1cu}" title="{GF.group.getCards($T.r1cu,20)}({$T.r1cu})"&gt;{GF.group.getCards($T.r1cu,20)}&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;span class="title"&gt;聊天达人&lt;/span&gt;&lt;span class="count"&gt;累计{$T.r1cc}条群聊精华&lt;/span&gt;&lt;/p&gt;
+{#else}
+    &lt;img class="user" alt="" src="http://s.qun.qq.com/god/images/defaultuser.gif" title="虚位以待"/&gt;
+    &lt;p class="fcgray"&gt;虚位以待&lt;/p&gt;
+    &lt;p&gt;&lt;span class="fcgray"&gt;发起聊天&lt;/span&gt;&lt;span class="count"&gt;争做本期&lt;/span&gt;&lt;span class="title"&gt;聊天达人&lt;/span&gt;&lt;/p&gt;
+{#/if}
+&lt;/li&gt;
+&lt;/ul&gt;
+{#/template MAIN}
+]]&gt;</textarea></p>
+
+<p style="display:none"><textarea id="navArea" style="display:none">&lt;![CDATA[
+&lt;ul class="newGroupNav"&gt;
+{#foreach $T as r}
+&lt;li id="{$P.h[$T.r]['m']}Nav" rel="internal" rev="#0/{$P.h[$T.r]['p']}"&gt;
+&lt;div class="navCellPadder"&gt;
+	&lt;div class="navBg"&gt;&lt;div class="navBgPadder"&gt;&lt;div class="navMask"&gt;&lt;div class="navIcon navIcon{$P.h[$T.r]['i']}"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+	&lt;div class="navTitleTop"&gt;&lt;/div&gt;
+	&lt;span class="navTitleLeft"&gt;&lt;span class="navTitleRight"&gt;&lt;em&gt;{$P.h[$T.r]['n']}&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+{#/for}
+&lt;li id="moreNav"&gt;
+&lt;div class="navCellPadder"&gt;
+	&lt;div class="navBg"&gt;&lt;div class="navBgPadder"&gt;&lt;div class="navMask"&gt;&lt;div class="navIcon navIcon10"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+	&lt;div class="navTitleTop"&gt;&lt;/div&gt;
+	&lt;span class="navTitleLeft"&gt;&lt;span class="navTitleRight"&gt;&lt;em id="moreNavText"&gt;更多&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+]]&gt;</textarea></p>
+
+<p style="display:none"><textarea id="navmoreArea" style="display:none">&lt;![CDATA[
+&lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+&lt;tr&gt;&lt;td colspan="3"&gt;&lt;div class="navMoreTop"&gt;&lt;div class="navMoreTopBg"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td&gt;&lt;div class="navMoreTL"&gt;&lt;div class="navMoreTLBg"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+	&lt;td&gt;&lt;div class="navMoreHoriBg"&gt;&lt;/div&gt;&lt;/td&gt;
+	&lt;td&gt;&lt;div class="navMoreTR"&gt;&lt;div class="navMoreTRBg"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+&lt;/tr&gt;
+{#foreach $T as r}
+{#if ($T.r$index+1) % 4 == 1}
+&lt;tr&gt;
+	&lt;td&gt;&lt;div class="navMoreVerticalBg"&gt;&lt;/div&gt;&lt;/td&gt;
+	&lt;td&gt;
+		&lt;ul class="navMoreUl"&gt;
+{#/if}
+		&lt;li id="{$P.h[$T.r]['m']}Nav" rel="internal" rev="#0/{$P.h[$T.r]['p']}"&gt;
+			&lt;div class="navMask"&gt;&lt;div class="navIcon navIcon{$P.h[$T.r]['i']}D"&gt;&lt;/div&gt;&lt;/div&gt;
+			&lt;div class="navMoreTitle"&gt;{$P.h[$T.r]['n']}&lt;/div&gt;
+		&lt;/li&gt;
+{#if ($T.r$index+1) % 4 == 0 || $T.r$last}		
+		&lt;/ul&gt;
+		&lt;div class="navMoreBg"&gt;&lt;/div&gt;
+	&lt;/td&gt;
+	&lt;td&gt;&lt;div class="navMoreVerticalBg"&gt;&lt;/div&gt;&lt;/td&gt;
+&lt;/tr&gt;
+{#/if}
+{#/for}
+&lt;tr&gt;
+	&lt;td&gt;&lt;div class="navMoreBL"&gt;&lt;div class="navMoreBLBg"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+	&lt;td&gt;&lt;div class="navMoreHoriBg"&gt;&lt;/div&gt;&lt;/td&gt;
+	&lt;td&gt;&lt;div class="navMoreBR"&gt;&lt;div class="navMoreBRBg"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+]]&gt;</textarea></p>
+
+<div id="embedFirstTips" style="z-index: 9999; display: none; ">
+    <div class="tipsContent">
+      <div class="ico"></div>
+      <div class="title">“加群帮手”帮助您在第三方网站方便地生成加群快捷入口</div>
+      <div class="close"><a id="embedTipsClose" href="javascript:void(0)">我知道了</a></div>
+    </div> 
+</div>
+
+<script type="text/javascript" src="/god/m/js/loader.zh-cn.js"></script>
+<script type="text/javascript">
+document.domain = "qq.com";
+jL.script({mark: "jquery", uri: "/god/m/js/jquery.zh-cn.js", depend: true});
+jL.script({mark: "jquery-plugins", uri: "/god/m/js/jquery/plugins.zh-cn.js", depend: true});
+jL.script({mark: "frame", uri: "/god/m/js/frame.zh-cn.js?_=53495", depend: true, onload: function(p) {
+    if ( $.browser.msie && "6.0" == $.browser.version ) {
+        document.execCommand("BackgroundImageCache", false, true);
+    }
+    G.run(p);
+}, params: {
+    request: location.href,
+    domain: "qun.qq.com", server: "8.13", client: "114.217.148.236",
+    elapsed: "0.0042", memory: "0.48MB", profile: "T_LOAD: 0.0007S|T_ROUTE: 0.0006S|T_DISPATCH: 0.0018S|",
+    module: "default", controller: "index", action: "frame",
+    env: "live", way: "frame", language : "zh-cn",
+    user: {
+        id: "0",
+        nick: "",
+        gkey: ""
+    },
+    group: {
+        id: "0",
+        auth: "0",
+        permission: "2",
+        type: "1",
+        level: ""
+    },
+    ruico:'http://face7.qun.qq.com/cgi/svr/face/getface?type=1&uin=',
+    rgico:'http://face9.qun.qq.com/cgi/svr/face/getface?type=4&fid=200',
+    gray: {
+        carlife: {
+            list: "71613924,90327334,66260371,65148366,85292093,75405323,75405369,86330865,83449971,40761197,81358376,101812,73420458,86329942,3358319,84577550,52894074,76529446,88097716,82098329,1902014,90330504,85489485,27342898,25427741,87369050,85489485",
+            limit: "0,0,0,0,0,0",
+            type: "1,1,1",
+            classtype: "6,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,3551,3552,3553,3554,3555,3556,3557,3558,3559,3560,3561,3562,3563,3564,3565,3566,3567,3568,3569,3570,3571,3572,3573,3574,3575,3576,3577,3578,3579,3580,3581,3582,3583,3584,3585,3586,3587,3588,3589,3590,3591,3592,3593,3594,3595,3596,3597,3598,3599,3600,3601,3602,3603,3604,3605,3606,3607,3608,3609,3610,3611,3612,3613,3614,3615,3616,3617,3618,3619,3620,3621,3622,3623,3624,3625,3626,3627,3628,3629,3630,3631,3632,3633,3634,3635,3636,3637,3638,3639,3640,3641,3642,3643,3644,3645,3646,3647,3648,3649,3650,3651,3652,3653,3654,3655,3656,3657,3658,3659,3660,3661,3662,3663,3664,3665,3666,3667,3668,3669,3670,3671,3672,3673,3674,3675,3676,3677,3678,3679,3680,3681,3682,3683,3684,3685,3686,3687,3688,3689,3690,3691,3692,3693,3694,3695,3696,3697,3698,3699,3700,3701,3702,3703,3704,3705,3706,3707,3708,3709,3710,3711,3712,3713,3714,3715,3716,3717,3718,3719,3720,3721,3722,3723,3724,3725,3726,3727,3728,3729,3730,3731,3732,3733,3734,3735,3736,3737,3738,3739,3740,3741,3742,3743,3744,3745,3746,3747,3748,3749,3750,3751,3752,3753,3754,3755,3756,3757,3758,3759,3760,3761,3762,3763,3764,3765,3766,3767,3768,3769,3770,3771,3772,3773,3774,3775,3776,3777,3778,3779,3780,3781,3782,3783,3784,3785,3786,3787,3788,3789,3790,3791,3792,3793,3794,3795,3796,3797,3798,3799,3800,3801,3802,3803,3804,3805,3806,3807,3808,3809,3810,3811,3812,3813,3814,3815,3816,3817,3818,3819,3820,3821,3822,3823,3824,3825,3826,3827,3828,3829,3830,3831,3832,3833,3834,3835,3836,3837,3838,3839,3840,3841,3842,3843,3844,3845,3846,3847,3848,3849,3850,3851,3852,3853,3854,3855,3856,3857,3858,3859,3860,3861,3862,3863,3864,3865,3866,3867,3868,3869,3870,3871,3872,3873,3874,3875,3876,3877,3878,3879,3880,3881,3882,3883,3884,3885,3886,3887,3888,3889,3890,3891,3892,3893,3894,3895,3896,3897,3898,3899,3900,3901,3902,3903,3904,3905,3906,3907,3908,3909,3910,3911,3912,3913,3914,4298,4299,4300,4301,4302,4303,4304,4305,4306,4307,4308,4309,4310,4311,4312,4313,4314,4315,4316,4317,4318,4319,4320,4321,4322,4323,4324,4325,4326,4327,4328,4329,4330,4331,4332,4333,4334,4335,4336,4337,4338,4339,4340,4341,4342,4343,4344,4345,4346,4347,4348,4349,4350,4351,4352,4353,4354,4355,4356,4357,4358,4359,4360,4361,4362,4363,4364,4365,4366,4367,4368,4369,4370,4371,4372,4373,4374,4375,4376,4377,4378,4379,4380,4381,4382,4383,4384,4385,4386,4387,4388,4389,4390,4391,4392,4393,4394,4395,4396,4397,4398,4399,4400,4401,4402,4403,4404,4405,4406,4407,4408,4409,4410,4411,4412,4413,4414,4415,4416,4417,4418,4419,4420,4421,4422,4423,4424,4425,4426,4427,4428,4429,4430,4431,4432,4433,4434,4435,4436,4437,4438,4439,4440,4441,4442,4443,4444,4445,4446,4447,4448,4449,4450,4451,4452,4453,4454,4455,4456,4457,4458,4459,4460,4461,4462,4463,4464,4465,4466,4467,4468,4469,4470,4471,4472,4473,4474,4475,4476,4477,4478,4479,4480,4481,4482,4483,4484,4485,4486,4487,4488,4489,4490,4491,4492,4493,4494,4495,4496,4497,4498,4499,4500,4501,4502,4503,4504,4505,4506,4507,4508,4509,4510,4511,4512,4513,4514,4515,4516,4517,4518,4519,4520,4521,4522,4523,4524,4525,4526,4527,4528,4529,4530,4531,4532,4533,4534,4535,4536,4537,4538,4539,4540,4541,4542,4543,4544,4545,4546,4547,4548,4549,4550,4551,4552,4553,4554,4555,4556,4557,4558,4559,4560,4561,4562,4563,4564,4565,4566,4567,4568,4569,4570,4571,4572,4573,4574,4575,4576,4577,4578,4579,4580,4581,4582,4583,4584,4585,4586,4587,4588,4589,4590,4591,4592,4593,4594,4595,4596,4597,4598,4599,4600,4601,4602,4603,4604,4605,4606,4607,4608,4609,4610,4611,4612,4613,4614,4615,4616,4617,4618,4619,4620,4621,4622,4623,4624,4625,4626,4627,4628,4629,4630,4631,4632,4633,4634,4635,4636,4637,4638,4639,4640,4641,4642,4643,4644,4645,4646,4647,4648,4649,4650,4651,4652,4653,4654,4655,4656,4657,4658,4659,4660,4661,4662,4663,4664,4665,4666,4667,4668,4669,4670,4671,4672,4673,4674,4675,4676,4677,4678,4679,4680,4681,4682,4683,4684,4685,4686,4687,4688,4689,4690,4691,4692,4693,4694,4695,4696,4697,4698,4699,4700,4701,4702,4703,4704,4705,4706,4707,4708,4709,4710,4711,4712,4713,4714,4715,4716,4717,4718,4719,4720,4721,4722,4723,4724,4725,4726,4727,4728,4729,4730,4731,4732,4733,4734,4735,4736,4737,4738,4739,4740,4741,4742,4743,4744,4745,4746,4747,4748,4749,4750,4751,4752,4753,4754,4755,4756,4757,4758,4759,4760,4761,4762,4763,4764,4765,4766,4767,4768,4769,4770,4771,4772,4773,4774,4775,4776,4777,4778,4779,4780,4781,4782,4783,4784,4785,4786,4787,4788,4789,4790,4791,4792,4793,4794,4795,4796,4797,4798,4799,4800,4801,4802,4803,4804,4805,4806,4807,4808,4809,4810,4811,4812,4813,4814,4815,4816,4817,4818,4819,4820,4821,4822,4823,4824,4825,4826,4827,4828,4829,4830,4831,4832,4833,4834,4835,4836,4837,4838,4839,4840"
+        }
+    },
+    pause:{
+        activity: {
+            'new':0,
+            newlist:"0,0,0,0,0,0,0,0,0,0",
+            mod:0,
+            modlist:"0,0,0,0,0,0,0,0,0,0"
+        },
+        share: {
+            upload:1,
+            uploadlist:"0,0,0,0,0,0,0,0,0,0",
+            down:0,
+            downlist:"0,0,0,0,0,0,0,0,0,0"
+        }
+    },
+    high:{
+        ehour:1,
+        shour:1,
+        smin:1,
+        emin:2    },
+    app: {"city":1004,"friend":1015,"wenwen":1018,"tuan":1020,"3366":1022}}});
+</script>
+
+
+
+<div class="ui-widget-overlay" style="width: 960px; height: 1286px; z-index: 1001; "></div><div style="overflow-x: hidden; overflow-y: hidden; outline-width: 0px; outline-style: initial; outline-color: initial; height: auto; width: 368px; position: absolute; top: 477px; left: -185px; display: block; z-index: 1002; " class="ui-dialog ui-widget ui-widget-content ui-corner-all  ui-draggable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-boxer"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" unselectable="on"><span class="ui-dialog-title" id="ui-dialog-title-boxer" unselectable="on">请先登录</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button" unselectable="on"><span class="ui-icon ui-icon-closethick" unselectable="on">close</span></a></div><div id="boxer" style="width: auto; min-height: 122px; height: 302px; " class="ui-dialog-content ui-widget-content"><iframe name="_sign" id="_sign" frameborder="0" scrolling="no" width="100%" height="100%" src="http://ui.ptlogin2.qq.com/cgi-bin/login?appid=3000801&amp;s_url=http%3A%2F%2Fqun.qq.com%2Fgod%2Fsucc.htm&amp;f_url=loginerroralert&amp;lang=2052&amp;bgcolor=ffffff&amp;style=1&amp;low_login=1&amp;link_target=blank&amp;target=self&amp;hide_title_bar=1&amp;dummy=1"></iframe></div></div></body></html>

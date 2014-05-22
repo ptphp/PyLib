@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+	<div id="page" class="view">
+		<div id="msgl">
+    <div id="msgl_header">
+        <div class="bg">
+        </div>
+        <div class="fg">
+            <div class="wrapper">
+                <a id="msgl_logo" href="/"><img src="{{static_url("media/img/logo_grey.png")}}" width="98" height="34" alt=""></a>
+                <a id="msgl_hide" href="javascript:parent.$.pageslide.close();" class="pageslide-close" title="返回">返回</a>
+            </div>
+        </div>
+    </div>
+    <div id="msgl_body">
+        <div class="wrapper">
+            <ul class="nav">
+                <li class="mentions current">
+                    <a href="/message/mentions/">@提到我的</a>
+                </li>
+                <li class="activities">
+                    <a href="/message/activities/">我的消息</a>
+                </li>
+            </ul>
+            <ol class="mentions">
+            </ol>
+            <div id="mentions_introduction">
+                <h2>梨花树可以全站<img src="{{static_url("media/img/mentions_introduction/at.png")}}">好友啦！<span>通过在采集里描述、评论里 @ TA，就能把喜欢的采集分享给好友。</span></h2>
+                <div class="unit">
+                    <img src="{{static_url("media/img/mentions_introduction/image_01.png")}}" alt="采集描述" width="889" height="287" data-pinit="registered"><span style="font-size: 16px; position: absolute; left: 648px; top: 222px;">图示一：在采集描述里 @ TA</span>
+                </div>
+                <div class="unit">
+                    <img src="{{static_url("media/img/mentions_introduction/image_02.png")}}" alt="采集评论" width="899" height="436" data-pinit="registered"><span style="font-size: 16px; position: absolute; left: 634px; top: 320px;">图示二：在自己或别人的评论里 @ TA</span>
+                </div>
+                <div class="foot">
+                    PS: 此功能来自花瓣用户反馈，感谢大家对梨花树的喜爱！
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	</div>
+{% end %}
