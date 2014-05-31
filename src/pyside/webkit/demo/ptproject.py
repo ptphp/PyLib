@@ -120,7 +120,7 @@ class Window(QtGui.QMainWindow):
     def __init__(self):
         QtGui.QMainWindow.__init__(self)
         webview = WebView()
-        webview.load(QtCore.QUrl("http://www.baidu.com"))
+        webview.load(QtCore.QUrl("https://www.google.com"))
         self.setCentralWidget(webview)
         self.createDockWindows()
         
